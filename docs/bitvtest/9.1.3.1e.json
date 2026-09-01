@@ -1,0 +1,154 @@
+{
+  "bitv_nummer": "9.1.3.1e",
+  "titel": "Datentabellen richtig aufgebaut",
+  "wcag22": {
+    "guideline": "Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure",
+    "level": "A",
+    "success_criterion": "1.3.1 Info and Relationships",
+    "techniken": {
+      "General Techniques": [
+        "G115: Using semantic elements to mark up structure",
+        "G140: Separating information and structure from presentation to enable different presentations"
+      ],
+      "HTML Techniques": [
+        "H51: Using table markup to present tabular information",
+        "H73: Using the summary attribute of the table element to give an overview of data tables"
+      ],
+      "Failures": [
+        "F33: Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to create multiple columns in plain text content",
+        "F34: Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to format tables in plain text content",
+        "F48: Failure of Success Criterion 1.3.1 due to using the pre element to markup tabular information",
+        "F91: Failure of Success Criterion 1.3.1 for not correctly marking up table headers",
+        "F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Datentabellen sind strukturell korrekt aufgebaut; Zeilen- und Spaltenüberschriften sind mit `th` oder passenden ARIA-Rollen markiert."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Sehende Nutzende orientieren sich in einer Datentabelle neben den Überschriften bei Bedarf auch am Wertebereich und können strukturelle Mängel, etwa Wechsel in der Bedeutung von Zeilen oder Spalten, leicht erkennen und ausgleichen. Blinde und sehbehinderte Nutzende erschließen die Tabelle dagegen analytisch: Sie entwickeln aus Überschriften und Kontextinformationen eine Vorstellung vom Aufbau, die die Grundlage des Datenzugriffs ist. Dafür müssen zwei Bedingungen erfüllt sein: Die Tabelle braucht eine klare Struktur, deren Zeilen- und Spaltenbedeutung fassbar ist und sich aus den Überschriften oder unterstützenden Kontextangaben ergibt; die Überschriften müssen auffindbar, eindeutig auf Daten beziehbar und korrekt ausgezeichnet sein. Eine mangelhaft strukturierte Tabelle lässt sich durch spezielle Auszeichnung nicht barrierefrei machen; erst bei einer klaren, nachvollziehbaren Struktur entfaltet die korrekte Auszeichnung ihren Nutzen. Mögliche Anwendungen der Überschriften-Auszeichnung: Der Screenreader meldet Position und Anzahl der Überschriftenreihen; er liest beim Wechsel der Tabellenzeile oder -spalte die jeweilige neue Überschrift vor; Überschriften lassen sich so hervorheben, dass sie für die Nutzenden besser passen."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar bei nativen oder über ARIA-Rollen ausgezeichneten Datentabellen sowie bei Inhalten, die visuell als Datentabelle strukturiert sind."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Tabellen für tabellarische Daten verwendet?",
+          "inhalt_markdown": "- Prüfen, ob tabellarische Daten mit `table` oder einer korrekten und vollständigen ARIA-Umsetzung ausgezeichnet sind, also `role=\"table\"`, `role=\"row\"`, `role=\"columnheader\"` und `role=\"rowheader\"`."
+        },
+        {
+          "titel": "2.2 Prüfung des Aufbaus von Tabellen:",
+          "inhalt_markdown": "Prüfen, ob die Tabelle bzw. das ARIA-Konstrukt einen strukturell sinnvollen Aufbau hat. Probleme entstehen oft dadurch, dass die Tabelle zugleich Layoutzwecken dient und das Tabellengitter die Anordnung von Inhalten übernimmt. Problematisch können sein: eine Datenspalte vor der Überschriftenspalte; Wechsel der Bedeutung von Zeilen oder Spalten; in die Tabelle integrierte Erläuterungszellen; leere Zeilen zur Festlegung von Höhe oder Abstand; verschachtelte Tabellen (eine Tabelle innerhalb einer anderen Tabellenzelle)."
+        },
+        {
+          "titel": "Woran erkennt man, dass eine Datentabelle sinnvoll aufgebaut ist?",
+          "inhalt_markdown": "Bei einer sinnvoll aufgebauten Tabelle lässt sich allgemein sagen, welche Inhalte in den einzelnen Spalten und Zeilen stecken – mehr als eine bloße Zusammenstellung der Zellenwerte. Die Bedeutung kann in den Überschriften gefasst sein, muss es aber nicht; auch ohne Überschriften lässt sich eine Tabelle sinnvoll strukturieren. Bei aussagekräftigen Überschriften ist zu prüfen, ob die Zelleninhalte den Überschriften entsprechen; nichtssagende Überschriften deuten darauf hin, dass Zeile oder Spalte inhaltlich nicht allgemein fassbar sind und eher dem Layout dienen. Auch komplexe Tabellen bestehen aus einfachen Spalten und Zeilen mit denselben Anforderungen; zusätzlich fassen übergreifende Überschriften benachbarte Zeilen oder Spalten zusammen, deren Inhalt sich ebenfalls allgemein fassen lassen muss."
+        },
+        {
+          "titel": "Wie kann man (ohne Screenreader) prüfen, ob eine Datentabelle richtig aufgebaut ist?",
+          "inhalt_markdown": "Eine beliebige Zelle gemeinsam mit ihren Spalten- und Zeilenüberschriften lesen: \"[Spaltenüberschrift(en)] - [Zeilenüberschrift(en)]: [Zelleninhalt]\". Ist die Bedeutung der Zelle so verständlich? Auffälligkeiten gezielt untersuchen, etwa andersartige Inhalte oder hervorgehobene Zellen: Auch dort müssen alle Zellen in gleicher Weise – unabhängig von den Nachbarzellen – nur zusammen mit den beiden Überschriften nutzbar sein. Trifft das zu, ist die Tabelle richtig aufgebaut und bei richtiger Auszeichnung auch per Screenreader nutzbar."
+        },
+        {
+          "titel": "2.3 Prüfung der Auszeichnung von nativen Tabellen:",
+          "inhalt_markdown": "- Seite im Chrome- oder Firefox-Browser laden.\n- Das Tables-Bookmarklet aufrufen; Tabellen-Auszeichnungen werden angezeigt.\n- Prüfen, ob sämtliche Spalten- und Zeilenüberschriften korrekt mit `th` ausgezeichnet sind.\n- Das `summary`-Attribut ist in HTML5 für Tabellenbeschreibungen nicht mehr zulässig; Beschreibungen sollten stattdessen über `caption`, `aria-describedby` oder `figure`/`figcaption` erfolgen.\n\nMindestanforderung: Überschriften, die offensichtlich, unverzichtbar oder visuell hervorgehoben sind, müssen ausgezeichnet sein (siehe Hinweis 3.2)."
+        },
+        {
+          "titel": "2.4 Prüfung von mit ARIA umgesetzten Tabellen",
+          "inhalt_markdown": "- Kontrollieren, ob Inhalte, die optisch als Datentabelle erscheinen, ohne natives Tabellen-Markup aber korrekt über die passenden ARIA-Rollen ausgezeichnet sind (`role=\"table\"`, `role=\"row\"`, `role=\"columnheader\"`, `role=\"rowheader\"`). Vergleiche dazu das APG Table pattern."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "3.1 Auszeichnung von zweideutigen Zellen",
+          "inhalt_markdown": "Zellen mit zugleich Überschriften- und Datencharakter dürfen in HTML5 nicht mehr per `td` in Kombination mit dem `scope`-Attribut ausgezeichnet werden."
+        },
+        {
+          "titel": "3.2 Woran erkennt man Zeilenüberschriften?",
+          "inhalt_markdown": "An der optischen Hervorhebung erkennt man mögliche Überschriften: Ist die erste Spalte einer Datentabelle hervorgehoben, dienen ihre Inhalte vermutlich als Überschriften. Umgekehrt gilt das nicht – die Hervorhebung ist als Kriterium nicht immer ausreichend, denn aus Gestaltungsgründen wird auf sie oft verzichtet; sehende Nutzende behelfen sich mit der Position der Zellen am linken Rand. Schwierig ist die Abgrenzung zwischen bewusst weggelassener Hervorhebung und tatsächlich ungeeigneten Überschriften: Auch Hersteller- oder Produktnamen sind kein sicherer Beleg, da Überschriften eindeutig und geläufig sein sollten. Redaktionen sollten überlegen, ob ein Screenreader bei Zeilenwechseln sinnvoll den Inhalt der ersten Spalte zusammen mit der Datenzelle vorlesen kann; wenn ja, sind diese Zellen unbedingt als Überschriften auszuzeichnen. Für die Prüfung gilt: Zellen ohne Dateninhalt, die also allein als Überschriften infrage kommen, müssen entsprechend ausgezeichnet werden. Muss beim Datenzugriff auf den Inhalt der Zeile oder Spalte Bezug genommen werden, um wenigstens einen Teil der Werte zu interpretieren, enthält die Randspalte Überschriften und ist entsprechend auszuzeichnen. Die Randspalte darf unabhängig von ihrer optischen Erscheinung als Überschrift ausgezeichnet werden, wenn der Vergleich von Werten anderer Spalten das nahelegt; sonst ist das Kriterium allein die visuelle Hervorhebung. Visuell hervorgehobene Zeilenüberschriften müssen ausgezeichnet sein, auch wenn die Hervorhebung einen anderen Grund hat; die Auszeichnung soll nicht von der Darstellung abweichen, gegebenenfalls ist die Darstellung anzupassen. Dieselben Regeln gelten für Spaltenüberschriften, bei denen auf die visuelle Hervorhebung verzichtet wurde."
+        },
+        {
+          "titel": "3.3 Eingesparte Überschriften",
+          "inhalt_markdown": "Überschriften sind überflüssig, wenn die Zellen neben den Einzelwerten auch deren Bedeutung angeben oder diese sich von selbst versteht – typisch bei Preislisten mit selbsterklärenden Produktbezeichnungen und Währungszeichen. Für blinde und sehbehinderte Nutzende kann der Umgang mit solchen Tabellen schwierig sein, da sie mangels Überschriften den Wertebereich durchsuchen müssen. Unproblematisch ist der Verzicht, wenn sich der Tabellenaufbau aus der ersten Zeile ergibt und die Tabelle zusammengehörige Daten in fester Reihenfolge auflistet, also normalerweise linear wie ein Buch genutzt wird. Solche Tabellen erfüllen den Prüfschritt, wenn sie richtig aufgebaut und linear nutzbar sind."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "- Tabellarische Daten nutzen statt `table` (bzw. `role=\"table\"`) nur positionierte `div`-, `span`- oder `p`-Elemente.\n- Spalten- und Zeilenüberschriften sind nicht sauber mit `th` (oder passenden ARIA-Rollen) ausgezeichnet."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- W3C Web Accessibility Initiative:[Tables Tutorial](https://www.w3.org/WAI/tutorials/tables/)\n        - ARIA Authoring Practices Guide (APG):[Table pattern](https://www.w3.org/WAI/ARIA/apg/patterns/table/)(W3C)\n        - [Synthetic tables built with ARIA](https://codepen.io/Wildebrew/pen/gBKdVb)(Birkir Gunnarsson, codepen). Beispiel einer mittels ARIA semantisch korrekt umgesetzten Tabelle.\n        - [A Responsive Accessible Table](https://adrianroselli.com/2017/11/a-responsive-accessible-table.html)(Adrian Roselli, 2017)\n        - [Table with Expando Rows](https://adrianroselli.com/2019/09/table-with-expando-rows.html). (Adrian Roselli, 2019). The article offers an implementation solution for a common pattern where rows are hidden until the user opts to show them."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=131#adaptable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=131#info-and-relationships)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G115: Using semantic elements to mark up structure](https://www.w3.org/WAI/WCAG22/Techniques/general/G115.html)\n                    - [G140: Separating information and structure from presentation to enable different presentations](https://www.w3.org/WAI/WCAG21/Techniques/general/G140.html)"
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H51: Using table markup to present tabular information](https://www.w3.org/WAI/WCAG22/Techniques/html/H51.html)\n                    - [H73: Using the summary attribute of the table element to give an overview of data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H73.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F33: Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to create multiple columns in plain text content](https://www.w3.org/WAI/WCAG22/Techniques/failures/F33.html)\n                    - [F34: Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to format tables in plain text content](https://www.w3.org/WAI/WCAG22/Techniques/failures/F34.html)\n                    - [F48: Failure of Success Criterion 1.3.1 due to using the pre element to markup tabular information](https://www.w3.org/WAI/WCAG22/Techniques/failures/F48.html)\n                    - [F91: Failure of Success Criterion 1.3.1 for not correctly marking up table headers](https://www.w3.org/WAI/WCAG22/Techniques/failures/F91.html)\n                    - [F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information](https://www.w3.org/WAI/WCAG22/Techniques/failures/F92.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Fragen zu diesem Prüfschritt",
+      "id": "fragen_zu_diesem_prüfschritt",
+      "untersektionen": [
+        {
+          "titel": "Warum müssen die Tabellenheader extra ausgezeichnet werden?",
+          "inhalt_markdown": "Screenreader brauchen die Auszeichnung nicht zwingend, um Spalten- und Zeilenüberschriften vorzulesen: Gängige Programme behandeln die erste Zeile und die linke Spalte faktisch wie Überschriften und lesen ihren Inhalt beim Wechsel vor – zumindest bei einfachen Tabellen und wenn Datenzellen nicht ausdrücklich per `headers`/`id` mit Überschriften verknüpft sind. Der Aufwand für die Auszeichnung ist bei einfachen Tabellen gering (Vorlagen, CMS); die eigentliche Herausforderung ist, die Tabellen einfach zu halten und alle strukturierenden Inhalte in der ersten Zeile und Spalte unterzubringen. Nicht jedes Hilfsmittel geht so vor – der IBM Homepagereader liest nur ausgezeichnete Überschriften. Die reale Nutzbarkeit mit verbreiteten Screenreadern oder Browsern darf nicht das alleinige Kriterium sein, sonst bliebe es dabei, dass Screenreader aus barrierebehafteten Angeboten etwas Brauchbares herausholen müssen; Verantwortliche von Webangeboten und Hersteller von Hilfsmitteln sollten sich an gemeinsame Standards halten."
+        },
+        {
+          "titel": "Der Aufbau von Datentabellen kann unter Umständen nicht einfach verändert werden, wie kann die Barrierefreiheit trotzdem sichergestellt werden?",
+          "inhalt_markdown": "Zwei Fälle sind zu unterscheiden: Gehört der Aufbau zum Inhalt – etwa eine historische Tabelle, die zeigt, wie die alten Ägypter ihre Erntedaten ordneten – ist zu klären, ob sie nur betrachtet oder auch genutzt werden soll. Zum bloßen Betrachten reicht der lineare Zugriff; soll sie etwa auch über fette und magere Erntejahre Auskunft geben, taugt die historische Form nicht und ein anderes Dokument ist nötig. Häufiger und wichtiger ist der Fall, dass eine andere Abteilung mangelhaft aufgebaute Tabellen liefert, die in der EDV durch unsichtbare Zusätze nachträglich barrierefrei gemacht werden sollen. Das ist nicht erfüllbar: Eine mangelhafte Struktur lässt sich nicht durch Auszeichnung reparieren. Verantwortliche müssen dafür sorgen, dass die Anforderungen der Barrierefreiheit schon bei der Erstellung der Tabellen beachtet werden."
+        }
+      ]
+    }
+  ]
+}

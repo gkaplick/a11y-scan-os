@@ -1,0 +1,54 @@
+{
+  "bitv_nummer": "6.5.2",
+  "titel": "Auflösung bei Videotelefonie",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Web-Anwendungen mit Videotelefonie müssen für die Videoübertragung mindestens QVGA-Auflösung unterstützen, üblicherweise 320x240 Pixel. Bei anderen Seitenverhältnissen sind entsprechend 76.800 Bildpunkte erforderlich."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Für manche Menschen mit Behinderungen ist ein ausreichend aufgelöstes Videobild besonders wichtig – etwa für gehörlose Menschen, die Inhalte am Mundbild der Sprechenden ablesen oder dank der zusätzlichen Aufnahme von Mundbild, Mimik und Gestik eine simultane Verschriftlichung besser nachvollziehen können."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn die Web-App Videotelefonie unterstützt."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Die technische Dokumentation der Web-App prüfen: Wird mindestens QVGA (320x240 Pixel) angegeben?\n2. - In einer Testübertragung den visuellen Eindruck bewerten: Wirkt die Angabe aus der Dokumentation plausibel?"
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Hinweise zu diesem Prüfschritt können Sie gerne [als Issue auf GitHub eröffnen](https://github.com/BIK-BITV/BIK-Web-Test/issues)."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "6.5.2 Resolution",
+          "inhalt_markdown": "> Where ICT that provides two-way voice communication includes real-time video\nfunctionality, the ICT:\n\n                                - shall support at least QVGA resolution"
+        }
+      ]
+    }
+  ]
+}

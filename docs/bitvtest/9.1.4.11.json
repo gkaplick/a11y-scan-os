@@ -1,0 +1,107 @@
+{
+  "bitv_nummer": "9.1.4.11",
+  "titel": "Kontraste von Grafiken und grafischen Bedienelementen ausreichend",
+  "wcag22": {
+    "guideline": "Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background",
+    "level": "AA",
+    "success_criterion": "1.4.11 Non-Text Contrast",
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Die visuelle Information, mit der informationstragende Grafiken und grafische Bedienelemente sowie ihre Zustände identifiziert werden, muss mindestens 3:1 Kontrast zu angrenzenden Farben aufweisen.\n\nBei einfarbigen Icons bedeutet das in der Regel, den Kontrast zwischen Element- und Hintergrundfarbe zu messen.\n\nBei mehrfarbigen oder abgetönten Elementen beschränkt sich die Anforderung auf jene visuelle Information, über die das Element beziehungsweise dessen Zustand hinreichend erkennbar ist; nicht jeder Bereich einer Grafik muss die Anforderung erfüllen.\n\nKennzeichnet ein zusätzlicher Text das Bedienelement bzw. seinen Zustand ausreichend, müssen grafische Elemente die Kontrastanforderung nicht erfüllen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Viele Menschen mit Sehbehinderungen benötigen gute Kontraste, um grafische Bedienelemente, deren Zustände oder Elemente informationstragender Grafiken wie Diagramme und Schaubilder zu erkennen. Ein Mindestkontrast für solche Grafiken hilft ihnen."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar ist der Prüfschritt, wenn informationstragende grafische Bedienelemente vorhanden sind, die nicht nur ergänzend (etwa zu Text) eingesetzt werden, oder wenn informationstragende Grafiken vorliegen.\n\nNicht anwendbar ist er auf Fotos, Logos, Flaggen, Screenshots, Diagramme mit festgelegten Farben und Datenvisualisierungen mit Farbabstufungen wie Heatmaps.\n\nEbenfalls ausgenommen sind native grafische Bedienelemente, deren Darstellung der Autor nicht beeinflusst hat (etwa native HTML-Checkboxen), sowie inaktive Bedienelemente, die zustandsabhängig nicht für die Interaktion zur Verfügung stehen."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Hinweis: Für die Prüfungen 2.2 bis 2.4 genügt eine Sichtprüfung, wenn der Kontrast sehr deutlich über 3:1 liegt. Im Zweifel immer den Color Contrast Analyzer einsetzen."
+        },
+        {
+          "titel": "2.1 Prüfung nicht festgelegter Farben",
+          "inhalt_markdown": "1. Prüfen, ob Grafiken oder Bedienelemente (etwa Icon Fonts), deren Vordergrundfarbe per CSS gesetzt ist, auch eine Hintergrundfarbe erhalten (und umgekehrt).\n2. Aktiviert wird dafür das Bookmarklet „Vorder- und Hintergrundfarbe definiert“ beziehungsweise ein User Stylesheet mit etwa `html {background-color:black;color:white}`.\n3. Danach kontrollieren, ob Grafiken oder Bedienelemente nun unsichtbar werden oder sich nur schwer erkennen lassen; dann wurde eine Farbe beziehungsweise Hintergrundfarbe nicht festgelegt."
+        },
+        {
+          "titel": "2.2 Prüfung von Bedienelementen in der Ausgangsansicht",
+          "inhalt_markdown": "1. Grafische Bedienelemente (etwa Icons) ohne begleitenden Text, der ihre Bedeutung und mögliche Zustände benennt, auf der Seite suchen. Reicht ihr Kontrast zu den Nachbarfarben eindeutig aus (3:1 oder besser)?\n2. Nun Elemente mit Umrandung (etwa Schaltflächen oder Eingabefelder) aufspüren. Erscheint das Element nur durch seinen Rahmen (bzw. einen Teil davon), weil dieser weder Text noch Symbol umschließt, muss der Rahmen mindestens 3:1 Kontrast bieten."
+        },
+        {
+          "titel": "2.3 Prüfung von Bedienelement-Zuständen nach Fokussierung oder Aktivierung",
+          "inhalt_markdown": "1. Die Bedienelemente per Tastatur und Maus in den Fokus nehmen. Ist die Fokushervorhebung gegenüber den Nachbarfarben klar erkennbar (3:1 oder besser)?\n2. Besitzen Bedienelemente unterschiedliche funktionale Zustände (etwa Kontrollkästchen, Optionsschalter, Reiter in Registerbereichen), die übrigen Zustände aufrufen. Sind die informationstragenden Teile gegenüber den Nachbarfarben klar erkennbar (3:1 oder besser)? Hinweis: Native Bedienelemente, deren Darstellung der Autor nicht angepasst hat, sind ausgenommen."
+        },
+        {
+          "titel": "2.4 Prüfung von Informationsgrafiken",
+          "inhalt_markdown": "1. Nach informationstragenden Grafiken suchen, deren Aussage sich nur über die Grafik selbst erschließt und nicht (oder nicht hinreichend) aus begleitendem Text hervorgeht.\n2. Bei Bereichen mit Farbverläufen Anteile mit weniger als 3:1 Kontrast ignorieren und bewerten, ob die Information weiterhin ausreichend vom kontrastreicheren Teil vermittelt wird."
+        },
+        {
+          "titel": "2.5 Styleswitcher-Prüfung, Prüfung der Grafikkontraste der alternativen Ansicht",
+          "inhalt_markdown": "Bietet die Seite bei nicht erfüllten Sollwerten der Standardversion über einen Styleswitcher eine kontrastreichere Darstellung an:\n1. Zuerst den Grafikkontrast des Schaltelements des Styleswitchers prüfen.\n2. Das Kontrastverhältnis muss mindestens 4,5:1 betragen, sofern der Schalter mit Text beschriftet ist (bei grafischen Schaltern 3,0:1, vgl. Prüfschritt 9.1.4.11). Auch alle übrigen Anforderungen wie Tastaturbedienbarkeit müssen erfüllt sein, sonst die Prüfung abbrechen.\n3. Die über den Styleswitcher angebotene kontrastreichere Ansicht öffnen.\n4. Die Grafikkontraste in der alternativen Ansicht messen (analog zu 2.2 und 2.4). Bestehen danach weiter Kontrastmängel bei Grafiken oder Text, wird diese Ansicht bei der Bewertung nicht berücksichtigt."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "3.1 Zur Identifizierung notwendiger Teile von Bedienelementen",
+          "inhalt_markdown": "Zu den zur Identifizierung notwendigen Teilen zählen sichtbare Elemente (etwa Element-Rahmen, aktivierter Zustand oder informationstragender Teil eines Icons), die wichtige Informationen wie Umriss, Wert oder Zustand eines Bedienelements anzeigen.\n\nBeispiele:\n- Die Fokushervorhebung eines Bedienelements\n- Der Aktivierungszustand einer Registerkarte\n- Die Ränder eines Eingabefelds oder Buttons\n- Der Haken einer Custom-Checkbox\n\nAnschauliche Beispiele bietet das Dokument „Understanding Success Criterion 1.4.11: Non-text Contrast“."
+        },
+        {
+          "titel": "3.2 Vernachlässigbare Rahmen und Umrisslinien",
+          "inhalt_markdown": "Wenn die Fläche eines Elements (etwa die Füllfarbe eines Schalters oder ein Segment eines Kuchendiagramms) genügend zum Hintergrund kontrastiert, bleiben Rahmen und Umrisslinien bei der Prüfung außen vor."
+        },
+        {
+          "titel": "3.3 Kontrast-Differenz bei Zuständen",
+          "inhalt_markdown": "- Nicht verlangt wird 3:1 Kontrast für die Differenz zwischen verschiedenen funktionalen Zuständen desselben Bedienelements (etwa Umschalter aktiviert/nicht aktiviert).\n- Ebenfalls nicht verlangt wird 3:1 für die Differenz zwischen verschiedenen Interaktions-Zuständen (etwa fokussiert/nicht fokussiert). Wird der Interaktions-Zustand jedoch nur über einen Farbwechsel angezeigt (ohne Formänderung, Textwechsel, Umrandung o. Ä.), sollte der Kontrast der einen zur anderen Farbe mindestens 3:1 betragen; dies prüft Prüfschritt 9.2.4.7 „Aktuelle Position des Fokus deutlich“.\n- Gefordert ist der Kontrast hingegen für jeden Zustand einzeln gegenüber der jeweils angrenzenden Farbe."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung von anderen Prüfschritten",
+          "inhalt_markdown": "Dieser Prüfschritt betrifft Kontraste von Grafiken und grafischen Attributen wie Umrisslinien. Den Kontrast von Schrift einschließlich Schriftgrafiken bewertet Prüfschritt 9.1.4.3 „Kontraste von Texten ausreichend“."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background](https://www.w3.org/TR/WCAG22/#distinguishable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.4.11 Non-Text Contrast](https://www.w3.org/TR/WCAG22/#non-text-contrast)(Level AA)"
+        },
+        {
+          "titel": "Sufficient Techniques",
+          "inhalt_markdown": "- [G174: Providing a control with a sufficient contrast ratio that allows users to switch to a presentation that uses sufficient contrast](https://www.w3.org/WAI/WCAG22/Techniques/general/G174)\n                - [G195: Using an author-supplied, highly visible focus indicator](https://www.w3.org/WAI/WCAG22/Techniques/general/G195.html)\n                - [G207: Ensuring that a contrast ratio of 3:1 is provided for icons](https://www.w3.org/WAI/WCAG22/Techniques/general/G207.html)\n                - [G209: Provide sufficient contrast at the boundaries between adjoining colors](https://www.w3.org/WAI/WCAG22/Techniques/general/G209.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F78: Failure of Success Criterion 2.4.7 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator](https://www.w3.org/WAI/WCAG22/Techniques/failures/F78)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Understanding Success Criterion 1.4.11: Non-text Contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html)(zur Zeit nur auf Englisch verfügbar)"
+    }
+  ]
+}

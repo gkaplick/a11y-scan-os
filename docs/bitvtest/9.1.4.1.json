@@ -1,0 +1,139 @@
+{
+  "bitv_nummer": "9.1.4.1",
+  "titel": "Ohne Farben nutzbar",
+  "wcag22": {
+    "level": "A",
+    "success_criterion": "1.4.1 Use of Color",
+    "techniken": {
+      "General Techniques": [
+        "G14: Ensuring that information conveyed by color differences is also available in text",
+        "G111: Using color and pattern",
+        "G182: Ensuring that additional visual cues are available when text color differences are used to convey information",
+        "G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual cues on focus for links or controls where color alone is used to identify them",
+        "G205: Including a text cue for colored form control labels"
+      ],
+      "Failures": [
+        "F13: Failure of Success Criterion 1.4.1 due to having a text alternative that does not include information that is conveyed by color differences in the image",
+        "F73: Failure of Success Criterion 1.4.1 due to creating links that are not visually evident without color vision",
+        "F81: Failure of Success Criterion 1.4.1 due to identifying required or error fields using color differences only"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Informationen, die über Farben vermittelt werden, müssen auch für Menschen erkennbar sein, die Farben nicht wahrnehmen können. Sie müssen daher zusätzlich auf anderem Weg hervorgehoben werden, etwa durch Fettung oder Einrückung."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Ausschließlich über die Farbe übertragene Informationen bleiben blinden Menschen verschlossen. Auch farbfehlsichtige Menschen, die teils eigene Farbprofile verwenden, können Farben nur begrenzt erkennen und voneinander unterscheiden."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt ist stets anwendbar."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Vermittlung von Informationen über die Farbgebung",
+          "inhalt_markdown": "1. Prüfen, ob die Seite Elemente nutzt, die Informationen allein über ihre Farbe transportieren. Typische Fälle: farblich hervorgehobene Überschriften, ausgewählte Menüeinträge oder Fließtext-Links in abweichender Farbe, eine Fokusmarkierung, die nur einen Farbwechsel zeigt, Grafiken, die Datenverläufe über Farben unterscheiden, sowie farblich markierte Pflichtfelder.\n2. Prüfen, dass wichtige Informationen nicht ausschließlich über eine Farbänderung vermittelt werden, sondern zusätzlich auf anderem Weg erkennbar sind:\n- Überschriften fallen zusätzlich durch Einrückung oder eine abweichende Schriftgröße auf (in der Praxis meist gegeben).\n- Ausgewählte Menüeinträge heben sich durch einen Kontrast von mehr als 3:1 von benachbarten Einträgen ab oder sind eingerückt, gefettet, unterstrichen, mit zusätzlichen Elementen, durch eine geänderte Form o. Ä. markiert.\n- Fließtext-Links sind über die Farbe hinaus durch ein zusätzliches optisches Kennzeichen unterscheidbar, etwa Unterstreichung, Fettung, Kursivierung, Invertierung oder eine Markierung. Ausnahme: Beträgt der Kontrast zwischen Linkfarbe und umgebender Textfarbe 3:1 oder mehr, ist die Zusatz-Hervorhebung im Ausgangszustand entbehrlich; bei Fokus muss der Link dann aber zusätzlich hervorgehoben sein.\n- Eine Fokusmarkierung, die nur auf einem Farbwechsel beruht, muss zwischen alter und neuer Farbe mindestens 3:1 Kontrast aufweisen; zugleich gelten in beiden Zuständen die Textkontrast-Anforderungen. Mängel hierbei werden unter 9.1.4.3 bewertet.\n- Linien in Schaubildern sind zusätzlich unterschiedlich gestaltet (gestrichelt, gepunktet, durchgezogen), Flächen haben unterscheidbare Muster.\n- Pflichtfelder sind zusätzlich mit einem Stern samt Bedeutungserklärung am Formularbeginn oder mit der Beschriftung „Pflichtfeld“ gekennzeichnet."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Beispiele für Informationsvermittlung, die über die Farbe hinausgeht:\n- Ein farblich hervorgehobener Menüeintrag wird zusätzlich durch einen Breadcrumb benannt, der die gewählte Seite anzeigt.\n- Ein farblich hervorgehobener Menüeintrag hat zusätzlich eine gleichlautende Überschrift.\n- Ein Icon wechselt die Farbe, zugleich ändert sich seine Beschriftung.\n- Ein Bedienelement wechselt bei Fokus die Farbe und erhält zusätzlich einen Rahmen, der ausreichend zum Hintergrund kontrastiert.\n- Ein Bedienelement wechselt bei Fokus die Farbe, wobei der Kontrast zwischen alter und neuer Farbe mindestens 3:1 beträgt.\n- Eine Farbumkehr ausreichend kontrastreicher Elemente, bei der Vorder- und Hintergrundfarbe bei Fokussierung oder Aktivierung getauscht werden."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "- Fließtext-Links unterscheiden sich von ihrer Umgebung nur durch eine abweichende Farbe mit einem Kontrast von weniger als 3:1.\n- Ein Bedienelement wechselt bei Fokus die Farbe mit einem Kontrast unter 3:1 zur vorherigen Farbe und bietet keine zusätzliche Hervorhebung (etwa einen ausreichend kontrastierenden Rahmen)."
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Informationen wie richtig/falsch werden ausschließlich über Farben übermittelt, etwa grün für richtig und rot für falsch."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Abgrenzung zur Prüfung der Kontraste",
+          "inhalt_markdown": "Kontraste zum Hintergrund sind hier nicht Gegenstand; sie werden in 9.1.4.3 „Kontraste von Texten ausreichend“ und 9.1.4.11 „Kontraste von Grafiken und grafischen Bedienelementen ausreichend“ geprüft.\n\nFür Fließtext-Links reicht eine Linkfarbe mit mindestens 3,0:1 Kontrast zum umgebenden Text, um diese Anforderung zu erfüllen; eine zusätzliche Hervorhebung entfällt dann. Für 9.1.4.3 muss die Linkfarbe gegenüber dem Hintergrund aber weiterhin 4,5:1 erreichen."
+        },
+        {
+          "titel": "Abgrenzung zum Prüfschritt 9.1.3.3. Ohne Bezug auf sensorische Merkmale nutzbar",
+          "inhalt_markdown": "Verweise auf Seiteninhalte, die über Farbangaben erfolgen, sind hier nicht Gegenstand. Deren sinnesunabhängige Bereitstellung prüft der Prüfschritt 9.1.3.3 „Ohne Bezug auf sensorische Merkmale nutzbar“."
+        },
+        {
+          "titel": "Abgrenzung zur Prüfung des Markups",
+          "inhalt_markdown": "Die Markup-Auszeichnung von Elementen wird in diesem Prüfschritt nicht betrachtet; im Fokus steht die mehrgleisige Vermittlung von Informationen auf dem Bildschirm. Die Prüfkriterien zur korrekten Auszeichnung zielen dagegen darauf, Informationen unabhängig von der Bildschirmdarstellung bereitzustellen oder dem Nutzer eine Anpassung der Darstellung zu ermöglichen."
+        },
+        {
+          "titel": "Abgrenzung zu fehlenden Hervorhebungen",
+          "inhalt_markdown": "Gegenstand ist die Farbunabhängigkeit vorhandener Seitenelemente.\n\nEine negative Bewertung folgt etwa, wenn Text-Links oder Menü-Einträge ausschließlich über die Farbe markiert sind und keine zusätzliche Unterstreichung, Fettung oder andere Kennzeichnung besitzen. Sind Links im Text gar nicht gekennzeichnet, ist das zwar wenig nutzerfreundlich, aber hier nicht zu beanstanden.\n\nFehlt eine Anzeige der aktuellen Menüposition gänzlich, ist das ebenfalls kein Verstoß gegen diesen Prüfschritt."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guidelines",
+          "inhalt_markdown": "- [Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background](https://www.w3.org/TR/WCAG22/#distinguishable)"
+        },
+        {
+          "titel": "Success criteria",
+          "inhalt_markdown": "- [1.4.1 Use of Color](https://www.w3.org/TR/WCAG22/#use-of-color)(Level A)\n                - [1.4.11 Non-text contrast](https://www.w3.org/TR/WCAG21/#non-text-contrast)(Level AA)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G14: Ensuring that information conveyed by color differences is also available in text](https://www.w3.org/WAI/WCAG22/Techniques/general/G14.html)\n                    - [G111: Using color and pattern](https://www.w3.org/WAI/WCAG22/Techniques/general/G111.html)\n                    - [G182: Ensuring that additional visual cues are available when text color differences are used to convey information](https://www.w3.org/WAI/WCAG22/Techniques/general/G182.html)\n                    - [G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual cues on focus for links or controls where color alone is used to identify them](https://www.w3.org/WAI/WCAG22/Techniques/general/G183.html)\n                    - [G205: Including a text cue for colored form control labels](https://www.w3.org/WAI/WCAG22/Techniques/general/G205.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F13: Failure of Success Criterion 1.4.1 due to having a text alternative that does not include information that is conveyed by color differences in the image](https://www.w3.org/WAI/WCAG22/Techniques/failures/F13.html)\n                    - [F73: Failure of Success Criterion 1.4.1 due to creating links that are not visually evident without color vision](https://www.w3.org/WAI/WCAG22/Techniques/failures/F73.html)\n                    - [F81: Failure of Success Criterion 1.4.1 due to identifying required or error fields using color differences only](https://www.w3.org/WAI/WCAG22/Techniques/failures/F81.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "Use of Color: Understanding SC 1.4.1",
+          "inhalt_markdown": "> The intent of this Success Criterion is to ensure that all users can access\ninformation that is conveyed by color differences, that is, by the use of\ncolor where each color has a meaning assigned to it.\nIf the information is conveyed through color differences in an image (or other\nnon-text format), the color may not be seen by users with color deficiencies.\nIn this case, providing the information conveyed with color through another\nvisual means ensures users who cannot see color can still perceive the\ninformation.\n\nColor is an important asset in design of Web content, enhancing its aesthetic\nappeal, its usability, and its accessibility.\nHowever, some users have difficulty perceiving color.\nPeople with partial sight often experience limited color vision, and many\nolder users do not see color well.\nIn addition, people using text-only, limited-color or monochrome displays and\nbrowsers will be unable to access information that is presented only in color.\n\nExamples of information conveyed by color differences: \"required fields are\nred\", \"error is shown in red\", and \"Mary’s sales are in red, Tom’s are in blue\".\nExamples of indications of an action include: using color to indicate that a\nlink will open in a new window or that a database entry has been updated\nsuccessfully.\nAn example of prompting a response would be: using highlighting on form fields\nto indicate that a required field had been left blank.\n\nNote: This should not in any way discourage the use of color on a page, or\neven color coding if it is redundant with other visual indication.\n\n[https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Fragen zu diesem Prüfschritt",
+      "id": "fragen_zu_diesem_prüfschritt",
+      "untersektionen": [
+        {
+          "titel": "Häufig werden besuchte Links in einer anderen Farbe dargestellt. Fällt das auch unter diesen Prüfschritt?",
+          "inhalt_markdown": "Die Unterscheidung zwischen besuchten und unbesuchten Links ist nützlich, da sie sofort zeigt, welche Seiten bereits aufgerufen wurden. Idealerweise würden besuchte Links daher etwa durch eine andere Unterstreichung gekennzeichnet.\n\nDie Gestaltungsmöglichkeiten sind hier jedoch begrenzt, und eine Vielzahl unterschiedlicher Link-Kennzeichnungen kann auch verwirren.\n\nIm BITV-Test fließt die Markierung besuchter Links nicht in die Bewertung dieses Prüfschritts ein."
+        }
+      ]
+    }
+  ]
+}

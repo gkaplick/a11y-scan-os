@@ -1,0 +1,79 @@
+{
+  "bitv_nummer": "9.1.4.13",
+  "titel": "Eingeblendete Inhalte bedienbar",
+  "wcag22": {
+    "guideline": "Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background",
+    "level": "AA",
+    "success_criterion": "1.4.13 Content on Hover or Focus",
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Zusätzliche Inhalte, die bei Zeiger- oder Tastaturfokus erscheinen (etwa benutzerdefinierte Tooltips oder Ausklapp-Menüs), müssen drei Anforderungen erfüllen:\n- Erscheint der Inhalt beim Darüberfahren mit dem Zeiger, können Nutzer den Zeiger auf den Inhalt bewegen, ohne dass er verschwindet.\n- Der eingeblendete Inhalt lässt sich schließen, ohne den Fokus zu verschieben (etwa per Escape-Taste oder durch Aktivieren des auslösenden Elements).\n- Der Inhalt schließt sich nicht von allein nach Ablauf einer Zeitspanne.\n\nHinweis: Die Anforderung betrifft keine eingeblendeten Inhalte, deren Verhalten der Browser steuert (etwa native `title`-Attribute)."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Für sehbehinderte Nutzer mit starker Zoomvergrößerung sind eingeblendete Inhalte aus mehreren Gründen problematisch:\n- Wegen des starken Zooms ist der Inhalt oft nur teilweise sichtbar; Nutzer müssen den Zeiger vom auslösenden Element zum Inhalt bewegen können, ohne dass dieser schließt.\n- Überlagernde eingeblendete Elemente verdecken oft andere Inhalte; sie müssen sich schließen lassen, ohne den Fokus zu bewegen. Escape oder das Aktivieren des auslösenden Elements mit Fokus sollte genügen.\n- Sehbehinderte Nutzer brauchen ggf. mehr Lesezeit; der Inhalt sollte daher verfügbar bleiben, bis er geschlossen wird (etwa durch Weiter-Tabben, Wegbewegen des Zeigers oder explizites Schließen per Tastatur)."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn die Seite zusätzliche Inhalte enthält, die bei Tastatur- oder Zeigerfokus eingeblendet werden — etwa Custom-Tooltips oder bereits bei Fokussierung ausklappende Menüs."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Zeiger-Hover-Prüfung",
+          "inhalt_markdown": "Lassen sich zusätzliche Inhalte durch Hinüberbewegen des Zeigers einblenden:\n1. Den Inhalt per Hover einblenden und beobachten, ob er stehen bleibt und sich nicht von allein rasch wieder schließt. Nicht gemeint sind Fälle, in denen der Inhalt seine Gültigkeit verloren hat.\n2. Kontrollieren, ob sich der Inhalt mit der Escape-Taste oder durch Betätigen des auslösenden Elements (Klick beziehungsweise Tippen) schließen lässt. Eine Ausnahme gilt, wenn es sich um eine Fehlermeldung handelt oder keine anderen Inhalte überdeckt beziehungsweise ersetzt werden.\n3. Den Inhalt erneut per Hover einblenden und den Zeiger über den Inhalt bewegen; er sollte sichtbar bleiben."
+        },
+        {
+          "titel": "2.2 Tastaturfokus-Prüfung",
+          "inhalt_markdown": "Lassen sich zusätzliche Inhalte durch Tastaturfokus einblenden:\n1. Den Inhalt durch Fokussieren des Elements einblenden.\n2. Nachsehen, ob er stehen bleibt und nicht von selbst rasch wieder verschwindet. Nicht gemeint sind Fälle, in denen der Inhalt seine Gültigkeit verloren hat.\n3. Kontrollieren, ob er sich mit der Escape-Taste oder durch Betätigen des auslösenden Elements (Enter) schließen lässt. Eine Ausnahme gilt, wenn es sich um eine Fehlermeldung handelt oder keine anderen Inhalte überdeckt beziehungsweise ersetzt werden."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Bei per Tastaturfokus eingeblendeten Inhalten wird nicht verlangt, dass der Mauszeiger über den Inhalt bewegt werden kann, ohne dass er sich schließt.\n\nDient das Aktivieren des auslösenden Elements zum Schließen, soll der Nutzer-Kontext erhalten bleiben, also keine weitere kontextändernde Aktion (etwa das Aktivieren eines Links) ausgelöst werden.\n\nPer Hover eingeblendete Inhalte sollten in der Regel auch bei Tastaturfokus erscheinen, sofern sie nicht anderweitig verfügbar sind. Das prüft Prüfschritt 9.2.1.1 „Ohne Maus nutzbar“."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background](https://www.w3.org/TR/WCAG21/#distinguishable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.4.13 Content on Hover or Focus](https://www.w3.org/TR/WCAG22/#content-on-hover-or-focus)(Level AA)"
+        },
+        {
+          "titel": "Sufficient Techniques",
+          "inhalt_markdown": "- [SCR39: Making content on focus or hover hoverable, dismissible, and persistent](https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR39)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F95: Failure of Success Criterion 1.4.13 due to content shown on hover not being hoverable](https://www.w3.org/WAI/WCAG22/Techniques/failures/F95)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Understanding Success Criterion 1.4.13: Content on Hover or Focus](https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus)(zur Zeit nur auf Englisch verfügbar)"
+    }
+  ]
+}

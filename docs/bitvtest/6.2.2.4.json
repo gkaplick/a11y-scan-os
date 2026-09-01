@@ -1,0 +1,54 @@
+{
+  "bitv_nummer": "6.2.2.4",
+  "titel": "Echtzeitindikation von Sprachkommunikation",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Stellt die Web-Anwendung zusätzlich zur Zwei-Wege-Sprachkommunikation auch RTT (Real-Time Text) bereit, muss die Aktivität gerade sprechender Personen unmittelbar sichtbar gemacht werden. Der Indikator für laufendes Sprechen soll zusätzlich programmatisch ermittelbar sein, damit etwa taubblinde Menschen über eine Braillezeile über die Audiokommunikation informiert werden. Signalisiert wird nur, dass gerade Audio-Eingabe erfolgt; die Vermittlung von Inhalten ist nicht Teil dieses Prüfschritts."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "In einer Web-Konferenz ist zentral zu wissen, wer gerade spricht und wem der Beitrag zuzuordnen ist. So erfahren Teilnehmende ohne Hörvermögen – etwa gehörlose Menschen –, dass gerade jemand spricht und wer es ist."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn die Web-Anwendung Gespräche in beide Richtungen erlaubt und zugleich Echtzeit-Text (RTT) bereitstellt."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Web-Anwendung öffnen.\n2. - Über die Anwendung eine Verbindung zu einem weiteren Gerät herstellen.\n3. - Kontrollieren, ob beim Sprechen eine Echtzeit-Signalisierung erfolgt, etwa über ein blinkendes Icon.\n4. - Ist das der Fall, kontrollieren, ob die Signalisierung mit Screenreader und Braillezeile programmatisch auslesbar ist und auf der Braillezeile platzsparend erscheint, etwa über blinkende Braillemodule."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- RTT (Real-Time Text) überträgt den Text direkt während des Tippens; beim Empfänger erscheint er also zeitgleich zur Eingabe. Chat-Nachrichten kommen dagegen erst nach dem Abschicken an."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Human Factors (HF); Real-Time Text (RTT) in Multiparty Conference Calling / ETSI TR 103 708 V1.1.1 (2022-08)](https://labs.etsi.org/rep/HF/en301549/uploads/272bede3724c5c99efe777f778201f70/tr_103708v010101p.pdf)"
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "6.2.2.4 Visual indicator of Audio with RTT",
+          "inhalt_markdown": "> Where ICT provides two-way voice communication, and has RTT capabilities, the\nICT shall provide a real-time visual indicator of audio activity on the display.\n\nNOTE 1:\nThe visual indicator may be a simple character position on the display that\nflickers on and off to reflect audio activity, or presentation of the\ninformation in another way that can be both visible to sighted users and\npassed on to deaf-blind users who are using a braille display.\n\nNOTE 2:\nWithout this indication a person who lacks the ability to hear does not know\nwhen someone is talking."
+        }
+      ]
+    }
+  ]
+}

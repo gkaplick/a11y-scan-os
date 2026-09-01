@@ -1,0 +1,59 @@
+# A11Y-Scanner — Docker-First-Setup.
+#
+#   api           FastAPI + Playwright (Port 8000, Daten/Reports als Bind-Mounts)
+#   web           Nuxt-SPA (Host-Port 3001 → Container 3000; 3000 am Host ist
+#                 üblicherweise bereits belegt → Standard hier 3001)
+#   testwebsite   Demo-/Test-Website mit Positiv-/Negativbeispielen je Kriterium
+#                 (nginx, Host-Port 8099 → Container 80; generiert aus
+#                 testwebsite/generate.py → testwebsite/site/)
+#
+# Start:  docker compose up --build
+#   Web:   http://localhost:3001
+#   API:   http://localhost:8000  (Swagger: /docs)
+#   Testwebsite: http://localhost:8099
+# Tests:  docker compose run --rm api pytest
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+      - A11Y_DATABASE_PATH=/app/data/a11y.db
+      - A11Y_OUTPUT_DIR=/app/docs
+      # Parallelität auf 1: spart Spitzen-RAM (Chromium-Renderer); Einzelscans
+      # dauern dadurch NICHT länger (Sequenz läuft pro Scan ohnehin linear).
+      - A11Y_MAX_PARALLEL_JOBS=1
+    volumes:
+      # Bind-Mounts: SQLite + Report-Exporte liegen direkt im Projekt
+      - ./data:/app/data
+      - ./docs:/app/docs
+    ports:
+      - "8000:8000"
+    shm_size: "2gb"
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+      args:
+        # Service-Name im Compose-Netzwerk — der Nitro-Server proxied darauf
+        API_URL: http://api:8000
+    depends_on:
+      - api
+    ports:
+      - "3001:3000"
+    restart: unless-stopped
+
+  testwebsite:
+    # Demo-/Test-Website (Positiv-/Negativbeispiele je Prüfkriterium).
+    # Vor Start einmalig generieren:  docker compose run --rm api python testwebsite/generate.py
+    #   → testwebsite/site/** entsteht; nginx serviert sie unter :8099.
+    image: nginx:alpine
+    volumes:
+      - ./testwebsite/site:/usr/share/nginx/html:ro
+    ports:
+      - "8099:80"
+    restart: unless-stopped

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Genau eine main-Landmarke (Negativbeispiel) · A11Y Test-Website</title>
+<link rel="stylesheet" href="/assets/styles.css">
+<style></style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="seitenkopf">
+  <a class="marke" href="/index.html">A11Y Test-Website</a>
+  <p class="kategorie">Kategorie: Struktur &amp; Navigation</p>
+</header>
+<nav aria-label="Hauptnavigation" class="hauptnav">
+  <a href="/index.html">Startseite</a>
+  <a href="/kriterien/einziges-main-positiv.html">Positivbeispiel</a>
+  <a href="/kriterien/einziges-main-negativ.html">Negativbeispiel</a>
+</nav>
+<div class="content">
+<span class="art-badge art-negativ">Negativbeispiel</span>
+<p class="kategorie">Kategorie: Struktur &amp; Navigation</p>
+<h1>Genau eine main-Landmarke</h1>
+<p class="beschreibung">Eine Seite darf nur ein sichtbares main-Element (bzw. role=main) enthalten.</p>
+<p class="testids">Geprüfte Kriterien: <span class="testid">WCAG_1_3_1_LANDMARK_MAIN</span></p>
+<main id="main"><h2>Erster Hauptbereich</h2><p>Inhalt des ersten Hauptbereichs.</p></main>
+<main><h2>Zweiter Hauptbereich</h2><p>Inhalt des zweiten Hauptbereichs.</p></main><p class="hinweis">Zur Gegenprobe: <a href="/kriterien/einziges-main-positiv.html">Positivbeispiel ansehen</a></p>
+</div>
+<footer class="seitenfuss">
+  <p>A11Y Test-Website · Negativbeispiel · <a href="/index.html">Zur Übersicht</a> · <a href="/gebaerdensprache.html">Gebärdensprache</a> · <a href="/leichte-sprache.html">Leichte Sprache</a> · <a href="/erklaerung.html">Erklärung zur Barrierefreiheit</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leere Alt-Attribute für Layoutgrafiken (Positivbeispiel) · A11Y Test-Website</title>
+<link rel="stylesheet" href="/assets/styles.css">
+<style></style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="seitenkopf">
+  <a class="marke" href="/index.html">A11Y Test-Website</a>
+  <p class="kategorie">Kategorie: Bilder &amp; Grafiken</p>
+</header>
+<nav aria-label="Hauptnavigation" class="hauptnav">
+  <a href="/index.html">Startseite</a>
+  <a href="/kriterien/layout-grafik-alt-positiv.html">Positivbeispiel</a>
+  <a href="/kriterien/layout-grafik-alt-negativ.html">Negativbeispiel</a>
+</nav>
+<main id="main">
+<span class="art-badge art-positiv">Positivbeispiel</span>
+<p class="kategorie">Kategorie: Bilder &amp; Grafiken</p>
+<h1>Leere Alt-Attribute für Layoutgrafiken</h1>
+<p class="beschreibung">Dekorative Grafiken brauchen alt=&quot;&quot; ohne title; Füll-Alt-Texte wie „spacer“ sind zu vermeiden.</p>
+<p class="testids">Geprüfte Kriterien: <span class="testid">BITV_9_1_1_1c_LEERE_ALT_ATTRIBUTE_FUER_LAYOUTGRAFIKEN</span></p>
+<div class="beispiel art-positiv">
+<h2>Dekoratives Bild mit leerem alt</h2>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></p>
+</div>
+
+<div class="beispiel art-positiv">
+<h2>Dekoratives SVG versteckt</h2>
+<svg aria-hidden="true" width="16" height="16"><circle cx="8" cy="8" r="6"/></svg>
+</div><p class="hinweis">Zur Gegenprobe: <a href="/kriterien/layout-grafik-alt-negativ.html">Negativbeispiel ansehen</a></p>
+</main>
+<footer class="seitenfuss">
+  <p>A11Y Test-Website · Positivbeispiel · <a href="/index.html">Zur Übersicht</a> · <a href="/gebaerdensprache.html">Gebärdensprache</a> · <a href="/leichte-sprache.html">Leichte Sprache</a> · <a href="/erklaerung.html">Erklärung zur Barrierefreiheit</a></p>
+</footer>
+</body>
+</html>

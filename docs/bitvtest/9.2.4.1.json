@@ -1,0 +1,173 @@
+{
+  "bitv_nummer": "9.2.4.1",
+  "titel": "Bereiche überspringbar",
+  "wcag22": {
+    "level": "A",
+    "success_criterion": "2.4.1 Bypass Blocks",
+    "techniken": {
+      "General Techniques": [
+        "G1: Adding a link at the top of each page that goes directly to the main content area",
+        "G115: Using semantic elements to mark up structure",
+        "G123: Adding a link at the beginning of a block of repeated content to go to the end of the block",
+        "G124: Adding links at the top of the page to each area of the content",
+        "G130: Providing descriptive headings",
+        "G140: Separating information and structure from presentation to enable different presentations"
+      ],
+      "HTML Techniques": [
+        "H42: Using h1-h6 to identify headings",
+        "H64: Using the title attribute of the frame and iframe elements",
+        "H69: Providing heading elements at the beginning of each section of content",
+        "H97: Grouping related links using the nav element"
+      ],
+      "ARIA Techniques": [
+        "ARIA11: Using ARIA landmarks to identify regions of a page",
+        "ARIA13: Using aria-labelledby to name regions and landmarks"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Menschen mit assistiven Technologien sollen einzelne Inhaltsbereiche – etwa Navigation, Suche oder Seiteninhalt – überspringen können; der Seitenaufbau soll für sie unabhängig von der Darstellung deutlich werden. Erfüllt sein muss mindestens eine dieser Bedingungen:\n\n- Sprunglinks sind vorhanden, zumindest ein Sprunglink zum Inhalt.\n- HTML5-Elemente zur Bereichsauszeichnung (`header`, `nav`, `main`, `aside`, `footer`) oder die entsprechenden WAI-ARIA document landmarks erschließen den Seitenaufbau sinnvoll.\n- Aussagekräftige Bereichsüberschriften (HTML-Strukturelemente `h1` bis `h6`) für \"Navigation\", \"Inhalt\" o. Ä. werden eingesetzt. Diese Technik wird inzwischen selten genutzt, seit es HTML-Elemente für die Bereichsauszeichnung gibt; inhaltlich orientierte Überschriften gelten in der Regel nicht als Bereichsüberschriften.\n\niframes sollten den Bereich im `title`-Attribut benennen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Visuell strukturieren Überschriften, Spalten oder Kästen Webseiten. Dank dieser Struktur weiß der Nutzer, was zusammengehört, überblickt das Angebot leicht und greift gezielt auf interessante Inhalte zu.\n\nNutzende, denen diese visuelle Ordnung fehlt – etwa Blinde – müssen sich darauf verlassen, dass sich die Struktur unabhängig von der Darstellung über Hilfsmittel wie Screenreader erschließen lässt. Sprunglinks, HTML5-Elemente zur Bereichsauszeichnung oder Bereichsüberschriften sind dafür eine wesentliche Voraussetzung.\n\nBei iframes unterstützt ein sinnvoller Titel die Orientierung. Gängige Screenreader werten das `title`- und das in der Programmierung gebräuchliche `name`-Attribut aus; das `title`-Attribut wird dabei vorrangig ausgegeben.\n\nSo setzen Nutzende Bereichsüberschriften, Sprunglinks oder HTML5-Elemente bzw. WAI-ARIA document landmarks ein:\n\n- Konstante Bereiche am Seitenbeginn (etwa Navigation oder Seitenkopf) überspringen, um direkt zum Inhalt zu gelangen\n- Zwischen Bereichen hin- und herwechseln"
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, sobald sich auf der Seite klar getrennte Bereiche finden, etwa Navigation und Inhalt. Bei informationsorientierten Seiten trifft das meist zu."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Sprunglink-Prüfung",
+          "inhalt_markdown": "Sind Sprunglinks vorhanden, prüfen, ob:\n\n- Sprunglinks führen den Tastaturfokus nach dem Aktivieren zum Zielbereich; beim Übergehen von Inhaltsblöcken landet er auf dem unmittelbar folgenden Inhalt\n- Sprunglinks sind dauerhaft sichtbar oder erscheinen bei erlangtem Fokus\n- Sprunglinks am Seitenanfang stehen vorn in der Tabreihenfolge bzw. sind nach einem Cookie-Banner oder Dialog die ersten fokussierbaren Elemente\n- Sprunglinks, die Inhaltsblöcke überbrücken, bilden das letzte fokussierbare Element vor dem jeweiligen Block oder dessen ersten Link"
+        },
+        {
+          "titel": "2.2 Prüfung der HTML5 Bereichsauszeichnung bzw. der entsprechenden WAI-ARIA document landmarks",
+          "inhalt_markdown": "1. - Seite im Firefox aufrufen.\n2. - Im Quelltext prüfen, ob die Seitenbereiche durch `header, nav, main, aside, footer` sinnvoll erschlossen werden.\n3. - Das [Landmarks bookmarklet](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#landmarksbm) aufrufen; die document landmarks werden dann hervorgehoben.\n4. - Prüfen, ob die vergebenen Rollen (z. B. `navigation, main`) stimmig sind und den Seitenaufbau widerspiegeln.\n5. - Kommen mehrere Navigationsbereiche mit `nav` oder `role=\"navigation\"` vor, prüfen, ob `aria-label` oder `aria-labelledby` sie sinnvoll benennen und voneinander abheben."
+        },
+        {
+          "titel": "2.3 Prüfung der Bereichsüberschriften",
+          "inhalt_markdown": "1. - Seite im Firefox aufrufen.\n2. - Das [Bookmarklet \"Inhalte gegliedert\"](https://webtest.bitv-test.de/bookmarklets.html#gegliedert) oder ein weiteres Werkzeug zur Überschriften-Anzeige starten.\n3. - Die Bereichsüberschriften gemeinsam mit den jeweils gegliederten Inhalten prüfen: Sind sie aussagekräftig, verwenden sie echte Überschriften-Elemente und gliedern sie die Inhaltsbereiche stimmig?"
+        },
+        {
+          "titel": "2.4 Prüfung von iframe-Titeln",
+          "inhalt_markdown": "1. - Seite im Firefox öffnen.\n2. - In der Web Developer Toolbar den Befehl *Outline > Outline Frames* ausführen.\n3. - In der Web Developer Toolbar zusätzlich *Information > Display Element Information* öffnen; der Mauszeiger wird zum Fadenkreuz.\n4. - Die hervorgehobenen iframes per Fadenkreuz ansteuern und für jeden iframe mit Inhalt kontrollieren, ob ein aussagekräftiger `title`-Text vorhanden ist (etwa \"Werbung\", \"Social Media\" oder die Kurzbezeichnung eines eingebundenen Videos).\n5. - Leere iframes ohne Inhalte sollten über das `hidden`- oder `aria-hidden`-Attribut versteckt sein."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Eigenständige Bereiche",
+          "inhalt_markdown": "Eigenständige Bereiche sind zum Beispiel:\n\n- Navigationsbereiche (etwa Haupt-, Service- oder Bereichsnavigation)\n- Hauptinhaltsbereich\n- Zusätzliche Inhalte\n- Fußbereich\n\nDer Fußbereich ist kein eigenständiger Bereich, wenn er ausschließlich wiederholte Links, Urhebervermerke oder Angaben zum Erstellungs- bzw. Änderungsdatum enthält."
+        },
+        {
+          "titel": "Hinweis zu Sprunglinks und Document Landmarks",
+          "inhalt_markdown": "Fehlende Sprunglinks und ungenutzte WAI-ARIA Document Landmarks sind für sich genommen kein Fehler. Ob eine Möglichkeit zum Überspringen der Bereiche nötig ist, richtet sich nach Inhalt und Komplexität der Seiten."
+        },
+        {
+          "titel": "Hinweis zu mehrfach verwendeten Landmarks bzw. HTML5-Elemente für Bereiche",
+          "inhalt_markdown": "Nutzt eine Seite dieselbe WAI-ARIA document landmark bzw. dasselbe HTML5-Element für Bereiche mehrfach (z. B. `role=\"navigation\"` oder `nav`), sollten `aria-label` oder `aria-labelledby` für eine aussagekräftige Benennung sorgen."
+        },
+        {
+          "titel": "Hinweis zu Sie-sind-hier\"-Navigationen",
+          "inhalt_markdown": "Gemeint ist damit die \"Sie-sind-hier\"-Anzeige zu Beginn der Seite (auch breadcrumb trail oder Krümelpfad). Sind Breadcrumbs als Listen ausgezeichnet, brauchen sie vorangestellte, ggf. verborgene Label wie \"Seitenpfad\", \"Sie sind hier\" oder \"Navigationspfad\", damit Screenreader-Nutzer sie von anderen Menüs unterscheiden können."
+        },
+        {
+          "titel": "Hinweis zu iframes",
+          "inhalt_markdown": "Im `title`-Attribut soll der Zweck oder Inhalt angegeben werden, nicht die Lage des Frames auf dem Bildschirm (siehe 9.2.4.2 \"Sinnvolle Dokumenttitel\"). Angemessene `title`-Attribute sind etwa \"Werbung\" oder \"Social Media\", nicht jedoch \"top\" oder \"rechts\"."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "- Alle Bereiche der Seite lassen sich per Sprunglink, HTML5-Regionen, WAI-ARIA document landmarks oder verständlich benannte Bereichsüberschriften ansteuern und übergehen"
+        },
+        {
+          "titel": "Teilweise erfüllt oder schlechter",
+          "inhalt_markdown": "- Bereichsauszeichnungen werden falsch oder irreführend eingesetzt\n- Sprunglinks erscheinen bei Fokuserhalt nicht\n- Bereichsüberschriften oder Sprunglinks sind über `display:none` unsichtbar gemacht\n- Mehrere wichtige, mit `nav` oder `role=\"navigation\"` markierte Navigationsbereiche bleiben ohne `aria-label` oder `aria-labelledby` ununterscheidbar"
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "- Gegenstand dieses Prüfschritts ist, wie Seitenbereiche über Überschriften, Sprunglinks oder WAI-ARIA-Attribute (landmarks) ausgezeichnet werden. Wie Seiteninhalte inhaltlich strukturiert werden, behandelt Prüfschritt 9.1.3.1a \"HTML-Strukturelemente für Überschriften\".\n- Hier steht im Fokus, ob iframes (sofern vorhanden) aussagekräftige Titel tragen. Der **Inhalt** von iframes wird wie jeder andere Seiteninhalt geprüft (siehe Prüfschritt 9.1.3.1d \"Inhalt gegliedert\")."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guidelines",
+          "inhalt_markdown": "- [Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are](https://www.w3.org/WAI/WCAG21/quickref/#navigable)"
+        },
+        {
+          "titel": "Success criteria",
+          "inhalt_markdown": "- [2.4.1 Bypass Blocks (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G1: Adding a link at the top of each page that goes directly to the main content area](https://www.w3.org/WAI/WCAG21/Techniques/general/G1.html)\n                    - [G115: Using semantic elements to mark up structure](https://www.w3.org/WAI/WCAG21/Techniques/general/G115.html)\n                    - [G123: Adding a link at the beginning of a block of repeated content to go to the end of the block](https://www.w3.org/WAI/WCAG21/Techniques/general/G123.html)\n                    - [G124: Adding links at the top of the page to each area of the content](https://www.w3.org/WAI/WCAG21/Techniques/general/G124.html)\n                    - [G130: Providing descriptive headings](https://www.w3.org/WAI/WCAG21/Techniques/general/G130.html)\n                    - [G140: Separating information and structure from presentation to enable different presentations](https://www.w3.org/WAI/WCAG21/Techniques/general/G140.html)"
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H42: Using h1-h6 to identify headings](https://www.w3.org/WAI/WCAG21/Techniques/html/H42.html)\n                    - [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64.html)\n                    - [H69: Providing heading elements at the beginning of each section of content](https://www.w3.org/WAI/WCAG21/Techniques/html/H69.html)\n                    - [H97: Grouping related links using the nav element](https://www.w3.org/WAI/WCAG21/Techniques/html/H97.html)"
+        },
+        {
+          "titel": "ARIA Techniques",
+          "inhalt_markdown": "- [ARIA11: Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA11.html)\n                    - [ARIA13: Using aria-labelledby to name regions and landmarks](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA13.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "WCAG 2.1 Hinweis zum Unterschied von name und title",
+          "inhalt_markdown": "> The`title`attribute is not interchangeable with the`name`attribute.\nThe title labels the frame for users; the name labels it for scripting and\nwindow targeting.\nThe name is not presented to the user, only the title is.\n\n([H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64.html))"
+        },
+        {
+          "titel": "WCAG 2.1 Verknüpfung von WAI ARIA document landmarks und Text",
+          "inhalt_markdown": "> The purpose of this technique is to provide names for regions of a page that\ncan be read by assistive technology.\nThe aria-labelledby attribute provides a\nway to associate an section of the page marked up as a region or landmarks\nwith text that is on the page that labels it.\n\n([ARIA13: Using aria-labelledby to name regions and landmarks](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA13.html))"
+        },
+        {
+          "titel": "Ergänzung von HTML5 Elementen mit WAI ARIA",
+          "inhalt_markdown": "Script, das bei HTML5 Elementen automatisch ARIA-Rollen ergänzt:[Polyfill accessifyhtml5.js von Yatil](https://github.com/yatil/accessifyhtml5.js)"
+        }
+      ]
+    },
+    {
+      "titel": "Fragen zu diesem Prüfschritt",
+      "id": "fragen_zu_diesem_prüfschritt",
+      "untersektionen": [
+        {
+          "titel": "Müssen die Bereiche der Webseite durch h1 -Überschriften ausgezeichnet werden?",
+          "inhalt_markdown": "In den meisten Webangeboten bleiben bestimmte Bereiche fest der Navigation vorbehalten; weitere wiederkehrende Flächen sind etwa die Suche oder der Seitenkopf. Diese Bereiche sind auf allen Seiten gleich aufgebaut und gestaltet, haben keinen engen Bezug zum besonderen Seiteninhalt und gehören eher dem Webauftritt als ganzen an. Daher bietet es sich an, Navigation, Inhaltsbereich und andere deutlich abgegrenzte Bereiche jeweils mit einer `h1`-Hauptüberschrift zu versehen.\n\nMöglich ist aber auch eine andere Auszeichnung, etwa durch `h5`- oder `h6`-Überschriften, sofern diese in der Gliederung der Seiteninhalte nicht gebraucht werden (siehe dazu den Artikel auf einfach-für-alle: [\"Passende Überschrift hier einsetzen\"](http://www.einfach-fuer-alle.de/artikel/ueberschriften-strukturen-in-html/)).\n\nDer BITV-Test akzeptiert unterschiedliche Herangehensweisen. Geprüft werden muss in jedem Fall, ob Überschriften konsistent eingesetzt werden, um die Seitenbereiche und deren Inhalte zu erschließen."
+        }
+      ]
+    }
+  ]
+}

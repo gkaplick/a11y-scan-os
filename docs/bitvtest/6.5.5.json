@@ -1,0 +1,49 @@
+{
+  "bitv_nummer": "6.5.5",
+  "titel": "Visuelle Anzeige von Audio-Aktivität",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Unterstützt das Webangebot Videotelefonie, muss Audio-Aktivität visuell angezeigt werden."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Die Anzeige der Audio-Aktivität lässt gehörlose Nutzende erkennen, dass jemand spricht und wer spricht."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar ist der Prüfschritt, wenn das Webangebot Videotelefonie samt Sprachübertragung bereitstellt."
+        },
+        {
+          "titel": "Prüfung",
+          "inhalt_markdown": "1. - Webangebot im Browser auf zwei verschiedenen Geräten mit unterschiedlichen Nutzerkonten starten.\n2. - Zwischen beiden Instanzen eine Videotelefonie-Verbindung aufbauen.\n3. - Am verbundenen Gerät Sprache eingeben und am Prüfgerät kontrollieren, ob die Spracheingabe visuell wahrnehmbar ist."
+        },
+        {
+          "titel": "Hinweise",
+          "inhalt_markdown": "Für die Anzeige der Sprachaktivität kommen weitere Anforderungen hinzu, etwa zum Grafik-Kontrast.\n\nAls visueller Indikator der Audio-Aktivität genügt ein einfacher Punkt, eine LED oder eine andere Ein-/Aus-Anzeige, die flackert.\n\nHinweise zu diesem Prüfschritt können Sie auf GitHub [als Issue anlegen](https://github.com/BIK-BITV/BIK-App-Test/issues)."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "6.5.5 Visual indicator of audio with video",
+          "inhalt_markdown": "> Where ICT provides two-way voice communication,\nand includes real-time video functionality,\nthe ICT shall provide a real-time visual indicator of audio activity.\n\nNOTE 1: The visual indicator may be a simple visual dot or LED,\nor other type of on/off indicator, that flickers to reflect audio activity.\n\nNOTE 2: Without this indication a person\nwho lacks the ability to hear does not know when someone is talking."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "bitv_nummer": "11.8.3",
+  "titel": "Erhaltung von Barrierefreiheitsinformationen bei Transformation",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Bietet die Webanwendung als Autorenwerkzeug Restrukturierungs- oder Rekodierungsfunktionen an, werden die Zugänglichkeitsinformationen in die Ausgabe übernommen, sofern der Zieldokumententyp gleichwertige Mechanismen zu ihrer Speicherung bietet."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Menschen mit Behinderung sind auf semantische Auszeichnungen angewiesen, etwa auf Überschriften oder sauber strukturierte Datentabellen, wenn sie Inhalte effektiv erschließen wollen. Entfernen oder zerstören Transformationen diese Auszeichnungen, verschlechtert sich die Benutzbarkeit der Dokumente."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar ist der Prüfschritt, wenn die Webanwendung als Autorenwerkzeug Restrukturierungstransformationen oder Funktionen zur Neucodierung anbietet."
+        },
+        {
+          "titel": "1.1 Restrukturierungstransformationen",
+          "inhalt_markdown": "Bei Restrukturierungstransformationen verändern sich die strukturellen Eigenschaften des Inhalts, etwa beim Auflösen von Tabellen, beim Zerlegen eines Dokuments in Einzelseiten oder beim Zusammenführen mehrerer PDF-Dateien. Dokumententyp und Technologie bleiben unverändert."
+        },
+        {
+          "titel": "1.2 Rekodierungstransformationen",
+          "inhalt_markdown": "Rekodierungstransformationen ändern die Technologie beziehungsweise den Dokumententyp, etwa bei der Umwandlung eines HTML-Dokuments in ein PDF."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. Ein Beispieldokument im Eingangsformat wählen – bei einer HTML-nach-PDF-Transformation also eine HTML-Datei.\n2. Das Dokument in der Webanwendung öffnen und in das Zielformat beziehungsweise eine andere Struktur umwandeln.\n3. Die Zieldatei prüfen. Je nach Dokumententyp sind dazu Untersuchungen nötig, die der BITV-Test selbst nicht leisten kann. Beispiel HTML zu PDF:\n   - Sind alle Überschriften der Quelle übernommen?\n   - Enthält die PDF-Datei die Alternativtexte der Grafiken?\n   - Ist die Tabellenstruktur korrekt ins Zielformat übertragen?"
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Die Prüfschritte sind für jedes Ein- und Ausgangsformat zu wiederholen, das die Webanwendung bei der Transformation unterstützt. Auch wenn das Eingangsdokument lediglich umstrukturiert wird, muss die Ausgangsdatei sämtliche barrierefreiheitsrelevanten Angaben enthalten.\n\nHinweise zur Verbesserung der Prüfanleitung können als [Issue auf GitHub](https://github.com/BIK-BITV/BIK-Web-Test/issues) eingereicht werden."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "11.8.3 Preservation of accessibility information in transformations",
+          "inhalt_markdown": "> If the authoring tool provides restructuring transformations or re-coding\ntransformations, then accessibility information shall be preserved in the\noutput if equivalent mechanisms exist in the content technology of the output.\n\nNOTE 1:\nRestructuring transformations are transformations in which the content\ntechnology stays the same, but the structural features of the content are\nchanged (e.g. linearizing tables, splitting a document into pages).\n\nNOTE 2:\nRe-coding transformations are transformations in which the technology used to\nencode the content is changed."
+        }
+      ]
+    }
+  ]
+}

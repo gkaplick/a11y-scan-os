@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sichtbare Beschriftung Teil des zugänglichen Namens (Positivbeispiel) · A11Y Test-Website</title>
+<link rel="stylesheet" href="/assets/styles.css">
+<style></style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="seitenkopf">
+  <a class="marke" href="/index.html">A11Y Test-Website</a>
+  <p class="kategorie">Kategorie: ARIA &amp; Bedienbarkeit</p>
+</header>
+<nav aria-label="Hauptnavigation" class="hauptnav">
+  <a href="/index.html">Startseite</a>
+  <a href="/kriterien/label-in-name-positiv.html">Positivbeispiel</a>
+  <a href="/kriterien/label-in-name-negativ.html">Negativbeispiel</a>
+</nav>
+<main id="main">
+<span class="art-badge art-positiv">Positivbeispiel</span>
+<p class="kategorie">Kategorie: ARIA &amp; Bedienbarkeit</p>
+<h1>Sichtbare Beschriftung Teil des zugänglichen Namens</h1>
+<p class="beschreibung">Die sichtbare Beschriftung eines Bedienelements muss im zugänglichen Namen enthalten sein.</p>
+<p class="testids">Geprüfte Kriterien: <span class="testid">BITV_9_2_5_3_SICHTBARE_BESCHRIFTUNG_TEIL_DES_ZUGAENGLICHEN_NAMENS</span>
+<span class="testid">WCAG_2_5_3_LABEL_IN_NAME</span></p>
+<div class="beispiel art-positiv">
+<h2>Button mit passendem aria-label</h2>
+<p><button type="button" aria-label="Senden">Senden</button></p>
+</div>
+
+<div class="beispiel art-positiv">
+<h2>Icon-Button mit aria-label (Symbol kein Label)</h2>
+<p><button type="button" aria-label="Schließen">×</button></p>
+</div>
+
+<div class="beispiel art-positiv">
+<h2>Eingabefeld mit passendem aria-label</h2>
+<p><label for="fn">Vorname</label><input id="fn" type="text" aria-label="Vorname"></p>
+</div><p class="hinweis">Zur Gegenprobe: <a href="/kriterien/label-in-name-negativ.html">Negativbeispiel ansehen</a></p>
+</main>
+<footer class="seitenfuss">
+  <p>A11Y Test-Website · Positivbeispiel · <a href="/index.html">Zur Übersicht</a> · <a href="/gebaerdensprache.html">Gebärdensprache</a> · <a href="/leichte-sprache.html">Leichte Sprache</a> · <a href="/erklaerung.html">Erklärung zur Barrierefreiheit</a></p>
+</footer>
+</body>
+</html>

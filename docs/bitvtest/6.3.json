@@ -1,0 +1,50 @@
+{
+  "bitv_nummer": "6.3",
+  "titel": "Anrufer-Identifizierung",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Bietet die Web-Anwendung Telefoniefunktionen mit Anrufer-Erkennung an, muss sich diese Erkennung zusätzlich als Text ausgeben und programmatisch ermitteln lassen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Die Anforderung stellt sicher, dass auch Nutzende assistiver Technologien erkennen können, wer anruft."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn die Web-Anwendung Telefonie samt Anruf-Identifizierung anbietet. Letztere umfasst das Übermitteln bzw. Anzeigen der Kennung der anrufenden Person."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Für die Prüfung ist die Web-Anwendung ggf. auf zwei Geräten zu öffnen.\n\n1. - Screenreader starten.\n2. - Web-Anwendung öffnen.\n3. - Von einem zweiten Gerät einen Anruf auslösen.\n4. - Prüfen, wie der Anruf bei aktiviertem Screenreader signalisiert wird: Wird die anrufende Person automatisch angesagt, oder lassen sich die Anrufer-Daten im Browser direkt ablesen?\n5. - Prüfen, wie der Anruf sichtbar angezeigt wird: Die Anzeige muss die anrufende Person in Textform identifizieren, etwa mit Telefonnummer oder hinterlegtem Namen."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Human Factors (HF); Real-Time Text (RTT) in Multiparty Conference Calling / ETSI TR 103 708 V1.1.1 (2022-08)](https://labs.etsi.org/rep/HF/en301549/uploads/272bede3724c5c99efe777f778201f70/tr_103708v010101p.pdf)"
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "6.3 Caller ID",
+          "inhalt_markdown": "> Where ICT provides caller identification or similar telecommunications\nfunctions, the caller identification and similar telecommunications functions\nshall be available in text form as well as being programmatically\ndeterminable, unless the functionality is closed."
+        }
+      ]
+    }
+  ]
+}

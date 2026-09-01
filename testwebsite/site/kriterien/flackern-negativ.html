@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verzicht auf Flackern (Negativbeispiel) · A11Y Test-Website</title>
+<link rel="stylesheet" href="/assets/styles.css">
+<style></style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="seitenkopf">
+  <a class="marke" href="/index.html">A11Y Test-Website</a>
+  <p class="kategorie">Kategorie: Struktur &amp; Navigation</p>
+</header>
+<nav aria-label="Hauptnavigation" class="hauptnav">
+  <a href="/index.html">Startseite</a>
+  <a href="/kriterien/flackern-positiv.html">Positivbeispiel</a>
+  <a href="/kriterien/flackern-negativ.html">Negativbeispiel</a>
+</nav>
+<main id="main">
+<span class="art-badge art-negativ">Negativbeispiel</span>
+<p class="kategorie">Kategorie: Struktur &amp; Navigation</p>
+<h1>Verzicht auf Flackern</h1>
+<p class="beschreibung">Inhalte blitzen nicht häufiger als dreimal pro Sekunde — keine blink-Elemente und keine text-decoration: blink.</p>
+<p class="testids">Geprüfte Kriterien: <span class="testid">BITV_9_2_3_1_VERZICHT_AUF_FLACKERN</span>
+<span class="testid">WCAG_2_3_1_THREE_FLASHES</span></p>
+<div class="beispiel art-negativ">
+<h2>blink-Element</h2>
+<p><blink>Wichtig: Diese Meldung blinkt permanent.</blink></p>
+</div>
+
+<div class="beispiel art-negativ">
+<h2>text-decoration: blink</h2>
+<p style="text-decoration: blink">Dieser Text blinkt über text-decoration.</p>
+</div><p class="hinweis">Zur Gegenprobe: <a href="/kriterien/flackern-positiv.html">Positivbeispiel ansehen</a></p>
+</main>
+<footer class="seitenfuss">
+  <p>A11Y Test-Website · Negativbeispiel · <a href="/index.html">Zur Übersicht</a> · <a href="/gebaerdensprache.html">Gebärdensprache</a> · <a href="/leichte-sprache.html">Leichte Sprache</a> · <a href="/erklaerung.html">Erklärung zur Barrierefreiheit</a></p>
+</footer>
+</body>
+</html>

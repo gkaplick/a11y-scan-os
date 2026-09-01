@@ -1,0 +1,35 @@
+# API-Container: FastAPI + Playwright (Chromium) + ReportLab.
+#
+# Basis-Image von Microsoft Playwright: Chromium (inkl. System-Dependencies)
+# bereits unter /ms-playwright installiert. playwright-Version im pip-Install
+# ist auf die Image-Browser-Version gepinnt (siehe requirements.txt), damit
+# die Browser-Revision exakt zusammenpasst.
+FROM mcr.microsoft.com/playwright/python:v1.48.0-jammy
+
+ENV PYTHONUNBUFFERED=1 \
+    PLAYWRIGHT_BROWSERS_PATH=/ms-playwright \
+    PIP_NO_CACHE_DIR=1
+
+WORKDIR /app
+
+# 1) Abhängigkeiten zuerst (besserer Build-Cache)
+COPY backend/requirements.txt backend/requirements-dev.txt ./
+RUN pip install -r requirements-dev.txt
+
+# 2) App-Code
+COPY backend/ .
+
+# 3) Test-Website (generiert, testwebsite/generate.py) — für den
+#    Integrationstest tests/test_testwebsite.py im Container-Zugriff.
+#    Pfad: /app/testwebsite/site — gleiche Struktur wie lokal
+#    (Projekt-Root/testwebsite/site), damit die conftest-Pfadlogik
+#    identisch lokal und im Container arbeitet.
+COPY testwebsite/site /app/testwebsite/site
+
+# SQLite-Datenbank & Report-Exporte (Defaults: data/ und docs/ relativ zu /app)
+ENV A11Y_DATABASE_PATH=/app/data/a11y.db \
+    A11Y_OUTPUT_DIR=/app/docs
+
+EXPOSE 8000
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

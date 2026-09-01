@@ -1,0 +1,115 @@
+{
+  "bitv_nummer": "9.1.3.1d",
+  "titel": "Inhalt gegliedert",
+  "wcag22": {
+    "guideline": "Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure",
+    "level": "A",
+    "success_criterion": "1.3.1 Info and Relationships",
+    "techniken": {
+      "General Techniques": [
+        "G115: Using semantic elements to mark up structure",
+        "G140: Separating information and structure from presentation to enable different presentations"
+      ],
+      "HTML Techniques": [
+        "H49: Using semantic markup to mark emphasized or special text"
+      ],
+      "Failures": [
+        "F2: Failure of Success Criterion 1.3.1 due to using changes in text presentation to convey information without using the appropriate markup or text",
+        "F33: Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to create multiple columns in plain text content",
+        "F43: Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content",
+        "F48: Failure of Success Criterion 1.3.1 due to using the pre element to markup tabular information",
+        "F87: Failure of Success Criterion 1.3.1 due to inserting non-decorative content by using :before and :after pseudo-elements and the 'content' property in CSS",
+        "F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Absätze sind mit passenden Strukturelementen ausgezeichnet; doppelte `br`-Elemente für Zeilenumbrüche werden vermieden. Hervorhebungen im Text sind mit `strong` oder `em` ausgezeichnet."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Kleinere Einheiten erleichtern das Verständnis und die Handhabung. Die vorgesehenen HTML-Strukturelemente machen die Gliederung programmatisch ermittelbar: Screenreader-Nutzende können die Inhalte im Lesemodus Absatz für Absatz durchlaufen, und wer die vorgegebene Darstellung nicht nutzen kann, wendet eine eigene an. Absatzumbrüche über doppelte `br`-Elemente erzeugen im Lesemodus leere Fokuspositionen, die irritieren und das Erfassen verlangsamen. `strong` und `em` sind allgemein und nicht darstellungsbezogen – anders als `b`, `i` oder eine rein per CSS realisierte visuelle Hervorhebung."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar bei gegliederten Textinhalten mit Absätzen auf der Seite."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Prüfung mit Bookmarklet",
+          "inhalt_markdown": "1. Seite im Firefox aufrufen.\n2. Das Bookmarklet \"Inhalte gegliedert\" aufrufen.\n3. Prüfen, ob Absätze mit `p` oder einer anderen passenden Semantik ausgezeichnet sind. `div` statt `p` ist in bestimmten Fällen akzeptabel (etwa wenig Fließtext oder optisch kein Textabsatz), da es für Screenreader-Nutzende im Lesemodus keinen nennenswerten Nachteil mit sich bringt.\n4. Werden doppelte `br`-Elemente für Zeilenumbrüche genutzt? Prüfen, ob Hervorhebungen in Texten mit `strong` oder `em` ausgezeichnet sind."
+        },
+        {
+          "titel": "2.2 Missbräuchliche Nutzung von typographischen Zeichen",
+          "inhalt_markdown": "- Prüfen, ob Leerzeichen (`&nbsp;`) zum Gestalten von Text eingesetzt werden (etwa um Spalten anzulegen).\n- Prüfen, ob typographische Zeichen wie Bindestrich-Reihen zum Erzeugen von Trennlinien eingesetzt werden, ohne programmatisch versteckt zu sein (etwa über `aria-hidden=\"true\"`)."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Bewertet wird nicht, ob die sichtbare Gliederung inhaltlich sinnvoll ist, sondern nur, ob sie mit passenden HTML-Elementen umgesetzt wurde.\n- Grundsätzlich ist `p` das vorgesehene Absatz-Element. Die Nutzung von `div` statt `p` bringt in der programmatischen Ausgabe, etwa über Screenreader, für gewöhnlich keine Nachteile und sollte deshalb nicht zu \"teilweise erfüllt\" oder schlechter führen.\n- Die Strukturelemente für Tabellen, Überschriften, Listen und Zitate bewerten eigene Prüfkriterien.\n- iframe-Inhalte wie andere Seiteninhalte prüfen, gegebenenfalls den iframe in einem neuen Fenster laden.\n- Textinhalte über das CSS-Attribut `content` werden heute meist von Screenreadern ausgegeben und stellen selten eine praktische Barriere dar; sie sollten nicht zu \"teilweise erfüllt\" oder schlechter führen. Für eine konsequente Trennung von Semantik und Darstellung (HTML/CSS) ist die Einbringung von Text über CSS trotzdem nicht empfehlenswert, da Inhalte in manchen Nutzungskontexten (eigene Stylesheets, Ansicht ohne CSS) fehlen können."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "- Textabsätze sind mit passenden Absatz-Elementen ausgezeichnet.\n- Auf Absatzumbrüche über doppelte `br`-Elemente wird verzichtet.\n- Für semantische Hervorhebungen im Text wird `strong` oder `em` verwendet."
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "- Textabsätze sind nicht mit passenden Absatz-Elementen ausgezeichnet.\n- Absatzumbrüche erfolgen über doppelte Zeilenumbrüche (`br`) statt über Absatz-Elemente.\n- Leerzeichen (`&nbsp;`) werden verwendet, um Spalten zu erzeugen."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Weitere auf Strukturierung bezogene Prüfkriterien sind: 9.1.3.1a \"HTML-Strukturelemente für Überschriften\", 9.1.3.1b \"HTML-Strukturelemente für Listen\", 9.1.3.1c \"HTML-Strukturelemente für Zitate\" und 9.1.3.1e \"Datentabellen richtig aufgebaut\". Die Textalternative für Font-Icons prüfen 9.1.1.1a \"Alternativtexte für Bedienelemente\" und 9.1.1.1b \"Alternativtexte für Grafiken und Objekte\"."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=131#adaptable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=131#info-and-relationships)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G115: Using semantic elements to mark up structure](https://www.w3.org/WAI/WCAG22/Techniques/general/G115.html)\n                    - [G140: Separating information and structure from presentation to enable different presentations](https://www.w3.org/WAI/WCAG21/Techniques/general/G140.html)"
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H49: Using semantic markup to mark emphasized or special text](https://www.w3.org/WAI/WCAG22/Techniques/html/H49.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F2: Failure of Success Criterion 1.3.1 due to using changes in text presentation to convey information without using the appropriate markup or text](https://www.w3.org/WAI/WCAG22/Techniques/failures/F2.html)\n                    - [F33: Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to create multiple columns in plain text content](https://www.w3.org/WAI/WCAG22/Techniques/failures/F33.html)\n                    - [F43: Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content](https://www.w3.org/WAI/WCAG22/Techniques/failures/F43.html)\n                    - [F48: Failure of Success Criterion 1.3.1 due to using the pre element to markup tabular information](https://www.w3.org/WAI/WCAG22/Techniques/failures/F48.html)\n                    - [F87: Failure of Success Criterion 1.3.1 due to inserting non-decorative content by using :before and :after pseudo-elements and the 'content' property in CSS](https://www.w3.org/WAI/WCAG22/Techniques/failures/F87.html)\n                    - [F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information](https://www.w3.org/WAI/WCAG22/Techniques/failures/F92.html)"
+        }
+      ]
+    }
+  ]
+}

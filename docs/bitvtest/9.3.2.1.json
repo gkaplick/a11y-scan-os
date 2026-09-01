@@ -1,0 +1,96 @@
+{
+  "bitv_nummer": "9.3.2.1",
+  "titel": "Keine unerwartete Kontextänderung bei Fokus",
+  "wcag22": {
+    "guideline": "Guideline 3.2 Predictable: Make Web pages appear and operate in predictable ways.",
+    "level": "A",
+    "success_criterion": "3.2.1 On Focus",
+    "techniken": {
+      "General Techniques": [
+        "G107: Using \"activate\" rather than \"focus\" as a trigger for changes of context"
+      ],
+      "Advisory Techniques": [
+        "G200: Opening new windows and tabs from a link only when necessary",
+        "G201: Giving users advanced warning when opening a new window"
+      ],
+      "Failures": [
+        "F52: Failure of Success Criterion 3.2.1 due to opening a new window as soon as a new page is loaded"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Erhält eine Komponente der Seite den Fokus, darf das keine unerwartete Kontextänderung auslösen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Unerwartete, nicht angekündigte Kontextänderungen beim Fokuserhalt (etwa automatisch abschickende Formulare) können die Orientierung stören. Änderungen auf der Seite selbst lenken ab, verwirren oder bleiben unbemerkt — sie sollten erwartbar und nachvollziehbar sein. Auch das Öffnen neuer Fenster beim Fokussieren oder beim Laden der Seite erschwert die Orientierung, besonders für blinde und sehbehinderte Nutzende: Sie bemerken den Kontextwechsel womöglich nicht, der Zurück-Button des Browsers greift nicht mehr und unter Umständen wird versehentlich das falsche Fenster geschlossen."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, sobald der Webauftritt interaktive Elemente umfasst."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Seite im [Firefox](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#firefox) öffnen; beim Aufruf darf kein weiteres Fenster aufgehen.\n2. - Anschließend mit der Tabulatortaste sämtliche Links und Formularelemente durchgehen.\n3. - Prüfen, ob der Fokuserhalt unerwartete Kontextwechsel auslöst, etwa das Öffnen von Pop-ups oder das automatische Absenden von Formularen."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Der Prüfschritt betrifft nur neue Browserfenster, nicht skriptgesteuerte Elemente, die den Inhalt überlagern (modaler Dialog).\n\nCustom-Tooltips — nicht modale Fenster, die sich beim Weitertabben oder Mausklick selbst schließen — gelten nicht als Kontextänderung."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 3.2 Predictable: Make Web pages appear and operate in predictable ways.](https://www.w3.org/TR/WCAG21/#predictable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [3.2.1 On Focus](https://www.w3.org/TR/WCAG21/#on-focus)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G107: Using \"activate\" rather than \"focus\" as a trigger for changes of context](https://www.w3.org/WAI/WCAG21/Techniques/general/G107.html)"
+        },
+        {
+          "titel": "Advisory Techniques",
+          "inhalt_markdown": "- [G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/WAI/WCAG21/Techniques/general/G200.html)\n                    - [G201: Giving users advanced warning when opening a new window](https://www.w3.org/WAI/WCAG21/Techniques/general/G201.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F52: Failure of Success Criterion 3.2.1 due to opening a new window as soon as a new page is loaded](https://www.w3.org/WAI/WCAG21/Techniques/failures/F52.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Fragen zu diesem Prüfschritt",
+      "id": "fragen_zu_diesem_prüfschritt",
+      "untersektionen": [
+        {
+          "titel": "Der Prüfschritt bezieht sich nur auf das Öffnen neuer Fenster beim Laden der Seite, erlaubt die BITV 2.0 jetzt das unangekündigte Öffnen von neuen Fenstern über Links?",
+          "inhalt_markdown": "Die WCAG-Empfehlungen in den *Advisory Techniques* [G200](https://www.w3.org/WAI/WCAG21/Techniques/general/G200.html) und [G201](https://www.w3.org/WAI/WCAG21/Techniques/general/G201.html) raten, neue Fenster nur dort zu öffnen, wo das aus Zugänglichkeitssicht sinnvoll ist, und Nutzende vorher zu informieren (etwa über den Linktext).\n\nÖffnet ein Link unangekündigt ein neues Fenster, wird das im Rahmen dieses Prüfschritts grundsätzlich nicht beanstandet, denn moderne Browser halten Einstellungen dafür bereit: Nutzende können festlegen, ob neue Fenster beziehungsweise Tabs geöffnet werden oder ob automatisch geöffnete Fenster unterdrückt werden (Popup-Blocker). Manche Browser wie Firefox erlauben außerdem, ob neue Tabs im Vordergrund geöffnet werden sollen, also den Fokus erhalten."
+        }
+      ]
+    }
+  ]
+}

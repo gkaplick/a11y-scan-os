@@ -1,0 +1,78 @@
+{
+  "bitv_nummer": "6.2.2.2",
+  "titel": "Programmatisch unterscheidbare Anzeige von Textnachrichten",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Verfügt die Web-Anwendung über Echtzeit-Textkommunikation (RTT, Real-Time Text), müssen sich gesendete und empfangene Nachrichten programmatisch unterscheiden lassen. Hilfsmittel-Nutzende müssen beim Lesen des Verlaufs eigene von empfangenen Texten unterscheiden können."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Wer mit Hilfsmitteln wie Screenreadern die Beiträge einer Kommunikation liest, muss eigene Texteingaben von denen anderer trennen können. Deshalb muss sich die Sende- und Empfangsrichtung programmatisch bestimmen lassen. Zusätzlich sinnvoll ist es, auch zwischen empfangenen Texten verschiedener Teilnehmender unterscheiden zu können."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt ist anwendbar, sobald die Web-Anwendung RTT-Nachrichten sowohl absenden als auch empfangen kann."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Quelltext-Prüfung",
+          "inhalt_markdown": "1. - Web-Anwendung öffnen.\n2. - In den Developer Tools des Browsers nachsehen, ob gesendete und empfangene Textnachrichten semantisch unterscheidbar sind. Im HTML-Quelltext kann etwa die jeweilige Verfasserin bzw. der jeweilige Verfasser samt Uhrzeit genannt sein. Die unterscheidenden Merkmale wie Nutzer-Namen oder Kürzel dürfen nicht vor Hilfsmitteln verborgen sein, etwa über `display:none` oder `aria-hidden=\"true\"`."
+        },
+        {
+          "titel": "2.2 Zusätzliche Prüfung mittels Screenreader",
+          "inhalt_markdown": "1. - Screenreader starten.\n2. - Die Web-Anwendung in der Ansicht für Echtzeit-Textkommunikation öffnen.\n3. - Einige Testnachrichten senden und empfangen (ggf. mit zweitem Gerät).\n4. - Die Textnachrichten antippen oder mit dem Screenreader ansteuern.\n5. - Auf die Ausgabe des Screenreaders achten: Unterscheidet er zwischen eigenen und fremden Textbeiträgen?"
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Unter RTT versteht man die Übertragung von Text in Echtzeit: Was die sendende Person tippt, ist bei der empfangenden Person sofort sichtbar. Klassisches Chatten übermittelt dagegen erst abgeschickte Nachrichten.\n- Verlangt wird lediglich, dass sich eigene und fremde Beiträge unterscheiden lassen; ob sich einzelne Empfangsquellen voneinander trennen lassen, ist nicht gefordert. In der Praxis ist aber anzunehmen, dass jeder Echtzeit-Textbeitrag über Namen oder Kürzel dem Sender zugeordnet werden kann, womit sich auch fremde Beiträge voneinander abgrenzen lassen."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "Eigene Eingaben und empfangene Echtzeit-Texteingaben anderer sind programmatisch unterscheidbar, etwa über einen Präfix."
+        },
+        {
+          "titel": "Eher erfüllt",
+          "inhalt_markdown": "Eigene und empfangene Echtzeit-Texteingaben sind programmatisch unterscheidbar, einzelne andere Nutzer jedoch nicht voneinander abgrenzbar."
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "Beim Auslesen der während einer Kommunikation eingegebenen Echtzeit-Texte lässt sich programmatisch nicht zwischen eigenen und fremden Eingaben unterscheiden."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Human Factors (HF); Real-Time Text (RTT) in Multiparty Conference Calling / ETSI TR 103 708 V1.1.1 (2022-08)](https://labs.etsi.org/rep/HF/en301549/uploads/272bede3724c5c99efe777f778201f70/tr_103708v010101p.pdf)"
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "6.2.2.2 Programmatically determinable send and receive direction",
+          "inhalt_markdown": "> Where ICT has RTT send and receive capabilities, the send/receive direction of\ntransmitted/received text shall be programmatically determinable, unless the\nRTT is implemented as closed functionality.\n\nNOTE:\nThis enables screen readers to distinguish between incoming text and outgoing\ntext when used with RTT functionality."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "bitv_nummer": "9.1.4.2",
+  "titel": "Ton abschaltbar",
+  "wcag22": {
+    "guideline": "Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background.",
+    "level": "A",
+    "success_criterion": "1.4.2 Audio Control",
+    "techniken": {
+      "General Techniques": [
+        "G60: Playing a sound that turns off automatically within three seconds",
+        "G170: Providing a control near the beginning of the Web page that turns off sounds that play automatically",
+        "G171: Playing sounds only on user request"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Automatisch gestartete Töne, die länger als drei Sekunden laufen, müssen sich abschalten lassen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Automatisch abgespielte Töne stören Menschen, die sich auf der Seite über eine Sprachausgabe orientieren. Startet nach dem Laden ein Tonelement von selbst, braucht es deshalb am Seitenbeginn einen barrierefreien Mechanismus, um den Ton abzuschalten, zu pausieren oder herunterzuregeln."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn nach dem Laden der Seite automatisch Tonelemente abgespielt werden, die länger als drei Sekunden dauern."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Wird nach dem Laden der Seite automatisch ein Tonelement abgespielt:\n- Nachsehen, ob der Ton länger als 3 Sekunden läuft.\n- Trifft das zu, nachsehen, ob oben auf der Seite eine Vorrichtung bereitsteht (Schaltfläche, Verweis oder Lautstärke-Regler), mit der sich der Ton stoppen oder getrennt von der Systemlautstärke leiser regeln lässt.\n- Den Mechanismus auslösen und den Ton ausschalten.\n\nLässt sich die Lautstärke regeln:\n- Das Kontrollelement „Sound“ öffnen: Windows-Menü Start > Alle Apps > Windows-System > Systemsteuerung > Sound, in der Registerkarte „Wiedergabe“ die Lautsprechereigenschaften öffnen und den „Pegel“ anzeigen.\n- Den Ton erneut aktivieren oder die Seite neu laden und die Lautstärke anschließend ganz herunterdrehen. Ist der Ton verschwunden?\n- Prüfen, ob die über den Mechanismus gesteuerte Lautstärke unabhängig von der Systemton-Lautstärke arbeitet (die Einstellung in „Sound“ soll unverändert bleiben). Alternativ lässt sich die Systemlautstärke über das Lautsprechersymbol im Infobereich der Taskleiste prüfen."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Länger andauernde Töne können die Sprachausgabe des Abschaltmechanismus selbst unverständlich machen; berücksichtigt wird daher auch, wie störend der Ton wirkt. Sprache oder laute Geräusche beeinträchtigen mehr als gleichmäßige Hintergrundmusik.\n- Der Regler darf die Systemtonlautstärke nicht verändern, da dies auch die Tonausgabe von Sprachausgabe-Hilfsmitteln beeinträchtigen würde.\n- Die Vorrichtung zum Beenden oder Verringern des Tons muss am Seitenbeginn liegen und selbst barrierefrei sein, also etwa ausreichende Kontraste bieten und per Tastatur bedienbar sein.\n- Bei einem Regler soll der Ton auf der niedrigsten Stufe nicht mehr hörbar sein.\n- Tastaturbefehle wie die Escape-Taste genügen zur Erfüllung nicht; solche Funktionen sind zwar sinnvoll, werden aber von vielen Nutzern nicht erwartet."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "Automatisch gestartete Töne sind nach höchstens drei Sekunden beendet oder lassen sich oben auf der Seite über eine barrierefrei zugängliche Vorrichtung abstellen."
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "- Ein von selbst gestarteter Ton beginnt gleich mit längeren Sprachanteilen oder anderen lauten Geräuschen, wodurch die Sprachausgabe des Abschaltmechanismus kaum verständlich bleibt.\n- Der Abschaltmechanismus liegt nicht unmittelbar am Seitenbeginn.\n- Am Seitenbeginn gibt es nur eine Anleitung, wie der Ton per Tastatur abgeschaltet werden kann."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background.](https://www.w3.org/TR/WCAG22/#audio-control)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.4.2 Audio Control](https://www.w3.org/TR/WCAG22/#audio-control)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G60: Playing a sound that turns off automatically within three seconds](https://www.w3.org/WAI/WCAG22/Techniques/general/G60.html)\n                    - [G170: Providing a control near the beginning of the Web page that turns off sounds that play automatically](https://www.w3.org/WAI/WCAG22/Techniques/general/G170.html)\n                    - [G171: Playing sounds only on user request](https://www.w3.org/WAI/WCAG22/Techniques/general/G171.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F23: Failure of 1.4.2 due to playing a sound longer than 3 seconds where there is no mechanism to turn it off](https://www.w3.org/WAI/WCAG22/Techniques/failures/F23.html)\n                - [F93: Failure of Success Criterion 1.4.2 for absence of a way to pause or stop an HTML5 media element that autoplays](https://www.w3.org/WAI/WCAG22/Techniques/failures/F93.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "Bedeutung der Tonabschaltung nach WCAG 2.2",
+          "inhalt_markdown": "> Individuals who use screen reading software can find it hard to hear the\nspeech output if there is other audio playing at the same time.\nThis difficulty is exacerbated when the screen reader’s speech output is\nsoftware based (as most are today\n) and is controlled via the same volume control as the sound.\nTherefore, it is important that the user be able to turn off the background\nsound.\nNote: Having control of the volume includes being able to reduce its volume to\nzero.\n\nNote: Playing audio automatically when landing on a page may affect a screen\nreader user’s ability to find the mechanism to stop it because they navigate\nby listening and automatically started sounds might interfere with that\nnavigation.\nTherefore, we discourage the practice of automatically starting sounds\n(especially if they last more than 3 seconds), and encourage that the sound be\nstarted by an action initiated by the user after they reach the page, rather\nthan requiring that the sound be stopped by an action of the user after they\nland on the page.\n\n([Audio Control: Understanding SC 1.4.2](https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html))"
+        }
+      ]
+    }
+  ]
+}

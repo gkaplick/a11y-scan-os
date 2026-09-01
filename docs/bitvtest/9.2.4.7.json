@@ -1,0 +1,125 @@
+{
+  "bitv_nummer": "9.2.4.7",
+  "titel": "Aktuelle Position des Fokus deutlich",
+  "wcag22": {
+    "guideline": "Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are",
+    "level": "AA",
+    "success_criterion": "2.4.7 Focus Visible",
+    "techniken": {
+      "General Techniques": [
+        "G149: Using user interface components that are highlighted by the user agent when they receive focus",
+        "G165: Using the default focus indicator for the platform so that high visibility default focus indicators will carry over",
+        "G195: Using an author-supplied, highly visible focus indicator"
+      ],
+      "CSS Techniques": [
+        "C15: Using CSS to change the presentation of a user interface component when it receives focus"
+      ],
+      "Client-side Scripting Techniques": [
+        "SCR31: Using script to change the background color or border of the element with focus"
+      ],
+      "Failures": [
+        "F55: Failure of Success Criteria 2.1.1, 2.4.7, and 3.2.1 due to using script to remove focus when focus is received",
+        "F78: Failure of Success Criterion 2.4.7 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Der Tastaturfokus muss klar sichtbar sein. Verzichten Autoren auf eine eigene Fokushervorhebung, darf die browsereigene Anzeige nicht per CSS abgeschaltet werden. Bewertet wird hier allein die **Sichtbarkeit** der Fokushervorhebung – nicht, ob sie ausreichend kontrastreich ist.\n\nAnfangs verborgene Sprunglinks sollen beim Fokuserhalt erscheinen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Für Tastaturnutzende ist es wichtig zu sehen, wo sich der Tastaturfokus gerade befindet: welcher Link oder Schalter bei der Eingabetaste ausgelöst wird oder welches Eingabefeld bzw. Formularelement den Fokus hat."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, sobald die Seite interaktive Elemente aufweist, die per Tastatur fokussierbar sind."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Seite im Firefox öffnen.\n2. - Alle Bedienelemente per Tabulator durchgehen und beobachten, ob sie auf den Fokus grafisch reagieren (etwa Farbwechsel, Unterstreichungen oder eingeblendete Symbole). Verborgene Sprunglinks sollten sichtbar werden, sobald sie den Fokus erhalten.\n3. - Beruht die Fokushervorhebung allein auf einem Farbwechsel, ist zu prüfen, ob sich fokussierter und unfokussierter Zustand im Kontrast um mindestens 3:1 unterscheiden. Andernfalls ist Prüfschritt [9.1.4.1 Ohne Farben nutzbar](9.1.4.1 Ohne Farben nutzbar.html) nicht erfüllt.\n4. - Zeigt die Seite nur den üblichen Browser-Tastaturfokus (Systemkranz), prüfen, ob er auf gestalteten (etwa per CSS gefärbten) Hintergründen gut erkennbar ist.\n5. - In Zweifelsfällen nach Prüfschritt [9.1.4.11 Kontraste von Grafiken und grafischen Bedienelementen ausreichend](9.1.4.11 Kontraste von Grafiken und grafischen Bedienelementen ausreichend.html) abschätzen, ob der Systemfokus zum Hintergrund mindestens 3:1 Kontrast bietet. Trifft das nicht zu, ist Prüfschritt 9.1.4.11 nicht erfüllt.\n6. - Seite in Chrome öffnen und die Schritte 2 bis 5 erneut durchlaufen."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Die Prüfung findet mit aktiviertem JavaScript statt.\n- Bietet die Seite überhaupt keinen Tastaturfokus – etwa weil die browsereigene Fokusanzeige (z. B. per JavaScript `blur()` oder CSS `outline:none`) unterdrückt wird –, ist der Prüfschritt nicht erfüllt.\n- Die Standard-Hervorhebung der Browser hat sich in den letzten Jahren verbessert, ist aber je nach Betriebssystem, Browser, Hintergrundfarbe und Design nicht immer gut sichtbar. Eine bewusste Gestaltung per CSS, etwa über die `:focus`-Pseudo-Klasse, garantiert eine dauerhaft gute Sichtbarkeit des Tastaturfokus.\n- Zeigen Links oder Buttons den Fokus allein über eine geänderte Text- oder Hintergrundfarbe an, muss ihr Kontrast zum unfokussierten Zustand mindestens 3:1 betragen; sonst ist ggf. Prüfschritt [9.1.4.1 Ohne Farben nutzbar](9.1.4.1 Ohne Farben nutzbar.html) nicht erfüllt.\n- Zeigt der Browser nur die Standard-Fokusanzeige und ist sie auf gestalteten Hintergründen sichtbar, ist dieser Prüfschritt erfüllt. Ggf. ist aber [9.1.4.11 Kontraste von Grafiken und grafischen Bedienelementen ausreichend](9.1.4.11 Kontraste von Grafiken und grafischen Bedienelementen ausreichend.html) nicht erfüllt, falls der Tastaturfokus vor gestaltetem Hintergrund zu wenig Kontrast zeigt; die Bewertung übernimmt der Kontrast-Prüfschritt 9.1.4.11."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "Der Fokus interaktiver Elemente ist deutlich sichtbar: sichtbar sind etwa Umrandungen, Unterstreichen, Farbumkehr, Formänderungen oder Zusatzmarkierungen; auch die Standard-Fokushervorhebung des Browsers darf erhalten bleiben."
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "- Sprunglinks bleiben bei Fokuserhalt versteckt.\n- Interaktive Elemente zeigen beim Fokuserhalt keine sichtbare Markierung"
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Die browsereigene Fokusanzeige wird vollständig abgeschaltet; bei Tastaturnutzung erscheint keinerlei Fokus."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Bezug zu 1.4.11 Non-Text Contrast (Sichtbarkeit der Fokushervorhebung)",
+          "inhalt_markdown": "Der [Understanding-Text zur WCAG-Anforderung 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) erläutert unter der Überschrift \"Relationship with Use of Color and Focus Visible\":\n\n> In combination with 2.4.7 Focus Visible, the visual focus indicator for a component must have sufficient contrast against the adjacent background when the component is focused, except where the appearance of the component is determined by the user agent and not modified by the author."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are](https://www.w3.org/TR/WCAG22/#navigable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [2.4.7 Focus Visible](https://www.w3.org/TR/WCAG22/#focus-visible)(Level AA)\n                - [1.4.11 Non-Text Contrast](https://www.w3.org/TR/WCAG21/#non-text-contrast)(Level AA)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G149: Using user interface components that are highlighted by the user agent when they receive focus](https://www.w3.org/WAI/WCAG21/Techniques/general/G149.html)\n                    - [G165: Using the default focus indicator for the platform so that high visibility default focus indicators will carry over](https://www.w3.org/WAI/WCAG21/Techniques/general/G165.html)\n                    - [G195: Using an author-supplied, highly visible focus indicator](https://www.w3.org/WAI/WCAG21/Techniques/general/G195.html)"
+        },
+        {
+          "titel": "CSS Techniques",
+          "inhalt_markdown": "- [C15: Using CSS to change the presentation of a user interface component when it receives focus](https://www.w3.org/WAI/WCAG21/Techniques/css/C15.html)"
+        },
+        {
+          "titel": "Client-side Scripting Techniques",
+          "inhalt_markdown": "- [SCR31: Using script to change the background color or border of the element with focus](https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR31.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F55: Failure of Success Criteria 2.1.1, 2.4.7, and 3.2.1 due to using script to remove focus when focus is received](https://www.w3.org/WAI/WCAG21/Techniques/failures/F55.html)\n                    - [F78: Failure of Success Criterion 2.4.7 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator](https://www.w3.org/WAI/WCAG21/Techniques/failures/F78.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Fragen zu diesem Prüfschritt",
+      "id": "fragen_zu_diesem_prüfschritt",
+      "untersektionen": [
+        {
+          "titel": "Ist die Anzeige des Fokus nicht Sache des Browsers?",
+          "inhalt_markdown": "Jeder Browser macht Tastaturnutzenden irgendwie kenntlich, wo der Fokus liegt – vorausgesetzt, die Anzeige wird nicht absichtlich deaktiviert.\n\nDennoch ist die Anzeige nicht allein Sache des Browsers: Die Webseite bestimmt, wie sie im Browser aussieht, verändert etwa die Farben fokussierter Links und ihrer Hintergründe oder nutzt andere Gestaltungselemente. In diesem von der Webseite bestimmten Umfeld muss der Fokus für Tastaturnutzer deutlich sichtbar bleiben."
+        }
+      ]
+    }
+  ]
+}

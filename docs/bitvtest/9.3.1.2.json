@@ -1,0 +1,97 @@
+{
+  "bitv_nummer": "9.3.1.2",
+  "titel": "Anderssprachige Wörter und Abschnitte ausgezeichnet",
+  "wcag22": {
+    "guideline": "Guideline 3.1 Readable: Make text content readable and understandable",
+    "level": "AA",
+    "success_criterion": "3.1.2 Language of Parts",
+    "techniken": {
+      "HTML Techniques": [
+        "H58: Using language attributes to identify changes in the human language"
+      ]
+    },
+    "wcag_version": "2.1"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Kommen auf einer Seite Wörter, Sätze oder größere Abschnitte in einer anderen Sprache vor, müssen diese mit dem `lang`-Attribut ausgezeichnet werden."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Screenreader sprechen Text anhand von Aussprache-Wortlisten aus. Nur wenn bekannt ist, zu welcher Sprache ein Textabschnitt gehört, kann die passende Wortliste gewählt und korrekt ausgesprochen werden."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt findet Anwendung, sobald auf der Seite einzelne Wörter, Satzteile oder umfangreichere Textabschnitte in einer fremden Sprache vorkommen."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Seite im Firefox öffnen.\n2. - Das [Lang bookmarklet](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html) aufrufen.\n3. - Kontrollieren, ob fremdsprachige Wörter und Textabschnitte korrekt markiert sind. Ausgenommen bleiben Eigennamen, Fachbegriffe und unklar zuordenbare Sprache (siehe 3. Hinweise)."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Einzelne fremdsprachige Wörter sind nicht zwingend auszuzeichnen: Sie können als Bestandteil des umgebenden Sprachraums gelten, sofern kein klarer Sprachwechsel beabsichtigt war und die Aussprache auch ohne Markierung verständlich bleibt. In deutschen Texten sind Wörter wie „Enter“ oder „Helpdesk“ bereits etabliert und werden zudem deutsch und englisch ähnlich ausgesprochen — hier ist eine Auszeichnung nicht sinnvoll.\n- Ebenfalls nicht ausgezeichnet werden Mischwörter wie „Webauftritt“ oder „Checkpunkt“.\n- Einzelne Fremdwörter müssen ausgezeichnet werden, solange sie noch nicht fest in den deutschen Sprachgebrauch übergegangen sind. Begriffe, die das „Deutsche Universalwörterbuch” des Duden-Verlags verzeichnet, brauchen dagegen keine Kennzeichnung. Die Online-Duden-Suche unter [http://www.duden.de/suchen](http://www.duden.de/suchen) unterscheidet nicht mehr zwischen den Wörterbüchern und taugt daher nur als Ergänzung.\n- Die Wortlisten von Screenreadern enthalten geläufige Fremdwörter nicht durchgängig, sodass diese ohne Auszeichnung falsch ausgesprochen werden. Eine Auszeichnung ist darum sinnvoll, aber nicht vorgeschrieben. Solche gängigen Begriffe dürfen markiert werden, müssen es aber nicht — etwa Copyright, Website, Site, Homepage."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "- Fremdsprachige Wörter und Textabschnitte sind lückenlos ausgezeichnet; vereinzelte vergessene Stellen fließen nicht negativ ein, solange mindestens 90 % gekennzeichnet sind."
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Unter 50 % der fremdsprachigen Wörter tragen eine Sprachanzeige."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "- Siehe auch Prüfschritt 9.3.1.1 „Hauptsprache angegeben“"
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 3.1 Readable: Make text content readable and understandable](https://www.w3.org/TR/WCAG21/#readable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [3.1.2 Language of Parts](https://www.w3.org/TR/WCAG21/#language-of-parts)(Level AA)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H58: Using language attributes to identify changes in the human language](https://www.w3.org/WAI/WCAG21/Techniques/html/H58.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "Wichtigkeit der Sprachauszeichnung nach WCAG 2.2",
+          "inhalt_markdown": "> Identifying changes in language is important for a number of reasons:\n\n                    - It allows braille translation software to follow changes in language, e.g., substitute control codes for accented characters, and insert control codes necessary to prevent erroneous creation of Grade 2 braille contractions.\n                    - Speech synthesizers that support multiple languages will be able to speak the text in the appropriate accent with proper pronunciation. If changes are not marked, the synthesizer will try its best to speak the words in the default language it works in. Thus, the French word for car, \"voiture\" would be pronounced \"voyture\" by a speech synthesizer that uses English as its default language.\n                    - Marking changes in language can benefit future developments in technology, for example users who are unable to translate between languages themselves will be able to use machines to translate unfamiliar languages.\n                    - Marking changes in language can also assist user agents in providing definitions using a dictionary.\n\n([Language of Parts: Understanding SC 3.1.2](https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html))"
+        }
+      ]
+    }
+  ]
+}

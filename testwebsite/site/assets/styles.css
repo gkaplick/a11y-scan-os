@@ -1,0 +1,118 @@
+/* A11Y Test-Website — gemeinsames, selbst konformes Styling.
+   Bewusst konform: dunkle Textfarben auf hellem Grund, unterstrichene Links,
+   sichtbare Fokus-Indikatoren (NIEMALS outline:none), responsive (keine festen
+   Breiten), kein white-space:nowrap, keine Text-Clipping-Techniken. */
+:root {
+  --text: #1a1a1a;
+  --muted: #4a4a4a;
+  --link: #0b4da6;
+  --fokus: #005fcc;
+  --grenze: #b8c0cc;
+  --box-hell: #f2f4f8;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 100%;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: #ffffff;
+}
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; }
+img, video, iframe, table, object { max-width: 100%; height: auto; }
+a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+
+/* 1.4.1 / G183 (BITV-Ausnahme): Link ohne Initial-Unterstreichung, aber mit
+   Unterstreichung bei Hover/Fokus — im Initialzustand nur durch ≥ 3:1 Kontrast
+   zur umgebenden Textfarbe unterscheidbar. */
+.g183-link { text-decoration: none; }
+.g183-link:hover, .g183-link:focus, .g183-link:focus-visible { text-decoration: underline; }
+.g183-fail { text-decoration: none; }
+/* Icon nur bei Hover/Fokus (kein dauerhaftes Nicht-Farb-Merkmal → negativ). */
+.icon-hover-only::before { content: none; }
+.icon-hover-only:hover::before, .icon-hover-only:focus::before { content: "↗"; }
+p, li, td, th, figcaption, dt, dd, blockquote { overflow-wrap: anywhere; }
+pre, code, .testid { overflow-wrap: anywhere; }
+
+/* Fokus: überall sichtbar — auch :focus, weil einige Checks programmatisch
+   fokussieren (focus(focusVisible) deckt :focus-visible ab). */
+a:focus, button:focus, input:focus, select:focus, textarea:focus,
+[tabindex]:focus, a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--fokus);
+  outline-offset: 2px;
+}
+
+/* Sprunglink: außerhalb des Viewports, wird bei Fokus eingeblendet. */
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: 0;
+}
+.skip-link:focus, .skip-link:focus-visible {
+  left: 0;
+  background: #ffffff;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+}
+
+.seitenkopf { border-bottom: 1px solid var(--grenze); padding-bottom: 0.5rem; margin-bottom: 0.5rem; }
+.marke { font-weight: 700; font-size: 1.15rem; text-decoration: none; }
+.hauptnav { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin: 0.75rem 0 1.25rem; }
+.hauptnav a { padding: 0.6rem 0.25rem; }  /* Touch-Ziel ≥ 44 px hoch (WCAG 2.5.5) */
+.kategorie { color: var(--muted); font-size: 0.95rem; margin: 0.25rem 0 0; }
+
+.art-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.art-positiv { background: #e7f3ec; color: #14532d; }
+.art-negativ { background: #fbeaea; color: #7a1d1d; }
+
+.testids { margin: 0.5rem 0 1.25rem; }
+.testid {
+  display: inline-block;
+  background: #eef2f7;
+  color: #1a1a1a;
+  border: 1px solid #c3ccd9;
+  border-radius: 3px;
+  padding: 0 0.4rem;
+  margin: 0.15rem 0.15rem 0 0;
+  font-size: 0.8rem;
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+
+.beispiel {
+  margin: 1rem 0 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--grenze);
+  border-radius: 4px;
+  background: #f2f4f8;
+}
+.beispiel-positiv { border-left: 4px solid #2e7d32; background: #f6fbf7; }
+.beispiel-negativ { border-left: 4px solid #b3261e; background: #fbf6f6; }
+.beispiel h2, .beispiel h3 { margin-top: 0; }
+.hinweis { color: var(--muted); font-size: 0.95rem; }
+
+.tabelle-wrap { overflow-x: auto; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td { border: 1px solid var(--grenze); padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
+th { background: #eef2f7; }
+
+.seitenfuss {
+  margin-top: 2.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--grenze);
+  color: var(--muted);
+  font-size: 0.9rem;
+}

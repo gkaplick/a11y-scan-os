@@ -1,0 +1,54 @@
+{
+  "bitv_nummer": "6.5.3",
+  "titel": "Bildwiederholfrequenz bei Videotelefonie",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Unterstützt das Web-Angebot Videotelefonie, muss es eine Bildwiederholfrequenz von mindestens 20 Bildern pro Sekunde bieten. Empfehlenswert sind 30 Bilder pro Sekunde."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Eine ausreichende Bildwiederholfrequenz ist vor allem für Menschen mit Hörbehinderungen wichtig, die auf Bildinformationen angewiesen sind, etwa gehörlose Menschen, die das Mundbild Sprechender lesen. Zusätzlich setzt das Mitlesen von Mimik und Gestik eine ausreichende Bildwiederholfrequenz voraus."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn das Web-Angebot Videotelefonie unterstützt."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Für die Konformitätsbewertung bleibt derzeit nur, die Herstellerangaben zur Bildrate mit den eigenen visuellen Eindrücken abzugleichen. Das Web-Angebot ist auf zwei Geräten zu öffnen.\n\n1. - Die Bildwiederholfrequenz den Unterlagen des Anbieters entnehmen oder beim Hersteller erfragen; entscheidend ist, ob mindestens 20 Bilder pro Sekunde unterstützt werden.\n2. - Das Web-Angebot auf zwei Geräten öffnen.\n3. - Zwischen den Geräten eine Videotelefonie-Verbindung aufbauen.\n4. - Prüfen, ob die Bilddarstellung flüssig wirkt und die Herstellerangabe plausibel erscheint."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Für eine flüssige Darstellung sind bei der Videotelefonie rund 30 Bilder pro Sekunde empfehlenswert.\n\nEine präzise Messmethode für die unterstützte Bildwiederholfrequenz steht noch aus. Vorschläge zur Weiterentwicklung des Prüfschritts können Sie [als Issue auf GitHub](https://github.com/BIK-BITV/BIK-Web-Test/issues) hinterlassen."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "6.5.3 Framerate",
+          "inhalt_markdown": "> Where ICT that provides two-way voice communication includes real-time video\nfunctionality, the ICT:\n\n                                - shall support a frame rate of at least 20 frames per second (FPS)"
+        }
+      ]
+    }
+  ]
+}

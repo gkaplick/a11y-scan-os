@@ -1,0 +1,54 @@
+{
+  "bitv_nummer": "6.2.1.2",
+  "titel": "Gleichzeitige Sprache und Text",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Bietet die Web-Anwendung sowohl Zwei-Wege-Kommunikation als auch Echtzeit-Textkommunikation (RTT, Real-Time Text), soll Sprache und Echtzeit-Text gleichzeitig genutzt werden können."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Wer statt Sprache Echtzeit-Text eingibt, soll anderen Teilnehmenden gleichgestellt sein. Funktionen wie das digitale Handheben zum Einreihen in eine Rednerliste müssen für beide Nutzergruppen gleichermaßen funktionieren."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn die Web-Anwendung eine Zwei-Wege-Kommunikation (u. a. Sprach- und Videotelefonie) und zusätzlich Echtzeit-Textkommunikation anbietet. Echtzeit bedeutet, dass schon einzelne eingegebene Zeichen übertragen werden und der Text nicht erst aktiv abgeschickt werden muss."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Web-Anwendung öffnen.\n2. - Prüfen, ob Echtzeit-Text und Sprache gleichberechtigt genutzt werden können und Funktionen wie das digitale Handheben sowohl für Sprachnutzer als auch für Echtzeit-Text-Nutzer verfügbar sind. Bei einer Warteschlange für Beiträge müssen beide Gruppen in derselben Schlange landen."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Bei RTT entsteht das Gespräch aus unmittelbar übertragenen Einzelzeichen; ein Chat hingegen übermittelt erst nach dem Senden eine fertige Nachricht.\n- Bei Konferenzen ab drei Teilnehmenden gilt Text-Echtzeit-Kommunikation gleichwertig zur Sprache. Regeln für abwechselndes Sprechen (etwa ein einzelner aktiver Redner) müssen entsprechend für RTT-Teilnehmende gelten.\n- Bietet eine Konferenz zugleich eine herkömmliche Chat-Funktion, sind Chat und Echtzeit-Text-Kommunikation zu trennen, etwa in separaten Fenstern, damit sich beide Kommunikationsformen nicht gegenseitig stören und keine Verwirrung entsteht."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Human Factors (HF); Real-Time Text (RTT) in Multiparty Conference Calling / ETSI TR 103 708 V1.1.1 (2022-08)](https://labs.etsi.org/rep/HF/en301549/uploads/272bede3724c5c99efe777f778201f70/tr_103708v010101p.pdf)"
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "6.2.1.2 Concurrent voice and text",
+          "inhalt_markdown": "> Where ICT provides a means for two-way voice communication and for users to\ncommunicate by RTT, it shall allow concurrent voice and text through a single\nuser connection.\n\nNOTE 1:\nWith many-party communication, as in a conference system, it is allowed (but\nnot required or necessarily recommended) that RTT be handled in a single\ndisplay field and that \"turn-taking\" be necessary to avoid confusion (in the\nsame way that turn-taking is required for those presenting/talking with voice).\n\nNOTE 2:\nWith many-party communication, best practice is for hand-raising for voice\nusers and RTT users to be handled in the same way, so that voice and RTT users\nare in the same queue.\n\nNOTE 3:\nWith a many-party conference system that has chat as one of its features - the\nRTT (like the voice) would typically be separate from the chat so that RTT use\ndoes not interfere with chat (i.e. people can be messaging in the chat field\nwhile the person is presenting/talking with RTT - in the same manner that\npeople message using the chat feature while people are talking with voice).\nRTT users would then use RTT for presenting and use the Chat feature to\nmessage while others are presenting (via Voice or RTT).\n\nNOTE 4:\nThe availability of voice and RTT running concurrently (and separately from\nchat) can also allow the RTT field to support text captioning when someone is\nspeaking (and it is therefore not being used for RTT since it is not the RTT\nuser’s turn to speak).\n\nNOTE 5:\nWhere both server-side software and local hardware and software are required\nto provide voice communication, where neither part can support voice\ncommunication without the other and are sold as a unit for the voice\ncommunication function, the local and server-side components are considered a\nsingle product."
+        }
+      ]
+    }
+  ]
+}

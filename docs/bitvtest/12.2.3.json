@@ -1,0 +1,54 @@
+{
+  "bitv_nummer": "12.2.3",
+  "titel": "Effektive Kommunikation",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Bietet ein Angebot technischen Support an (etwa per Telefon, Mail oder Chat), soll er auf die Kommunikationsanliegen von Menschen mit Behinderungen eingehen und wirksame, tragfähige Kommunikationswege anbieten – gegebenenfalls auch durch Vermittlung an Dritte."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Menschen mit unterschiedlichen Behinderungen bevorzugen unterschiedliche Kommunikationswege. Schwerhörige Menschen etwa tun sich mit dem Telefon schwer und wählen eher E-Mail oder Chat, während Menschen, denen das Schreiben schwerfällt, ein Anruf leichter fällt."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar ist der Prüfschritt, wenn das Angebot (meist eine Webanwendung) technischen Support bereitstellt, etwa per Telefon, Mail oder Chat."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Erfüllt ist der Prüfschritt in der Regel nur, wenn den Nutzenden mehrere Kommunikationswege offenstehen, etwa:\n\n- E-Mail\n- Chat\n- Telefon\n- Videotelefonie"
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Ein Prüfansatz wäre festzustellen, ob der Support über mindestens zwei verschiedene Kanäle erreichbar ist, etwa Telefon und E-Mail. Wie der Prüfschritt in der Praxis anzuwenden ist, ist noch nicht abschließend geklärt; Hinweise können als [Issue auf GitHub](https://github.com/BIK-BITV/BIK-Web-Test/issues) hinterlassen werden."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "12.2.3 Effective communication",
+          "inhalt_markdown": "> ICT support services shall accommodate the communication needs of individuals\nwith disabilities either directly or through a referral point."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "bitv_nummer": "9.2.4.6",
+  "titel": "Aussagekräftige Überschriften und Beschriftungen",
+  "wcag22": {
+    "guideline": "Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are.",
+    "level": "A",
+    "success_criterion": "2.4.6 Headings and Labels",
+    "techniken": {
+      "General Techniques": [
+        "G130: Providing descriptive headings",
+        "G131: Providing descriptive labels"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Überschriften fassen den nachfolgenden Inhalt treffend zusammen; Beschriftungen und Linktexte sind aussagekräftig formuliert."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Überschriften gliedern Webseiteninhalte optisch. Dank dieser Ordnung erkennen Nutzende, was zusammengehört, überblicken die Inhalte leicht und greifen gezielt auf Interessantes zu.\n\nSind Formularelemente aussagekräftig beschriftet, können Nutzende sie als solche erkennen und bedienen."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, sobald die Seite per Überschriften gegliederte Inhalte sowie Formularelemente aufweist."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Seite im [Firefox](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#firefox) laden.\n2. - Prüfen, ob die Überschriften im Kontext der von ihnen gegliederten Inhalte überzeugen.\n3. - Prüfen, ob die Beschriftungen der Formularfelder ihren Inhalt gut beschreiben.\n4. - Kontrollieren, ob programmatisch hinterlegte Beschriftungen den Inhalt treffend wiedergeben – etwa bei visuellen Linktexten, die mittels `aria-label` überschrieben werden, oder bei hinterlegten Beschriftungen grafischer Bedienelemente. Dazu gehört auch die richtige Sprache.\n5. - Wird zur Gruppen-Beschriftung `fieldset` mit `legend` eingesetzt: Ist die Ausgabe von `legend` und `label` im Zusammenhang aussagekräftig?"
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "3.1 Hinweise zu Fachausdrücken",
+          "inhalt_markdown": "Gerade in Fachanwendungen tragen Beschriftungen und Überschriften oft Fachbegriffe, Abkürzungen oder Codes, die nicht jeder versteht, den Nutzenden der Zielgruppe aber geläufig sind. Solche Begriffe haben Vorzüge (Wiedererkennbarkeit, Präzision, Kürze), müssen jedoch erst erlernt werden. In Fachanwendungen ist das hinnehmbar und nicht negativ zu bewerten."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt:",
+          "inhalt_markdown": "- Überschriften stimmen mit dem folgenden Inhalt überein, die Beschriftungen der Formularelemente sagen klar aus, was erwartet wird."
+        },
+        {
+          "titel": "Nicht voll erfüllt:",
+          "inhalt_markdown": "- Überschriften oder Beschriftungen wirken unklar oder schwer verständlich (z. B. unübersetzt)\n- Wegen Tipp- oder Kopierfehlern tragen Formularelemente falsche, nicht passende Beschriftungen\n- Für bestimmte Eingaben verlangte Formate werden nicht über Zusatzbeschriftungen erklärt\n- Besonders in Fachanwendungen entsprechen Labels und Überschriften dem etablierten Vokabular des Nutzerkreises (einschließlich viel genutzter Abkürzungen). Das hat Vorzüge (Wiedererkennbarkeit, Präzision, Kürze), kann jedoch bewirken, dass sie nicht jeder sofort versteht; das soll nicht negativ bewertet werden.\n- Bei Angeboten mit Framework-Komponenten finden sich häufig unübersetzte englischsprachige hinterlegte Beschriftungen, etwa ein Schließen-Icon mit `aria-label=\"close\"`. In solchen Fällen ist 9.1.1.1a \"Alternativtexte für Bedienelemente\" gleichwohl erfüllt; der Mangel liegt in der hier bewerteten fehlenden Aussagekraft."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung von anderen Prüfschritten",
+          "inhalt_markdown": "- Dieser Prüfschritt beurteilt, wie aussagekräftig Überschriften und Beschriftungen sind – auch wenn sie visuell versteckt sind. Dass sie programmatisch ermittelbar sind, verankern die Prüfschritte 9.1.3.1a \"HTML-Strukturelemente für Überschriften\" bzw. 9.1.3.1h \"Beschriftung von Formularelementen programmatisch ermittelbar\".\n- Die Alternativtexte von Bildern – etwa Teaser-Grafiken – prüft Prüfschritt 9.1.1.1a \"Alternativtexte für Bedienelemente\". Hier zählt allein, wie aussagekräftig hinterlegte Beschriftungen grafischer Bedienelemente bzw. Icons sind, sofern **überhaupt** eine Beschriftung existiert. Fehlt eine programmatisch ermittelbare Beschriftung, greift 9.1.1.1a."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are.](https://www.w3.org/TR/WCAG21/#navigable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [2.4.6 Headings and Labels](https://www.w3.org/TR/WCAG21/#headings-and-labels)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G130: Providing descriptive headings](https://www.w3.org/WAI/WCAG21/Techniques/general/G130.html)\n                    - [G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131.html)"
+        }
+      ]
+    }
+  ]
+}

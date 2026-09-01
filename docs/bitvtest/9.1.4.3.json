@@ -1,0 +1,142 @@
+{
+  "bitv_nummer": "9.1.4.3",
+  "titel": "Kontraste von Texten ausreichend",
+  "wcag22": {
+    "guideline": "Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background",
+    "level": "AA",
+    "success_criterion": "1.4.3 Contrast (Minimum)",
+    "techniken": {
+      "General Techniques": [
+        "G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text",
+        "G145: Ensuring that a contrast ratio of at least 3:1 exists between text (and images of text) and background behind the text",
+        "G148: Not specifying background color, not specifying text color, and not using technology features that change those defaults",
+        "G174: Providing a control with a sufficient contrast ratio that allows users to switch to a presentation that uses sufficient contrast"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Sämtliche Texte der Seite müssen in allen Zuständen einen ausreichenden Helligkeitskontrast aufweisen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Ähneln sich Vordergrund- und Hintergrundfarbe in ihrer Helligkeit, kann der Textkontrast zu gering ausfallen. Ausreichende Kontraste erleichtern das Lesen und kommen vor allem Menschen mit eingeschränkter Sehschärfe, Farbfehlsichtigkeit oder altersbedingt verminderter Kontrastempfindlichkeit zugute."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, sobald die Seite Text enthält; auch grafisch dargestellte Schriften sind eingeschlossen."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Prüfung der Textkontraste der Standardversion",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Prüfung nicht festgelegter Farben",
+          "inhalt_markdown": "Geeignet sind das Bookmarklet „Vorder- und Hintergrundfarbe definiert“ beziehungsweise ein User Stylesheet mit etwa `html {background-color:black;color:white}`; damit lässt sich nachprüfen, ob zu jeder gesetzten Vordergrundfarbe eines Elements eine Hintergrundfarbe existiert und umgekehrt."
+        },
+        {
+          "titel": "Sichtprüfung",
+          "inhalt_markdown": "- Sind die Schriftkontraste ausreichend?\n- Im Zweifel den Contrast Analyser öffnen.\n- Im Bereich „Vordergrund“ mit der Pipette die Vordergrundfarbe wählen, danach im Bereich „Hintergrund“ die Hintergrundfarbe.\n- Ist unklar, ob der Wert für große Schrift (3:1) oder kleine Schrift (4,5:1) gilt, in der Web Developer Toolbar die Funktion „Informationen > Elementinformationen einblenden“ aktivieren und den zu prüfenden Text anklicken; im Fenster „Elementinformationen“ zeigt der Bereich „Text“ die Schriftgröße in Pixeln. Alternativ in den Firefox Web Developer Tools das Element aktivieren und unter „Inspektor > CSS > Berechnet“ die tatsächliche Schriftgröße (font-size) ermitteln.\n- Für Schriftgrößen unter 24 px (bei fetter Schrift unter 18,7 px) prüfen, ob das Kontrastverhältnis mindestens 4,5:1 beträgt.\n- Bei großen Schriften ist ein Kontrastverhältnis von mindestens 3:1 erforderlich."
+        },
+        {
+          "titel": "2.2 Styleswitcher-Prüfung, Prüfung der Textkontraste der alternativen Ansicht",
+          "inhalt_markdown": "Erfüllt die Standardversion die Sollwerte nicht und bietet die Seite über einen Styleswitcher eine kontrastreichere Ansicht:\n1. Den Textkontrast des Styleswitcher-Schaltelements messen.\n2. Das Kontrastverhältnis muss mindestens 4,5:1 betragen, sofern der Schalter textuell beschriftet ist (bei grafischen Schaltern greift 3,0:1, vgl. Prüfschritt 9.1.4.11). Auch alle übrigen Anforderungen wie Tastaturbedienbarkeit müssen erfüllt sein, sonst wird die Prüfung der alternativen Ansicht abgebrochen.\n3. Die über den Styleswitcher angebotene kontrastreichere Ansicht öffnen.\n4. Die Textkontraste in der alternativen Ansicht messen (analog zu 2.1)."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "3.1 Allgemeine Hinweise",
+          "inhalt_markdown": "- Elemente mit unterschiedlichen Zuständen sollen in allen Zuständen ausreichend zum Hintergrund kontrastieren. Auch die Hervorhebung von Maus- oder Tastaturfokus muss den Wert von 4,5:1 (bei großen Schriften 3,0:1) erreichen.\n- Schwache Kontraste können bewusst eingesetzt sein und die Bedienung erleichtern, etwa bei derzeit nicht verfügbaren Funktionen. Das ist in Ordnung, sofern das ausgeblendete Element für Orientierung und Bedienung nicht gebraucht wird; die Beschriftungen ausgeblendeter, inaktiver Bedienelemente fallen in der Regel nicht unter diesen Prüfschritt.\n- Bei Bereichen mit Farbwechseln auf Mauskontakt kann ein Screenshot helfen, den Farbwert im Ruhezustand zu ermitteln. Alternativ lässt sich der Fokus per Tastatur herbeiführen; die Messung erfolgt dann über die Pipette des Contrast Analyzers.\n- Bei dünnen Schriften bei Bedarf vergrößern und die Schriftglättung abschalten.\n- Bei sehr kleinen Flächen wie feinen Schriften oder kleinen Icons empfiehlt sich oft ein Screenshot; die Vergrößerungs- und Farbpipette eines Bildbearbeitungswerkzeugs hilft dann weiter.\n- Platzhaltertexte in Formularfeldern müssen mindestens 4,5:1 erfüllen. Eine Ausnahme gilt, wenn eine parallel sichtbare Beschriftung die Kontrastanforderung bereits abdeckt; bei Suchfeldern reicht zudem ein gängiges Icon, das die Grafikkontrast-Vorgabe einhält (vgl. 9.1.4.11). Enthält der Platzhalter Zusatzangaben wie das Datumsformat, entfällt die Ausnahme und der Platzhalter muss 4,5:1 erreichen."
+        },
+        {
+          "titel": "3.2 Hinweise zur Prüfung von Seiten mit Styleswitcher",
+          "inhalt_markdown": "Die Kontrastprüfung der über einen Styleswitcher erreichbaren Ansicht erfolgt nur unter diesen Bedingungen:\n- Das Schaltelement beziehungsweise der unmittelbare Verweis auf die Styleswitcher-Seite ist oben auf der Seite klar erkennbar angeordnet.\n- Das Schaltelement hat mindestens 4,5:1 Kontrast, sofern textbeschriftet (bei grafischen Schaltern 3,0:1, vgl. 9.1.4.11), und erfüllt alle weiteren Anforderungen an Barrierefreiheit wie Tastaturbedienbarkeit.\n- Die kontrastreichere Ansicht bietet dieselben Informationen und Funktionen wie die Ausgangsansicht."
+        },
+        {
+          "titel": "3.3 Hinweise zur Messung des Kontrastverhältnisses",
+          "inhalt_markdown": "- Maßgeblich ist das Kontrastverhältnis (relative Helligkeit) nach der in den WCAG 2.1 definierten Formel.\n- Die Unterscheidung von normalem und großem Text stützt sich auf die gemessene Schriftgröße in Pixeln (Web Developer Toolbar, Funktion „Elementinformationen einblenden“), da eine Typometer-Messung der Punktgröße auf dem Bildschirm nicht praktikabel ist. Bei 96 dpi entspricht 18 Punkt ungefähr 24 Pixeln, 14 Punkt rund 18,7 Pixeln.\n- Diese Umrechnung ist gerechtfertigt, weil die bisher getesteten User Agents Pixel und Punkt unabhängig von der Bildschirmauflösung im Verhältnis 4:3 behandeln. Maßgeblich ist der Referenzwert von 96 dpi, für den die Entsprechung sicher gilt."
+        },
+        {
+          "titel": "3.4 Hinweise zu mangelnden Text-Kontrasten nativer Elemente in Browsern (z.B. select , datepicker widgets)",
+          "inhalt_markdown": "In manchen Browsern genügen die Kontraste nativer Elemente nicht immer; so stellt Chrome die gewählte Option in `select`-Elementen als weiße Schrift auf blauem Grund mit nur 3,2:1 dar. Streng genommen wäre der Prüfschritt bei solchen nativen Elementen in bestimmten Browsern nicht erfüllt.\n\nAutoren können die Darstellung vieler nativer Elemente und Widgets derzeit nicht ausreichend beeinflussen. Der Ersatz durch kontrastreichere Custom-Elemente brächte andere Nachteile: korrekte Darstellung nur mit JavaScript, umgebungsabhängige Screenreader-Probleme sowie umfangreicheren, fehleranfälligeren Code. Da native Elemente deutliche Vorteile gegenüber Custom-Elementen bieten, gilt der Prüfschritt trotzdem als erfüllt, wenn die Kontrastmängel allein auf die browserbedingte Darstellung nativer Elemente zurückgehen."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "- Für Texte unter 18 Punkt (fette Texte unter 14 Punkt) beträgt das Kontrastverhältnis zwischen Vorder- und Hintergrundfarbe mindestens 4,5:1.\n- Für große Schrift (18 Punkt und größer, fette Schrift ab 14 Punkt) beträgt das Kontrastverhältnis mindestens 3:1.\n- Wird das Kriterium ausschließlich über eine Alternativansicht erreicht, muss der Styleswitcher selbst 4,5:1 erfüllen; auch die übrigen Anforderungen an Barrierefreiheit müssen gegeben sein."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "- Der Kontrast von Grafiken ist Gegenstand von Prüfschritt 9.1.4.11 „Kontraste von Grafiken und grafischen Bedienelementen ausreichend“.\n- Schriftgrafiken behandelt Prüfschritt 9.1.4.5 „Verzicht auf Schriftgrafiken“ (dort auch die Definition)."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background](https://www.w3.org/TR/WCAG21/#distinguishable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG22/#contrast-minimum)(Level AA)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text](https://www.w3.org/WAI/WCAG22/Techniques/general/G18.html)\n                    - [G145: Ensuring that a contrast ratio of at least 3:1 exists between text (and images of text) and background behind the text](https://www.w3.org/WAI/WCAG22/Techniques/general/G145.html)\n                    - [G148: Not specifying background color, not specifying text color, and not using technology features that change those defaults](https://www.w3.org/WAI/WCAG22/Techniques/general/G148.html)\n                    - [G174: Providing a control with a sufficient contrast ratio that allows users to switch to a presentation that uses sufficient contrast](https://www.w3.org/WAI/WCAG22/Techniques/general/G174.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F83: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text)](https://www.w3.org/WAI/WCAG22/Techniques/failures/F83.html)\n                - [F24: Failure of Success Criterion 1.4.3, 1.4.6 and 1.4.8 due to specifying foreground colors without specifying background colors or vice versa](https://www.w3.org/WAI/WCAG22/Techniques/failures/F24.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "W3C zum Zusammenhang zwischen px und pt",
+          "inhalt_markdown": "[CSS Values and Units Module Level 3: 5.2 Absolute Lengths](https://www.w3.org/TR/css3-values/#absolute-lengths)"
+        }
+      ]
+    },
+    {
+      "titel": "Fragen zu diesem Prüfschritt",
+      "id": "fragen_zu_diesem_prüfschritt",
+      "untersektionen": [
+        {
+          "titel": "Subjektiver Eindruck bei Kontrastmessungen",
+          "inhalt_markdown": "Der Helligkeitskontrast ist nur eine von drei Einflussgrößen des Gesamtkontrasts; das Formelergebnis kann daher vom subjektiven Eindruck abweichen. Das ist gewollt: Maßgeblich ist allein, ob die Helligkeitsabstände der Farben für sich genommen genügen. Bei normaler Sicht entspricht der Eindruck der Graustufenansicht dem Formelergebnis eher. Nachbarfarben beeinflussen die Wahrnehmung, kleine und dünne Schriften wirken kontrastärmer, es gibt Überstrahleffekte, und die Schriftglättung kann Kontraste abschwächen — all das berücksichtigt die Formel nicht, was bei Texten auch angemessen ist, weil diese Einflüsse nicht feststehen.\n\nFür die Prüfung heißt das: Ohne Erfahrung mit der formelbasierten Bewertung sollte man sich nicht auf den subjektiven Eindruck verlassen, sondern die Formel auf nahezu alle Farbkombinationen anwenden."
+        }
+      ]
+    }
+  ]
+}

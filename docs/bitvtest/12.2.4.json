@@ -1,0 +1,66 @@
+{
+  "bitv_nummer": "12.2.4",
+  "titel": "Vom Support bereitgestellte Dokumentation",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Stellt der technische Support eines Angebots Dokumentation bereit, muss diese mindestens in einem der folgenden Formate barrierefrei vorliegen:\n\n- Als Web-Dokument, das den Vorgaben aus EN 301 549 Kapitel 9 genügt\n- Als Nicht-Web-Dokument (etwa PDF oder Word-Datei), das den Vorgaben aus EN 301 549 Kapitel 10 genügt\n\nDaneben bereitgestellte, womöglich nicht barrierefreie Ausgaben der Dokumentation bleiben außen vor."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Technische Dokumentation ist fester Bestandteil vieler Angebote, gerade bei komplexeren Webanwendungen. Damit sie auch von Menschen mit Behinderungen genutzt werden kann, sollte sie sämtlichen Anforderungen an Barrierefreiheit genügen."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar ist der Prüfschritt, wenn Support-Services technische Unterlagen zur Bedienung des Angebots herausgeben, etwa HTML-basierte Hilfesysteme, PDF-Handbücher oder Anleitungen. Der BITV-Test kann nur Dokumente auf Basis von Web-Technologien prüfen. Stellt der Support eine webbasierte Dokumentation bereit, sollte das vorab mit dem Anbieter geklärt werden, damit sie bereits bei der Seitenauswahl berücksichtigt wird. Andere Formate wie PDF erfordern gegebenenfalls einen getrennten Prüfauftrag."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Zunächst ist zu klären, ob es eine Support-Dienstleistung gibt, die technische Dokumentation bereitstellt, die die Funktionen eines Angebots erläutert. Beispiele:\n\n- Ein Datenbankanbieter verweist auf Anfrage per Link auf eine HTML-Anwendung, die Such- und Filterfunktionen erklärt.\n- Ein Dokumenten-Management-System übermittelt auf Anfrage eine HTML-Referenzseite zu den unterstützten Tastaturbefehlen.\n- Der Anbieter eines webbasierten Drucker-Management-Systems übermittelt auf Anfrage ein PDF-Handbuch zu den verfügbaren Touch-Displays und Funktionen des Druckers. Dieses Handbuch wäre im Test nicht zu prüfen; der Auftraggeber wird auf einen möglichen Zusatzauftrag für eine PDF-Prüfung hingewiesen.\n\nLiegt weitere technische Dokumentation als HTML vor, wird sie in die Seitenauswahl des Tests aufgenommen und mitgeprüft."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Gemeint sind alle Dokumente, die der Support dem Nutzer auf Anfrage zur Verfügung stellt. Alternative Formate für bestimmte Nutzergruppen bleiben möglich, etwa Braille-Dokumente für blinde Menschen oder Angebote in Leichter Sprache für Menschen mit kognitiven oder sprachlichen Einschränkungen. Wie der Prüfschritt in der Praxis anzuwenden ist, ist noch nicht abschließend geklärt; Hinweise können als [Issue auf GitHub](https://github.com/BIK-BITV/BIK-Web-Test/issues) eingereicht werden."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "Die webbasierte Dokumentation genügt sämtlichen Anforderungen aus Kapitel 9 (Web) der EN."
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "Die webbasierte Dokumentation verfehlt mindestens eine Anforderung aus Kapitel 9 (Web) der EN."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "12.2.4 Accessible documentation",
+          "inhalt_markdown": "> Documentation provided by support services shall be made available in at least\none of the following electronic formats:\n* a Web format that conforms to clause 9; or\n* a non-web format that conforms to clause 10.\n\nNOTE 1:\nThis does not preclude the possibility of also providing the documentation in\nother formats (electronic or printed) that are not accessible.\n\nNOTE 2:\nIt also does not preclude the possibility of providing alternate formats that\nmeet the needs of some specific type of users (e.g. Braille documents for\nblind people or easy-to-read information for persons with limited cognitive,\nlanguage and learning abilities).\n\nNOTE 3:\nWhere the support documentation is incorporated into the ICT, the documentation\nfalls under the requirements for accessibility in the present document.\n\nNOTE 4:\nA user agent that supports automatic media conversion would be beneficial to\nenhancing accessibility."
+        }
+      ]
+    }
+  ]
+}

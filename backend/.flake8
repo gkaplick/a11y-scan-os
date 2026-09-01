@@ -1,0 +1,17 @@
+[flake8]
+max-line-length = 100
+extend-ignore =
+    # E203: Whitespace vor ':' (PEP8 vs. Black-Konvention)
+    E203,
+    # W503: Zeilenumbruch vor binärem Operator (Black-Stil)
+    W503,
+    # F401 in __init__.py-Rexports ist gewollt (CheckContext etc.)
+    F401,
+    # E501: lange Zeilen toleriert (Projekt-Konvention, siehe CLAUDE.md)
+    E501,
+exclude =
+    .git,
+    __pycache__,
+    data,
+    docs,
+    tests/fixtures

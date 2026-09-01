@@ -1,0 +1,65 @@
+# Dev-Override: Hot-Reload für Backend + Frontend.
+#
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up
+#
+# Vorteil gegenüber dem Produktiv-Setup: Kein Rebuild nötig bei Code-Änderungen —
+# Backend (uvicorn --reload) und Frontend (Nuxt-Dev-Server mit HMR) lesen den
+# Quellcode direkt vom Host. Das Frontend zeigt damit immer den aktuellen
+# Registry-Stand (implementiert vs. stub), ohne dass zuerst ein Image neu
+# gebaut werden muss.
+#
+#   api:  App-Code live (./backend/app → /app/app), uvicorn --reload.
+#         requirements/testwebsite bleiben aus dem Image (bei neuen
+#         Abhängigkeiten: docker compose build api).
+#   web:  Frontend-Code live (./frontend → /app), Nuxt-Dev-Server (HMR).
+#         node_modules kommt aus dem Image (named volume) — kein npm ci beim
+#         Start. Der Dev-Server lauscht auf Container-Port 3000, damit die
+#         Basis-Mapping 3001:3000 greift (kein extra Ports-Block: Compose
+#         MERGT ports-Listen additiv — ein 3001:3001 hier kollidiert mit dem
+#         Basis-3001:3000 auf Host-Port 3001!). --host 0.0.0.0 nötig: nuxi dev
+#         bindet sonst nur localhost im Container und wäre über das
+#         Port-Mapping nicht erreichbar.
+#
+# Einschränkungen:
+# - Das Dev-Web belegt Host-Port 3001 — Produktiv-web (gleicher Port) darf
+#   nicht parallel laufen (vorher: docker compose down).
+# - WebSocket-Tunnel + /api-Proxy funktionieren im Dev-Server gleich (same-
+#   origin über API_URL=http://api:8000 im Compose-Netzwerk).
+# - Integrationstests mit Live-Code weiterhin explizit mounten, z. B.:
+#   docker compose run --rm -v "G:/Meine Projekte/a11y-scanner/backend:/app" api pytest -m integration
+services:
+  api:
+    volumes:
+      # Nur den App-Code live mounten — /app/data, /app/docs, /app/testwebsite
+      # und die requirements bleiben aus dem Image.
+      - ./backend/app:/app/app
+    # --timeout-graceful-shutdown: bricht den Reload-Shutdown nach N Sekunden
+    # hart ab. Ohne das Limit wartet uvicorn unbegrenzt auf laufende
+    # asyncio-Tasks — ein gerade laufender Scan (oder offener Chromium) hält
+    # den Reload auf, die API hängt und das Frontend lädt ewig (siehe unten).
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload --timeout-graceful-shutdown 10
+    environment:
+      # Kein Browser-Warmstart im Dev-Modus: ein offener Chromium-Prozess hält
+      # den uvicorn-Reload-Shutdown auf ("Waiting for background tasks") →
+      # die API hängt und das Frontend lädt ewig. Der Browser wird bei Bedarf
+      # pro Job ohnehin gestartet (get_browser in new_context).
+      A11Y_BROWSER_WARMSTART: "false"
+
+  web:
+    volumes:
+      - ./frontend:/app
+      # node_modules aus dem Image (wird beim ersten Start mit den
+      # Image-Dependencies befüllt) — Host-node_modules bleibt unberührt.
+      - web_node_modules:/app/node_modules
+    # npx nuxt dev auf Container-Port 3000 (nutzt die Basis-Mapping 3001:3000);
+    # --host 0.0.0.0 für Erreichbarkeit über das Docker-Port-Mapping.
+    command: npx nuxt dev --port 3000 --host 0.0.0.0
+    environment:
+      API_URL: http://api:8000
+      # CHOKIDAR_USEPOLLING: Datei-Änderungen am Host (Bind-Mount) über Docker
+      # Desktop werden sonst NICHT als inotify-Events in den Container gereicht
+      # → Vite bemerkt Edits nicht, HMR ist tot. Polling erzwingt die Erkennung.
+      CHOKIDAR_USEPOLLING: "true"
+
+volumes:
+  web_node_modules:

@@ -1,0 +1,65 @@
+{
+  "bitv_nummer": "9.1.2.1",
+  "titel": "Alternativen für Audiodateien und stumme Videos",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Audiodateien und stumme Videos, die Informationen vermitteln, benötigen gleichwertige Medienalternativen – es sei denn, sie selbst dienen bereits als Medienalternative zu einem Text."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Audiodateien (etwa Podcasts) bleiben hörbehinderten Menschen ohne Transkription verschlossen. Stumme Videos – beispielsweise eine Montageanleitung ohne Ton – sind für blinde und sehbehinderte Menschen nicht verfügbar; sie benötigen deshalb eine vollwertige Medienalternative als Text oder Audiodatei."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar, sobald die Seite Audiodateien oder stumme Videodateien einbindet."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Transkription für Audiodateien",
+          "inhalt_markdown": "1. Die Audiodatei im Browser abspielen. 2. Prüfen, ob sie Informationen vermittelt (etwa über eine Kommentarstimme); dann ist eine Transkription erforderlich. 3. Prüfen, ob eine Transkription angeboten wird. 4. Transkription aufrufen und prüfen, ob sie dieselben Inhalte wie die Audiodatei vermittelt. Bei mehreren Stimmen muss die Transkription kennzeichnen, wer jeweils spricht."
+        },
+        {
+          "titel": "2.2 Medienalternative für stumme Film- oder Bildsequenzen",
+          "inhalt_markdown": "1. Die stumme Videodatei im Browser abspielen. 2. Prüfen, ob sie Informationen vermittelt. 3. Prüfen, ob eine Medienalternative angeboten wird – als Textversion (direkt oder per Link), als alternative Tonspur oder als zusätzliche Audiodatei. 4. Die Medienalternative öffnen und kontrollieren, ob sie den Inhalt der stummen Film- oder Bildsequenz ebenso vermittelt."
+        },
+        {
+          "titel": "2.3 Prüfung der Erreichbarkeit der Transkription bzw. Medienalternative",
+          "inhalt_markdown": "1. Kontrollieren, ob die Medienalternative in direkter Nachbarschaft der Audio- oder Videodatei angeboten wird. 2. Liegt sie auf einer anderen Seite, muss ein aussagekräftiger Link im unmittelbaren Umfeld der Audio- oder Videodatei zu ihr führen."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Keine Medienalternative ist nötig, wenn die Audio- oder Videodatei selbst als ergänzende Alternative zu einem Text dient (etwa eine Bildsequenz, die eine schriftliche Montageanleitung ergänzt). Der Zusammenhang muss deutlich erkennbar sein, etwa durch räumliche Nähe oder einen sprechenden Link. Eine exakte Entsprechung wird nicht verlangt; nachvollziehbar müssen aber dieselben Inhalte wiedergegeben werden. Bei Transkriptionen mit mehreren Stimmen (etwa Dialogen) ist zu kennzeichnen, welche sprechende Person jeweils zu Wort kommt."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "- Eine Medienalternative ist vorhanden, aber ihr Bezug zur Audiodatei oder zum stummen Video ist nicht deutlich.\n- Die Medienalternative bildet den Inhalt der Audio- bzw. stummen Videodatei nicht vollständig ab."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Für zeitbasierte Medien übernimmt Prüfschritt 9.1.1.1b \"Alternativtexte für Grafiken und Objekte\" die Abgrenzung."
+        }
+      ]
+    }
+  ]
+}

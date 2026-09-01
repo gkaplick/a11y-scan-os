@@ -1,0 +1,83 @@
+{
+  "bitv_nummer": "9.3.1.1",
+  "titel": "Hauptsprache angegeben",
+  "wcag22": {
+    "guideline": "Guideline 3.1 Readable: Make text content readable and understandable",
+    "level": "A",
+    "success_criterion": "3.1.1 Language of Page",
+    "techniken": {
+      "HTML Techniques": [
+        "H57: Using language attributes on the html element"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Die Webseite muss die Sprache ihres Hauptinhalts angeben."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Screenreader sprechen Text anhand von Aussprache-Wortlisten aus. Nur wenn die Sprache des Texts erkennbar ist, greift die richtige Wortliste und die Aussprache stimmt."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt gilt für alle Seiten."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Quelltextanalyse: Im Quelltext prüfen, ob das öffnende `html`-Element ein `lang`-Attribut trägt (bei XHTML-Seiten `xml:lang`) und ob darin die Hauptsprache der Seite korrekt eingetragen ist."
+        },
+        {
+          "titel": "3. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "- Die Sprache der Seite ist korrekt als Hauptsprache ausgezeichnet."
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Die Hauptsprache fehlt oder ist falsch angegeben."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "- Siehe auch Prüfschritt 9.3.1.2 „Anderssprachige Wörter und Abschnitte ausgezeichnet“"
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 3.1 Readable: Make text content readable and understandable](https://www.w3.org/TR/WCAG21/#readable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [3.1.1 Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H57: Using language attributes on the html element](https://www.w3.org/WAI/WCAG21/Techniques/html/H57.html)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "bitv_nummer": "5.2",
+  "titel": "Aktivierung von Barrierefreiheitsfunktionen",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Stellt die Webseite dokumentierte Funktionen zur Barrierefreiheit bereit, die besondere Bedürfnisse von Nutzenden abdecken, muss deren Aktivierung für die betroffene Zielgruppe barrierefrei möglich sein. Die Funktion soll von dieser Gruppe selbstständig in Gang gesetzt werden können; das ist in der Regel dann der Fall, wenn sie – etwa ein Kontrastumschalter oder ein Link auf eine Fassung in Leichter Sprache – den übrigen Anforderungen der EN 301 549 genügt.\n\nGeprüft werden nur nachgewiesene Funktionen, also solche, die beispielsweise in Hilfetexten oder der Erklärung zur Barrierefreiheit aufgeführt und beschrieben werden.\n\nBeispiele für Barrierefreiheitsfunktionen:\n\n- Vorlesefunktion\n- Kontrasterhöhung und abweichende Farbschemata\n- Anpassung von Schriftgröße und Schriftformatierung (z. B. Zeilenabstand, Schriftart)\n- Fassungen in Leichter Sprache oder in Deutscher Gebärdensprache\n- Einstellungen zum Deaktivieren automatisch abgespielter Animationen, Videos oder Audiodateien"
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Barrierefreiheitsfunktionen, die das Webangebot selbst bereitstellt (nicht das Betriebssystem oder der Browser), sollen von den Nutzenden, die sie benötigen, eigenständig aktivierbar sein. Bietet die Seite etwa eine Funktion zur Verbesserung des Kontrasts, müssen auch alle zu ihrer Aktivierung nötigen Bedienelemente bereits in der Standardansicht einen ausreichenden Kontrast aufweisen. Nur so können Menschen, die mit kontrastarmen Darstellungen Probleme haben und genau zur Zielgruppe der Funktion gehören, die Kontrasterhöhung selbst einschalten."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar ist der Prüfschritt, wenn die Webseite besondere Barrierefreiheitsfunktionen anbietet, die das Angebot selbst beschreibt – etwa unter den Einstellungen – oder die in einer mitgelieferten technischen Dokumentation genannt werden. Systemseitige Bedienungshilfen von Browser oder Betriebssystem bleiben außen vor."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. Die Webseite aufrufen.\n2. Sofern dokumentierte Barrierefreiheitsfunktionen vorhanden sind, prüfen:\n   - Ist die Funktion für die Zielgruppe identifizierbar?\n   - Kann die Zielgruppe die Funktion selbstständig auslösen?"
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "3.1 Hinweis zur Bestimmung der Zielgruppe der Barrierefreiheits-Funktion",
+          "inhalt_markdown": "Menschen mit Behinderung nutzen häufig wechselnde Eingabemethoden, etwa mal die Maus, mal die Tastatur. Auch mit kognitiven Einschränkungen gehen oft weitere Einschränkungen einher. Bei der Festlegung der Zielgruppe sollte daher berücksichtigt werden, welche Anforderungen über die eigentliche Einschränkung hinaus bestehen, für die die Funktion gedacht ist."
+        },
+        {
+          "titel": "3.2 Hinweis zur Identifizierbarkeit und Aktivierbarkeit",
+          "inhalt_markdown": "Bedienelemente für Barrierefreiheitsfunktionen sollen grundsätzlich allen Anforderungen der Barrierefreiheit genügen. Zwei Beispiele:\n\n1. Ein Schalter für eine Version in Leichter Sprache braucht eine verständliche, kontrastreiche und zugängliche Beschriftung, da Menschen mit kognitiven Einschränkungen oft zusätzlich sehbehindert oder blind sind.\n2. Ein Kontrastmodus-Schalter für sehbehinderte Menschen benötigt ebenfalls eine zugängliche Beschriftung, denn manche von ihnen setzen zusätzlich eine Sprachausgabe ein."
+        },
+        {
+          "titel": "3.3 Hinweis auf andere anwendbare Anforderungen",
+          "inhalt_markdown": "Nicht dokumentierte Barrierefreiheitsfunktionen können, auch wenn dieser Prüfschritt erfüllt ist, in anderen Prüfschritten negativ bewertet werden."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "Die Barrierefreiheitsfunktion lässt sich barrierefrei erkennen und selbstständig aktivieren."
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "Die Funktion oder ihre Bedienelemente verstoßen gegen weitere Anforderungen der EN."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "5.2 Activation of accessibility features",
+          "inhalt_markdown": "> Where ICT has documented accessibility features, it shall be possible to\nactivate those documented accessibility\nfeatures that are required to meet a specific need without relying on a method\nthat does not support that need."
+        }
+      ]
+    }
+  ]
+}

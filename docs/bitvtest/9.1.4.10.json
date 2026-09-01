@@ -1,0 +1,91 @@
+{
+  "bitv_nummer": "9.1.4.10",
+  "titel": "Inhalte brechen um",
+  "wcag22": {
+    "guideline": "Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background",
+    "level": "AA",
+    "success_criterion": "1.4.10 Reflow",
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Bei einer Browserfensterbreite von 320 CSS-Pixeln — beziehungsweise 1280 CSS-Pixeln bei 400% Zoom — muss sich der Inhalt so umbrechen, dass sämtliche Informationen und Funktionen ohne horizontales Scrollen erreichbar bleiben.\n\nDie Inhalte müssen in der responsiven Ansicht nicht in gleicher Weise vorliegen: Navigationsmenüs können etwa nur über eine Ausklappnavigation zugänglich sein, und Inhalte dürfen auch in aufklappbaren Bereichen oder über Verweise auf weitere Seiten beziehungsweise Ansichten untergebracht sein.\n\nNicht betroffen sind Inhalte, die nur mit einem zweidimensionalen Layout sinnvoll zu nutzen sind, etwa Abbildungen, Landkarten, Schaubilder, Videos, Spiele, Präsentationen oder Datentabellen sowie Bildschirm-Anwendungen mit festen Werkzeugleisten.\n\nHinweis: Der Prüfschritt betrifft nur Inhalte mit waagerechter primärer Schreibrichtung (etwa lateinische Schrift); für vertikale Schreibrichtungen gilt die zugrunde liegende WCAG-Anforderung sinngemäß."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Sehbehinderte Nutzer vergrößern Inhalte oft über die Zoomfunktion gängiger Desktop-Browser. Responsive Gestaltung mit CSS media queries unterstützt die Nutzung bei starkem Zoom, indem sie den Seitenumbruch dynamisch anpasst.\n\nResponsive Layouts ordnen Inhaltsblöcke neu an; mehrspaltige Inhalte werden bei starkem Zoom meist einspaltig untereinander angeordnet, und Fließtexte erhalten kürzere Zeilen. Dadurch ist nur das Scrollen in eine Richtung nötig (bei westlichen Sprachen senkrecht). Bleiben Zeilen dagegen ungebrochen, müssen Nutzer jede Zeile horizontal hin- und herscrollen, was die Aufnahme stark erschwert und verlangsamt."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt gilt für Webinhalte, deren Zugänglichkeits-Basis die üblichen Desktop-Browser mit integrierter Zoom-Funktion umfasst. Nicht anwendbar ist er bei Browsern mobiler Betriebssysteme, deren Zoom (etwa per Spreizgeste) in der Regel keinen Umbruch der Inhalte bewirkt."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Prüfung mit 320px Viewport-Breite",
+          "inhalt_markdown": "Gilt für Webinhalte mit horizontaler Schrift:\n1. Die Seite im Chrome Browser öffnen.\n2. Die Developer Tools rechts andocken (F12, Strg + Umschalttaste + I oder „Menü Einstellungen > Weitere Tools > Entwicklertools“) und die vertikale Trennlinie ziehen, bis oben rechts im Seitenbereich „320px x“ angezeigt wird (erscheint rechts ein Scrollbalken, 14px dazuzählen, also 334px einstellen).\n3. Die Seite neu laden.\n4. Prüfen, ob die Inhalte ohne horizontales Scrollen nutzbar umbrechen und weder Inhalte noch Funktionen verloren gehen."
+        },
+        {
+          "titel": "2.2 Alternative Prüfung mit 1280px Viewport-Breite",
+          "inhalt_markdown": "1. In einem Browser mit 400%-Zoom (z. B. Chrome) das Fenster auf 1280 CSS-Pixel Breite und 1024 CSS-Pixel Höhe einstellen, etwa über die Resize-Funktion der Web Developer Toolbar.\n2. Sicherstellen, dass 100% Zoom und 100% Textvergrößerung eingestellt sind.\n3. Auf 400% zoomen.\n4. Die Seite neu laden.\n5. Prüfen, ob die Inhalte ohne horizontales Scrollen nutzbar umbrechen und weder Inhalte noch Funktionen verloren gehen."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- In der umgebrochenen Ansicht dürfen Inhalte und Funktionen abweichend angeboten werden; sie können etwa über ein Ausklappmenü oder einen direkten Verweis erreichbar sein.\n- Bei der Prüfung mit 1280px und 400% Zoom ist es kein Mangel, wenn starr platzierte Elemente (etwa aufklappende Menüs) wegen der geringen Fensterhöhe nicht vollständig erreichbar sind. Entscheidend ist allein, ob die Inhalte in eine nicht horizontal zu scrollende Ansicht umbrechen. Für den Verlust von Information und Funktionalität ist die Prüfung bei 320px maßgeblich.\n- Ausgenommen bleiben Inhalte mit zweidimensionalem Aufbau, etwa Datentabellen, Abbildungen, Schaubilder, Videos, Spiele oder Anwendungsoberflächen mit Werkzeugleisten.\n- Optionen eines geöffneten `select`-Elements, die den sichtbaren Bereich überragen, sind nicht negativ zu werten.\n- Nicht geprüft wird hier, ob 400%-Zoom den Text tatsächlich auf 400% vergrößert; das ist Gegenstand von Prüfschritt 9.1.4.4 „Text auf 200% vergrößerbar“.\n- Für Unternehmen mit Bestandssystemen, die ihre Layoutmethoden nicht anpassen können, kann eine alternative konforme Version eine mobile Website mit festem, 320px breitem Layout sein; sie sollte von der Standardseite aus auffindbar sein."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Prüfschritt erfüllt",
+          "inhalt_markdown": "Inhalte und Funktionen sind bei 1280px Fensterbreite nach Zoom auf 400% (oder ungezoomt bei 320px Breite) vollständig ohne horizontales Scrollen erreichbar."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung von anderen Prüfschritten",
+          "inhalt_markdown": "Dieser Prüfschritt betrifft das Umbrechen von Inhalten beim Reinzoomen oder in schmalen Viewports ohne Informationsverlust in eine einspaltige Ansicht. Die Vergrößerbarkeit von Schrift bewertet Prüfschritt 9.1.4.4 „Text auf 200% vergrößerbar“."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background](https://www.w3.org/TR/WCAG22/#distinguishable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.4.10 Reflow](https://www.w3.org/TR/WCAG22/#reflow)(Level AA)"
+        },
+        {
+          "titel": "Sufficient Techniques",
+          "inhalt_markdown": "- [C32: Using media queries and grid CSS to reflow columns](https://www.w3.org/WAI/WCAG22/Techniques/css/C32.html)\n                - [C31: Using CSS Flexbox to reflow content](https://www.w3.org/WAI/WCAG22/Techniques/css/C31.html)\n                - [C33: Allowing for Reflow with Long URLs and Strings of Text](https://www.w3.org/WAI/WCAG22/Techniques/css/C33.html)\n                - [C38: Using CSS width, max-width and flexbox to fit labels and inputs](https://www.w3.org/WAI/WCAG22/Techniques/css/C38.html)\n                - [SCR34: Calculating size and position in a way that scales with text size](https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR34.html)\n                - [G206: Providing options within the content to switch to a layout that does not require the user to scroll horizontally to read a line of text](https://www.w3.org/WAI/WCAG22/Techniques/general/G206.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F102: Failure of Success Criterion 1.4.10 due to content disappearing and not being available when content has reflowed](https://www.w3.org/WAI/WCAG22/Techniques/failures/F102)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Understanding Reflow](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)(zur Zeit nur auf Englisch verfügbar)"
+    }
+  ]
+}

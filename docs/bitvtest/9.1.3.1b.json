@@ -1,0 +1,107 @@
+{
+  "bitv_nummer": "9.1.3.1b",
+  "titel": "HTML-Strukturelemente für Listen",
+  "wcag22": {
+    "level": "A",
+    "success_criterion": "1.3.1 Info and Relationships",
+    "techniken": {
+      "General Techniques": [
+        "G115: Using semantic elements to mark up structure",
+        "G140: Separating information and structure from presentation to enable different presentations"
+      ],
+      "HTML Techniques": [
+        "H48: Using ol, ul and dl for lists",
+        "H97: Grouping related links using the nav element"
+      ],
+      "Client-side Scripting Techniques": [
+        "SCR28: Using an expandable and collapsible menu to bypass block of content"
+      ],
+      "Failures": [
+        "F2: Failure of Success Criterion 1.3.1 due to using changes in text presentation to convey information without using the appropriate markup or text",
+        "F43: Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content",
+        "F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Listen auf der Seite sollen mit den HTML-Strukturelementen für Listen (`ul`, `ol` und so weiter) ausgezeichnet sein."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Die HTML-Strukturelemente definieren den Aufbau einer Seite losgelöst von der Präsentation auf einer abstrakten Ebene und machen ihn zugänglich. Wer mit der vorgegebenen visuellen Darstellung nichts anfangen kann, findet sich so zurecht oder wendet eine eigene, besser passende Präsentation an. Mögliche Anwendungen: Screenreader-Nutzende überspringen Listen oder Listeneinträge; hierarchische Strukturen lassen sich angemessen abbilden."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar, wenn die Seite Elemente enthält, die vom Erscheinungsbild oder von der Funktion her Listen sind – auf Informationsseiten die Regel. Da auch der Missbrauch der HTML-Elemente für Listen geprüft wird, ist der Prüfschritt zusätzlich immer dann anwendbar, wenn Elemente als Listen ausgezeichnet sind."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "- Seite im Firefox aufrufen.\n- Das Lists-Bookmarklet aufrufen; vorhandene Listenauszeichnungen werden dargestellt.\n- Prüfen, ob alle Listen und auch die Menüs mit den dafür vorgesehenen HTML-Strukturelementen ausgezeichnet sind (`ul`, `ol`, `dl`).\n- Prüfen, ob Listen-Markup für Elemente eingesetzt wird, die gar keine Listen sind."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Nicht bewertet wird, ob Texte besser in Listenform dargestellt werden sollten – geprüft wird nur, ob vorhandene, erkennbare Listen auch ausgezeichnet sind. Listen erkennt man meist an der Darstellung: Sie heben sich von Textabsätzen ab, sind oft eingerückt und tragen Aufzählungszeichen oder Nummern. Navigationsmenüs führen Gruppen von Linkzielen auf und sind ihrer Aufgabe nach immer Listen, egal wie sie gestaltet sind; sie sind daher ebenfalls als Listen zu markieren. Für Aktionsmenüs eignen sich eher ARIA-Konstrukte wie `menu`. Beschreibungslisten (`dl`) bündeln Begriffe (`dt`) und Beschreibungen (`dd`), typisch für Glossare oder Schlüssel/Wert-Paare; ihre Verwendung für andere paarige Informationen ist akzeptiert, auch wenn Screenreader das Konstrukt kaum unterstützen. Für die Notwendigkeit einer Listenauszeichnung ist die Semantik des Elements maßgeblich: Ein Seitenpfad (breadcrumb) muss nicht zwingend eine Liste sein – einfache, verschachtelte oder als Absatz mit Links umgesetzte Varianten sind alle möglich. Komplexe Teaser-Kacheln aus Bild, Überschrift, Begleittext und Link können als ungeordnete Liste umgesetzt werden, müssen es aber nicht; ohne Listenauszeichnung sollten die Inhalte anderweitig semantisch gegliedert sein, etwa durch Überschriften oder das `article`-Element. Bestehen Kachelinhalte nur aus einfachen Links, ist Listenauszeichnung immer angemessen. Eine Liste mit nur einem Element ist sinnvoll, wenn potenziell weitere Einträge folgen können (etwa bei Suchergebnissen oder nach einer Filterung)."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "- Sämtliche Listen, auch die Menüs, sind mit den dafür vorgesehenen HTML-Strukturelementen als Listen markiert."
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "- Für Menüs fehlt die Auszeichnung mit geeigneten HTML-Strukturelementen."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guidelines",
+          "inhalt_markdown": "- [Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure](https://www.w3.org/TR/WCAG22/#adaptable)\n                - [Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are](https://www.w3.org/TR/WCAG22/#navigable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG22/#info-and-relationships)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G115: Using semantic elements to mark up structure](https://www.w3.org/WAI/WCAG22/Techniques/general/G115.html)\n                    - [G140: Separating information and structure from presentation to enable different presentations](https://www.w3.org/WAI/WCAG22/Techniques/general/G140.html)"
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H48: Using ol, ul and dl for lists](https://www.w3.org/WAI/WCAG22/Techniques/html/H48.html)\n                    - [H97: Grouping related links using the nav element](https://www.w3.org/WAI/WCAG22/Techniques/html/H97.html)"
+        },
+        {
+          "titel": "Client-side Scripting Techniques",
+          "inhalt_markdown": "- [SCR28: Using an expandable and collapsible menu to bypass block of content](https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR28.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F2: Failure of Success Criterion 1.3.1 due to using changes in text presentation to convey information without using the appropriate markup or text](https://www.w3.org/WAI/WCAG22/Techniques/failures/F2.html)\n                    - [F43: Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content](https://www.w3.org/WAI/WCAG22/Techniques/failures/F43.html)\n                    - [F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information](https://www.w3.org/WAI/WCAG22/Techniques/failures/F92.html)"
+        }
+      ]
+    }
+  ]
+}

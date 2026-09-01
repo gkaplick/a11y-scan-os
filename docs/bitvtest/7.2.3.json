@@ -1,0 +1,61 @@
+{
+  "bitv_nummer": "7.2.3",
+  "titel": "Erhaltung von Audiodeskription",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Überträgt, konvertiert oder zeichnet das Webangebot Videos mit Audiodeskription auf, übersteht die Audiodeskription den Vorgang unverändert: Sie bleibt zuschaltbar und läuft synchron zu Bild und Ton. Die Prüfschritte 7.2.1 „Wiedergabe von Audiodeskription“ und 7.2.2 „Synchrone Audiodeskription“ bleiben damit erfüllt."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Nach Übertragung, Konvertierung oder Aufnahme soll die Audiodeskription genauso nutzbar sein wie zuvor, also ausgebbar und synchron zum Video."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn das Webangebot Videos samt Audiodeskription überträgt, konvertiert oder aufnimmt."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Konvertiert oder zeichnet das Webangebot Videos mit Audiodeskription auf, das Ergebnis in einem konformen Player abspielen und prüfen:\n- Ist die Audiodeskription der Quelle weiterhin vorhanden?\n- Lässt sie sich abspielen?\n- Bleibt sie synchron zu Bild und Ton?"
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Anmerkungen zu diesem Prüfschritt lassen sich auf GitHub [in einem Issue hinterlassen](https://github.com/BIK-BITV/BIK-Web-Test/issues)."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht erfüllt:",
+          "inhalt_markdown": ""
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Dieser Prüfschritt beurteilt, ob Übertragung, Konvertierung oder Aufnahme die Ausgabe oder Synchronität der Audiodeskription beeinträchtigen. Die Prüfschritte 7.2.1 „Wiedergabe von Audiodeskription“ und 7.2.2 „Synchrone Audiodeskription“ betreffen dagegen Videos, die bereits auf der Webseite vorliegen."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "7.2.3 Preservation of audio description",
+          "inhalt_markdown": "> Where ICT transmits, converts, or records video with synchronized audio, it\nshall preserve audio description data such that it can be played in a manner\nconsistent with clauses 7.2.1 and 7.2.2."
+        }
+      ]
+    }
+  ]
+}

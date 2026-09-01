@@ -1,0 +1,43 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+
+# --- Backend-Laufzeitdaten ---
+# SQLite-Datenbank (liegt in ./data, als Docker-Bind-Mount)
+*.db
+*.sqlite3
+
+# --- Report-Exporte (werden lokal/ins Container in ./docs geschrieben) ---
+docs/*.pdf
+docs/*.txt
+docs/*.json
+# ... aber die Doku-Markdowns versionieren
+!docs/ARCHITEKTUR.md
+
+# --- Node / Nuxt ---
+node_modules/
+.nuxt/
+.output/
+.data/
+dist/
+
+# --- IDEs / OS ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# --- Logs / Sonstiges ---
+*.log
+.env
+.env.*
+
+# --- Lokale Dev-/Laufzeitdaten (nicht versionieren) ---
+data/
+.claude/

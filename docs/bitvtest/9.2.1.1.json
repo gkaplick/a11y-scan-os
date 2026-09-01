@@ -1,0 +1,133 @@
+{
+  "bitv_nummer": "9.2.1.1",
+  "titel": "Ohne Maus nutzbar",
+  "wcag22": {
+    "guideline": "Guideline 2.1 Keyboard Accessible: Make all functionality available from a keyboard.",
+    "level": "A",
+    "success_criterion": "2.1.1 Keyboard",
+    "techniken": {
+      "General Techniques": [
+        "G90: Providing keyboard-triggered event handlers",
+        "G202: Ensuring keyboard control for all functionality"
+      ],
+      "HTML Techniques": [
+        "H91: Using HTML form controls and links"
+      ],
+      "Scripting Techniques": [
+        "SCR2: Using redundant keyboard and mouse event handlers",
+        "SCR20: Using both keyboard and other device-specific functions",
+        "SCR27: Reordering page sections using the Document Object Model",
+        "SCR29: Adding keyboard-accessible actions to static HTML elements",
+        "SCR35: Making actions keyboard accessible by using the onclick event of anchors and buttons"
+      ],
+      "Failures": [
+        "F42: Failure of Success Criterion 1.3.1 and 2.1.1 due to using scripting events to emulate links in a way that is not programmatically determinable",
+        "F54: Failure of Success Criterion 2.1.1 due to using only pointing-device-specific event handlers (including gesture) for a function",
+        "F55: Failure of Success Criteria 2.1.1, 2.4.7, and 3.2.1 due to using script to remove focus when focus is received"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Die Webseite muss sich ohne Maus, also ausschließlich mit der Tastatur, bedienen lassen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Die Bedienung soll unabhängig vom Eingabegerät funktionieren, also ebenso per Maus wie per Tastatur; auch Spezialgeräte verhalten sich wie Maus oder Tastatur. Meist bereitet die Tastaturbedienung Probleme, weil die meisten Nutzer mit der Maus arbeiten und Webangebote oft nur darauf ausgelegt sind. Viele motorisch eingeschränkte Menschen oder Blinde sind jedoch auf die Tastatur angewiesen."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt ist anwendbar, sobald der Webauftritt interaktive Elemente enthält."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Seite im Firefox aufrufen.\n2. - Mit der Tabulatortaste sämtliche Verweise und Formularfelder der Reihe nach ansteuern.\n3. - Kontrollieren, ob alle wesentlichen Links und Eingabefelder erreichbar und bedienbar sind.\n4. - Elemente, die wie Bedienelemente aussehen, sich aber nicht per Tabulator ansteuern lassen, darauf prüfen, ob sie auf die Maus reagieren (etwa mit Bewegung, Vergrößerung oder Einblenden weiterer Inhalte).\n5. - Bei scrollbaren Bereichen müssen auch die anfangs nicht sichtbaren Inhalte über die Tastatur erreichbar sein.\n6. - Seite in Chrome öffnen und die Schritte 2 bis 5 wiederholen."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "3.1 Allgemeine Hinweise",
+          "inhalt_markdown": "- Prüfende müssen die Tastaturbedienung des jeweiligen Browsers kennen, also wissen, welche Tasten und Tastenkombinationen vorgesehen sind.\n- Bedienprobleme entstehen in der Regel durch JavaScript; geprüft wird daher bei eingeschaltetem JavaScript.\n- Unwesentlich sind etwa Funktionen, die der Browser selbst anbietet (zum Beispiel \"Fenster schließen\").\n- Auch Elemente ohne sichtbare Fokusmarkierung sind auf ihre Tastaturbedienbarkeit zu prüfen; um den Fokus anzuzeigen, eignet sich etwa ein Bookmarklet wie Force Show Keyboard Focus.\n\nWichtig in diesem Zusammenhang:\n\n- Besitzt das Browserfenster nicht den Fokus, darf man nicht hineinklicken und dann mit der Tastatur beginnen; der Fokus ist per Tastatur (F6) zum Browserfenster zu bewegen.\n- Auswahllisten ohne Submit-Button, die auf \"onchange\" reagieren, lassen sich mit den Pfeiltasten allein oft nicht bedienen, weil bereits die erste Option ausgelöst wird. Solche Listen sind ggf. erst mit \"Alt + Pfeil nach unten\" zu öffnen, dann per Pfeiltasten zu durchblättern und mit der Eingabetaste auszuwählen.\n- Die Tastaturbedienung muss der Mausbedienung nicht entsprechen. So ist es kein Mangel, wenn per Maus Ausklappmenüs tiefe Links in einem Schritt erreichen, per Tastatur dafür mehrere Schritte nötig sind.\n\nManche Elemente lassen sich mit dem Screenreader NVDA ggf. nicht oder nur mit zusätzlich gedrückter `alt`-Taste aktivieren. Ursache ist meist eine fehlerhafte ARIA-Auszeichnung; bewertet wird das in Prüfschritt 9.4.1.2 \"Name, Rolle, Wert verfügbar\"."
+        },
+        {
+          "titel": "3.2 Hinweis zu Drag-and-Drop-Funktionen",
+          "inhalt_markdown": "Für wichtige Bedienfunktionen, die per Drag-and-Drop ausgeführt werden, müssen tastaturnutzbare Alternativen bereitstehen."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "- Sämtliche wesentlichen Inhalte und Funktionen lassen sich in Firefox und Chrome grundsätzlich per Tastatur erreichen und bedienen."
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- In Firefox oder Chrome lassen sich wesentliche Inhalte und Funktionen per Tastatur weder erreichen noch bedienen."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "- Dieser Prüfschritt betrifft die **Auslösbarkeit** von Funktionen und Links auch über die Tastatur.\n- **Tastaturfallen** behandelt Prüfschritt 9.2.1.2 \"Keine Tastaturfalle\".\n- Die **sinnvolle Reihenfolge** skriptgenerierter oder per Skript eingeblendeter Elemente (etwa ausklappender Texte oder Lightboxen) im Quellcode prüft 9.1.3.2 \"Sinnvolle Reihenfolge\".\n- Prüfschritt 9.2.4.7 \"Aktuelle Position des Fokus deutlich\" behandelt die Fokus**hervorhebung**.\n- In welcher Abfolge Links und Formularelemente beim Tabben durchlaufen werden, spielt hier keine Rolle; die sinnvolle Fokus**reihenfolge** behandelt 9.2.4.3 \"Schlüssige Reihenfolge bei der Tastaturbedienung\"."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 2.1 Keyboard Accessible: Make all functionality available from a keyboard.](https://www.w3.org/TR/WCAG21/#keyboard-accessible)"
+        },
+        {
+          "titel": "Success criteria",
+          "inhalt_markdown": "- [2.1.1 Keyboard](https://www.w3.org/TR/WCAG21/#keyboard)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G90: Providing keyboard-triggered event handlers](https://www.w3.org/WAI/WCAG21/Techniques/general/G90.html)\n                    - [G202: Ensuring keyboard control for all functionality](https://www.w3.org/WAI/WCAG21/Techniques/general/G202.html)"
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H91: Using HTML form controls and links](https://www.w3.org/WAI/WCAG21/Techniques/html/H91.html)"
+        },
+        {
+          "titel": "Scripting Techniques",
+          "inhalt_markdown": "- [SCR2: Using redundant keyboard and mouse event handlers](https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR2.html)\n                    - [SCR20: Using both keyboard and other device-specific functions](https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR20.html)\n                    - [SCR27: Reordering page sections using the Document Object Model](https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR27.html)\n                    - [SCR29: Adding keyboard-accessible actions to static HTML elements](https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR29.html)\n                    - [SCR35: Making actions keyboard accessible by using the onclick event of anchors and buttons](https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR35.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F42: Failure of Success Criterion 1.3.1 and 2.1.1 due to using scripting events to emulate links in a way that is not programmatically determinable](https://www.w3.org/WAI/WCAG21/Techniques/failures/F42.html)\n                    - [F54: Failure of Success Criterion 2.1.1 due to using only pointing-device-specific event handlers (including gesture) for a function](https://www.w3.org/WAI/WCAG21/Techniques/failures/F54.html)\n                    - [F55: Failure of Success Criteria 2.1.1, 2.4.7, and 3.2.1 due to using script to remove focus when focus is received](https://www.w3.org/WAI/WCAG21/Techniques/failures/F55.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "Die WCAG 2.1 zur Tastaturbedienbarkeit",
+          "inhalt_markdown": "> If all functionality can be achieved using the keyboard, it can be\naccomplished by keyboard users, by speech input (which creates keyboard\ninput), by mouse (using on-screen keyboards), and by a wide variety of\nassistive technologies that create simulated keystrokes as their output.\nNo other input form has this flexibility or is universally supported and\noperable by people with different disabilities, as long as the keyboard input\nis not time-dependent.\n\nNote that providing universal keyboard input does not mean that other types of\ninput should not be supported.\nOptimized speech input, optimized mouse/pointer input, etc., are also good.\nThe key is to provide keyboard input and control as well.\n\nSome devices do not have native keyboards?\nfor example, a PDA or cell phone.\nIf these devices have a Web browsing capability, however, they will have some\nmeans of generating text or \"keystrokes.\" This guideline uses the term\n\"keyboard interface\" to acknowledge that Web content should be controlled from\nkeystrokes that may come from a keyboard, keyboard emulator, or other hardware\nor software that generates keyboard or text input.\n\n([Keyboard Accessible: Understanding Guideline 2.1](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html))"
+        }
+      ]
+    }
+  ]
+}

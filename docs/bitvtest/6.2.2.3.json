@@ -1,0 +1,54 @@
+{
+  "bitv_nummer": "6.2.2.3",
+  "titel": "Sprecheridentifizierung",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Identifiziert die Web-Anwendung bei unterstützter Echtzeit-Textkommunikation (RTT, Real-Time Text) aktive Sprechende, müssen auch Teilnehmende, die Echtzeit-Text eingeben, ebenso identifizierbar sein."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Bei einer entfernten Kommunikation müssen alle Teilnehmenden erkennen können, wer gerade spricht, um Antworten richtig zuordnen zu können. Sprach- und Texteingaben sind deshalb gleichrangig zu behandeln."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn die Web-Anwendung RTT (Real-Time Text) anbietet, aktive Sprechende anhand ihrer Stimme erkennt und diese Sprecher in der Oberfläche kennzeichnet oder hervorhebt."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Web-Anwendung starten.\n2. - Kontrollieren, ob aktive Sprechende über ihre Stimme erkannt und in der App entsprechend gekennzeichnet werden.\n3. - Trifft das zu, kontrollieren, ob auch Teilnehmende, die Echtzeit-Text tippen, während der Eingabe als solche ausgewiesen werden."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Um eine eventuelle Kennzeichnung oder Hervorhebung zweifelsfrei erkennen zu können, sollte der Test über eine Video- oder Sprachverbindung mit mehreren Teilnehmenden laufen."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Human Factors (HF); Real-Time Text (RTT) in Multiparty Conference Calling / ETSI TR 103 708 V1.1.1 (2022-08)](https://labs.etsi.org/rep/HF/en301549/uploads/272bede3724c5c99efe777f778201f70/tr_103708v010101p.pdf)"
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "6.2.2.3 Speaker identification",
+          "inhalt_markdown": "> Where ICT has RTT capabilities, and provides speaker identification for voice,\nthe ICT shall provide speaker identification for RTT.\n\nNOTE:\nThis is necessary to enable both voice and RTT participants to know who is\ncurrently communicating, whether it be in RTT or voice."
+        }
+      ]
+    }
+  ]
+}

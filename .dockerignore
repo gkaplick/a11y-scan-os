@@ -1,0 +1,13 @@
+# Build-Kontext klein halten (jeweilige COPYs filtern ohnehin).
+.git
+.gitignore
+data
+docs
+node_modules
+**/__pycache__
+**/*.pyc
+**/.nuxt
+**/.output
+.env
+*.db
+.venv

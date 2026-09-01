@@ -1,0 +1,58 @@
+{
+  "bitv_nummer": "12.2.2",
+  "titel": "Technischer Support",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Bietet das Angebot einen technischen Support an (etwa per Telefon, Mail oder Chat), soll er über die Barrierefreiheitsfunktionen des Webangebots und die Kompatibilität mit assistiven Technologien Auskunft geben können. Die Informationen sollen mindestens so umfassend sein wie die der Angebotsdokumentation (siehe auch Prüfschritt 12.1.1)."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Hinweise zu Barrierefreiheitsfunktionen sind oft schwer verständlich, Angaben zur Hilfsmittelkompatibilität können rasch veralten. Der technische Support muss daher in der Lage sein, auf Fragen einzugehen und Hilfe zu leisten."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar ist der Prüfschritt, wenn das Webangebot (meist eine Webanwendung) technische Dokumentation bereitstellt und diese Barrierefreiheitsfunktionen sowie Hinweise auf die Hilfsmittelkompatibilität umfasst."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. Sich an den technischen Support wenden und stichprobenartig zu den dokumentierten Barrierefreiheitsfunktionen oder zur Hilfsmittelkompatibilität nachfragen.\n2. Prüfen, ob der Support zusätzliche Angaben und Unterstützung mündlich oder schriftlich liefern kann."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Bewertet wird weder die Qualität der übermittelten Informationen noch die Zugänglichkeit übersandter Dokumente. Geprüft wird allein, ob der Support des Anbieters für weitergehende Fragen zu Barrierefreiheitsfunktionen oder Hilfsmittelkompatibilität gerüstet ist. Ein allgemeiner Kontakt zum Anbieter gilt dabei nicht als Support; es muss sich erkennbar um technischen Support handeln, etwa unter Bezeichnungen wie „Technischer Support“, „Support“ oder „Hilfe bei technischen Fragen“. Wie der Prüfschritt in der Praxis zu testen ist, ist noch nicht abschließend geklärt; Hinweise können als [Issue auf GitHub](https://github.com/BIK-BITV/BIK-Web-Test/issues) hinterlassen werden."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Hier geht es darum, ob der technische Support zusätzliche Informationen zu dokumentierten Barrierefreiheitsfunktionen oder zur Hilfsmittelkompatibilität liefern kann. Abzugrenzen ist das von:\n\n- Prüfschritt 12.2.3 „Effektive Kommunikation“, der prüft, ob mit dem Support über verschiedene Wege kommuniziert werden kann (etwa Telefon, Kontaktformular, E-Mail oder Chat).\n- Prüfschritt 12.2.4 „Vom Support bereitgestellte Dokumentation“, der die Barrierefreiheit der web-basierten Support-Dokumentation prüft."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "12.2.2 Information on accessibility and compatibility features",
+          "inhalt_markdown": "> ICT support services shall provide information on the accessibility and\ncompatibility features that are mentioned in the product documentation.\n\nNOTE:\nAccessibility and compatibility features include accessibility features that\nare built-in and accessibility features that provide compatibility with\nassistive technology."
+        }
+      ]
+    }
+  ]
+}

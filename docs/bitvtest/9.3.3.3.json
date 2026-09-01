@@ -1,0 +1,82 @@
+{
+  "bitv_nummer": "9.3.3.3",
+  "titel": "Hilfe bei Fehlern",
+  "wcag22": {
+    "guideline": "Guideline 3.3 Input Assistance: Help users avoid and correct mistakes.",
+    "level": "AA",
+    "success_criterion": "3.3.3 Error Suggestion",
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Erzeugt ein Formular Fehlermeldungen, müssen diese verständlich sein und aufzeigen, wie der Fehler zu korrigieren ist."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Eingabefehler sind häufig: Nutzende vertippen sich oder überspringen benötigte Eingaben. Werden Eingaben geprüft, sind verständliche Fehlermeldungen wichtig, die das Beheben des Fehlers erleichtern."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift bei Seiten mit Formularen, die auf falsches Ausfüllen mit Fehlermeldungen reagieren — schon während der Eingabe oder erst nach dem Absenden."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Das Formular mit fehlenden oder falschen Angaben ausfüllen, etwa Pflichtfelder frei lassen oder eine ungültige E-Mail-Adresse eintragen.\n2. - Löst das Absenden eine Fehlermeldung aus, ist zu prüfen, ob Meldungen und Korrekturvorschläge verständlich und hilfreich sind. Sinnvoll ist etwa, die Fehler am Seitenbeginn zu benennen oder Korrekturvorschläge direkt neben den betroffenen Eingabefeldern anzuzeigen und per ARIA-Technik zu verknüpfen."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Erscheint die serverseitige Fehlermeldung auf einer neuen Seite, wird sie wie ein weiterer Zustand der Ausgangsseite mitgeprüft; ebenso fließt die Erfüllung anderer relevanter Prüfkriterien ein.\n- Bei komplizierten Formaten wie Datum hilft eine Angabe des erwarteten Formats (z. B. tt.mm.jjjj), um Fehler zu vermeiden.\n- Erzeugen Formulare keine Fehlermeldungen, ist das nicht negativ zu bewerten.\n- Konkrete Korrekturhinweise sind verzichtbar, sofern sie die Sicherheit des Inhalts unterlaufen würden. Meldungen zu Anmelde- oder Passwortfeldern dürfen daher auf spezifische Angaben verzichten, weil solche Hinweise den Anmeldevorgang angreifbar machen würden."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Fehlermeldungen sind unverständlich oder führen in die Irre."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung von anderen Prüfschritten",
+          "inhalt_markdown": "Die Identifizierung und Benennung des Fehlers behandelt Prüfschritt 9.3.3.1 „Fehlererkennung“."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 3.3 Input Assistance: Help users avoid and correct mistakes.](https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=334#input-assistance)"
+        },
+        {
+          "titel": "Success criteria",
+          "inhalt_markdown": "- [3.3.3 Error Suggestion](https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=334#error-suggestion)(Level AA)"
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G83: Providing text descriptions to identify required fields that were not completed](https://www.w3.org/WAI/WCAG21/Techniques/general/G83.html)\n                    - [G84: Providing a text description when the user provides information that is not in the list of allowed values](https://www.w3.org/WAI/WCAG21/Techniques/general/G84.html)\n                    - [G85: Providing a text description when user input falls outside the required format or values](https://www.w3.org/WAI/WCAG21/Techniques/general/G85.html)\n                    - [G177: Providing suggested correction text](https://www.w3.org/WAI/WCAG21/Techniques/general/G177.html)"
+        },
+        {
+          "titel": "Scripting Techniques",
+          "inhalt_markdown": "- [SCR18: Providing client-side validation and alert](https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR18.html)\n                    - [SCR32: Providing client-side validation and adding error text via the DOM](https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR32.html)"
+        },
+        {
+          "titel": "ARIATechniques",
+          "inhalt_markdown": "- [ARIA2: Identifying a required field with the aria-required property](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA2.html)\n                    - [ARIA18: Using aria-alertdialog to Identify Errors](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA18.html)"
+        }
+      ]
+    }
+  ]
+}

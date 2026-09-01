@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Name, Rolle und Wert verfügbar (Positivbeispiel) · A11Y Test-Website</title>
+<link rel="stylesheet" href="/assets/styles.css">
+<style></style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="seitenkopf">
+  <a class="marke" href="/index.html">A11Y Test-Website</a>
+  <p class="kategorie">Kategorie: ARIA &amp; Bedienbarkeit</p>
+</header>
+<nav aria-label="Hauptnavigation" class="hauptnav">
+  <a href="/index.html">Startseite</a>
+  <a href="/kriterien/name-rolle-wert-positiv.html">Positivbeispiel</a>
+  <a href="/kriterien/name-rolle-wert-negativ.html">Negativbeispiel</a>
+</nav>
+<main id="main">
+<span class="art-badge art-positiv">Positivbeispiel</span>
+<p class="kategorie">Kategorie: ARIA &amp; Bedienbarkeit</p>
+<h1>Name, Rolle und Wert verfügbar</h1>
+<p class="beschreibung">Bedienelemente brauchen Rolle und Namen; Elemente mit Event-Handler ohne Rolle sind unzulässig (F59).</p>
+<p class="testids">Geprüfte Kriterien: <span class="testid">BITV_9_4_1_2_NAME_ROLLE_WERT_VERFUEGBAR</span></p>
+<div class="beispiel art-positiv">
+<h2>Link mit href</h2>
+<a href="/index.html">Funktionierender Link</a>
+</div>
+
+<div class="beispiel art-positiv">
+<h2>Bedienelement mit Rolle</h2>
+<span role="button" tabindex="0" onclick="go()" aria-label="Aktion">Aktion</span>
+</div><p class="hinweis">Zur Gegenprobe: <a href="/kriterien/name-rolle-wert-negativ.html">Negativbeispiel ansehen</a></p>
+</main>
+<footer class="seitenfuss">
+  <p>A11Y Test-Website · Positivbeispiel · <a href="/index.html">Zur Übersicht</a> · <a href="/gebaerdensprache.html">Gebärdensprache</a> · <a href="/leichte-sprache.html">Leichte Sprache</a> · <a href="/erklaerung.html">Erklärung zur Barrierefreiheit</a></p>
+</footer>
+</body>
+</html>

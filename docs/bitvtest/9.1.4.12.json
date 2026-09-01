@@ -1,0 +1,79 @@
+{
+  "bitv_nummer": "9.1.4.12",
+  "titel": "Textabstände anpassbar",
+  "wcag22": {
+    "guideline": "Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background",
+    "level": "AA",
+    "success_criterion": "1.4.12 Text Spacing",
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Wird die Zeilenhöhe auf das 1,5-fache der Textgröße, der Abstand nach Absätzen auf das 2-fache, der Buchstabenabstand auf das 0,12-fache und der Wortabstand auf das 0,16-fache der Textgröße erhöht, darf das nicht zu Verlust von Inhalten oder Funktionalitäten führen — etwa durch abgeschnittene Inhalte in Elementen, deren Größe sich bei größeren Textabständen nicht dynamisch anpasst.\n\nAnmerkung: Autoren müssen diese Werte nicht selbst umsetzen; die Anforderung verlangt lediglich, dass von Nutzern vorgenommene Anpassungen nicht zum Abschneiden von Text oder zum Verlust von Funktionalitäten führen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Sehbehinderte können das Lesen erleichtern, indem sie etwa per Bookmarklet oder eigenem Stylesheet die Abstände zwischen den Zeilen, Absätzen, Buchstaben und Wörtern vergrößern. Dadurch benötigen Texte mitunter mehr Platz; Inhalts-Container müssen sich daher dynamisch an den längeren Text anpassen."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn die Seite echten Text enthält, also Text, der nicht über eine Grafik bereitgestellt wird."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. Die Textabstände per Bookmarklet „Textabstände“ oder Browser-Erweiterung auf die vorgegebenen Maximalwerte anheben — Zeilenhöhe, Abstand nach Absätzen sowie Buchstaben- und Wortabstand.\n2. Prüfen, ob es dadurch zu abgeschnittenem oder überlappendem Text oder zum Verlust von Funktionalität kommt."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Nicht anwendbar ist die Anforderung auf native HTML-Elemente wie `input type=\"file\"` oder Optionen einer Ausklappliste (`<select>`), weil CSS-Anpassungen dort keine Wirkung entfalten."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt:",
+          "inhalt_markdown": "Mit dem Bookmarklet angewendet bleiben sämtliche Texte — auch in Aufklappbereichen und Menüs — vollständig lesbar; nichts wird abgeschnitten oder überlagert andere Inhalte."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background](https://www.w3.org/TR/WCAG22/#distinguishable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.4.12 Text Spacing](https://www.w3.org/TR/WCAG22/#text-spacing)(Level AA)"
+        },
+        {
+          "titel": "Sufficient Techniques",
+          "inhalt_markdown": "- [C36: Allowing for text spacing override](https://www.w3.org/WAI/WCAG22/Techniques/css/C36.html)\n                - [C35: Allowing for text spacing without wrapping](https://www.w3.org/WAI/WCAG22/Techniques/css/C35.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F104: Failure of Success Criterion 1.4.12 due to clipped or overlapped content when text spacing is adjusted](https://www.w3.org/WAI/WCAG22/Techniques/failures/F104)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Understanding Success Criterion 1.4.12: Text Spacing](https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html)(zur Zeit nur auf Englisch verfügbar)\n        - [Stylus Browsererweiterung](https://github.com/openstyles/stylus/blob/master/README.md)\n        - [Text Spacing Bookmarklet](https://www.html5accessibility.com/tests/tsbookmarklet.html)"
+    }
+  ]
+}

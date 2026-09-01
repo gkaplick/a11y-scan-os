@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keine Tastaturfalle (Negativbeispiel) · A11Y Test-Website</title>
+<link rel="stylesheet" href="/assets/styles.css">
+<style></style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="seitenkopf">
+  <a class="marke" href="/index.html">A11Y Test-Website</a>
+  <p class="kategorie">Kategorie: Fokus &amp; Tastatur</p>
+</header>
+<nav aria-label="Hauptnavigation" class="hauptnav">
+  <a href="/index.html">Startseite</a>
+  <a href="/kriterien/tastaturfalle-positiv.html">Positivbeispiel</a>
+  <a href="/kriterien/tastaturfalle-negativ.html">Negativbeispiel</a>
+</nav>
+<main id="main">
+<span class="art-badge art-negativ">Negativbeispiel</span>
+<p class="kategorie">Kategorie: Fokus &amp; Tastatur</p>
+<h1>Keine Tastaturfalle</h1>
+<p class="beschreibung">Der Tastaturfokus darf sich nicht in einem Element verfangen (kein Tab-PreventDefault).</p>
+<p class="testids">Geprüfte Kriterien: <span class="testid">WCAG_2_1_2_KEYBOARD_TRAP</span>
+<span class="testid">BITV_9_2_1_2_KEINE_TASTATURFALLE</span></p>
+<div class="beispiel art-negativ">
+<h2>Tastaturfalle</h2>
+<p>Der dritte Fokusstopp fängt den Tabulator ein.</p>
+<p><a href="#a" id="a">Link A</a> · <a href="#" id="falle" class="falle" style="display:inline-block" onkeydown="if(event.key==='Tab'){event.preventDefault();event.stopPropagation();}">Fokusfalle</a> · <a href="#b" id="b">Link B</a></p>
+</div><p class="hinweis">Zur Gegenprobe: <a href="/kriterien/tastaturfalle-positiv.html">Positivbeispiel ansehen</a></p>
+</main>
+<footer class="seitenfuss">
+  <p>A11Y Test-Website · Negativbeispiel · <a href="/index.html">Zur Übersicht</a> · <a href="/gebaerdensprache.html">Gebärdensprache</a> · <a href="/leichte-sprache.html">Leichte Sprache</a> · <a href="/erklaerung.html">Erklärung zur Barrierefreiheit</a></p>
+</footer>
+</body>
+</html>

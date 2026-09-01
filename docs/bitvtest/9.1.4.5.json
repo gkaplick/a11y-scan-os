@@ -1,0 +1,122 @@
+{
+  "bitv_nummer": "9.1.4.5",
+  "titel": "Schriftgrafiken",
+  "wcag22": {
+    "guideline": "Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background",
+    "level": "AA",
+    "success_criterion": "1.4.5 Images of Text",
+    "techniken": {
+      "General Techniques": [
+        "G140: Separating information and structure from presentation to enable different presentations"
+      ],
+      "CSS Techniques": [
+        "C22: Using CSS to control visual presentation of text",
+        "C30: Using CSS to replace text with images of text and providing user interface controls to switch"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Schriften sollen nicht als Grafik dargestellt werden. Logos sind von dieser Anforderung ausgenommen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Als Bitmap eingebundene Schriftgrafiken (etwa JPEG, PNG oder GIF) lassen sich kaum an Nutzerbedürfnisse anpassen: Ihre Farben sind nicht individuell einstellbar, die Schriftgröße bleibt unveränderlich, und beim Zoomen werden die Schriftkanten unscharf."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn das Angebot Schriftgrafiken enthält."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. Die Seite in Firefox aufrufen.\n2. In der Web Developer Toolbar über „Bilder > Bilder deaktivieren > Alle Bilder deaktivieren“ sämtliche Grafiken ausblenden (alternativ „Bilder > Bilder mit ALT-Attributen ersetzen“).\n3. Prüfen, ob dadurch Schrift verschwindet."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Grafische Schriften in Logos oder Fotos werden in der Regel nicht negativ bewertet.\n\nAuch das SVG-`text`-Element in Inline-SVGs wird nicht negativ bewertet.\n\nGibt eine Schriftgrafik den Informationsinhalt im Kontext zugleich als Text wieder, kann dieser Text als konforme Alternative gelten. Beispiel: Abbildungen von Broschüren, Plakaten o. Ä. als Teaser-Bild, deren Titel unmittelbar daneben, darüber oder darunter ebenfalls als Text erscheint."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "Für Schalter oder Schaltflächen kommen Schriftgrafiken zum Einsatz."
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "Schriftgrafiken werden für wichtige Texte eingesetzt, etwa Überschriften, Menüoptionen oder Schaltflächen, deren Beschriftung lesbar sein muss."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Alternativtexte für Schriftgrafiken sind Gegenstand der Prüfschritte 9.1.1.1a „Alternativtexte für Bedienelemente“ und 9.1.1.1b „Alternativtexte für Grafiken und Objekte“."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background](https://www.w3.org/TR/WCAG21/#distinguishable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.4.5 Images of Text](https://www.w3.org/TR/WCAG21/#images-of-text)(Level AA)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G140: Separating information and structure from presentation to enable different presentations](https://www.w3.org/WAI/WCAG21/Techniques/general/G140.html)"
+        },
+        {
+          "titel": "CSS Techniques",
+          "inhalt_markdown": "- [C22: Using CSS to control visual presentation of text](https://www.w3.org/WAI/WCAG21/Techniques/css/C22.html)\n                    - [C30: Using CSS to replace text with images of text and providing user interface controls to switch](https://www.w3.org/WAI/WCAG21/Techniques/css/C30.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Does SVG text pass WCAG 1.4.5 (Images of Text)?](https://www.paciellogroup.com/blog/2015/12/does-svg-text-pass-wcag-1-4-5-images-of-text/)(Léonie Watson, The Paciello Group blog, Dezember 2015)\n        - [Accessible SVGs in High Contrast Mode](https://css-tricks.com/accessible-svgs-high-contrast-mode/)(Eric Bailey, CSS-Tricks, June 2017)"
+    },
+    {
+      "titel": "Fragen zu diesem Prüfschritt",
+      "id": "fragen_zu_diesem_prüfschritt",
+      "untersektionen": [
+        {
+          "titel": "Wie ist es mit der Darstellung von Schriftzeichen, die nicht auf allen Computern zur Verfügung stehen? Also zum Beispiel arabische Schriftzeichen: sollten dafür nicht besser Grafiken verwendet werden?",
+          "inhalt_markdown": "Moderne Betriebssysteme enthalten die Schriftzeichen aller verbreiteten Sprachen. Schriftzeichen, die ein möglicher Nutzer benötigt, sind in der Regel auch installiert; eine grafische Darstellung ist daher nur als Zusatzangebot sinnvoll.\n\nDer BITV-Test prüft ausschließlich, ob Text als Text vorliegt. Zusätzliche grafische Angebote bleiben unberücksichtigt."
+        },
+        {
+          "titel": "Was ist mit auf Fotos abgebildeten Schriften?",
+          "inhalt_markdown": "Schriftgrafiken sind abzulehnen, weil die Textdarstellung dadurch starr wird. Bei abgebildeten Schriften wie Fotos von Ladenschildern gehören Inhalt und Darstellung zusammen; der Prüfschritt ist hier nicht anwendbar.\n\nAnders verhält es sich mit Abbildungen, die wie Schriftgrafiken verwendet werden, etwa als Überschrift."
+        },
+        {
+          "titel": "Oft ist es nicht möglich, auf Schriftgrafiken zu verzichten, denn das Corporate Design gilt auch für den Webauftritt, und die für Texte verfügbaren Schrifttypen passen nicht.",
+          "inhalt_markdown": "Für Schriftgrafiken mögen gute Gründe sprechen, aus Barrierefreiheitssicht sind sie jedoch problematisch. Zu entscheiden ist, ob das einheitliche Corporate Design wichtiger ist als der barrierefreie Zugang. Sollen die Inhalte barrierefrei erreichbar sein, muss das Corporate Design angepasst oder auf seinen durchgängigen Einsatz verzichtet werden."
+        },
+        {
+          "titel": "Wie wird Text in Firmenlogos bewertet?",
+          "inhalt_markdown": "Der Prüfschritt betrifft grafische Schriften für Texte, Überschriften und Bedienelemente. Das Firmenlogo ist unerheblich, solange es nicht (auch) als Überschrift oder Bedienelement eingesetzt wird."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "bitv_nummer": "6.2.2.1",
+  "titel": "Visuell unterscheidbare Anzeige von Textnachrichten",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Verfügt das Webangebot über Echtzeit-Textkommunikation (RTT, Real-Time Text) inklusive Sende- und Empfangsfunktion, müssen gesendete und empfangene Nachrichten in der Anzeige klar voneinander unterscheidbar sein."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Nutzende von Echtzeit-Textkommunikation müssen eigene von fremden Nachrichten visuell unterscheiden können, um Beiträge leichter zu finden und richtig zuzuordnen."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn das Webangebot über Echtzeit-Textkommunikation (RTT, Real-Time Text) inklusive Sende- und Empfangsfunktion verfügt."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Webangebot öffnen.\n2. - Prüfen, ob das Angebot das Senden und Empfangen von Echtzeit-Text (RTT) ermöglicht.\n3. - Prüfen, ob gesendete und empfangene Textnachrichten deutlich unterscheidbar und getrennt angezeigt werden, etwa durch:\n   - Rahmen um die Textnachricht (mit gutem Kontrast nach außen),\n   - Positionierung der eigenen Nachrichten rechts- und der Nachrichten der Gesprächsteilnehmer linksbündig (oder umgekehrt),\n   - Nennung des Namens vor Beginn der Nachricht."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Bei RTT wird der Text der sendenden Person beim Empfänger bereits sichtbar, während er getippt wird – anders als im Chat, wo Nachrichten erst nach dem Absenden ankommen.\n- Die Anforderung bezieht sich streng genommen nur auf Echtzeit-Text, ist aber auch für andere Formen der Textkommunikation wie Text-Chats sinnvoll.\n- Bietet das Webangebot weitere Anzeige-Optionen, die diesen Vorgaben nicht entsprechen, ist das nicht negativ zu bewerten: Andere Darstellungen können bestimmte Bedürfnisse erfüllen. So ist die Fließtext-Darstellung gesendeter und empfangener Nachrichten in einem gemeinsamen Textcontainer für Braille-Nutzende vorteilhaft.\n- Die Nachrichten verschiedener Personen sollten nicht allein über unterschiedliche Textfarben unterschieden werden – weitere Einzelheiten in der Abgrenzung (Abschnitt 4.2).\n- Gefordert ist allein, dass sich eigene gesendete Beiträge von empfangenen unterscheiden lassen; nicht nötig ist, verschiedene empfangene Beiträge auseinanderzuhalten."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Human Factors (HF); Real-Time Text (RTT) in Multiparty Conference Calling / ETSI TR 103 708 V1.1.1 (2022-08)](https://labs.etsi.org/rep/HF/en301549/uploads/272bede3724c5c99efe777f778201f70/tr_103708v010101p.pdf)"
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Werden gesendete und empfangene Nachrichten ausschließlich über die Textfarbe unterschieden und liegt der Kontrastunterschied zwischen beiden unter 3:1, gilt das zugleich als Verstoß gegen diesen Prüfschritt und gegen Prüfschritt 1.4.1a \"Ohne Farbe nutzbar\". Weitere Anforderungen, etwa ausreichender Kontrast von Text, Rahmen oder anderen unterscheidenden Grafiken, bewerten die jeweils zuständigen Prüfschritte."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach der EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "6.2.2.1 Visually distinguishable display",
+          "inhalt_markdown": "> Where ICT has RTT send and receive capabilities, displayed sent text shall be\nvisually differentiated from, and separated from, received text.\n\nNOTE:\nThe ability of the user to choose between having the send and receive text be\ndisplayed in-line or separately, and with options to select, allows users to\ndisplay RTT in a form that works best for them.\nThis would allow Braille users to use a single field and take turns and have\ntext appear in the sequential way that they may need or prefer."
+        }
+      ]
+    }
+  ]
+}

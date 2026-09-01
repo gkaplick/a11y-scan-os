@@ -1,0 +1,85 @@
+{
+  "bitv_nummer": "9.2.3.1",
+  "titel": "Verzicht auf Flackern",
+  "wcag22": {
+    "level": "",
+    "success_criterion": "2.3.1 Three Flashes or Below Threshold",
+    "techniken": {
+      "General Techniques": [
+        "G15: Using a tool to ensure that content does not violate the general flash threshold or red flash threshold",
+        "G176: Keeping the flashing area small enough"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Auf der Seite gibt es keine Elemente, die innerhalb einer Sekunde mehr als dreimal aufleuchten."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Längeres Flackern in bestimmten Frequenzen kann bei Menschen mit Epilepsie einen Anfall auslösen."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Die Anforderungen gelten uneingeschränkt für jede Seite."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Gibt es auf der Webseite Flackern, das nicht nach höchstens drei Aufblitzvorgängen innerhalb einer Sekunde endet?\n\nUm die Ausdehnung der flackernden Fläche einzuschätzen, lässt sich bei Bedarf die WCAG-2.1-[Formel 1](http://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/G176#smallsafe1) heranziehen."
+        },
+        {
+          "titel": "3. Hinweis zur Abwertung",
+          "inhalt_markdown": "Enthält die Seite größere flackernde Elemente, wird das Gesamtergebnis der Prüfung abgewertet. Flackern entsteht dadurch, dass die Farbe oder das Muster einer Fläche pro Sekunde mindestens 4-mal wechselt."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guidelines",
+          "inhalt_markdown": "- [Guideline 2.3 Do not design content in a way that is known to cause seizures](https://www.w3.org/WAI/WCAG21/quickref/#no-timing)"
+        },
+        {
+          "titel": "Success criteria",
+          "inhalt_markdown": "- [2.3.1 Three Flashes or Below Threshold](https://www.w3.org/WAI/WCAG21/quickref/#three-flashes-or-below-threshold)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G15: Using a tool to ensure that content does not violate the general flash threshold or red flash threshold](https://www.w3.org/WAI/WCAG21/Techniques/general/G15.html)\n                    - [G176: Keeping the flashing area small enough](https://www.w3.org/WAI/WCAG21/Techniques/general/G176.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "Die WCAG 2.1 zu General flash and red flash thresholds",
+          "inhalt_markdown": "> A flash or rapidly changing image sequence is below the threshold (i.e.,\ncontent passes) if any of the following are true:\n\nthere are no more than three general flashes and / or no more than three red\nflashes within any one-second period; or the combined area of flashes occurring\nconcurrently occupies no more than a total of .006 steradians within any 10\ndegree visual field on the screen (25% of any 10 degree visual field on the\nscreen) at typical viewing distance\n\nwhere:\n\n                            - A general flash is defined as a pair of opposing changes in relative luminance of 10% or more of the maximum relative luminance where the relative luminance of the darker image is below 0.80; and where \"a pair of opposing changes\" is an increase followed by a decrease, or a decrease followed by an increase, and\n                            - A red flash is defined as any pair of opposing transitions involving a saturated red.\n\n([Three Flashes or Below Threshold: Understanding SC 2.3.1](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html))"
+        },
+        {
+          "titel": "Die WCAG 2.1 zur Abgrenzung von Blinken und Flackern",
+          "inhalt_markdown": "> Note: The terms \"blinking\" and \"flashing\" can sometimes refer to the same\ncontent.\n\n                            - \"Blinking\" refers to content that causes a distraction problem. Blinking can be allowed for a short time as long as it stops (or can be stopped)\n                            - \"Flashing\" refers to content that can trigger a seizure (if it is more than 3 per second and large and bright enough). This cannot be allowed even for a second or it could cause a seizure. And turning the flash off is also not an option since the seizure could occur faster than most users could turn it off.\n                            - Blinking usually does not occur at speeds of 3 per second or more, but it can. If blinking occurs faster than 3 per second, it would also be considered a flash.\n\n([Pause, Stop, Hide: Understanding SC 2.2.2](https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html))"
+        }
+      ]
+    }
+  ]
+}

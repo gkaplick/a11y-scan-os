@@ -1,0 +1,120 @@
+{
+  "bitv_nummer": "9.3.3.2",
+  "titel": "Beschriftungen von Formularelementen vorhanden",
+  "wcag22": {
+    "level": "A",
+    "success_criterion": "3.3.2 Labels or Instructions",
+    "techniken": {
+      "General Techniques": [
+        "G13: Describing what will happen before a change to a form control that causes a change of context to occur is made",
+        "G89: Providing expected data format and example",
+        "G131: Providing descriptive labels",
+        "G162: Positioning labels to maximize predictability of relationships",
+        "G184: Providing text instructions at the beginning of a form or set of fields that describes the necessary input"
+      ],
+      "HTML Techniques": [
+        "H44: Using label elements to associate text labels with form controls",
+        "H65: Using the title attribute to identify form controls when the label element cannot be used",
+        "H71: Providing a description for groups of form controls using fieldset and legend elements",
+        "H90: Indicating required form controls using label or legend"
+      ],
+      "ARIA Techniques": [
+        "ARIA1: Using the aria-describedby property to provide a descriptive label for user interface controls",
+        "ARIA9: Using aria-labelledby to concatenate a label from several text nodes",
+        "ARIA17: Using grouping roles to identify related form controls"
+      ],
+      "Failures": [
+        "F82: Failure of Success Criterion 3.3.2 by visually formatting a set of phone number fields but not including a text label"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Formularelemente müssen sichtbar beschriftet sein. Die Beschriftung soll vor dem Eingabefeld stehen (links daneben oder darüber); nur bei Checkboxen und Radio-Buttons kann sie rechts daneben angeordnet sein und ist dort in der Regel auch zu erwarten. Wird für die Eingabe ein bestimmtes Format verlangt, müssen die Anweisungen für alle Nutzenden lesbar sein."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Sichtbare Beschriftungen zeigen, welche Eingaben erwartet werden, und beugen so Fehlern vor. Die Platzierung direkt vor oder über dem Eingabefeld folgt den üblichen Gestaltungskonventionen und bleibt auch bei ausschnittartiger Darstellung (etwa mit Vergrößerungssoftware) eindeutig dem Feld zuordenbar."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt findet Anwendung, wenn die Seite Formularelemente enthält."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Die Seite im Firefox- oder Chrome-Browser aufrufen."
+        },
+        {
+          "titel": "2.1 Sind Beschriftungen vorhanden?",
+          "inhalt_markdown": "- Verfügen alle Formularelemente über eine sichtbare Beschriftung?\n- Sind Pflichtfelder per Text gekennzeichnet, etwa durch ein nachgestelltes „(Pflichtfeld)“ oder indem alle Nicht-Pflichtfelder mit „(optional)” ausgezeichnet werden? Werden Symbole wie Sternchen (*) verwendet, sollte ihre Bedeutung erklärt sein — am besten am Beginn des Formulars, bei mehrstufigen Formularen beim ersten Formular.\n- Gibt ein Eingabefeld ein bestimmtes Eingabeformat vor, wird das **vor** dem Feld oder im Placeholder-Text klar beschrieben (Beispiele: „Format der Datumseingabe: TT.MM.JJJJ” oder „Telefonnummer: nur Ziffern, ohne Leerzeichen oder Bindestriche eingeben”)."
+        },
+        {
+          "titel": "2.2 Sind Beschriftungen richtig positioniert?",
+          "inhalt_markdown": "1. - Mit der [Web Developer Toolbar](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#webdeveloper) die Funktion *Miscellaneous > Linearize page* aufrufen, um die Seite zu linearisieren.\n2. - Kontrollieren, ob die Beschriftungen in der linearisierten Ansicht eindeutig den Eingabefeldern zuzuordnen sind: Sie sollen direkt **über** oder **vor** dem Feld stehen; bei Checkboxen und Radio-Buttons steht die Beschriftung in der Regel **nach** dem Formularelement.\n\n### 3. Hinweise\n\n- Das `placeholder`-Attribut ersetzt keine Beschriftung im Sinne dieses Prüfschritts: Es verschwindet bereits bei (auch versehentlichen) Eingaben. Laut [HTML-Spezifikation](https://html.spec.whatwg.org/multipage/input.html#attr-input-placeholder) ist es nur als kurzer zusätzlicher Hinweis gedacht, der bei der Dateneingabe hilft (etwa ein Beispielwert oder ein erwartetes Format).\n- Bei kombinierten Eingabeelementen hat nicht jedes Element eine eigene Beschriftung; dann sind die Elemente mit einem erklärenden `title`-Attribut zu versehen. Beispiel: Für die Eingabe eines Datums gibt es drei Auswahllisten (Tag, Monat, Jahr) mit gemeinsamer Gruppenbeschriftung „Datum“ über `fieldset` und `legend`; die einzelnen Listen tragen ein erklärendes `title`.\n- Hinweise zu Eingabeformat oder ausgelösten Aktionen lassen sich sinnvoll einmal am Formularanfang bündeln, statt sie vor jedem einzelnen Feld zu wiederholen.\n- Ein einfaches Suchformular aus einem Eingabefeld und einem Button benötigt oft keine sichtbare Beschriftung, sofern die optische Gestaltung des Absenden-Buttons gängigen Mustern folgt und als Suche erkennbar ist (etwa durch ein Lupe-Icon). Die programmatische Verfügbarkeit einer unsichtbaren Beschriftung regelt Prüfschritt 1.3.1h „Beschriftung von Formularelementen programmatisch ermittelbar“ (dort Abschnitt 3.3); ein Mangel dort bewirkt hier keine negative Bewertung."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Wichtige Formularelemente (etwa die Sucheingabe) bleiben ohne sichtbare Beschriftung, und auch benachbarte Elemente geben keinen Hinweis auf ihre Funktion."
+        },
+        {
+          "titel": "Teilweise erfüllt oder schlechter",
+          "inhalt_markdown": "- Beschriftungen existieren ausschließlich als Vorbelegung der Formularfelder über das `placeholder`-Attribut."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung von anderen Prüfschritten",
+          "inhalt_markdown": "Dieser Prüfschritt befasst sich mit den sichtbaren Beschriftungen. Ob Formularelemente zusätzlich über programmatisch ermittelbare Namen verfügen, behandelt Prüfschritt 9.1.3.1h „Beschriftung von Formularelementen programmatisch ermittelbar”."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guidelines",
+          "inhalt_markdown": "- [Guideline 3.3 Input Assistance: Help users avoid and correct mistakes.](https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=334#input-assistance)"
+        },
+        {
+          "titel": "Success criteria",
+          "inhalt_markdown": "- [3.3.2 Labels or Instructions](https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=334#labels-or-instructions)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G13: Describing what will happen before a change to a form control that causes a change of context to occur is made](https://www.w3.org/WAI/WCAG21/Techniques/general/G13.html)\n                    - [G89: Providing expected data format and example](https://www.w3.org/WAI/WCAG21/Techniques/general/G89.html)\n                    - [G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131.html)\n                    - [G162: Positioning labels to maximize predictability of relationships](https://www.w3.org/WAI/WCAG21/Techniques/general/G162.html)\n                    - [G184: Providing text instructions at the beginning of a form or set of fields that describes the necessary input](https://www.w3.org/WAI/WCAG21/Techniques/general/G184.html)"
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H44: Using label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG21/Techniques/html/H44.html)\n                    - [H65: Using the title attribute to identify form controls when the label element cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/html/H65.html)\n                    - [H71: Providing a description for groups of form controls using fieldset and legend elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H71.html)\n                    - [H90: Indicating required form controls using label or legend](https://www.w3.org/WAI/WCAG21/Techniques/html/H90.html)"
+        },
+        {
+          "titel": "ARIA Techniques",
+          "inhalt_markdown": "- [ARIA1: Using the aria-describedby property to provide a descriptive label for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA1)\n                    - [ARIA9: Using aria-labelledby to concatenate a label from several text nodes](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA9)\n                    - [ARIA17: Using grouping roles to identify related form controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA17.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F82: Failure of Success Criterion 3.3.2 by visually formatting a set of phone number fields but not including a text label](https://www.w3.org/WAI/WCAG21/Techniques/failures/F82.html)"
+        }
+      ]
+    }
+  ]
+}

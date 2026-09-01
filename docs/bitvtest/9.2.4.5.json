@@ -1,0 +1,86 @@
+{
+  "bitv_nummer": "9.2.4.5",
+  "titel": "Alternative Zugangswege",
+  "wcag22": {
+    "guideline": "Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are.",
+    "level": "AA",
+    "success_criterion": "2.4.5 Multiple Ways",
+    "techniken": {
+      "General Techniques": [
+        "G63: Providing a site map",
+        "G64: Providing a Table of Contents",
+        "G125: Providing links to navigate to related Web pages",
+        "G126: Providing a list of links to all other Web pages",
+        "G161: Providing a search function to help users find content",
+        "G185: Linking to all of the pages on the site from the home page"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Zu den Inhalten des Angebots führen mindestens zwei unterschiedliche Zugangswege."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Benutzer erreichen Inhalte auf unterschiedlichen Wegen: Manche folgen einem hierarchischen Navigationsmenü, andere nutzen ein Inhaltsverzeichnis (Sitemap), wieder andere eine Suchfunktion. Gerade sehbehinderte Nutzer kommen oft schneller über die Suche zu den gewünschten Inhalten. Das Angebot sollte daher mehrere Zugangswege zu den Inhalten bereitstellen."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift bei informationsorientierten Angeboten, die aus mehr als einer Seite bestehen."
+        },
+        {
+          "titel": "Prüfung",
+          "inhalt_markdown": "1. - Das Angebot nach vorhandenen Zugangswegen durchsehen. Typische Zugangswege sind:\n   - Durchgängig verfügbare Navigationsmenüs\n   - Inhaltsverzeichnis (Sitemap)\n   - Suchfunktion (direkt über ein Suchfeld oder über einen Link auf eine zentrale Suchseite)\n   - Sämtliche Seiten sind von der Startseite aus oder auf jeder Seite verlinkt (nur bei kleinen Sites sinnvoll)\n   - Sequenziell verlinkte Seiten (höchstens für kleine Sites sinnvoll, sofern eine bestimmte Reihenfolge der Seiten geboten ist)\n   - Seiten, die als Teil eines Prozesses entstehen (etwa das Ergebnis einer Transaktion)\n2. - Sind mindestens zwei Zugangswege verfügbar, etwa ein hierarchisches Navigationsmenü mit Suchfunktion oder ein Navigationsmenü mit Inhaltsverzeichnis (Sitemap)?\n3. - Einige Zugangswege stichprobenartig durchtesten, ob sie tatsächlich funktionieren"
+        },
+        {
+          "titel": "Hinweise",
+          "inhalt_markdown": "- Hierarchische Navigationsmenüs müssen die tieferen Ebenen des Angebots nicht vollständig abbilden.\n- Ob Navigationsmenüs hochkant oder quer ausgerichtet sind, ist für diesen Prüfschritt unerheblich; sie sollten aber als eigene Bereiche erkennbar sein.\n- Ein hierarchisches Hauptmenü samt untergeordneter Bereichsmenüs zählt als **ein** Zugangsweg.\n- Ein Breadcrumb-Pfad ist eine hilfreiche Orientierung, zählt aber nicht als eigener Zugangsweg, denn er führt nur zu höheren Ebenen, nicht zu weiter unten liegenden.\n- Bei kleinen Angeboten, deren Seiten **alle** von der Startseite verlinkt sind, gilt die Startseite zugleich als Sitemap, sofern auf allen Unterseiten deutlich ein Link zur Startseite angeboten wird.\n- Bei sequenziellen Prozessen reicht es oft, nur die Schritte vor und zurück zu verlinken; die Prozessseiten ergeben nur im Gesamtzusammenhang Sinn und müssen nicht einzeln erreichbar sein. Fehlende weitere Navigationsoptionen sind hier nicht negativ zu bewerten."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are.](https://www.w3.org/TR/WCAG21/#navigable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [2.4.5 Multiple Ways](https://www.w3.org/TR/WCAG21/#multiple-ways)(Level AA)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G63: Providing a site map](https://www.w3.org/WAI/WCAG21/Techniques/general/G63.html)\n                    - [G64: Providing a Table of Contents](https://www.w3.org/WAI/WCAG21/Techniques/general/G64.html)\n                    - [G125: Providing links to navigate to related Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G125.html)\n                    - [G126: Providing a list of links to all other Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G126.html)\n                    - [G161: Providing a search function to help users find content](https://www.w3.org/WAI/WCAG21/Techniques/general/G161.html)\n                    - [G185: Linking to all of the pages on the site from the home page](https://www.w3.org/WAI/WCAG21/Techniques/general/G185.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "Multiple Ways - Specific Benefits of Success Criterion 2.4.5",
+          "inhalt_markdown": "> - Providing an opportunity to navigate sites in more than one manner can help people find information faster. Users with visual impairments may find it easier to navigate to the correct part of the site by using a search, rather than scrolling through a large navigation bar using a screen magnifier or screen reader. A person with cognitive disabilities may prefer a table of contents or site map that provides an overview of the site rather than reading and traversing through several Web pages. Some users may prefer to explore the site in a sequential manner, moving from Web page to Web page in order to best understand the concepts and layout.\n                    - Individuals with cognitive limitations may find it easier to use search features than to use a hierarchical navigation scheme that be difficult to understand.\n\n([Multiple Ways: Understanding SC 2.4.5](https://www.w3.org/WAI/WCAG21/Understanding/multiple-ways.html))"
+        }
+      ]
+    }
+  ]
+}

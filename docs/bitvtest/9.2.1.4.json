@@ -1,0 +1,89 @@
+{
+  "bitv_nummer": "9.2.1.4",
+  "titel": "Tastatur-Kurzbefehle abschaltbar oder anpassbar",
+  "wcag22": {
+    "guideline": "Guideline 2.1 Keyboard Accessible: Make all functionality available from a keyboard",
+    "level": "A",
+    "success_criterion": "2.1.4 Character Key Shortcuts",
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Einzeltasten-Kurzbefehle (Buchstaben, Zahlen, Satzzeichen oder Symbole) müssen abschaltbar sein oder sich auf Kombinationen mit Modifikator-Tasten umstellen lassen; zulässig ist auch, dass sie nur bei Fokus auf bestimmten Schnittstellen-Elementen greifen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Solche Kurzbefehle bereiten Spracheingabe-Nutzern häufig Probleme, weil Spracheingaben unerwartet Funktionen auslösen und dadurch der Nutzungskontext verloren geht."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt betrifft jede Webseite gleichermaßen."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Seite neu laden.\n2. - Setzt das Laden den Fokus auf ein Schnittstellen-Element (etwa ein Eingabefeld), auf eine freie Stelle der Seite klicken, damit keine Elemente fokussiert sind.\n3. - Ohne Modifikator- und Steuertasten (STR, ALT, ENTER, Tab, Pfeiltasten, F1-F12) nacheinander alle Nummern-, Buchstaben-, Symbol- und Zeichensetzungstasten drücken.\n4. - Umschalttaste gedrückt halten und dieselben Tasten abermals betätigen.\n5. - Rufen einzelne Tasten Funktionen auf, prüfen, ob die Website oder App das Abschalten dieser Kurzbefehle oder eine Umstellung auf Kombinationen mit einer Modifikator-Taste erlaubt."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Die Anforderung gilt nicht, wenn die Kurzbefehle nur bei Fokus auf bestimmten Schnittstellen-Elementen aktiv sind, etwa bei einem Auswahllisten-Element bzw. `select`, wo eine Buchstabentaste zur schnellen Navigation in den Optionen dient.\n\nDas Vorhandensein entsprechender Skripte lässt sich ggf. über das Anzeigen von Seitenskripten und die Suche nach typischen Tastatur-Event-Handlern wie `document.addEventListener` oder der `.keycode`-Eigenschaft prüfen. Da es mehrere Umsetzungsmöglichkeiten gibt, ist diese Methode aber nicht zuverlässig.\n\nEinige Browser nutzen Tastenkombinationen mit der Umschalttaste: Firefox öffnet etwa mit Umschalttaste + / eine Seitensuche und mit Umschalttaste + ' eine Suche in Seitenlinks. In diesen Fällen lässt sich der Fokus mit der ESC-Taste oder durch einen Klick auf einen leeren Bereich aus der Browser-Sucheingabe lösen."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Prüfschritt erfüllt",
+          "inhalt_markdown": "- Beim Betätigen der Tasten bleiben Inhalt und Kontext vollständig unverändert.\n- Es gibt Einzeltasten-Kurzbefehle, die sich über Einstellungen der Website oder App abschalten oder auf Kombinationen mit Modifikator-Tasten umstellen lassen.\n- Einzeltasten-Kurzbefehle sind nur bei Fokus auf bestimmten interaktiven Elementen wirksam (z. B. Auswahllisten)."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 2.1 Keyboard Accessible: Make all functionality available from a keyboard](https://www.w3.org/TR/WCAG21/#keyboard-accessible)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [2.1.4 Character Key Shortcuts](https://www.w3.org/TR/WCAG21/#character-key-shortcuts)(Level A)"
+        },
+        {
+          "titel": "Sufficient Techniques",
+          "inhalt_markdown": "- [G217: Providing a mechanism to allow users to remap or turn off character key shortcuts](https://www.w3.org/WAI/WCAG21/Techniques/general/G217)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F99: Failure of Success Criterion 2.1.4 due to implementing character key shortcuts that cannot be turned off or remapped](https://www.w3.org/WAI/WCAG21/Techniques/failures/F99)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Bookmarklet \"Tastatur-Kurzbefehle auslösen\"](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste/bookmarklets.html)von Prüfstelle T-Systems MMS kann ggf. zusätzlich eingesetzt werden, um der Reihe nach alle erforderlichen Tasten auszulösen. Dabei muss die Seite genau beobachtet werden, ob sich etwas ändert bzw. geändert hat. Die Konsole der Entwickler-Tools zeigt die simulierten Eingaben.\n        - [Understanding Success Criterion 2.1.4: Character Key Shortcuts](https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html)(zur Zeit nur auf Englisch verfügbar)"
+    },
+    {
+      "titel": "Fragen zu diesem Prüfschritt",
+      "id": "fragen_zu_diesem_prüfschritt",
+      "untersektionen": [
+        {
+          "titel": "Das eingebundene Video reagiert auf Tastaturkurzbefehle über Einzeltasten, z.B: \"k\" zum Pausieren/Abspielen und \"m\" zum Stummschalten. Ist das als Verstoß gegen 2.1.4 \"Tastatur-Kurzbefehle abschaltbar oder anpassbar\" zu werten?",
+          "inhalt_markdown": "Diese Kurzbefehle bieten Tastaturnutzern erkennbar einen Mehrwert. Ob Spracheingabe-Nutzer dadurch benachteiligt werden, wird aktuell geklärt. Ebenso offen ist, ob ein Video als [User Interface Component](https://www.w3.org/TR/WCAG21/#dfn-user-interface-components) im Sinne der normativen Anforderung zählt; hierzu läuft [eine Diskussion im Github-Issue der Accessibility Guidelines Working Group](https://github.com/w3c/wcag/issues/1950). Bis zu einer Entscheidung sollten Kurzbefehle bei fokussierten Videos nicht als Verstoß gewertet werden."
+        }
+      ]
+    }
+  ]
+}

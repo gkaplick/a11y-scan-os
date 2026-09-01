@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alternativen für CAPTCHAs (Positivbeispiel) · A11Y Test-Website</title>
+<link rel="stylesheet" href="/assets/styles.css">
+<style></style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="seitenkopf">
+  <a class="marke" href="/index.html">A11Y Test-Website</a>
+  <p class="kategorie">Kategorie: Bilder &amp; Grafiken</p>
+</header>
+<nav aria-label="Hauptnavigation" class="hauptnav">
+  <a href="/index.html">Startseite</a>
+  <a href="/kriterien/captcha-alternative-positiv.html">Positivbeispiel</a>
+  <a href="/kriterien/captcha-alternative-negativ.html">Negativbeispiel</a>
+</nav>
+<main id="main">
+<span class="art-badge art-positiv">Positivbeispiel</span>
+<p class="kategorie">Kategorie: Bilder &amp; Grafiken</p>
+<h1>Alternativen für CAPTCHAs</h1>
+<p class="beschreibung">CAPTCHA-Grafiken brauchen einen Alternativtext mit Zweckbeschreibung und eine Alternative (z. B. Audio-Version).</p>
+<p class="testids">Geprüfte Kriterien: <span class="testid">BITV_9_1_1_1d_ALTERNATIVEN_FUER_CAPTCHAS</span></p>
+<div class="beispiel art-positiv">
+<h2>CAPTCHA mit Zweck-Alt-Text und Audio-Alternative</h2>
+<form action="/senden">
+  <label for="c">Sicherheitscode</label>
+  <p><img id="captcha-bild" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="CAPTCHA: Sicherheitscode ablesen und eingeben"></p>
+  <p><a href="#audio-alternative">Zur Audio-Version des Codes</a></p>
+  <input id="c" name="captcha" type="text">
+</form>
+</div><p class="hinweis">Zur Gegenprobe: <a href="/kriterien/captcha-alternative-negativ.html">Negativbeispiel ansehen</a></p>
+</main>
+<footer class="seitenfuss">
+  <p>A11Y Test-Website · Positivbeispiel · <a href="/index.html">Zur Übersicht</a> · <a href="/gebaerdensprache.html">Gebärdensprache</a> · <a href="/leichte-sprache.html">Leichte Sprache</a> · <a href="/erklaerung.html">Erklärung zur Barrierefreiheit</a></p>
+</footer>
+</body>
+</html>

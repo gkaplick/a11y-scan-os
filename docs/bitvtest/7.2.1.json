@@ -1,0 +1,66 @@
+{
+  "bitv_nummer": "7.2.1",
+  "titel": "Wiedergabe von Audiodeskription",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Liegen Videos mit synchroner Bild- und Tonspur vor und existiert eine Fassung mit Audiodeskription, braucht es einen Mechanismus, diese Fassung auszuwählen und abzuspielen. Der Player muss dafür ein eigenes AD-Bedienelement besitzen oder es erlauben, eine Tonspur mit Audiodeskription über die Spracheinstellungen zu aktivieren. Zulässig ist auch eine Fassung mit Audiodeskription direkt im Umfeld des Players."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Bietet das Angebot zu den visuellen Inhalten eines Videos eine Fassung mit Audiodeskription, muss sich diese auswählen oder zuschalten lassen."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn auf der Webseite mindestens ein aufgezeichnetes Video mit synchroner Bild- und Tonspur vorhanden ist und für dieses eine Fassung mit Audiodeskription bereitsteht."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Das Video im eingebundenen Player abspielen.\n2. - Prüfen, ob der Player ein Bedienelement zum Ein- und Ausschalten der Audiodeskription bietet.\n3. - Fehlt eine solche Schaltfläche, prüfen, ob sich Audiodeskription als eine von mehreren Tonspuren auswählen lässt."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Nicht bemängelt wird, wenn beim Aktivieren eines AD-Buttons ein zweites Video mit Audiodeskription geladen oder Audiodeskription über einen zweiten Player dargestellt wird.\n- Vermittelt die Audiospur bereits alle wichtigen Informationen der Bildsequenz, ist weder Audiodeskription noch ein AD-Button nötig.\n- Der Prüfschritt 7.2.1 gestattet zwar, die Audiodeskription über mehrere Tonspuren anzubieten, doch verlangt 7.3, dass die AD-Bedienelemente auf derselben Interaktionsebene liegen wie die Wiedergabebedienelemente (etwa Abspielen, Pause, Lautstärke).\n- Ist 7.3 „Bedienelemente für Untertitel und Audiodeskription“ erfüllt, ist auch 7.2.1 erfüllt."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht erfüllt:",
+          "inhalt_markdown": "- Der Player bietet keinerlei Bedienelement, um eine Audiodeskription zuzuschalten."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Gegenstand ist hier das Vorhandensein von Bedienelementen zum An- und Abschalten der Audiodeskription, soweit entsprechende Fassungen bereitliegen. Prüfschritt 9.1.2.5 „Audiodeskription für Videos“ beurteilt dagegen inhaltlich, ob für rein visuell vermittelte Inhalte überhaupt eine Audiodeskription vorliegt. Fällt 9.1.2.5 negativ aus, weil eine nötige Audiodeskription fehlt, ist 7.2.1 nicht anwendbar: Er setzt ein vorhandenes Audiodeskriptions-Angebot voraus."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "7.2.1 Audio description playback",
+          "inhalt_markdown": "> Where ICT displays video with synchronized audio, it shall provide a mechanism to select and play available audio description to the default audio channel.\n\nWhere video technologies do not have explicit and separate mechanisms for audio description, an ICT is deemed to satisfy this requirement if the ICT enables the user to select and play several audio tracks.\n\nNOTE 1:\nIn such cases, the video content can include the audio description as one of the available audio tracks.\n\nNOTE 2:\nAudio descriptions in digital media sometimes include information to allow descriptions that are longer than the gaps between dialogue. Support in digital media players for this \"extended audio description\" feature is useful, especially for digital media that is viewed personally."
+        }
+      ]
+    }
+  ]
+}

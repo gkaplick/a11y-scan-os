@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A11Y Test-Website · Positiv-/Negativbeispiele je Prüfkriterium</title>
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="seitenkopf">
+  <a class="marke" href="/index.html">A11Y Test-Website</a>
+</header>
+<nav aria-label="Hauptnavigation" class="hauptnav">
+  <a href="/index.html">Startseite</a>
+</nav>
+<form role="search" class="suche">
+  <label for="suche-index">Suche</label>
+  <input id="suche-index" name="suche" type="search">
+</form>
+<main id="main">
+  <h1>A11Y Test-Website</h1>
+  <p>Diese Website enthält zu jedem automatisiert prüfbaren Kriterium des
+  Scanners ein <strong>Positivbeispiel</strong> (konform, soll keine Befunde
+  erzeugen) und ein <strong>Negativbeispiel</strong> (Verstoß, soll genau die
+  gelisteten Kriterien melden). Scanne sie mit Suite „Alle“ unter
+  <code>http://localhost:8099</code>.</p>
+  <p class="hinweis">Hinweis: Die Beispiele sind Minimal-Markup zur
+  Veranschaulichung und Absicherung — kein vollwertiges Barrierefreiheits-Muster
+  für reale Websites. Normative Quelle der Kriterien ist der
+  BITV/WCAG-Kriterienkatalog.</p>
+  <section class="kategorie">
+  <h2>Bilder &amp; Grafiken</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Alternativtexte für Bilder</h3>
+  <p>Informative Bilder brauchen ein alt-Attribut; rein dekorative Bilder ein leeres alt=&quot;&quot;.</p>
+  <p class="testids"><span class="testid">WCAG_1_1_1_IMG_ALT</span></p>
+  <p class="links">
+    <a href="/kriterien/img-alt-positiv.html">Positivbeispiel</a> · <a href="/kriterien/img-alt-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Alternativtexte für Bedienelemente</h3>
+  <p>Grafiken in Links/Buttons sowie grafische Schaltflächen (input type=image) brauchen eine Textalternative.</p>
+  <p class="testids"><span class="testid">BITV_9_1_1_1a_ALTERNATIVTEXTE_FUER_BEDIENELEMENTE</span></p>
+  <p class="links">
+    <a href="/kriterien/bedienelement-alt-positiv.html">Positivbeispiel</a> · <a href="/kriterien/bedienelement-alt-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Alternativtexte für Grafiken und Objekte</h3>
+  <p>Unverlinkte informative Grafiken, Inline-SVGs und Objekte brauchen eine Textalternative.</p>
+  <p class="testids"><span class="testid">BITV_9_1_1_1b_ALTERNATIVTEXTE_FUER_GRAFIKEN_UND_OBJEKTE</span></p>
+  <p class="links">
+    <a href="/kriterien/grafik-alt-positiv.html">Positivbeispiel</a> · <a href="/kriterien/grafik-alt-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Leere Alt-Attribute für Layoutgrafiken</h3>
+  <p>Dekorative Grafiken brauchen alt=&quot;&quot; ohne title; Füll-Alt-Texte wie „spacer“ sind zu vermeiden.</p>
+  <p class="testids"><span class="testid">BITV_9_1_1_1c_LEERE_ALT_ATTRIBUTE_FUER_LAYOUTGRAFIKEN</span></p>
+  <p class="links">
+    <a href="/kriterien/layout-grafik-alt-positiv.html">Positivbeispiel</a> · <a href="/kriterien/layout-grafik-alt-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Medien &amp; Video</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Transkript für Audio-Inhalte</h3>
+  <p>Reine Audio- und Video-Inhalte brauchen ein verlinktes Transkript.</p>
+  <p class="testids"><span class="testid">WCAG_1_2_1_AUDIO_TRANSCRIPT</span></p>
+  <p class="links">
+    <a href="/kriterien/audio-transkript-positiv.html">Positivbeispiel</a> · <a href="/kriterien/audio-transkript-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Untertitel für aufgezeichnete Videos</h3>
+  <p>Videos mit Ton brauchen eine Untertitel-Spur (track kind=&quot;captions&quot;) oder eine Textalternative.</p>
+  <p class="testids"><span class="testid">WCAG_1_2_2_CAPTIONS</span> <span class="testid">BITV_9_1_2_2_AUFGEZEICHNETE_VIDEOS_MIT_UNTERTITELN</span></p>
+  <p class="links">
+    <a href="/kriterien/video-untertitel-positiv.html">Positivbeispiel</a> · <a href="/kriterien/video-untertitel-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Audiodeskription für Videos</h3>
+  <p>Videos brauchen eine Audiodeskriptions-Spur (track kind=&quot;descriptions&quot;) oder als Alternative einen Hinweistext.</p>
+  <p class="testids"><span class="testid">WCAG_1_2_5_AD</span> <span class="testid">EN_7_2_1_AD_PLAYBACK</span> <span class="testid">BITV_9_1_2_5_AUDIODESKRIPTION_FUER_VIDEOS</span></p>
+  <p class="links">
+    <a href="/kriterien/video-audiodeskription-positiv.html">Positivbeispiel</a> · <a href="/kriterien/video-audiodeskription-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Kein automatisch abgespielter Ton</h3>
+  <p>Autoplay ist nur ohne Ton erlaubt: Videos müssen muted sein, Audio darf nicht automatisch starten.</p>
+  <p class="testids"><span class="testid">WCAG_1_4_2_AUTOPLAY</span> <span class="testid">BITV_9_1_4_2_TON_ABSCHALTBAR</span></p>
+  <p class="links">
+    <a href="/kriterien/autoplay-ton-positiv.html">Positivbeispiel</a> · <a href="/kriterien/autoplay-ton-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Titel für Iframes</h3>
+  <p>Eingebettete Inhalte (iframe) brauchen einen beschreibenden Titel.</p>
+  <p class="testids"><span class="testid">WCAG_2_4_1_IFRAME_TITLE</span></p>
+  <p class="links">
+    <a href="/kriterien/iframe-titel-positiv.html">Positivbeispiel</a> · <a href="/kriterien/iframe-titel-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Titel für eingebettete Videos</h3>
+  <p>Eingebettete Videos (YouTube, Vimeo, …) brauchen ein beschreibendes iframe-title-Attribut.</p>
+  <p class="testids"><span class="testid">WCAG_2_4_1_VIDEO_TITLE</span> <span class="testid">WCAG_2_4_1_IFRAME_TITLE</span></p>
+  <p class="links">
+    <a href="/kriterien/video-titel-positiv.html">Positivbeispiel</a> · <a href="/kriterien/video-titel-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Player-Steuerung für Untertitel und Audiodeskription</h3>
+  <p>Video-/Audioplayer müssen Untertitel und Audiodeskription bedienbar machen (controls bzw. eigene Buttons).</p>
+  <p class="testids"><span class="testid">EN_7_3_CONTROLS</span></p>
+  <p class="links">
+    <a href="/kriterien/video-bedienelemente-positiv.html">Positivbeispiel</a> · <a href="/kriterien/video-bedienelemente-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Kontrast &amp; Farbe</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Kontrast von Text (AA)</h3>
+  <p>Text muss mindestens 4,5:1 (großer Text 3:1) Kontrast zum Hintergrund haben.</p>
+  <p class="testids"><span class="testid">WCAG_1_4_3_CONTRAST_AA</span> <span class="testid">BITV_9_1_4_3_KONTRASTE_VON_TEXTEN_AUSREICHEND</span></p>
+  <p class="links">
+    <a href="/kriterien/kontrast-aa-positiv.html">Positivbeispiel</a> · <a href="/kriterien/kontrast-aa-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Kontrast von Text (AAA)</h3>
+  <p>Erhöhter Kontrast (7:1 bzw. 4,5:1 für großen Text) über die gesetzliche Pflicht hinaus.</p>
+  <p class="testids"><span class="testid">WCAG_1_4_6_CONTRAST_AAA</span></p>
+  <p class="links">
+    <a href="/kriterien/kontrast-aaa-positiv.html">Positivbeispiel</a> · <a href="/kriterien/kontrast-aaa-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Information nicht nur durch Farbe</h3>
+  <p>Links müssen sich außer durch die Farbe durch ein dauerhaftes Nicht-Farb-Merkmal vom Text abheben (Unterstreichung, Fettung ab halbfett, Marker-Hintergrund, Icon) — oder bei ≥ 3:1 Kontrast zur umgebenden Textfarbe bei Hover/Fokus zusätzlich hervorgehoben werden (BITV/G183-Ausnahme).</p>
+  <p class="testids"><span class="testid">WCAG_1_4_1_COLOR_ONLY</span> <span class="testid">BITV_9_1_4_1_OHNE_FARBEN_NUTZBAR</span></p>
+  <p class="links">
+    <a href="/kriterien/links-nicht-nur-farbe-positiv.html">Positivbeispiel</a> · <a href="/kriterien/links-nicht-nur-farbe-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Überschriften</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Überschriften-Hierarchie</h3>
+  <p>Überschriften dürfen keine Ebenen überspringen (z. B. h2 → h4).</p>
+  <p class="testids"><span class="testid">WCAG_1_3_1_HEADING_SKIP</span></p>
+  <p class="links">
+    <a href="/kriterien/heading-hierarchie-positiv.html">Positivbeispiel</a> · <a href="/kriterien/heading-hierarchie-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>ARIA-Überschriften mit Ebene</h3>
+  <p>role=&quot;heading&quot; braucht ein gültiges aria-level.</p>
+  <p class="testids"><span class="testid">BITV_9_1_3_1a_HTML_STRUKTURELEMENTE_FUER_UEBERSCHRIFTEN</span></p>
+  <p class="links">
+    <a href="/kriterien/heading-aria-level-positiv.html">Positivbeispiel</a> · <a href="/kriterien/heading-aria-level-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Aussagekräftige Überschriften</h3>
+  <p>Überschriften dürfen nicht leer sein und brauchen einen Text bzw. ein alt/aria-label.</p>
+  <p class="testids"><span class="testid">WCAG_2_4_6_EMPTY_HEADING</span> <span class="testid">BITV_9_2_4_6_AUSSAGEKRAEFTIGE_UEBERSCHRIFTEN_UND_BESCHRIFTUNGEN</span></p>
+  <p class="links">
+    <a href="/kriterien/leere-ueberschrift-positiv.html">Positivbeispiel</a> · <a href="/kriterien/leere-ueberschrift-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Links</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Aussagekräftige Linktexte (WCAG)</h3>
+  <p>WCAG 2.4.4: Generische Linktexte („hier klicken“, „mehr“) sind ein Verstoß, unabhängig vom Kontext.</p>
+  <p class="testids"><span class="testid">WCAG_2_4_4_LINK_TEXT</span></p>
+  <p class="links">
+    <a href="/kriterien/linktext-positiv.html">Positivbeispiel</a> · <a href="/kriterien/linktext-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Aussagekräftige Linktexte (BITV)</h3>
+  <p>BITV 9.2.4.4: Links brauchen einen Text bzw. Namen; generischer Kurztext ist mit Kontext-Ausnahme zulässig. Urteil ist binär (bestanden/nicht bestanden).</p>
+  <p class="testids"><span class="testid">BITV_9_2_4_4_AUSSAGEKRAEFTIGE_LINKTEXTE</span></p>
+  <p class="links">
+    <a href="/kriterien/linktext-bitv-positiv.html">Positivbeispiel</a> · <a href="/kriterien/linktext-bitv-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Formulare</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Programmatisch ermittelbare Formular-Labels</h3>
+  <p>Eingabefelder brauchen ein programmatisch ermittelbares Label (label/aria-label/title).</p>
+  <p class="testids"><span class="testid">WCAG_1_3_1_FORM_LABEL</span> <span class="testid">BITV_9_1_3_1h_BESCHRIFTUNG_VON_FORMULARELEMENTEN_PROGRAMMATISCH_ERMITTELBAR</span></p>
+  <p class="links">
+    <a href="/kriterien/formular-label-programmatisch-positiv.html">Positivbeispiel</a> · <a href="/kriterien/formular-label-programmatisch-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Sichtbare Formular-Beschriftungen</h3>
+  <p>Eingabefelder brauchen eine sichtbare Beschriftung — ein nur unsichtbares aria-label reicht nicht.</p>
+  <p class="testids"><span class="testid">WCAG_3_3_2_LABELS</span></p>
+  <p class="links">
+    <a href="/kriterien/formular-label-sichtbar-positiv.html">Positivbeispiel</a> · <a href="/kriterien/formular-label-sichtbar-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Beschriftung vor dem Formularfeld</h3>
+  <p>Die sichtbare Beschriftung muss vor bzw. über dem Feld stehen.</p>
+  <p class="testids"><span class="testid">BITV_9_3_3_2_BESCHRIFTUNGEN_VON_FORMULARELEMENTEN_VORHANDEN</span></p>
+  <p class="links">
+    <a href="/kriterien/formular-label-reihenfolge-positiv.html">Positivbeispiel</a> · <a href="/kriterien/formular-label-reihenfolge-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Autocomplete-Attribute für Nutzerdaten</h3>
+  <p>Felder für bekannte Nutzerdaten (E-Mail, Name, …) brauchen ein passendes autocomplete-Attribut.</p>
+  <p class="testids"><span class="testid">WCAG_1_3_5_AUTOCOMPLETE</span> <span class="testid">BITV_9_1_3_5_EINGABEFELDER_ZU_NUTZERDATEN_VERMITTELN_DEN_ZWECK</span></p>
+  <p class="links">
+    <a href="/kriterien/autocomplete-positiv.html">Positivbeispiel</a> · <a href="/kriterien/autocomplete-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Tabellen &amp; Listen</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Tabellen mit Kopfzellen</h3>
+  <p>Datentabellen brauchen &lt;th&gt;-Kopfzellen.</p>
+  <p class="testids"><span class="testid">WCAG_1_3_1_SR_TABLE_HEADERS</span> <span class="testid">BITV_9_1_3_1e_DATENTABELLEN_RICHTIG_AUFGEBAUT</span></p>
+  <p class="links">
+    <a href="/kriterien/tabellen-kopfzellen-positiv.html">Positivbeispiel</a> · <a href="/kriterien/tabellen-kopfzellen-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Zuordnung von Tabellenzellen</h3>
+  <p>Komplexe Tabellen (colspan/rowspan) brauchen scope- oder id/headers-Zuordnungen.</p>
+  <p class="testids"><span class="testid">BITV_9_1_3_1f_ZUORDNUNG_VON_TABELLENZELLEN</span></p>
+  <p class="links">
+    <a href="/kriterien/tabellen-zellen-zuordnung-positiv.html">Positivbeispiel</a> · <a href="/kriterien/tabellen-zellen-zuordnung-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Listen mit Einträgen</h3>
+  <p>Listenelemente (ul/ol/dl) dürfen nicht leer sein oder nur leere Einträge enthalten.</p>
+  <p class="testids"><span class="testid">WCAG_1_3_1_SR_EMPTY_LIST</span> <span class="testid">BITV_9_1_3_1b_HTML_STRUKTURELEMENTE_FUER_LISTEN</span></p>
+  <p class="links">
+    <a href="/kriterien/listen-positiv.html">Positivbeispiel</a> · <a href="/kriterien/listen-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Struktur &amp; Navigation</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Genau eine main-Landmarke</h3>
+  <p>Eine Seite darf nur ein sichtbares main-Element (bzw. role=main) enthalten.</p>
+  <p class="testids"><span class="testid">WCAG_1_3_1_LANDMARK_MAIN</span></p>
+  <p class="links">
+    <a href="/kriterien/einziges-main-positiv.html">Positivbeispiel</a> · <a href="/kriterien/einziges-main-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Mechanismus zum Überspringen von Blöcken</h3>
+  <p>Wiederkehrende Blöcke müssen überspringbar sein (main-/nav-Landmarke oder Sprunglink).</p>
+  <p class="testids"><span class="testid">WCAG_2_4_1_SKIP_LINKS</span> <span class="testid">BITV_9_2_4_1_BEREICHE_UEBERSPRINGBAR</span></p>
+  <p class="links">
+    <a href="/kriterien/skip-link-positiv.html">Positivbeispiel</a> · <a href="/kriterien/skip-link-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Unterscheidbare Navigationsbereiche</h3>
+  <p>Mehrere Navigationsbereiche brauchen aria-label/aria-labelledby zur Unterscheidung.</p>
+  <p class="testids"><span class="testid">BITV_9_2_4_1_BEREICHE_UEBERSPRINGBAR</span></p>
+  <p class="links">
+    <a href="/kriterien/navigation-benennung-positiv.html">Positivbeispiel</a> · <a href="/kriterien/navigation-benennung-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Gegliederter Inhalt</h3>
+  <p>Textabsätze mit p, keine doppelten &lt;br&gt;, keine Leerzeichen-Ketten, keine Zeichen-Trennlinien statt &lt;hr&gt;.</p>
+  <p class="testids"><span class="testid">BITV_9_1_3_1d_INHALT_GEGLIEDERT</span></p>
+  <p class="links">
+    <a href="/kriterien/inhalt-gegliedert-positiv.html">Positivbeispiel</a> · <a href="/kriterien/inhalt-gegliedert-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Sprache</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Hauptsprache der Seite</h3>
+  <p>Die Sprache der Seite muss über ein gültiges BCP-47-lang-Attribut deklariert sein.</p>
+  <p class="testids"><span class="testid">WCAG_3_1_1_LANG</span> <span class="testid">BITV_9_3_1_1_HAUPTSPRACHE_ANGEGEBEN</span></p>
+  <p class="links">
+    <a href="/kriterien/hauptsprache-positiv.html">Positivbeispiel</a> · <a href="/kriterien/hauptsprache-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Sprachwechsel im Text</h3>
+  <p>Fremdsprachige Abschnitte brauchen ein gültiges lang-Attribut mit dem richtigen Sprachkürzel.</p>
+  <p class="testids"><span class="testid">WCAG_3_1_2_LANG_PARTS</span> <span class="testid">BITV_9_3_1_2_ANDERSSPRACHIGE_WOERTER_UND_ABSCHNITTE_AUSGEZEICHNET</span></p>
+  <p class="links">
+    <a href="/kriterien/sprachwechsel-positiv.html">Positivbeispiel</a> · <a href="/kriterien/sprachwechsel-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Seitentitel</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Seitentitel vorhanden</h3>
+  <p>Jede Seite braucht ein nicht-leeres &lt;title&gt;-Element.</p>
+  <p class="testids"><span class="testid">WCAG_2_4_2_TITLE</span></p>
+  <p class="links">
+    <a href="/kriterien/seiten-titel-positiv.html">Positivbeispiel</a> · <a href="/kriterien/seiten-titel-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Sinnvoller Seitentitel</h3>
+  <p>Der Seitentitel darf nicht generisch (z. B. „Home“) oder nur Schmuckzeichen sein.</p>
+  <p class="testids"><span class="testid">BITV_9_2_4_2_SINNVOLLE_DOKUMENTTITEL</span></p>
+  <p class="links">
+    <a href="/kriterien/seiten-titel-sinnvoll-positiv.html">Positivbeispiel</a> · <a href="/kriterien/seiten-titel-sinnvoll-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>ARIA &amp; Bedienbarkeit</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Zugänglicher Name für Buttons</h3>
+  <p>Jeder Button braucht einen zugänglichen Namen (Text, alt, aria-label o. Ä.).</p>
+  <p class="testids"><span class="testid">WCAG_4_1_2_BUTTON_NAME</span></p>
+  <p class="links">
+    <a href="/kriterien/button-name-positiv.html">Positivbeispiel</a> · <a href="/kriterien/button-name-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Zugänglicher Name für interaktive Elemente</h3>
+  <p>Interaktive ARIA-Elemente (z. B. role=checkbox) brauchen einen zugänglichen Namen.</p>
+  <p class="testids"><span class="testid">WCAG_4_1_2_ARIA_LABEL_MISSING</span></p>
+  <p class="links">
+    <a href="/kriterien/aria-name-missing-positiv.html">Positivbeispiel</a> · <a href="/kriterien/aria-name-missing-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Name für Dialoge</h3>
+  <p>role=&quot;dialog&quot; braucht aria-label oder aria-labelledby.</p>
+  <p class="testids"><span class="testid">WCAG_4_1_2_DIALOG_LABEL</span></p>
+  <p class="links">
+    <a href="/kriterien/dialog-name-positiv.html">Positivbeispiel</a> · <a href="/kriterien/dialog-name-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Gültige ARIA-Rollen</h3>
+  <p>role-Attribute dürfen nur bekannte ARIA-Rollen verwenden.</p>
+  <p class="testids"><span class="testid">WCAG_4_1_2_INVALID_ROLE</span></p>
+  <p class="links">
+    <a href="/kriterien/invalid-role-positiv.html">Positivbeispiel</a> · <a href="/kriterien/invalid-role-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Gültiger aria-hidden-Wert</h3>
+  <p>aria-hidden darf nur &quot;true&quot; oder &quot;false&quot; sein.</p>
+  <p class="testids"><span class="testid">WCAG_4_1_2_ARIA_HIDDEN</span></p>
+  <p class="links">
+    <a href="/kriterien/aria-hidden-wert-positiv.html">Positivbeispiel</a> · <a href="/kriterien/aria-hidden-wert-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Gültiger aria-expanded-Wert</h3>
+  <p>aria-expanded darf nur &quot;true&quot; oder &quot;false&quot; sein.</p>
+  <p class="testids"><span class="testid">WCAG_4_1_2_ARIA_EXPANDED</span></p>
+  <p class="links">
+    <a href="/kriterien/aria-expanded-wert-positiv.html">Positivbeispiel</a> · <a href="/kriterien/aria-expanded-wert-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Gültige Live-Regionen</h3>
+  <p>aria-live darf nur &quot;off&quot;, &quot;polite&quot; oder &quot;assertive&quot; sein.</p>
+  <p class="testids"><span class="testid">WCAG_4_1_3_ARIA_LIVE</span> <span class="testid">BITV_9_4_1_3_STATUSMELDUNGEN_PROGRAMMATISCH_VERFUEGBAR</span></p>
+  <p class="links">
+    <a href="/kriterien/statusmeldung-aria-live-positiv.html">Positivbeispiel</a> · <a href="/kriterien/statusmeldung-aria-live-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Name, Rolle und Wert verfügbar</h3>
+  <p>Bedienelemente brauchen Rolle und Namen; Elemente mit Event-Handler ohne Rolle sind unzulässig (F59).</p>
+  <p class="testids"><span class="testid">BITV_9_4_1_2_NAME_ROLLE_WERT_VERFUEGBAR</span></p>
+  <p class="links">
+    <a href="/kriterien/name-rolle-wert-positiv.html">Positivbeispiel</a> · <a href="/kriterien/name-rolle-wert-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Zeitlimits</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Anpassbare Zeitbegrenzung (Meta-Refresh)</h3>
+  <p>Ein Meta-Refresh mit Zeitbegrenzung (&lt;meta http-equiv=refresh content=&quot;30&quot;&gt;) ist unzulässig.</p>
+  <p class="testids"><span class="testid">WCAG_2_2_1_META_REFRESH</span> <span class="testid">BITV_9_2_2_1_ZEITBEGRENZUNGEN_ANPASSBAR</span></p>
+  <p class="links">
+    <a href="/kriterien/zeitlimit-refresh-positiv.html">Positivbeispiel</a> · <a href="/kriterien/zeitlimit-refresh-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Responsive &amp; Viewport</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Viewport-Meta-Tag vorhanden</h3>
+  <p>Mobile Seiten brauchen &lt;meta name=&quot;viewport&quot;&gt; für die korrekte Darstellung bei 320 px.</p>
+  <p class="testids"><span class="testid">WCAG_1_4_10_VIEWPORT_MISSING</span> <span class="testid">BITV_9_1_4_10_INHALTE_BRECHEN_UM</span></p>
+  <p class="links">
+    <a href="/kriterien/viewport-vorhanden-positiv.html">Positivbeispiel</a> · <a href="/kriterien/viewport-vorhanden-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Zoomen nicht sperren</h3>
+  <p>user-scalable=no oder maximum-scale ≤ 1 im viewport-Meta ist unzulässig.</p>
+  <p class="testids"><span class="testid">WCAG_1_4_10_VIEWPORT_ZOOM</span> <span class="testid">BITV_9_1_4_10_INHALTE_BRECHEN_UM</span></p>
+  <p class="links">
+    <a href="/kriterien/viewport-zoom-positiv.html">Positivbeispiel</a> · <a href="/kriterien/viewport-zoom-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Inhalt bricht bei 320 px um</h3>
+  <p>Inhalt darf bei 320 px nicht horizontal überlaufen (keine festen Breiten).</p>
+  <p class="testids"><span class="testid">WCAG_1_4_10_REFLOW</span> <span class="testid">BITV_9_1_4_10_INHALTE_BRECHEN_UM</span></p>
+  <p class="links">
+    <a href="/kriterien/reflow-320-positiv.html">Positivbeispiel</a> · <a href="/kriterien/reflow-320-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Text bei 200 % Zoom lesbar</h3>
+  <p>Bei 200 % Zoom (bzw. halbierter Viewport-Breite) darf kein Text abgeschnitten werden.</p>
+  <p class="testids"><span class="testid">WCAG_1_4_4_RESIZE</span> <span class="testid">BITV_9_1_4_4_TEXT_AUF_200_VERGROESSERBAR</span></p>
+  <p class="links">
+    <a href="/kriterien/text-200-prozent-positiv.html">Positivbeispiel</a> · <a href="/kriterien/text-200-prozent-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Anpassbare Textabstände</h3>
+  <p>Text darf bei größeren Zeichen- und Zeilenabständen nicht abgeschnitten oder überlappend werden.</p>
+  <p class="testids"><span class="testid">WCAG_1_4_12_TEXT_SPACING</span> <span class="testid">BITV_9_1_4_12_TEXTABSTAENDE_ANPASSBAR</span></p>
+  <p class="links">
+    <a href="/kriterien/textabstaende-positiv.html">Positivbeispiel</a> · <a href="/kriterien/textabstaende-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Fokus &amp; Tastatur</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Sichtbarer Fokus-Indikator</h3>
+  <p>Der Tastaturfokus muss durch eine sichtbare Änderung erkennbar sein.</p>
+  <p class="testids"><span class="testid">WCAG_2_4_7_FOCUS_INDICATOR</span> <span class="testid">BITV_9_2_4_7_AKTUELLE_POSITION_DES_FOKUS_DEUTLICH</span></p>
+  <p class="links">
+    <a href="/kriterien/fokus-indikator-positiv.html">Positivbeispiel</a> · <a href="/kriterien/fokus-indikator-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Kein verstecktes fokussierbares Element</h3>
+  <p>Fokussierbare Elemente müssen sichtbar sein (keine Null-Größe, kein opacity:0).</p>
+  <p class="testids"><span class="testid">WCAG_2_4_7_HIDDEN_FOCUSABLE</span></p>
+  <p class="links">
+    <a href="/kriterien/verstecktes-fokuselement-positiv.html">Positivbeispiel</a> · <a href="/kriterien/verstecktes-fokuselement-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Keine Tastaturfalle</h3>
+  <p>Der Tastaturfokus darf sich nicht in einem Element verfangen (kein Tab-PreventDefault).</p>
+  <p class="testids"><span class="testid">WCAG_2_1_2_KEYBOARD_TRAP</span> <span class="testid">BITV_9_2_1_2_KEINE_TASTATURFALLE</span></p>
+  <p class="links">
+    <a href="/kriterien/tastaturfalle-positiv.html">Positivbeispiel</a> · <a href="/kriterien/tastaturfalle-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Kein positiver tabindex</h3>
+  <p>Positive tabindex-Werte (tabindex=&quot;1&quot;) stören die logische Tab-Reihenfolge.</p>
+  <p class="testids"><span class="testid">WCAG_2_4_3_TABINDEX</span> <span class="testid">BITV_9_2_4_3_SCHLUESSIGE_REIHENFOLGE_BEI_DER_TASTATURBEDIENUNG</span></p>
+  <p class="links">
+    <a href="/kriterien/tabindex-positiv.html">Positivbeispiel</a> · <a href="/kriterien/tabindex-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Sonstige</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Ausreichende Zielgröße</h3>
+  <p>Bedienelemente sollten mindestens 44×44 px groß und nicht zu eng beieinander sein.</p>
+  <p class="testids"><span class="testid">WCAG_2_5_5_TARGET_SIZE</span></p>
+  <p class="links">
+    <a href="/kriterien/zielgroesse-positiv.html">Positivbeispiel</a> · <a href="/kriterien/zielgroesse-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Bilder &amp; Grafiken</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Alternativen für CAPTCHAs</h3>
+  <p>CAPTCHA-Grafiken brauchen einen Alternativtext mit Zweckbeschreibung und eine Alternative (z. B. Audio-Version).</p>
+  <p class="testids"><span class="testid">BITV_9_1_1_1d_ALTERNATIVEN_FUER_CAPTCHAS</span></p>
+  <p class="links">
+    <a href="/kriterien/captcha-alternative-positiv.html">Positivbeispiel</a> · <a href="/kriterien/captcha-alternative-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Medien &amp; Video</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Alternativen für Audiodateien und stumme Videos</h3>
+  <p>Reine Audio- und stumme Video-Inhalte brauchen eine Medienalternative (Transkript) in unmittelbarer Nähe.</p>
+  <p class="testids"><span class="testid">BITV_9_1_2_1_ALTERNATIVEN_FUER_AUDIODATEIEN_UND_STUMME_VIDEOS</span></p>
+  <p class="links">
+    <a href="/kriterien/audio-volltext-bitv-positiv.html">Positivbeispiel</a> · <a href="/kriterien/audio-volltext-bitv-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Audiodeskription oder Volltext-Alternative für Videos</h3>
+  <p>Tonbehaftete Videos brauchen eine Audiodeskriptions-Spur oder eine Volltext-Alternative.</p>
+  <p class="testids"><span class="testid">BITV_9_1_2_3_AUDIODESKRIPTION_ODER_VOLLTEXT_ALTERNATIVE_FUER_VIDEOS</span></p>
+  <p class="links">
+    <a href="/kriterien/video-ad-volltext-positiv.html">Positivbeispiel</a> · <a href="/kriterien/video-ad-volltext-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Kontrast &amp; Farbe</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Kontraste von Grafiken und grafischen Bedienelementen</h3>
+  <p>Bedienelemente, die nur über ihren Rahmen erkennbar sind, brauchen einen Rahmenkontrast von 3:1.</p>
+  <p class="testids"><span class="testid">BITV_9_1_4_11_KONTRASTE_VON_GRAFIKEN_UND_GRAFISCHEN_BEDIENELEMENTEN_AUSREICHEND</span></p>
+  <p class="links">
+    <a href="/kriterien/kontrast-grafik-positiv.html">Positivbeispiel</a> · <a href="/kriterien/kontrast-grafik-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Fokus &amp; Tastatur</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Ohne Maus nutzbar</h3>
+  <p>Bedienelemente müssen per Tastatur erreichbar und aktivierbar sein — Maus-only-Handler auf nicht-fokussierbaren Elementen sind ein Verstoß.</p>
+  <p class="testids"><span class="testid">BITV_9_2_1_1_OHNE_MAUS_NUTZBAR</span></p>
+  <p class="links">
+    <a href="/kriterien/ohne-maus-positiv.html">Positivbeispiel</a> · <a href="/kriterien/ohne-maus-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Tastatur-Kurzbefehle abschaltbar oder anpassbar</h3>
+  <p>Einzelzeichen-Kurzbefehle brauchen einen Modifikator oder eine Abschalt-/Anpassungsmöglichkeit.</p>
+  <p class="testids"><span class="testid">BITV_9_2_1_4_TASTATUR_KURZBEFEHLE_ABSCHALTBAR_ODER_ANPASSBAR</span> <span class="testid">WCAG_2_1_4_CHAR_SHORTCUTS</span></p>
+  <p class="links">
+    <a href="/kriterien/tastatur-kurzbefehl-positiv.html">Positivbeispiel</a> · <a href="/kriterien/tastatur-kurzbefehl-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Sonstige</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Bewegte Inhalte abschaltbar</h3>
+  <p>Laufende/blinkende Inhalte brauchen einen Abschalt- oder Pause-Mechanismus.</p>
+  <p class="testids"><span class="testid">BITV_9_2_2_2_BEWEGTE_INHALTE_ABSCHALTBAR</span> <span class="testid">WCAG_2_2_2_ANIMATIONS</span></p>
+  <p class="links">
+    <a href="/kriterien/bewegte-inhalte-positiv.html">Positivbeispiel</a> · <a href="/kriterien/bewegte-inhalte-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>ARIA &amp; Bedienbarkeit</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Sichtbare Beschriftung Teil des zugänglichen Namens</h3>
+  <p>Die sichtbare Beschriftung eines Bedienelements muss im zugänglichen Namen enthalten sein.</p>
+  <p class="testids"><span class="testid">BITV_9_2_5_3_SICHTBARE_BESCHRIFTUNG_TEIL_DES_ZUGAENGLICHEN_NAMENS</span> <span class="testid">WCAG_2_5_3_LABEL_IN_NAME</span></p>
+  <p class="links">
+    <a href="/kriterien/label-in-name-positiv.html">Positivbeispiel</a> · <a href="/kriterien/label-in-name-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Sonstige</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Korrekte HTML-Syntax (W3C-Validator)</h3>
+  <p>Valides HTML ohne doppelte IDs und fehlende schließende Tags (W3C-Validator; braucht Netz).</p>
+  <p class="testids"><span class="testid">WCAG_4_1_1_HTML_ERROR</span> <span class="testid">WCAG_4_1_1_HTML_WARNING</span> <span class="testid">BITV_9_4_1_1_KORREKTE_SYNTAX</span></p>
+  <p class="links">
+    <a href="/kriterien/html-syntax-positiv.html">Positivbeispiel</a> · <a href="/kriterien/html-syntax-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Struktur &amp; Navigation</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>HTML-Strukturelemente für Zitate</h3>
+  <p>Eigenständige Zitate sollen mit blockquote/q ausgezeichnet sein — nicht nur visuell per Klasse oder Anführungszeichen.</p>
+  <p class="testids"><span class="testid">BITV_9_1_3_1c_HTML_STRUKTURELEMENTE_FUER_ZITATE</span></p>
+  <p class="links">
+    <a href="/kriterien/zitat-struktur-positiv.html">Positivbeispiel</a> · <a href="/kriterien/zitat-struktur-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Verzicht auf Flackern</h3>
+  <p>Inhalte blitzen nicht häufiger als dreimal pro Sekunde — keine blink-Elemente und keine text-decoration: blink.</p>
+  <p class="testids"><span class="testid">BITV_9_2_3_1_VERZICHT_AUF_FLACKERN</span> <span class="testid">WCAG_2_3_1_THREE_FLASHES</span></p>
+  <p class="links">
+    <a href="/kriterien/flackern-positiv.html">Positivbeispiel</a> · <a href="/kriterien/flackern-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Alternative Zugangswege</h3>
+  <p>Mindestens zwei unterschiedliche Zugangswege zu den Inhalten — z. B. Navigation, Suche oder Sitemap-Link.</p>
+  <p class="testids"><span class="testid">BITV_9_2_4_5_ALTERNATIVE_ZUGANGSWEGE</span> <span class="testid">WCAG_2_4_5_MULTIPLE_WAYS</span></p>
+  <p class="links">
+    <a href="/kriterien/zugangswege-positiv.html">Positivbeispiel</a> · <a href="/kriterien/zugangswege-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Bedienbarkeit</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Keine unerwartete Kontextänderung bei Fokus</h3>
+  <p>Beim Fokuserhalt (oder Laden der Seite) wird kein Fenster geöffnet, kein Formular abgeschickt und nicht navigiert.</p>
+  <p class="testids"><span class="testid">BITV_9_3_2_1_KEINE_UNERWARTETE_KONTEXTAENDERUNG_BEI_FOKUS</span> <span class="testid">WCAG_3_2_1_ON_FOCUS</span></p>
+  <p class="links">
+    <a href="/kriterien/fokus-kontext-positiv.html">Positivbeispiel</a> · <a href="/kriterien/fokus-kontext-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Keine unerwartete Kontextänderung bei Eingabe</h3>
+  <p>Formularfelder lösen bei Eingabe keine unerwartete Kontextänderung aus (kein Auto-Submit, keine Navigation).</p>
+  <p class="testids"><span class="testid">BITV_9_3_2_2_KEINE_UNERWARTETE_KONTEXTAENDERUNG_BEI_EINGABE</span> <span class="testid">WCAG_3_2_2_ON_INPUT</span></p>
+  <p class="links">
+    <a href="/kriterien/eingabe-kontext-positiv.html">Positivbeispiel</a> · <a href="/kriterien/eingabe-kontext-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Formulare</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Fehlererkennung</h3>
+  <p>Fehler werden automatisch erkannt und beschrieben — auch wenn die native Validierung (novalidate) ausgeschaltet ist.</p>
+  <p class="testids"><span class="testid">BITV_9_3_3_1_FEHLERERKENNUNG</span></p>
+  <p class="links">
+    <a href="/kriterien/fehlererkennung-positiv.html">Positivbeispiel</a> · <a href="/kriterien/fehlererkennung-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Struktur &amp; Navigation</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Erklärung zur Barrierefreiheit</h3>
+  <p>Die Seite verlinkt eine aktuelle Erklärung zur Barrierefreiheit (üblicherweise im Footer).</p>
+  <p class="testids"><span class="testid">BITV_7_DECLARATION</span></p>
+  <p class="links">
+    <a href="/kriterien/erklaerung-positiv.html">Positivbeispiel</a> · <a href="/kriterien/erklaerung-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Kein Strukturmarkup für Layouttabellen</h3>
+  <p>Als Layout deklarierte Tabellen (role=presentation) dürfen kein Tabellenstruktur-Markup (th, caption, summary, scope) enthalten.</p>
+  <p class="testids"><span class="testid">BITV_9_1_3_1g_KEIN_STRUKTURMARKUP_FUER_LAYOUTTABELLEN</span></p>
+  <p class="links">
+    <a href="/kriterien/layout-tabelle-positiv.html">Positivbeispiel</a> · <a href="/kriterien/layout-tabelle-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Verständlichkeit</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Ohne Bezug auf sensorische Merkmale nutzbar</h3>
+  <p>Anweisungen nennen zusätzlich zu Farbe, Form oder Position einen unabhängigen Bezug (z. B. den Text einer Überschrift).</p>
+  <p class="testids"><span class="testid">BITV_9_1_3_3_OHNE_BEZUG_AUF_SENSORISCHE_MERKMALE_NUTZBAR</span> <span class="testid">WCAG_1_3_3_SENSORY</span></p>
+  <p class="links">
+    <a href="/kriterien/sensorisch-positiv.html">Positivbeispiel</a> · <a href="/kriterien/sensorisch-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Bedienbarkeit</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Schlüssige Reihenfolge bei der Tastaturbedienung</h3>
+  <p>Keine positiven tabindex-Werte, die die natürliche Fokus-Reihenfolge umstellen.</p>
+  <p class="testids"><span class="testid">BITV_9_2_4_3_SCHLUESSIGE_REIHENFOLGE_BEI_DER_TASTATURBEDIENUNG</span></p>
+  <p class="links">
+    <a href="/kriterien/tastatur-reihenfolge-positiv.html">Positivbeispiel</a> · <a href="/kriterien/tastatur-reihenfolge-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Alternativen für Bewegungsaktivierung</h3>
+  <p>Gerätebewegung (Shake/Neigen) löst keine Funktion aus, ohne dass eine alternative Bedienung vorhanden ist.</p>
+  <p class="testids"><span class="testid">BITV_9_2_5_4_ALTERNATIVEN_FUER_BEWEGUNGSAKTIVIERUNG</span> <span class="testid">WCAG_2_5_4_MOTION</span></p>
+  <p class="links">
+    <a href="/kriterien/bewegung-positiv.html">Positivbeispiel</a> · <a href="/kriterien/bewegung-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Formulare</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Fehlervermeidung wird unterstützt</h3>
+  <p>Transaktionsformulare (z. B. Bestellung, Zahlung) bieten vor dem Absenden einen Prüf-/Bestätigungs-Mechanismus.</p>
+  <p class="testids"><span class="testid">BITV_9_3_3_4_FEHLERVERMEIDUNG_WIRD_UNTERSTUETZT</span> <span class="testid">WCAG_3_3_4_ERROR_PREVENTION</span></p>
+  <p class="links">
+    <a href="/kriterien/fehlervermeidung-positiv.html">Positivbeispiel</a> · <a href="/kriterien/fehlervermeidung-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Barrierefreiheits-Angebote</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Gebärdensprach-Video auf der Startseite</h3>
+  <p>Die wichtigsten Inhalte werden auch in Deutscher Gebärdensprache (DGS) als Video angeboten und von jeder Seite verlinkt.</p>
+  <p class="testids"><span class="testid">BITV_4_SIGN_LANGUAGE</span> <span class="testid">WCAG_1_2_6_SIGN_LANGUAGE</span></p>
+  <p class="links">
+    <a href="/kriterien/gebardensprache-positiv.html">Positivbeispiel</a> · <a href="/kriterien/gebardensprache-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Leichte-Sprache-Angebot auf der Startseite</h3>
+  <p>Die wichtigsten Inhalte werden auch in Leichter Sprache angeboten und von jeder Seite verlinkt.</p>
+  <p class="testids"><span class="testid">BITV_4_EASY_LANGUAGE</span></p>
+  <p class="links">
+    <a href="/kriterien/leichte-sprache-positiv.html">Positivbeispiel</a> · <a href="/kriterien/leichte-sprache-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Bedienbarkeit</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Keine Beschränkung der Bildschirmausrichtung</h3>
+  <p>Die Bildschirmausrichtung wird nicht programmatisch gesperrt — Inhalte funktionieren im Hoch- und Querformat.</p>
+  <p class="testids"><span class="testid">BITV_9_1_3_4_KEINE_BESCHRAENKUNG_DER_BILDSCHIRMAUSRICHTUNG</span> <span class="testid">WCAG_1_3_4_ORIENTATION</span></p>
+  <p class="links">
+    <a href="/kriterien/ausrichtung-positiv.html">Positivbeispiel</a> · <a href="/kriterien/ausrichtung-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Alternativen für komplexe Zeiger-Gesten</h3>
+  <p>Funktionen, die über Wisch- oder Mehrpunkt-Gesten bedient werden, bieten eine einfache Zeigeralternative.</p>
+  <p class="testids"><span class="testid">BITV_9_2_5_1_ALTERNATIVEN_FUER_KOMPLEXE_ZEIGER_GESTEN</span> <span class="testid">WCAG_2_5_1_POINTER_GESTURES</span></p>
+  <p class="links">
+    <a href="/kriterien/gesten-positiv.html">Positivbeispiel</a> · <a href="/kriterien/gesten-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+<li class="kriterium">
+  <h3>Zeigergesten-Eingaben können abgebrochen oder widerrufen werden</h3>
+  <p>Aktionen werden nicht bereits beim Drücken eines Zeigers ausgelöst — das Loslassen (oder Widerrufen) bleibt möglich.</p>
+  <p class="testids"><span class="testid">BITV_9_2_5_2_ZEIGERGESTEN_EINGABEN_KOENNEN_ABGEBROCHEN_ODER_WIDERRUFEN_WERDEN</span> <span class="testid">WCAG_2_5_2_POINTER_CANCEL</span></p>
+  <p class="links">
+    <a href="/kriterien/zeiger-abbruch-positiv.html">Positivbeispiel</a> · <a href="/kriterien/zeiger-abbruch-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+<section class="kategorie">
+  <h2>Formulare</h2>
+  <ul class="kriterien-liste">
+<li class="kriterium">
+  <h3>Hilfe bei Fehlern</h3>
+  <p>Fehlermeldungen sind verständlich und geben einen Hinweis, wie der Fehler zu korrigieren ist.</p>
+  <p class="testids"><span class="testid">BITV_9_3_3_3_HILFE_BEI_FEHLERN</span> <span class="testid">WCAG_3_3_3_ERROR_SUGGESTION</span></p>
+  <p class="links">
+    <a href="/kriterien/hilfe-fehler-positiv.html">Positivbeispiel</a> · <a href="/kriterien/hilfe-fehler-negativ.html">Negativbeispiel</a>
+  </p>
+</li>
+  </ul>
+</section>
+</main>
+<footer class="seitenfuss">
+  <p>A11Y Test-Website · <a href="/index.html">Zur Übersicht</a> · <a href="/gebaerdensprache.html">Gebärdensprache</a> · <a href="/leichte-sprache.html">Leichte Sprache</a> · <a href="/erklaerung.html">Erklärung zur Barrierefreiheit</a></p>
+</footer>
+</body>
+</html>

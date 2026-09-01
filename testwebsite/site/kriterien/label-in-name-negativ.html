@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sichtbare Beschriftung Teil des zugänglichen Namens (Negativbeispiel) · A11Y Test-Website</title>
+<link rel="stylesheet" href="/assets/styles.css">
+<style></style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="seitenkopf">
+  <a class="marke" href="/index.html">A11Y Test-Website</a>
+  <p class="kategorie">Kategorie: ARIA &amp; Bedienbarkeit</p>
+</header>
+<nav aria-label="Hauptnavigation" class="hauptnav">
+  <a href="/index.html">Startseite</a>
+  <a href="/kriterien/label-in-name-positiv.html">Positivbeispiel</a>
+  <a href="/kriterien/label-in-name-negativ.html">Negativbeispiel</a>
+</nav>
+<main id="main">
+<span class="art-badge art-negativ">Negativbeispiel</span>
+<p class="kategorie">Kategorie: ARIA &amp; Bedienbarkeit</p>
+<h1>Sichtbare Beschriftung Teil des zugänglichen Namens</h1>
+<p class="beschreibung">Die sichtbare Beschriftung eines Bedienelements muss im zugänglichen Namen enthalten sein.</p>
+<p class="testids">Geprüfte Kriterien: <span class="testid">BITV_9_2_5_3_SICHTBARE_BESCHRIFTUNG_TEIL_DES_ZUGAENGLICHEN_NAMENS</span>
+<span class="testid">WCAG_2_5_3_LABEL_IN_NAME</span></p>
+<div class="beispiel art-negativ">
+<h2>Button: aria-label ohne sichtbaren Text</h2>
+<p><button type="button" aria-label="Absenden">Senden</button></p>
+</div>
+
+<div class="beispiel art-negativ">
+<h2>Eingabefeld: aria-label ohne sichtbare Beschriftung</h2>
+<p><label for="em">E-Mail</label><input id="em" type="email" aria-label="Mailadresse"></p>
+</div><p class="hinweis">Zur Gegenprobe: <a href="/kriterien/label-in-name-positiv.html">Positivbeispiel ansehen</a></p>
+</main>
+<footer class="seitenfuss">
+  <p>A11Y Test-Website · Negativbeispiel · <a href="/index.html">Zur Übersicht</a> · <a href="/gebaerdensprache.html">Gebärdensprache</a> · <a href="/leichte-sprache.html">Leichte Sprache</a> · <a href="/erklaerung.html">Erklärung zur Barrierefreiheit</a></p>
+</footer>
+</body>
+</html>

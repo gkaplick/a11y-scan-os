@@ -1,0 +1,152 @@
+{
+  "bitv_nummer": "9.1.4.4",
+  "titel": "Text auf 200% vergrößerbar",
+  "wcag22": {
+    "guideline": "Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background",
+    "level": "AA",
+    "success_criterion": "1.4.4 Resize text",
+    "techniken": {
+      "General Techniques": [
+        "G146: Using liquid layout",
+        "G178: Providing controls on the Web page that allow users to incrementally change the size of all text on the page up to 200 percent",
+        "G179: Ensuring that there is no loss of content or functionality when the text resizes and text containers do not change their width"
+      ],
+      "CSS-Techniques": [
+        "C12: Using percent for font sizes",
+        "C13: Using named font sizes",
+        "C14: Using em units for font sizes",
+        "C20: Using relative measurements to set column widths so that lines can average 80 characters or less when the browser is resized",
+        "C28: Specifying the size of text containers using em units",
+        "C29: Using a style switcher to provide a conforming alternate version"
+      ],
+      "Client-side Scripting Techniques": [
+        "SCR34: Calculating size and position in a way that scales with text size"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Text muss sich um bis zu 200 Prozent vergrößern lassen, ohne dass Inhalt oder Funktionalität verloren gehen. Mindestens eine der folgenden Möglichkeiten soll bestehen:\n- Über die Browser-Zoomfunktion lässt sich die Schrift auf 200% vergrößern (die Seite bricht dabei häufig in ein neues Layout um).\n- Über ein Bedienelement im oberen Seitenbereich lässt sich die Schriftgröße vergrößern."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Nutzer müssen die Schriftgröße an ihre Bedürfnisse anpassen können. Übliche Desktop-Browser bieten dafür die Zoom-Vergrößerung des gesamten Layouts, bei der die Seite oft in eine responsive Ansicht umbricht."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, sobald die Seite Text enthält."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Prüfung der Zoomvergrößerung über Browser-Einstellungen",
+          "inhalt_markdown": "1. Die Seite in Firefox aufrufen.\n2. Falls nötig unter „Ansicht > Zoom“ die Option „Nur Text zoomen“ deaktivieren.\n3. Mit der Web Developer Toolbar die Browserfenstergröße auf 1280x768 einstellen („Größe ändern“).\n4. Sechsmal die Tastenkombination Strg + + drücken, um auf 200% zu zoomen (alternativ sechsmal „Ansicht > Zoom > Vergrößern“).\n5. Prüfen, ob alle Inhalte weiterhin ohne Überlagerungen sichtbar und sämtliche Funktionen bedienbar bleiben.\n6. Die Seite im Chrome Browser aufrufen.\n7. Die Browserfenstergröße auf 1280x768 setzen (wie zuvor im Firefox).\n8. Über das Einstellungs-Menü die Option Zoomen „200%“ auswählen.\n9. Prüfen, ob alle Inhalte weiterhin ohne Überlagerungen sichtbar und sämtliche Funktionen bedienbar bleiben."
+        },
+        {
+          "titel": "2.2 Prüfung der Schriftvergrößerung durch Bedienelemente auf der Seite",
+          "inhalt_markdown": "Bietet die Seite eigene Bedienelemente zur Schriftvergrößerung:\n1. Prüfen, ob sie deutlich sichtbar im oberen Seitenbereich platziert sind.\n2. Prüfen, ob sich die Schrift darüber schrittweise vergrößern lässt. Eigene Bedienelemente schaffen dabei meist keine 200%; in dem Fall ist der Prüfschritt nicht erfüllt, und die 200% müssen auf anderem Wege erreichbar sein.\n3. Prüfen, ob sich die Ausgangsschriftgröße über die Bedienelemente wiederherstellen lässt."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "3.1 Hinweise zur Prüfung der Zoomvergrößerung über Browser-Einstellungen",
+          "inhalt_markdown": "Wird beim Zoomen am Desktop das mobile Layout ausgeliefert, müssen auch in dieser Ansicht alle Barrierefreiheits-Anforderungen erfüllt sein; Probleme werden bei den jeweils zuständigen Prüfschritten bewertet."
+        },
+        {
+          "titel": "3.2 Hinweise zur Prüfung der Schriftvergrößerung durch Bedienelemente auf der Seite",
+          "inhalt_markdown": "Die Prüfung eigener Schriftvergrößerungs-Bedienelemente setzt voraus, dass das Bedienelement selbst alle Anforderungen an Barrierefreiheit erfüllt (etwa Tastaturbedienbarkeit und ausreichende Kontraste)."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "Mindestens eine Methode erlaubt es, die Schrift um 200 % zu vergrößern, ohne dass Inhalte überlappen oder abgeschnitten werden und ohne Verlust von Funktionalität."
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "Die Seite bietet Schriftvergrößerungs-Bedienelemente, die den Text auf 200% vergrößern können, aber sie liegen nicht oben auf der Seite, führen zu Textüberlappungen oder Inhalte werden abgeschnitten."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Die mangelnde Vergrößerbarkeit von Schriftgrafiken behandelt Prüfschritt 9.1.4.5 „Verzicht auf Schriftgrafiken“."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background](https://www.w3.org/TR/WCAG21/#distinguishable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.4.4 Resize text](https://www.w3.org/TR/WCAG21/#resize-text)(Level AA)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G146: Using liquid layout](https://www.w3.org/WAI/WCAG21/Techniques/general/G146.html)\n                    - [G178: Providing controls on the Web page that allow users to incrementally change the size of all text on the page up to 200 percent](https://www.w3.org/WAI/WCAG21/Techniques/general/G178.html)\n                    - [G179: Ensuring that there is no loss of content or functionality when the text resizes and text containers do not change their width](https://www.w3.org/WAI/WCAG21/Techniques/general/G179.html)"
+        },
+        {
+          "titel": "CSS-Techniques",
+          "inhalt_markdown": "- [C12: Using percent for font sizes](https://www.w3.org/WAI/WCAG21/Techniques/css/C12.html)\n                    - [C13: Using named font sizes](https://www.w3.org/WAI/WCAG21/Techniques/css/C13.html)\n                    - [C14: Using em units for font sizes](https://www.w3.org/WAI/WCAG21/Techniques/css/C14.html)\n                    - [C20: Using relative measurements to set column widths so that lines can average 80 characters or less when the browser is resized](https://www.w3.org/WAI/WCAG21/Techniques/css/C20.html)\n                    - [C28: Specifying the size of text containers using em units](https://www.w3.org/WAI/WCAG21/Techniques/css/C28.html)\n                    - [C29: Using a style switcher to provide a conforming alternate version](https://www.w3.org/WAI/WCAG21/Techniques/css/C29.html)"
+        },
+        {
+          "titel": "Client-side Scripting Techniques",
+          "inhalt_markdown": "- [SCR34: Calculating size and position in a way that scales with text size](https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR34.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F69: Failure of Success Criterion 1.4.4 when resizing visually rendered tex up to 200 percent causes the text, image or controls to be clipped, truncated or obscured](https://www.w3.org/WAI/WCAG21/Techniques/failures/F69.html)\n                - [F80: Failure of Success Criterion 1.4.4 when text-based form controls do not resize when visually rendered text is resized up to 200%](https://www.w3.org/WAI/WCAG21/Techniques/failures/F80.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "WCAG 2.1 über die Skalierung von Text",
+          "inhalt_markdown": "> The scaling of content is primarily a user agent responsibility.\nUser agents that satisfy UAAG 1.0 Checkpoint 4.1 allow users to configure text\nscale.\nThe author’s responsibility is to create Web content that does not prevent the\nuser agent from scaling the content effectively.\nAuthors may satisfy this Success Criterion by verifying that content does not\ninterfere with user agent support for resizing text, including text-based\ncontrols, or by providing direct support for resizing text or changing the\nlayout.\nAn example of direct support might be via server-side script that can be used\nto assign different style sheets.\n\n([Resize text: Understanding SC 1.4.4](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html))"
+        },
+        {
+          "titel": "Die WCAG 2.1 zur Nutzung absoluter und relativer Maßeinheiten für Text",
+          "inhalt_markdown": "> (…​) specify text font size in`em`units so that user agents can scale\ncontent effectively.\nSince the`em`is a property of the font, it scales as the\nfont changes size.\nIf a font-size is specified for the body element, all other\nelements inherit that value, unless overridden by a more specific selector.\n\nWhen font size is given in absolute units of measurement, such as points or\npixels, the Text Size menu commands in Internet Explorer 7 and earlier do not\nresize the text.\n\nInternet Explorer 7 only changes the text size when the CSS is defined in a\nstyle element (…​)When using inline style with the`style`attribute, the\ntext size change is not supported.\n\n(WCAG 2.1 Technik[C14: Using em units for font sizes](https://www.w3.org/WAI/WCAG21/Techniques/css/C14.html))"
+        }
+      ]
+    },
+    {
+      "titel": "Fragen zu diesem Prüfschritt",
+      "id": "fragen_zu_diesem_prüfschritt",
+      "untersektionen": [
+        {
+          "titel": "Die Vergrößerung der Schrift ist weniger wichtig, wenn die Ausgangsschriftgrößen der Webseite bereits groß genug sind, sollte das nicht berücksichtigt werden?",
+          "inhalt_markdown": "Der BITV-Test bewertet nicht die tatsächliche Schriftgröße, sondern nur die Änderbarkeit. Für Seiten mit großen Ausgangsschriften ist die Anforderung damit schwerer zu erfüllen.\n\nDas hat Gründe: Die BITV verlangt keine Mindestschriftgröße, und über die richtige Ausgangsgröße gehen die Meinungen auseinander.\n- Ideal wären einheitliche Ausgangsschriftgrößen über alle Webangebote hinweg, damit jeder Nutzer in seinem Browser die passende Größe einmal einstellt und sie für alle Angebote gilt.\n- Sehr große Ausgangsschriften können auch jenen Nutzern schaden, die große Schriften benötigen, weil deren Computer oder Browser bereits größere Schriften darstellt.\n\nÜbliche Web-Schriftgrößen sind also sinnvoll, große Ausgangsschriften aber auch vorteilhaft, etwa für Besucher, die die Schriftvergrößerung nicht kennen. Am besten orientieren sich Angebote an der Obergrenze üblicher Web-Schriftgrößen."
+        }
+      ]
+    }
+  ]
+}

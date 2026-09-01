@@ -1,0 +1,137 @@
+{
+  "bitv_nummer": "9.1.1.1c",
+  "titel": "Leere alt-Attribute für Layoutgrafiken",
+  "wcag22": {
+    "guideline": "Guideline 1.1 Text Alternatives: Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language",
+    "level": "A",
+    "success_criterion": "1.1.1 Non-text Content",
+    "techniken": {
+      "HTML Techniques": [
+        "H67: Using null alt text and no title attribute on img elements for images that AT should ignore"
+      ],
+      "CSS Techniques": [
+        "C9: Using CSS to include decorative images"
+      ],
+      "Failures": [
+        "F38: Failure of Success Criterion 1.1.1 due to omitting the alt -attribute for non-text content used for decorative purposes only in HTML",
+        "F39: Failure of Success Criterion 1.1.1 due to providing a text alternative that is not null(e.g. alt='spacer' or alt='image' ) for images that should be ignored by assistive technology"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Grafiken ohne informative Funktion — etwa Abstandshalter, Farbflächen, Muster oder rein dekorative Fotos — brauchen keinen Alternativtext und sollen mit einem leeren `alt`-Attribut (`alt=\"\"`) ausgezeichnet werden. Thema sind außerdem per Icon Font eingebundene Icons sowie SVGs."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Screenreader unterscheiden Bilder **ohne** `alt`-Attribut von Bildern **mit leerem** `alt`-Attribut. Fehlt das Attribut, liest der Screenreader in der Regel den Dateinamen vor — bei informativen Bildern manchmal ein brauchbarer Hinweis, bei rein dekorativen aber schlicht störend. Das leere `alt`-Attribut signalisiert, dass das Bild nur der Dekoration dient und ignoriert werden kann; der Screenreader übergeht es dann vollständig. Es verhindert so, dass Nutzer durch ständig vorgelesene, bedeutungslose Dateinamen an der Seitennutzung gehindert werden. Icon Fonts sind per CSS eingebundene Schriften aus Symbolen; manche Browser reichen an den Screenreader ein Unicode-Äquivalent weiter, was bei dekorativen Icons stört."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn als `img`-Element eingebundene Grafiken, Font Icons oder SVGs für Layoutzwecke eingesetzt werden."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Leere alt -Attribute für Layoutgrafiken",
+          "inhalt_markdown": "1. - Die Seite im Firefox laden.\n2. - In der [Web Developer Toolbar](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#webdeveloper) unter *Images > Display Alt Attributes* prüfen; alternativ das [Images bookmarklet](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#imagesbm) nutzen.\n3. - Prüfen, ob Layout- und Dekorgrafiken leere `alt`-Attribute besitzen; vorhandene `title`-Attribute müssen ebenfalls leer sein. Zu bemängeln sind fehlende `alt`-Attribute (die Toolbar markiert sie mit „No Alt!“) sowie Bezeichnungen wie „Abstandshalter“, „spacer“ oder „leer“."
+        },
+        {
+          "titel": "2.2 Dekorative Icon Fonts:",
+          "inhalt_markdown": "Bei Icon Fonts lässt sich kein leeres `alt`-Attribut vergeben. Ein dekoratives Icon bleibt für assistive Technologien unsichtbar, wenn es mit einem geeigneten Verfahren versteckt ist (etwa `aria-hidden=\"true\"`)."
+        },
+        {
+          "titel": "Prüfung",
+          "inhalt_markdown": "**Dekorative Icon Fonts:**\n1. - Seite in [Firefox](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#firefox) aufrufen.\n2. - Mit den Web Developer Tools kontrollieren, ob über die CSS-Eigenschaft `content` der Pseudoelemente `:before` oder `:after` Font Icons zu dekorativen Zwecken eingebunden werden.\n3. - Wird für diese Icons Text ausgegeben (z. B. `content: \"k\"`), prüfen, ob sie für Screenreader versteckt sind (z. B. `aria-hidden=\"true\"`).\n\n**Dekorative SVGs:**\n1. - Seite in [Firefox](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#firefox) aufrufen.\n2. - Mit den Web Developer Tools kontrollieren, ob die SVG direkt in HTML eingebunden ist (Inline SVG).\n3. - Prüfen, ob die Grafik mit `aria-hidden=\"true\"` versteckt wird."
+        },
+        {
+          "titel": "2.3 Dekorative SVGs",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Besteht ein informatives Bild aus mehreren Teilbildern, sollte eines davon einen Alternativtext zum Gesamtinhalt tragen; die übrigen Teilbilder erhalten leere `alt`-Attribute."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "- Layoutgrafiken haben kein `alt`-Attribut.\n- Layoutgrafiken tragen Alternativtexte wie „Platzhalter“ oder „leer“.\n- Layoutgrafiken haben `title`-Attribute, die nicht leer sind."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.1 Text Alternatives: Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language](http://www.w3.org/TR/WCAG22/#text-alternatives)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.1.1 Non-text Content](http://www.w3.org/TR/WCAG22/#x1-1-1-non-text-content)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](https://www.w3.org/WAI/WCAG22/Techniques/html/H67)"
+        },
+        {
+          "titel": "CSS Techniques",
+          "inhalt_markdown": "- [C9: Using CSS to include decorative images](https://www.w3.org/WAI/WCAG22/Techniques/css/C9)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F38: Failure of Success Criterion 1.1.1 due to omitting the`alt`-attribute for non-text content used for decorative purposes only in HTML](https://www.w3.org/WAI/WCAG22/Techniques/failures/F38)\n                    - [F39: Failure of Success Criterion 1.1.1 due to providing a text alternative that is not null(e.g.`alt='spacer'`or`alt='image'`) for images that should be ignored by assistive technology](https://www.w3.org/WAI/WCAG21/Techniques/failures/F39)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "Die WCAG 2.0-Technik[H67](https://www.w3.org/WAI/WCAG22/Techniques/html/H67.html)sieht zusätzlich vor, dass bei Layout-Grafiken auch kein`title`-Attribut\nvorhanden sein soll oder dass das`title`-Attribut leer ist:\n\n> For each image that should be ignored:\n\nCheck that`title`attribute is either absent or empty.\nCheck that`alt`attribute is present and empty or contains only whitespace\n(but not )\n\n([H67: Using null alt\ntext and no title attribute on img elements for images that AT should ignore](https://www.w3.org/WAI/WCAG22/Techniques/html/H67.html))"
+    },
+    {
+      "titel": "Fragen zu diesem Prüfschritt",
+      "id": "fragen_zu_diesem_prüfschritt",
+      "untersektionen": [
+        {
+          "titel": "Grafiken mit informativem Charakter",
+          "inhalt_markdown": "Auch eindeutig informative Grafiken sind auf der Seite mit leeren `alt`-Attributen versehen — vermutlich, weil beim Bild ohne Texteingabe automatisch ein leeres `alt`-Attribut erzeugt wird. Wohin gehört das? Das leere `alt`-Attribut ist ausdrücklich für Dekorgrafiken gedacht und unterscheidet sich vom fehlenden `alt`-Attribut: Es versichert dem Nutzer, dass er nichts verpasst, wenn er das Bild nicht sieht. Informative Grafiken automatisch mit leerem `alt` zu versehen missbraucht dieses Signal und macht es unzuverlässig. Bewertet wird das in Prüfschritt 9.1.1.1b „Alternativtexte für Grafiken und Objekte“."
+        },
+        {
+          "titel": "Aufgabe des Bildes in den Alternativtext?",
+          "inhalt_markdown": "Warum nicht die Aufgabe der Layoutgrafik — etwa „Abstandshalter“ — in den Alternativtext schreiben? Der Alternativtext kann die Funktion nicht erfüllen, also keinen Abstand herstellen. Die Auskunft, dass irgendwo Abstände zwischen Elementen liegen, ist nutzlos; die Seitenanordnung lässt sich daraus nicht ableiten. Solche Texte bringen nichts und stören, wenn der Screenreader ständig „Abstandshalter, Abstandshalter …“ vorliest."
+        },
+        {
+          "titel": "Warum müssen Layoutgrafiken mit leeren alt -Attributen versehen werden?",
+          "inhalt_markdown": "Da die Grafiken ohnehin nicht gebraucht werden — warum das `alt`-Attribut nicht einfach weglassen? Weil informative Grafiken bislang nicht durchgängig Alternativtexte tragen: Bei einer Seite mit Grafiken ohne `alt`-Attribut kann ein blinder Nutzer nicht wissen, ob sie rein dekorativ sind. Deshalb soll der Webdesigner Layoutgrafiken ausdrücklich durch ein leeres `alt`-Attribut kennzeichnen."
+        }
+      ]
+    }
+  ]
+}

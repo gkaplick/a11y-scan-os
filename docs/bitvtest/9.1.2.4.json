@@ -1,0 +1,105 @@
+{
+  "bitv_nummer": "9.1.2.4",
+  "titel": "Videos (live) mit Untertiteln",
+  "wcag22": {
+    "guideline": "Guideline 1.2 Time-based Media: Provide alternatives for time-based media",
+    "level": "AA",
+    "success_criterion": "1.2.4 Captions (Live)",
+    "techniken": {
+      "General Techniques": [
+        "G9: Creating captions for live synchronized media",
+        "G87: Providing closed captions",
+        "G93: Providing open (always visible) captions"
+      ],
+      "SMIL Techniques": [
+        "SM11: Providing captions through synchronized text streams in SMIL 1.0",
+        "SM12: Providing captions through synchronized text streams in SMIL 2.0"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Enthält die Tonspur einer Live-Übertragung Informationen, müssen Untertitel als Alternative bereitgestellt werden."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Filme sind in der Regel ohne Ton nicht zu verstehen – das gilt auch für Live-Übertragungen. Menschen mit Hörbehinderung brauchen deshalb den Inhalt der Tonspur als Untertitel. Untertitel helfen auch anderen, etwa wenn die Sprache der Übertragung nicht vertraut ist."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "- Anwendbar bei Live-Übertragungen mit synchronem Bild und Ton.\n- Live-Videos ohne Tonspur sind ausgenommen; Alternativen für sie werden in 9.1.2.1 \"Alternativen für Audiodateien und stumme Videos\" behandelt."
+        },
+        {
+          "titel": "2. Prüfung auf Untertitel",
+          "inhalt_markdown": "1. Das Video im eingebundenen Player abspielen. 2. Prüfen, ob Untertitel automatisch angezeigt werden oder sich zuschalten lassen. 3. Eine kurze Sequenz mit Untertiteln ansehen und stichprobenartig prüfen, ob die Untertitel dem Hörbaren entsprechen – einschließlich bedeutungsvoller akustischer Ereignisse."
+        },
+        {
+          "titel": "3. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "- Die Live-Übertragung hat erweiterte Untertitel mit sämtlichen Informationen der Tonspur, gegebenenfalls inklusive Sprecherkennzeichnung und bedeutungstragender Tonereignisse wie informationstragenden Geräuschen, Lachen oder Applaus."
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Die Live-Übertragung hat keine Untertitel."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Aufgezeichnete Videos",
+          "inhalt_markdown": "Die Untertitelung aufgezeichneter Videos prüft 9.1.2.2 \"Aufgezeichnete Videos mit Untertiteln\"."
+        },
+        {
+          "titel": "Stumme Videodateien",
+          "inhalt_markdown": "Hier zählt die synchrone Vermittlung von visuellen und akustischen Informationen: Ist die gleichzeitige Wahrnehmung von Bild und Ton für das Verständnis nötig, genügt eine kurze Textalternative bzw. eine zusammenfassende Umschreibung nicht mehr. Stumme Videodateien behandelt 9.1.2.1 \"Alternativen für Audiodateien und stumme Videos\"."
+        },
+        {
+          "titel": "Alternativtexte für Objekte",
+          "inhalt_markdown": "Alternativtexte für Multimedia-Objekte wie Video- oder Audiodateien oder Applets prüft 9.1.1.1b \"Alternativtexte für Grafiken und Objekte\"."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.2 Time-based Media: Provide alternatives for time-based media](https://www.w3.org/TR/WCAG22/#time-based-media)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.2.4 Captions (Live)](https://www.w3.org/TR/WCAG22/#captions-live)(Level AA)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G9: Creating captions for live synchronized media](https://www.w3.org/WAI/WCAG22/Techniques/general/G9)\n                    - [G87: Providing closed captions](https://www.w3.org/WAI/WCAG22/Techniques/general/G87)\n                    - [G93: Providing open (always visible) captions](http://www.w3.org/TR/WCAG20-TECHS/G93)"
+        },
+        {
+          "titel": "SMIL Techniques",
+          "inhalt_markdown": "- [SM11: Providing captions through synchronized text streams in SMIL 1.0](http://www.w3.org/TR/WCAG20-TECHS/SM11.html)\n                    - [SM12: Providing captions through synchronized text streams in SMIL 2.0](http://www.w3.org/TR/WCAG20-TECHS/SM12.html)"
+        }
+      ]
+    }
+  ]
+}

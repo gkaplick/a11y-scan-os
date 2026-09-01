@@ -1,0 +1,54 @@
+{
+  "bitv_nummer": "11.8.5",
+  "titel": "Vorlagen",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Bietet ein Autorenwerkzeug Vorlagen oder Eingabemasken für die Dokumente an, die es erzeugt, muss mindestens eine von ihnen so beschaffen sein, dass sich damit barrierefreie Web- oder Nicht-Web-Dokumente anlegen lassen. Gibt es alternative Vorlagen, sollen barrierefreiheits-optimierte eindeutig als solche erkennbar sein."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "(folgt)"
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar ist der Prüfschritt, wenn die Seite Teil eines Autorenwerkzeugs ist, das Vorlagen oder Eingabemasken für seine Dokumente bereitstellt. Der BITV-Test kann nur webbasierte Autorenwerkzeuge prüfen, deren Ausgabe im Web-Format vorliegt, etwa ein Content-Management-System mit überprüfbarem Web-Output. Erzeugen solche Werkzeuge statt HTML etwa ein PDF, ist der Prüfschritt nur anwendbar, wenn zusätzlich ein anderes Verfahren die Nicht-Web-Ausgabe prüft."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. Das Autorenwerkzeug öffnen.\n2. Prüfen, ob es verschiedene Vorlagen zur Erstellung von Inhalten anbietet.\n3. Sofern alternative Vorlagen existieren, die barrierefreie Inhalte unterstützen, prüfen, ob sie deutlich als solche markiert sind. Gibt es nur eine Vorlage, benötigt diese keine gesonderte Kennzeichnung.\n4. Probeseiten über die Vorlage erzeugen, die barrierefreie Inhalte unterstützt, sonst die Standardvorlage nehmen.\n5. Die Testausgaben auf Barrierefreiheit prüfen; festgestellte Mängel zusätzlich bei den übrigen anwendbaren Prüfschritten eintragen."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Weitere Hinweise für die Prüfpraxis können als [Issue auf GitHub](https://github.com/BIK-BITV/BIK-Web-Test/issues) eingebracht werden."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "11.8.5 Templates",
+          "inhalt_markdown": "> When an authoring tool provides templates, at least one template that supports\nthe creation of content that conforms to the requirements of clauses 9 (Web)\nor 10 (Non-web documents) as applicable shall be available and identified as\nsuch."
+        }
+      ]
+    }
+  ]
+}

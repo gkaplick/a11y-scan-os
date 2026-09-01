@@ -1,0 +1,70 @@
+{
+  "bitv_nummer": "7.1.2",
+  "titel": "Synchrone Untertitel",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Bei Videos mit synchroner Bild- und Tonspur muss der Player Untertitel und Ton zeitgleich wiedergeben. Bei aufgezeichneten Videos darf die Anzeige eines Untertitels höchstens 100 ms vom Zeitstempel der Untertitel-Datei abweichen. Die Vorgabe gilt grundsätzlich auch für Live-Untertitel, dort ist aber eine natürliche Verzögerung durch die Umwandlung von Sprache in Text zu berücksichtigen, vor allem bei manueller Übertragung."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Die [Untertitel-Standards](https://www.ndr.de/fernsehen/barrierefreie_angebote/untertitel/Untertitel-Standards,untertitelstandards102.html) verlangen Synchronität: Die Einblendung soll zeitgleich mit Bild und Ton und möglichst lippensynchron erfolgen. Menschen mit Hörbehinderung lesen nicht nur die Untertitel, sondern beobachten zugleich das Mundbild; zudem leidet die Verständlichkeit, wenn beides auseinanderfällt."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar ist der Prüfschritt, wenn die Webseite aufgezeichnete Videos anbietet, deren Bild- und Tonspur synchronisiert sind und die zuschaltbare Untertitel (closed captions) mitbringen."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Prüfung von Untertiteln eines aufgezeichneten Videos:",
+          "inhalt_markdown": "1. - Das Video im Player der Seite abspielen.\n2. - Prüfen, ob die Untertitel zeitgleich zum Ton erscheinen.\n3. - Bei fehlender Synchronität kann die Ursache im Player oder in fehlerhaften Zeitstempeln der Untertitel-Datei liegen.\n4. - Zur Eingrenzung die Zeitstempel stichprobenartig prüfen: Im Inspektor des Browsers das `track`-Element suchen; die Untertitel-Datei ist als `.vtt`- oder `.srt`-Datei eingebunden. Über das Kontextmenü („Link in neuem Tab anzeigen“) die Datei öffnen oder den Pfad kopieren und hinter der Top-Level-Domain im Browser eingeben.\n5. - Prüfen, ob die Zeitstempel stimmen.\n6. - Zeigt die Track-Datei fehlerhafte Zeitcodierungen, liegt der Fehler nicht am Player; der Prüfschritt ist erfüllt."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Fehler in der Zeitcodierung der Track-Datei deuten auf die Datei als Ursache hin, ganz auszuschließen ist aber eine Mitwirkung des Players nicht. Sinnvoll ist eine Stichprobe weiterer Videos: Laufen dort die Untertitel synchron, stellt der Player Untertitel grundsätzlich korrekt dar; der Prüfschritt ist dann erfüllt und Synchronprobleme sind eher im Inhalt zu suchen.\n\nAuf GitHub können Sie Hinweise zu diesem Prüfschritt [in einem Issue hinterlassen](https://github.com/BIK-BITV/BIK-Web-Test/issues)."
+        },
+        {
+          "titel": "4. Bewertungen",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht erfüllt:",
+          "inhalt_markdown": "- Bild und Ton laufen nicht synchron zu den Untertiteln."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Inhalt, Qualität und Angemessenheit der Untertitel beurteilt Prüfschritt 9.1.2.2 „Aufgezeichnete Videos mit Untertiteln“. Hier geht es allein darum, ob der Player Untertitel grundsätzlich synchron zu Bild und Ton darstellen kann."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "7.1.2 Captioning synchronization",
+          "inhalt_markdown": "> Where ICT displays captions, the mechanism to display captions shall preserve\nsynchronization between the audio and the corresponding captions as follows:\n\n                                - Captions in recorded material: within 100 ms of the time stamp of the caption\n                                - Live captions: within 100 ms of the availability of the caption to the player."
+        }
+      ]
+    }
+  ]
+}

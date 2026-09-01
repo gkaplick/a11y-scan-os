@@ -1,0 +1,110 @@
+{
+  "bitv_nummer": "9.1.3.1f",
+  "titel": "Zuordnung von Tabellenzellen",
+  "wcag22": {
+    "guideline": "Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure",
+    "level": "A",
+    "success_criterion": "1.3.1 Info and Relationships",
+    "techniken": {
+      "General Techniques": [
+        "G115: Using semantic elements to mark up structure",
+        "G140: Separating information and structure from presentation to enable different presentations"
+      ],
+      "HTML Techniques": [
+        "H43 Using id and headers attributes to associate data cells with header cells in data tables",
+        "H63 Using the scope attribute to associate header cells and data cells in data tables"
+      ],
+      "Failures": [
+        "F90: Failure of Success Criterion 1.3.1 for incorrectly associating table headers and content via the headers and id attributes",
+        "F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "In komplexen Datentabellen soll der Bezug zwischen Überschriften und Inhalten über `scope` oder über `id` und `headers` definiert sein; ausdrücklich vorgenommene Zuordnungen von Überschriften zu Inhalten in einfachen Datentabellen müssen korrekt sein."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Bei komplexen Tabellen können Screenreader allein aus dem Tabellengerüst nicht erschließen, welche Daten- zu welchen Überschriftenzellen gehören; die Verknüpfung muss deshalb über die in HTML verfügbaren Attribute ausdrücklich definiert werden. Auch einfache Datentabellen sind in der Praxis gelegentlich mit `headers`- und `id`-Attributen ausgezeichnet; Screenreader folgen dann nicht allgemeinen Regeln, sondern der tatsächlich vorhandenen Auszeichnung. Deshalb muss diese auch dort richtig sein, wo sie eigentlich unnötig wäre – sonst werden die Überschriften nicht oder fehlerhaft ausgegeben. Hinweis: Komplexe Tabellen sind für Screenreader-Nutzende auch bei perfekter Auszeichnung schwerer zu erfassen als einfache. Tabellen mit mehreren logischen Ebenen sind möglichst zu vermeiden; oft lassen sie sich teilen und durch mehrere einfache Tabellen ersetzen. Für diesen Prüfschritt lautet die beste Bewertung daher stets \"nicht anwendbar\"."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar bei komplexen Datentabellen, also mehrstufigen Zeilen- oder Spaltenüberschriften, sowie bei einfachen Datentabellen, in denen Zellen ausdrücklich (per `headers` und `id`) Überschriften zugeordnet sind, auch wenn diese Zuordnung eigentlich nicht erforderlich wäre. Einfache Datentabellen haben anders als komplexe nur jeweils eine Zeile oder Spalte für Überschriften; dort ist eine Zuordnung der Zellen zu \"ihren\" Überschriften eigentlich nicht nötig."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "- Seite im Firefox laden.\n- Das Tables-Bookmarklet aufrufen; Tabellen-Auszeichnungen werden angezeigt.\n- Prüfen, ob der Anwendungsbereich der Überschriften korrekt über `scope` angegeben ist oder ob die einzelnen Zellen über `headers`- und `id`-Attribute korrekt ihren jeweiligen Überschriften zugeordnet sind."
+        },
+        {
+          "titel": "3. Hinweis",
+          "inhalt_markdown": "Ausgangspunkt der Prüfung ist die zuvor erfolgte Kontrolle von Aufbau und Überschriften-Auszeichnung der Datentabelle in 9.1.3.1e \"Datentabellen richtig aufgebaut\". Dieser Prüfschritt beschränkt sich auf die Vollständigkeit und die formale Richtigkeit der Zuordnung von Inhalten zu Überschriften."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=131#adaptable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=131#info-and-relationships)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G115: Using semantic elements to mark up structure](https://www.w3.org/WAI/WCAG22/Techniques/general/G115.html)\n                    - [G140: Separating information and structure from presentation to enable different presentations](https://www.w3.org/WAI/WCAG22/Techniques/general/G140.html)"
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H43 Using`id`and`headers`attributes to associate data cells with header cells in data tables](https://www.w3.org/WAI/WCAG22/Techniques/html/H43.html)\n                    - [H63 Using the`scope`attribute to associate header cells and data cells in data tables](https://www.w3.org/WAI/WCAG22/Techniques/html/H63.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F90: Failure of Success Criterion 1.3.1 for incorrectly associating table headers and content via the`headers`and`id`attributes](https://www.w3.org/WAI/WCAG22/Techniques/failures/F90.html)\n                    - [F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information](https://www.w3.org/WAI/WCAG22/Techniques/failures/F92.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "Was sind Tabellen mit mehreren logischen Ebenen?",
+          "inhalt_markdown": "> (…​) the average table of data with a row of headers across the top, and a\ncolumn of headers down one side or the other (or sometimes the same headers\nreproduced at either side, to make life easier) has only one logical level of\nheaders.\n\nTables with two or more levels are those where the row of headers \"closest to the content\" itself has headersA trivial example would be months, which have season headers (…​)\n\n([http://lists.w3.org/Archives/Public/wai-wcag-editor/2000OctDec/0155.html](http://lists.w3.org/Archives/Public/wai-wcag-editor/2000OctDec/0155.html))"
+        },
+        {
+          "titel": "Technique H63: Using the scope attribute to associate header cells and data cells in data tables",
+          "inhalt_markdown": "> \"At the current time, those who want to ensure consistent support across\nAssistive Technologies for tables where the headers are not in the first\nrow/column may want to use the technique for complex tables H43: Using id and\nheaders attributes to associate data cells with header cells in data tables.\nFor simple tables that have headers in the first column or row we recommend\nthe use of the th and td elements.\"\n\n([https://www.w3.org/WAI/WCAG21/Techniques/html/H63.html](https://www.w3.org/WAI/WCAG21/Techniques/html/H63.html))"
+        },
+        {
+          "titel": "Technique H43: Using id and headers attributes to associate data cells with header cells in data tables",
+          "inhalt_markdown": "> \"The objective of this technique is to associate each data cell (in a data\ntable) with the appropriate headers.\nThis technique adds a headers attribute to each data cell (td element)It also\nadds an id attribute to any cell used as a header for other cells.\nThe headers attribute of a cell contains a list of the id attributes of the\nassociated header cells.\nIf there is more than one id, they are separated by spaces.\n\nThis technique is used when data cells are associated with more than one row\nand/or one column header.\nThis allows screen readers to speak the headers associated with each data cell\nwhen the relationships are too complex to be identified using the th element\nalone or the th element with the scope attribute.\nUsing this technique also makes these complex relationships perceivable when\nthe presentation format changes.\n\nThis technique is not recommended for layout tables since its use implies a\nrelationship between cells that is not meaningful when tables are used for\nlayout.\"\n\n([https://www.w3.org/WAI/WCAG22/Techniques/html/H43.html](https://www.w3.org/WAI/WCAG22/Techniques/html/H43.html))"
+        },
+        {
+          "titel": "Weiterführende Links:",
+          "inhalt_markdown": "- pro-barrierefreiheit:[Strukturierung von Tabelleninhalten](http://www.pro-barrierefreiheit.de/entwickler/tabellen/strukturierung/)\n            - Roger Hudson, Web Usability:[Accessible Data Tables](http://www.usability.com.au/resources/tables.cfm)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "bitv_nummer": "5.3",
+  "titel": "Biometrie",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Setzt die Webseite biometrische Merkmale (etwa Fingerabdruck, Gesichtserkennung oder Spracherkennung) zur Identifizierung oder Steuerung ein, darf sie sich dabei nicht auf ein einziges Merkmal stützen. Alternativen zur biometrischen Identifizierung sind meist nicht-biometrisch, etwa Nutzername und Passwort – für diese gelten selbstverständlich alle übrigen Anforderungen wie Tastaturbedienbarkeit und zugängliche Namen. Auch eine zweite biometrische Methode genügt, beispielsweise die Erkennung von Irismuster, Sprachmuster oder Gesicht zusätzlich zum Fingerabdruck."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Biometrische Identifizierung oder Authentifizierung kann Menschen mit Behinderung den Einstieg in geschützte Systeme erleichtern: Eine Fingerberührung am Sensor geht rascher von der Hand als das Eintippen einer PIN oder eines Passworts. Wer die angebotene biometrische Methode wegen einer Behinderung nicht nutzen kann, benötigt jedoch eine nutzbare Alternative."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar ist der Prüfschritt, wenn die Webseite biometrische Merkmale zur Nutzeridentifizierung oder zur Steuerung einsetzt."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. Die Webseite öffnen.\n2. Prüfen, ob zur biometrischen Identifizierung auch Ausweichwege ohne Biometrie oder mit einem anderen biometrischen Verfahren angeboten werden.\n3. Das Bedienkonzept der wesentlichen Funktionen untersuchen:\n   - Kommen biometrische Verfahren bei der Steuerung zum Einsatz?\n   - Bestehen neben der erkannten biometrischen Steuerung andere Steuerungswege, biometrisch oder nicht-biometrisch?"
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Biometrie kommt derzeit vor allem als Nutzeridentifizierung innerhalb eines Prozesses vor, etwa wenn die Berührung eines Fingerabdrucksensors das Passwort für einen eingegebenen Nutzernamen freigibt. Diese Funktion stellt meist das System bereit, daran kann der Autor nichts ändern. Andere, vom Autor gestaltbare Steuerungsformen sind denkbar: Manche Kamerasysteme fokussieren automatisch auf eine biometrisch erkannte Person, und in Augmented-Reality-Spielen ließe sich die Bedienung anhand erkannter biometrischer Merkmale vorstellen."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "Neben der biometrischen Identifizierung oder Steuerung steht mindestens eine weitere Methode zur Verfügung, biometrisch oder nicht-biometrisch."
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "Nutzeridentifizierung und Steuerung sind ausschließlich über ein einziges biometrisches Merkmal möglich; Alternativen fehlen."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "5.3 Biometrics",
+          "inhalt_markdown": "> Where ICT uses biological characteristics, it shall not rely\non the use of a particular biological characteristic\nas the only means of user identification or for control of ICT.\n\nNOTE 1:\nAlternative means of user identification or for control of ICT could be non-biometric or biometric.\n\nNOTE 2:\nBiometric methods based on dissimilar biological characteristics increase the\nlikelihood that individuals with disabilities possess at least one of the\nspecified biological characteristics.\nExamples of dissimilar biological characteristics are fingerprints, eye\nretinal patterns, voice, and face."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Laufzeit-Abhängigkeiten (aus pyproject.toml [project].dependencies).
+# playwright ist bewusst auf die Version der Basis-Image-Browser gepinnt
+# (mcr.microsoft.com/playwright/python:v1.48.0-jammy) — siehe Dockerfile.api.
+fastapi>=0.115
+uvicorn[standard]>=0.30
+playwright==1.48.0
+beautifulsoup4>=4.12
+requests>=2.32
+sqlalchemy>=2.0
+pydantic-settings>=2.4
+python-multipart>=0.0.9

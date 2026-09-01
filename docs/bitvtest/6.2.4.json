@@ -1,0 +1,54 @@
+{
+  "bitv_nummer": "6.2.4",
+  "titel": "Reaktionsgeschwindigkeit der Echtzeit-Textkommunikation",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Verfügt die Web-App über Echtzeit-Text (RTT, Real-Time Text) samt Eingabefeld, so muss die kleinste zusammenhängende Texteinheit – ein Zeichen oder ein Wort – spätestens 500 ms nach der Eingabe übertragen werden. Anders als in üblichen Chat-Systemen wird die Nachricht nicht erst nach Abschluss der Eingabe gesendet, sondern erscheint unmittelbar."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Wer sich per Tippen an einer Online-Kommunikation beteiligt, soll gegenüber Sprechenden nicht benachteiligt sein. Die Eingaben müssen die übrigen Teilnehmenden unmittelbar oder mit nur minimaler Verzögerung erreichen."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar ist der Prüfschritt, wenn das Webangebot Echtzeit-Textkommunikation anbietet und die Benutzerschnittstelle eine Eingabe für RTT-Nachrichten vorsieht."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Für die Praxis gibt es bislang nur Prüfansätze. Idealerweise würde gemessen, wann die Anwendung die eingegebenen Daten abschickt. Als Näherung kann eine RTT-Verbindung zwischen zwei Geräten aufgebaut werden.\n\nDie kleinste übermittelbare Texteinheit – einzelne Zeichen oder Wörter – sollte auf dem zweiten Gerät praktisch ohne Verzögerung nach der Eingabe sichtbar werden.\n\nDie Übertragung soll nicht mehr als eine halbe Sekunde dauern. Dabei sind physikalische Grenzen der Netzwerktechnik zu berücksichtigen und herauszurechnen, etwa bei großen Entfernungen zwischen den Kommunikationspartnern. Die reine Übertragungszeit lässt sich beispielsweise mit einem Ping messen."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Anders als in Chat-Anwendungen wird bei RTT schon die laufende Eingabe übertragen: Die sendende Person sieht beim Tippen, wie der Text beim Gegenüber erscheint.\n- Wünschenswert ist eine Übertragung innerhalb von höchstens 300 ms nach der Eingabe, weil sich das Gespräch dadurch flüssiger anfühlt.\n\nTipps für belastbare Messungen in der Praxis lassen sich auf GitHub [als Issue einreichen](https://github.com/BIK-BITV/BIK-Web-Test/issues)."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Human Factors (HF); Real-Time Text (RTT) in Multiparty Conference Calling / ETSI TR 103 708 V1.1.1 (2022-08)](https://labs.etsi.org/rep/HF/en301549/uploads/272bede3724c5c99efe777f778201f70/tr_103708v010101p.pdf)"
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "6.2.4 RTT responsiveness",
+          "inhalt_markdown": "> Where ICT utilises RTT input, that RTT input shall be transmitted to the ICT\nnetwork or platform on which the ICT runs within 500 ms of the time that the\nsmallest reliably composed unit of text entry is available to the ICT for\ntransmission.\nDelays due to platform or network performance shall not be included in the\n500 ms limit.\n\nNOTE 1:\nFor character by character input, the \"smallest reliably composed unit of text\nentry\" would be a character.\nFor word prediction it would be a word.\nFor some voice recognition systems - the text may not exit the recognition\nsoftware until an entire word (or phrase) has been spoken.\nIn this case, the smallest reliably composed unit of text entry available to\nthe ICT would be the word (or phrase).\n\nNOTE 2:\nThe 500 ms limit allows buffering of characters for this period before\ntransmission so character by character transmission is not required unless the\ncharacters are generated more slowly than 1 per 500 ms.\n\nNOTE 3:\nA delay of 300 ms, or less, produces a better impression of flow to the user."
+        }
+      ]
+    }
+  ]
+}

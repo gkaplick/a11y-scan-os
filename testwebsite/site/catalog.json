@@ -1,0 +1,1164 @@
+[
+  {
+    "slug": "img-alt",
+    "kategorie": "Bilder & Grafiken",
+    "titel": "Alternativtexte für Bilder",
+    "beschreibung": "Informative Bilder brauchen ein alt-Attribut; rein dekorative Bilder ein leeres alt=\"\".",
+    "test_ids": [
+      "WCAG_1_1_1_IMG_ALT"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/img-alt-positiv.html",
+      "negativ": "kriterien/img-alt-negativ.html"
+    }
+  },
+  {
+    "slug": "bedienelement-alt",
+    "kategorie": "Bilder & Grafiken",
+    "titel": "Alternativtexte für Bedienelemente",
+    "beschreibung": "Grafiken in Links/Buttons sowie grafische Schaltflächen (input type=image) brauchen eine Textalternative.",
+    "test_ids": [
+      "BITV_9_1_1_1a_ALTERNATIVTEXTE_FUER_BEDIENELEMENTE"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/bedienelement-alt-positiv.html",
+      "negativ": "kriterien/bedienelement-alt-negativ.html"
+    }
+  },
+  {
+    "slug": "grafik-alt",
+    "kategorie": "Bilder & Grafiken",
+    "titel": "Alternativtexte für Grafiken und Objekte",
+    "beschreibung": "Unverlinkte informative Grafiken, Inline-SVGs und Objekte brauchen eine Textalternative.",
+    "test_ids": [
+      "BITV_9_1_1_1b_ALTERNATIVTEXTE_FUER_GRAFIKEN_UND_OBJEKTE"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/grafik-alt-positiv.html",
+      "negativ": "kriterien/grafik-alt-negativ.html"
+    }
+  },
+  {
+    "slug": "layout-grafik-alt",
+    "kategorie": "Bilder & Grafiken",
+    "titel": "Leere Alt-Attribute für Layoutgrafiken",
+    "beschreibung": "Dekorative Grafiken brauchen alt=\"\" ohne title; Füll-Alt-Texte wie „spacer“ sind zu vermeiden.",
+    "test_ids": [
+      "BITV_9_1_1_1c_LEERE_ALT_ATTRIBUTE_FUER_LAYOUTGRAFIKEN"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/layout-grafik-alt-positiv.html",
+      "negativ": "kriterien/layout-grafik-alt-negativ.html"
+    }
+  },
+  {
+    "slug": "audio-transkript",
+    "kategorie": "Medien & Video",
+    "titel": "Transkript für Audio-Inhalte",
+    "beschreibung": "Reine Audio- und Video-Inhalte brauchen ein verlinktes Transkript.",
+    "test_ids": [
+      "WCAG_1_2_1_AUDIO_TRANSCRIPT"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/audio-transkript-positiv.html",
+      "negativ": "kriterien/audio-transkript-negativ.html"
+    }
+  },
+  {
+    "slug": "video-untertitel",
+    "kategorie": "Medien & Video",
+    "titel": "Untertitel für aufgezeichnete Videos",
+    "beschreibung": "Videos mit Ton brauchen eine Untertitel-Spur (track kind=\"captions\") oder eine Textalternative.",
+    "test_ids": [
+      "WCAG_1_2_2_CAPTIONS",
+      "BITV_9_1_2_2_AUFGEZEICHNETE_VIDEOS_MIT_UNTERTITELN"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/video-untertitel-positiv.html",
+      "negativ": "kriterien/video-untertitel-negativ.html"
+    }
+  },
+  {
+    "slug": "video-audiodeskription",
+    "kategorie": "Medien & Video",
+    "titel": "Audiodeskription für Videos",
+    "beschreibung": "Videos brauchen eine Audiodeskriptions-Spur (track kind=\"descriptions\") oder als Alternative einen Hinweistext.",
+    "test_ids": [
+      "WCAG_1_2_5_AD",
+      "EN_7_2_1_AD_PLAYBACK",
+      "BITV_9_1_2_5_AUDIODESKRIPTION_FUER_VIDEOS"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/video-audiodeskription-positiv.html",
+      "negativ": "kriterien/video-audiodeskription-negativ.html"
+    }
+  },
+  {
+    "slug": "autoplay-ton",
+    "kategorie": "Medien & Video",
+    "titel": "Kein automatisch abgespielter Ton",
+    "beschreibung": "Autoplay ist nur ohne Ton erlaubt: Videos müssen muted sein, Audio darf nicht automatisch starten.",
+    "test_ids": [
+      "WCAG_1_4_2_AUTOPLAY",
+      "BITV_9_1_4_2_TON_ABSCHALTBAR"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/autoplay-ton-positiv.html",
+      "negativ": "kriterien/autoplay-ton-negativ.html"
+    }
+  },
+  {
+    "slug": "iframe-titel",
+    "kategorie": "Medien & Video",
+    "titel": "Titel für Iframes",
+    "beschreibung": "Eingebettete Inhalte (iframe) brauchen einen beschreibenden Titel.",
+    "test_ids": [
+      "WCAG_2_4_1_IFRAME_TITLE"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/iframe-titel-positiv.html",
+      "negativ": "kriterien/iframe-titel-negativ.html"
+    }
+  },
+  {
+    "slug": "video-titel",
+    "kategorie": "Medien & Video",
+    "titel": "Titel für eingebettete Videos",
+    "beschreibung": "Eingebettete Videos (YouTube, Vimeo, …) brauchen ein beschreibendes iframe-title-Attribut.",
+    "test_ids": [
+      "WCAG_2_4_1_VIDEO_TITLE",
+      "WCAG_2_4_1_IFRAME_TITLE"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/video-titel-positiv.html",
+      "negativ": "kriterien/video-titel-negativ.html"
+    }
+  },
+  {
+    "slug": "video-bedienelemente",
+    "kategorie": "Medien & Video",
+    "titel": "Player-Steuerung für Untertitel und Audiodeskription",
+    "beschreibung": "Video-/Audioplayer müssen Untertitel und Audiodeskription bedienbar machen (controls bzw. eigene Buttons).",
+    "test_ids": [
+      "EN_7_3_CONTROLS"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/video-bedienelemente-positiv.html",
+      "negativ": "kriterien/video-bedienelemente-negativ.html"
+    }
+  },
+  {
+    "slug": "kontrast-aa",
+    "kategorie": "Kontrast & Farbe",
+    "titel": "Kontrast von Text (AA)",
+    "beschreibung": "Text muss mindestens 4,5:1 (großer Text 3:1) Kontrast zum Hintergrund haben.",
+    "test_ids": [
+      "WCAG_1_4_3_CONTRAST_AA",
+      "BITV_9_1_4_3_KONTRASTE_VON_TEXTEN_AUSREICHEND"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/kontrast-aa-positiv.html",
+      "negativ": "kriterien/kontrast-aa-negativ.html"
+    }
+  },
+  {
+    "slug": "kontrast-aaa",
+    "kategorie": "Kontrast & Farbe",
+    "titel": "Kontrast von Text (AAA)",
+    "beschreibung": "Erhöhter Kontrast (7:1 bzw. 4,5:1 für großen Text) über die gesetzliche Pflicht hinaus.",
+    "test_ids": [
+      "WCAG_1_4_6_CONTRAST_AAA"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/kontrast-aaa-positiv.html",
+      "negativ": "kriterien/kontrast-aaa-negativ.html"
+    }
+  },
+  {
+    "slug": "links-nicht-nur-farbe",
+    "kategorie": "Kontrast & Farbe",
+    "titel": "Information nicht nur durch Farbe",
+    "beschreibung": "Links müssen sich außer durch die Farbe durch ein dauerhaftes Nicht-Farb-Merkmal vom Text abheben (Unterstreichung, Fettung ab halbfett, Marker-Hintergrund, Icon) — oder bei ≥ 3:1 Kontrast zur umgebenden Textfarbe bei Hover/Fokus zusätzlich hervorgehoben werden (BITV/G183-Ausnahme).",
+    "test_ids": [
+      "WCAG_1_4_1_COLOR_ONLY",
+      "BITV_9_1_4_1_OHNE_FARBEN_NUTZBAR"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/links-nicht-nur-farbe-positiv.html",
+      "negativ": "kriterien/links-nicht-nur-farbe-negativ.html"
+    }
+  },
+  {
+    "slug": "heading-hierarchie",
+    "kategorie": "Überschriften",
+    "titel": "Überschriften-Hierarchie",
+    "beschreibung": "Überschriften dürfen keine Ebenen überspringen (z. B. h2 → h4).",
+    "test_ids": [
+      "WCAG_1_3_1_HEADING_SKIP"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/heading-hierarchie-positiv.html",
+      "negativ": "kriterien/heading-hierarchie-negativ.html"
+    }
+  },
+  {
+    "slug": "heading-aria-level",
+    "kategorie": "Überschriften",
+    "titel": "ARIA-Überschriften mit Ebene",
+    "beschreibung": "role=\"heading\" braucht ein gültiges aria-level.",
+    "test_ids": [
+      "BITV_9_1_3_1a_HTML_STRUKTURELEMENTE_FUER_UEBERSCHRIFTEN"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/heading-aria-level-positiv.html",
+      "negativ": "kriterien/heading-aria-level-negativ.html"
+    }
+  },
+  {
+    "slug": "leere-ueberschrift",
+    "kategorie": "Überschriften",
+    "titel": "Aussagekräftige Überschriften",
+    "beschreibung": "Überschriften dürfen nicht leer sein und brauchen einen Text bzw. ein alt/aria-label.",
+    "test_ids": [
+      "WCAG_2_4_6_EMPTY_HEADING",
+      "BITV_9_2_4_6_AUSSAGEKRAEFTIGE_UEBERSCHRIFTEN_UND_BESCHRIFTUNGEN"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/leere-ueberschrift-positiv.html",
+      "negativ": "kriterien/leere-ueberschrift-negativ.html"
+    }
+  },
+  {
+    "slug": "linktext",
+    "kategorie": "Links",
+    "titel": "Aussagekräftige Linktexte (WCAG)",
+    "beschreibung": "WCAG 2.4.4: Generische Linktexte („hier klicken“, „mehr“) sind ein Verstoß, unabhängig vom Kontext.",
+    "test_ids": [
+      "WCAG_2_4_4_LINK_TEXT"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/linktext-positiv.html",
+      "negativ": "kriterien/linktext-negativ.html"
+    }
+  },
+  {
+    "slug": "linktext-bitv",
+    "kategorie": "Links",
+    "titel": "Aussagekräftige Linktexte (BITV)",
+    "beschreibung": "BITV 9.2.4.4: Links brauchen einen Text bzw. Namen; generischer Kurztext ist mit Kontext-Ausnahme zulässig. Urteil ist binär (bestanden/nicht bestanden).",
+    "test_ids": [
+      "BITV_9_2_4_4_AUSSAGEKRAEFTIGE_LINKTEXTE"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/linktext-bitv-positiv.html",
+      "negativ": "kriterien/linktext-bitv-negativ.html"
+    }
+  },
+  {
+    "slug": "formular-label-programmatisch",
+    "kategorie": "Formulare",
+    "titel": "Programmatisch ermittelbare Formular-Labels",
+    "beschreibung": "Eingabefelder brauchen ein programmatisch ermittelbares Label (label/aria-label/title).",
+    "test_ids": [
+      "WCAG_1_3_1_FORM_LABEL",
+      "BITV_9_1_3_1h_BESCHRIFTUNG_VON_FORMULARELEMENTEN_PROGRAMMATISCH_ERMITTELBAR"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/formular-label-programmatisch-positiv.html",
+      "negativ": "kriterien/formular-label-programmatisch-negativ.html"
+    }
+  },
+  {
+    "slug": "formular-label-sichtbar",
+    "kategorie": "Formulare",
+    "titel": "Sichtbare Formular-Beschriftungen",
+    "beschreibung": "Eingabefelder brauchen eine sichtbare Beschriftung — ein nur unsichtbares aria-label reicht nicht.",
+    "test_ids": [
+      "WCAG_3_3_2_LABELS"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/formular-label-sichtbar-positiv.html",
+      "negativ": "kriterien/formular-label-sichtbar-negativ.html"
+    }
+  },
+  {
+    "slug": "formular-label-reihenfolge",
+    "kategorie": "Formulare",
+    "titel": "Beschriftung vor dem Formularfeld",
+    "beschreibung": "Die sichtbare Beschriftung muss vor bzw. über dem Feld stehen.",
+    "test_ids": [
+      "BITV_9_3_3_2_BESCHRIFTUNGEN_VON_FORMULARELEMENTEN_VORHANDEN"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/formular-label-reihenfolge-positiv.html",
+      "negativ": "kriterien/formular-label-reihenfolge-negativ.html"
+    }
+  },
+  {
+    "slug": "autocomplete",
+    "kategorie": "Formulare",
+    "titel": "Autocomplete-Attribute für Nutzerdaten",
+    "beschreibung": "Felder für bekannte Nutzerdaten (E-Mail, Name, …) brauchen ein passendes autocomplete-Attribut.",
+    "test_ids": [
+      "WCAG_1_3_5_AUTOCOMPLETE",
+      "BITV_9_1_3_5_EINGABEFELDER_ZU_NUTZERDATEN_VERMITTELN_DEN_ZWECK"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/autocomplete-positiv.html",
+      "negativ": "kriterien/autocomplete-negativ.html"
+    }
+  },
+  {
+    "slug": "tabellen-kopfzellen",
+    "kategorie": "Tabellen & Listen",
+    "titel": "Tabellen mit Kopfzellen",
+    "beschreibung": "Datentabellen brauchen <th>-Kopfzellen.",
+    "test_ids": [
+      "WCAG_1_3_1_SR_TABLE_HEADERS",
+      "BITV_9_1_3_1e_DATENTABELLEN_RICHTIG_AUFGEBAUT"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/tabellen-kopfzellen-positiv.html",
+      "negativ": "kriterien/tabellen-kopfzellen-negativ.html"
+    }
+  },
+  {
+    "slug": "tabellen-zellen-zuordnung",
+    "kategorie": "Tabellen & Listen",
+    "titel": "Zuordnung von Tabellenzellen",
+    "beschreibung": "Komplexe Tabellen (colspan/rowspan) brauchen scope- oder id/headers-Zuordnungen.",
+    "test_ids": [
+      "BITV_9_1_3_1f_ZUORDNUNG_VON_TABELLENZELLEN"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/tabellen-zellen-zuordnung-positiv.html",
+      "negativ": "kriterien/tabellen-zellen-zuordnung-negativ.html"
+    }
+  },
+  {
+    "slug": "listen",
+    "kategorie": "Tabellen & Listen",
+    "titel": "Listen mit Einträgen",
+    "beschreibung": "Listenelemente (ul/ol/dl) dürfen nicht leer sein oder nur leere Einträge enthalten.",
+    "test_ids": [
+      "WCAG_1_3_1_SR_EMPTY_LIST",
+      "BITV_9_1_3_1b_HTML_STRUKTURELEMENTE_FUER_LISTEN"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/listen-positiv.html",
+      "negativ": "kriterien/listen-negativ.html"
+    }
+  },
+  {
+    "slug": "einziges-main",
+    "kategorie": "Struktur & Navigation",
+    "titel": "Genau eine main-Landmarke",
+    "beschreibung": "Eine Seite darf nur ein sichtbares main-Element (bzw. role=main) enthalten.",
+    "test_ids": [
+      "WCAG_1_3_1_LANDMARK_MAIN"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/einziges-main-positiv.html",
+      "negativ": "kriterien/einziges-main-negativ.html"
+    }
+  },
+  {
+    "slug": "skip-link",
+    "kategorie": "Struktur & Navigation",
+    "titel": "Mechanismus zum Überspringen von Blöcken",
+    "beschreibung": "Wiederkehrende Blöcke müssen überspringbar sein (main-/nav-Landmarke oder Sprunglink).",
+    "test_ids": [
+      "WCAG_2_4_1_SKIP_LINKS",
+      "BITV_9_2_4_1_BEREICHE_UEBERSPRINGBAR"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/skip-link-positiv.html",
+      "negativ": "kriterien/skip-link-negativ.html"
+    }
+  },
+  {
+    "slug": "navigation-benennung",
+    "kategorie": "Struktur & Navigation",
+    "titel": "Unterscheidbare Navigationsbereiche",
+    "beschreibung": "Mehrere Navigationsbereiche brauchen aria-label/aria-labelledby zur Unterscheidung.",
+    "test_ids": [
+      "BITV_9_2_4_1_BEREICHE_UEBERSPRINGBAR"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/navigation-benennung-positiv.html",
+      "negativ": "kriterien/navigation-benennung-negativ.html"
+    }
+  },
+  {
+    "slug": "inhalt-gegliedert",
+    "kategorie": "Struktur & Navigation",
+    "titel": "Gegliederter Inhalt",
+    "beschreibung": "Textabsätze mit p, keine doppelten <br>, keine Leerzeichen-Ketten, keine Zeichen-Trennlinien statt <hr>.",
+    "test_ids": [
+      "BITV_9_1_3_1d_INHALT_GEGLIEDERT"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/inhalt-gegliedert-positiv.html",
+      "negativ": "kriterien/inhalt-gegliedert-negativ.html"
+    }
+  },
+  {
+    "slug": "hauptsprache",
+    "kategorie": "Sprache",
+    "titel": "Hauptsprache der Seite",
+    "beschreibung": "Die Sprache der Seite muss über ein gültiges BCP-47-lang-Attribut deklariert sein.",
+    "test_ids": [
+      "WCAG_3_1_1_LANG",
+      "BITV_9_3_1_1_HAUPTSPRACHE_ANGEGEBEN"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/hauptsprache-positiv.html",
+      "negativ": "kriterien/hauptsprache-negativ.html"
+    }
+  },
+  {
+    "slug": "sprachwechsel",
+    "kategorie": "Sprache",
+    "titel": "Sprachwechsel im Text",
+    "beschreibung": "Fremdsprachige Abschnitte brauchen ein gültiges lang-Attribut mit dem richtigen Sprachkürzel.",
+    "test_ids": [
+      "WCAG_3_1_2_LANG_PARTS",
+      "BITV_9_3_1_2_ANDERSSPRACHIGE_WOERTER_UND_ABSCHNITTE_AUSGEZEICHNET"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/sprachwechsel-positiv.html",
+      "negativ": "kriterien/sprachwechsel-negativ.html"
+    }
+  },
+  {
+    "slug": "seiten-titel",
+    "kategorie": "Seitentitel",
+    "titel": "Seitentitel vorhanden",
+    "beschreibung": "Jede Seite braucht ein nicht-leeres <title>-Element.",
+    "test_ids": [
+      "WCAG_2_4_2_TITLE"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/seiten-titel-positiv.html",
+      "negativ": "kriterien/seiten-titel-negativ.html"
+    }
+  },
+  {
+    "slug": "seiten-titel-sinnvoll",
+    "kategorie": "Seitentitel",
+    "titel": "Sinnvoller Seitentitel",
+    "beschreibung": "Der Seitentitel darf nicht generisch (z. B. „Home“) oder nur Schmuckzeichen sein.",
+    "test_ids": [
+      "BITV_9_2_4_2_SINNVOLLE_DOKUMENTTITEL"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/seiten-titel-sinnvoll-positiv.html",
+      "negativ": "kriterien/seiten-titel-sinnvoll-negativ.html"
+    }
+  },
+  {
+    "slug": "button-name",
+    "kategorie": "ARIA & Bedienbarkeit",
+    "titel": "Zugänglicher Name für Buttons",
+    "beschreibung": "Jeder Button braucht einen zugänglichen Namen (Text, alt, aria-label o. Ä.).",
+    "test_ids": [
+      "WCAG_4_1_2_BUTTON_NAME"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/button-name-positiv.html",
+      "negativ": "kriterien/button-name-negativ.html"
+    }
+  },
+  {
+    "slug": "aria-name-missing",
+    "kategorie": "ARIA & Bedienbarkeit",
+    "titel": "Zugänglicher Name für interaktive Elemente",
+    "beschreibung": "Interaktive ARIA-Elemente (z. B. role=checkbox) brauchen einen zugänglichen Namen.",
+    "test_ids": [
+      "WCAG_4_1_2_ARIA_LABEL_MISSING"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/aria-name-missing-positiv.html",
+      "negativ": "kriterien/aria-name-missing-negativ.html"
+    }
+  },
+  {
+    "slug": "dialog-name",
+    "kategorie": "ARIA & Bedienbarkeit",
+    "titel": "Name für Dialoge",
+    "beschreibung": "role=\"dialog\" braucht aria-label oder aria-labelledby.",
+    "test_ids": [
+      "WCAG_4_1_2_DIALOG_LABEL"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/dialog-name-positiv.html",
+      "negativ": "kriterien/dialog-name-negativ.html"
+    }
+  },
+  {
+    "slug": "invalid-role",
+    "kategorie": "ARIA & Bedienbarkeit",
+    "titel": "Gültige ARIA-Rollen",
+    "beschreibung": "role-Attribute dürfen nur bekannte ARIA-Rollen verwenden.",
+    "test_ids": [
+      "WCAG_4_1_2_INVALID_ROLE"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/invalid-role-positiv.html",
+      "negativ": "kriterien/invalid-role-negativ.html"
+    }
+  },
+  {
+    "slug": "aria-hidden-wert",
+    "kategorie": "ARIA & Bedienbarkeit",
+    "titel": "Gültiger aria-hidden-Wert",
+    "beschreibung": "aria-hidden darf nur \"true\" oder \"false\" sein.",
+    "test_ids": [
+      "WCAG_4_1_2_ARIA_HIDDEN"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/aria-hidden-wert-positiv.html",
+      "negativ": "kriterien/aria-hidden-wert-negativ.html"
+    }
+  },
+  {
+    "slug": "aria-expanded-wert",
+    "kategorie": "ARIA & Bedienbarkeit",
+    "titel": "Gültiger aria-expanded-Wert",
+    "beschreibung": "aria-expanded darf nur \"true\" oder \"false\" sein.",
+    "test_ids": [
+      "WCAG_4_1_2_ARIA_EXPANDED"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/aria-expanded-wert-positiv.html",
+      "negativ": "kriterien/aria-expanded-wert-negativ.html"
+    }
+  },
+  {
+    "slug": "statusmeldung-aria-live",
+    "kategorie": "ARIA & Bedienbarkeit",
+    "titel": "Gültige Live-Regionen",
+    "beschreibung": "aria-live darf nur \"off\", \"polite\" oder \"assertive\" sein.",
+    "test_ids": [
+      "WCAG_4_1_3_ARIA_LIVE",
+      "BITV_9_4_1_3_STATUSMELDUNGEN_PROGRAMMATISCH_VERFUEGBAR"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/statusmeldung-aria-live-positiv.html",
+      "negativ": "kriterien/statusmeldung-aria-live-negativ.html"
+    }
+  },
+  {
+    "slug": "name-rolle-wert",
+    "kategorie": "ARIA & Bedienbarkeit",
+    "titel": "Name, Rolle und Wert verfügbar",
+    "beschreibung": "Bedienelemente brauchen Rolle und Namen; Elemente mit Event-Handler ohne Rolle sind unzulässig (F59).",
+    "test_ids": [
+      "BITV_9_4_1_2_NAME_ROLLE_WERT_VERFUEGBAR"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/name-rolle-wert-positiv.html",
+      "negativ": "kriterien/name-rolle-wert-negativ.html"
+    }
+  },
+  {
+    "slug": "zeitlimit-refresh",
+    "kategorie": "Zeitlimits",
+    "titel": "Anpassbare Zeitbegrenzung (Meta-Refresh)",
+    "beschreibung": "Ein Meta-Refresh mit Zeitbegrenzung (<meta http-equiv=refresh content=\"30\">) ist unzulässig.",
+    "test_ids": [
+      "WCAG_2_2_1_META_REFRESH",
+      "BITV_9_2_2_1_ZEITBEGRENZUNGEN_ANPASSBAR"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/zeitlimit-refresh-positiv.html",
+      "negativ": "kriterien/zeitlimit-refresh-negativ.html"
+    }
+  },
+  {
+    "slug": "viewport-vorhanden",
+    "kategorie": "Responsive & Viewport",
+    "titel": "Viewport-Meta-Tag vorhanden",
+    "beschreibung": "Mobile Seiten brauchen <meta name=\"viewport\"> für die korrekte Darstellung bei 320 px.",
+    "test_ids": [
+      "WCAG_1_4_10_VIEWPORT_MISSING",
+      "BITV_9_1_4_10_INHALTE_BRECHEN_UM"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/viewport-vorhanden-positiv.html",
+      "negativ": "kriterien/viewport-vorhanden-negativ.html"
+    }
+  },
+  {
+    "slug": "viewport-zoom",
+    "kategorie": "Responsive & Viewport",
+    "titel": "Zoomen nicht sperren",
+    "beschreibung": "user-scalable=no oder maximum-scale ≤ 1 im viewport-Meta ist unzulässig.",
+    "test_ids": [
+      "WCAG_1_4_10_VIEWPORT_ZOOM",
+      "BITV_9_1_4_10_INHALTE_BRECHEN_UM"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/viewport-zoom-positiv.html",
+      "negativ": "kriterien/viewport-zoom-negativ.html"
+    }
+  },
+  {
+    "slug": "reflow-320",
+    "kategorie": "Responsive & Viewport",
+    "titel": "Inhalt bricht bei 320 px um",
+    "beschreibung": "Inhalt darf bei 320 px nicht horizontal überlaufen (keine festen Breiten).",
+    "test_ids": [
+      "WCAG_1_4_10_REFLOW",
+      "BITV_9_1_4_10_INHALTE_BRECHEN_UM"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/reflow-320-positiv.html",
+      "negativ": "kriterien/reflow-320-negativ.html"
+    }
+  },
+  {
+    "slug": "text-200-prozent",
+    "kategorie": "Responsive & Viewport",
+    "titel": "Text bei 200 % Zoom lesbar",
+    "beschreibung": "Bei 200 % Zoom (bzw. halbierter Viewport-Breite) darf kein Text abgeschnitten werden.",
+    "test_ids": [
+      "WCAG_1_4_4_RESIZE",
+      "BITV_9_1_4_4_TEXT_AUF_200_VERGROESSERBAR"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/text-200-prozent-positiv.html",
+      "negativ": "kriterien/text-200-prozent-negativ.html"
+    }
+  },
+  {
+    "slug": "textabstaende",
+    "kategorie": "Responsive & Viewport",
+    "titel": "Anpassbare Textabstände",
+    "beschreibung": "Text darf bei größeren Zeichen- und Zeilenabständen nicht abgeschnitten oder überlappend werden.",
+    "test_ids": [
+      "WCAG_1_4_12_TEXT_SPACING",
+      "BITV_9_1_4_12_TEXTABSTAENDE_ANPASSBAR"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/textabstaende-positiv.html",
+      "negativ": "kriterien/textabstaende-negativ.html"
+    }
+  },
+  {
+    "slug": "fokus-indikator",
+    "kategorie": "Fokus & Tastatur",
+    "titel": "Sichtbarer Fokus-Indikator",
+    "beschreibung": "Der Tastaturfokus muss durch eine sichtbare Änderung erkennbar sein.",
+    "test_ids": [
+      "WCAG_2_4_7_FOCUS_INDICATOR",
+      "BITV_9_2_4_7_AKTUELLE_POSITION_DES_FOKUS_DEUTLICH"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/fokus-indikator-positiv.html",
+      "negativ": "kriterien/fokus-indikator-negativ.html"
+    }
+  },
+  {
+    "slug": "verstecktes-fokuselement",
+    "kategorie": "Fokus & Tastatur",
+    "titel": "Kein verstecktes fokussierbares Element",
+    "beschreibung": "Fokussierbare Elemente müssen sichtbar sein (keine Null-Größe, kein opacity:0).",
+    "test_ids": [
+      "WCAG_2_4_7_HIDDEN_FOCUSABLE"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/verstecktes-fokuselement-positiv.html",
+      "negativ": "kriterien/verstecktes-fokuselement-negativ.html"
+    }
+  },
+  {
+    "slug": "tastaturfalle",
+    "kategorie": "Fokus & Tastatur",
+    "titel": "Keine Tastaturfalle",
+    "beschreibung": "Der Tastaturfokus darf sich nicht in einem Element verfangen (kein Tab-PreventDefault).",
+    "test_ids": [
+      "WCAG_2_1_2_KEYBOARD_TRAP",
+      "BITV_9_2_1_2_KEINE_TASTATURFALLE"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/tastaturfalle-positiv.html",
+      "negativ": "kriterien/tastaturfalle-negativ.html"
+    }
+  },
+  {
+    "slug": "tabindex",
+    "kategorie": "Fokus & Tastatur",
+    "titel": "Kein positiver tabindex",
+    "beschreibung": "Positive tabindex-Werte (tabindex=\"1\") stören die logische Tab-Reihenfolge.",
+    "test_ids": [
+      "WCAG_2_4_3_TABINDEX",
+      "BITV_9_2_4_3_SCHLUESSIGE_REIHENFOLGE_BEI_DER_TASTATURBEDIENUNG"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/tabindex-positiv.html",
+      "negativ": "kriterien/tabindex-negativ.html"
+    }
+  },
+  {
+    "slug": "zielgroesse",
+    "kategorie": "Sonstige",
+    "titel": "Ausreichende Zielgröße",
+    "beschreibung": "Bedienelemente sollten mindestens 44×44 px groß und nicht zu eng beieinander sein.",
+    "test_ids": [
+      "WCAG_2_5_5_TARGET_SIZE"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/zielgroesse-positiv.html",
+      "negativ": "kriterien/zielgroesse-negativ.html"
+    }
+  },
+  {
+    "slug": "captcha-alternative",
+    "kategorie": "Bilder & Grafiken",
+    "titel": "Alternativen für CAPTCHAs",
+    "beschreibung": "CAPTCHA-Grafiken brauchen einen Alternativtext mit Zweckbeschreibung und eine Alternative (z. B. Audio-Version).",
+    "test_ids": [
+      "BITV_9_1_1_1d_ALTERNATIVEN_FUER_CAPTCHAS"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/captcha-alternative-positiv.html",
+      "negativ": "kriterien/captcha-alternative-negativ.html"
+    }
+  },
+  {
+    "slug": "audio-volltext-bitv",
+    "kategorie": "Medien & Video",
+    "titel": "Alternativen für Audiodateien und stumme Videos",
+    "beschreibung": "Reine Audio- und stumme Video-Inhalte brauchen eine Medienalternative (Transkript) in unmittelbarer Nähe.",
+    "test_ids": [
+      "BITV_9_1_2_1_ALTERNATIVEN_FUER_AUDIODATEIEN_UND_STUMME_VIDEOS"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/audio-volltext-bitv-positiv.html",
+      "negativ": "kriterien/audio-volltext-bitv-negativ.html"
+    }
+  },
+  {
+    "slug": "video-ad-volltext",
+    "kategorie": "Medien & Video",
+    "titel": "Audiodeskription oder Volltext-Alternative für Videos",
+    "beschreibung": "Tonbehaftete Videos brauchen eine Audiodeskriptions-Spur oder eine Volltext-Alternative.",
+    "test_ids": [
+      "BITV_9_1_2_3_AUDIODESKRIPTION_ODER_VOLLTEXT_ALTERNATIVE_FUER_VIDEOS"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/video-ad-volltext-positiv.html",
+      "negativ": "kriterien/video-ad-volltext-negativ.html"
+    }
+  },
+  {
+    "slug": "kontrast-grafik",
+    "kategorie": "Kontrast & Farbe",
+    "titel": "Kontraste von Grafiken und grafischen Bedienelementen",
+    "beschreibung": "Bedienelemente, die nur über ihren Rahmen erkennbar sind, brauchen einen Rahmenkontrast von 3:1.",
+    "test_ids": [
+      "BITV_9_1_4_11_KONTRASTE_VON_GRAFIKEN_UND_GRAFISCHEN_BEDIENELEMENTEN_AUSREICHEND"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/kontrast-grafik-positiv.html",
+      "negativ": "kriterien/kontrast-grafik-negativ.html"
+    }
+  },
+  {
+    "slug": "ohne-maus",
+    "kategorie": "Fokus & Tastatur",
+    "titel": "Ohne Maus nutzbar",
+    "beschreibung": "Bedienelemente müssen per Tastatur erreichbar und aktivierbar sein — Maus-only-Handler auf nicht-fokussierbaren Elementen sind ein Verstoß.",
+    "test_ids": [
+      "BITV_9_2_1_1_OHNE_MAUS_NUTZBAR"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/ohne-maus-positiv.html",
+      "negativ": "kriterien/ohne-maus-negativ.html"
+    }
+  },
+  {
+    "slug": "tastatur-kurzbefehl",
+    "kategorie": "Fokus & Tastatur",
+    "titel": "Tastatur-Kurzbefehle abschaltbar oder anpassbar",
+    "beschreibung": "Einzelzeichen-Kurzbefehle brauchen einen Modifikator oder eine Abschalt-/Anpassungsmöglichkeit.",
+    "test_ids": [
+      "BITV_9_2_1_4_TASTATUR_KURZBEFEHLE_ABSCHALTBAR_ODER_ANPASSBAR",
+      "WCAG_2_1_4_CHAR_SHORTCUTS"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/tastatur-kurzbefehl-positiv.html",
+      "negativ": "kriterien/tastatur-kurzbefehl-negativ.html"
+    }
+  },
+  {
+    "slug": "bewegte-inhalte",
+    "kategorie": "Sonstige",
+    "titel": "Bewegte Inhalte abschaltbar",
+    "beschreibung": "Laufende/blinkende Inhalte brauchen einen Abschalt- oder Pause-Mechanismus.",
+    "test_ids": [
+      "BITV_9_2_2_2_BEWEGTE_INHALTE_ABSCHALTBAR",
+      "WCAG_2_2_2_ANIMATIONS"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/bewegte-inhalte-positiv.html",
+      "negativ": "kriterien/bewegte-inhalte-negativ.html"
+    }
+  },
+  {
+    "slug": "label-in-name",
+    "kategorie": "ARIA & Bedienbarkeit",
+    "titel": "Sichtbare Beschriftung Teil des zugänglichen Namens",
+    "beschreibung": "Die sichtbare Beschriftung eines Bedienelements muss im zugänglichen Namen enthalten sein.",
+    "test_ids": [
+      "BITV_9_2_5_3_SICHTBARE_BESCHRIFTUNG_TEIL_DES_ZUGAENGLICHEN_NAMENS",
+      "WCAG_2_5_3_LABEL_IN_NAME"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/label-in-name-positiv.html",
+      "negativ": "kriterien/label-in-name-negativ.html"
+    }
+  },
+  {
+    "slug": "html-syntax",
+    "kategorie": "Sonstige",
+    "titel": "Korrekte HTML-Syntax (W3C-Validator)",
+    "beschreibung": "Valides HTML ohne doppelte IDs und fehlende schließende Tags (W3C-Validator; braucht Netz).",
+    "test_ids": [
+      "WCAG_4_1_1_HTML_ERROR",
+      "WCAG_4_1_1_HTML_WARNING",
+      "BITV_9_4_1_1_KORREKTE_SYNTAX"
+    ],
+    "pytest": false,
+    "seiten": {
+      "positiv": "kriterien/html-syntax-positiv.html",
+      "negativ": "kriterien/html-syntax-negativ.html"
+    }
+  },
+  {
+    "slug": "zitat-struktur",
+    "kategorie": "Struktur & Navigation",
+    "titel": "HTML-Strukturelemente für Zitate",
+    "beschreibung": "Eigenständige Zitate sollen mit blockquote/q ausgezeichnet sein — nicht nur visuell per Klasse oder Anführungszeichen.",
+    "test_ids": [
+      "BITV_9_1_3_1c_HTML_STRUKTURELEMENTE_FUER_ZITATE"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/zitat-struktur-positiv.html",
+      "negativ": "kriterien/zitat-struktur-negativ.html"
+    }
+  },
+  {
+    "slug": "flackern",
+    "kategorie": "Struktur & Navigation",
+    "titel": "Verzicht auf Flackern",
+    "beschreibung": "Inhalte blitzen nicht häufiger als dreimal pro Sekunde — keine blink-Elemente und keine text-decoration: blink.",
+    "test_ids": [
+      "BITV_9_2_3_1_VERZICHT_AUF_FLACKERN",
+      "WCAG_2_3_1_THREE_FLASHES"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/flackern-positiv.html",
+      "negativ": "kriterien/flackern-negativ.html"
+    }
+  },
+  {
+    "slug": "zugangswege",
+    "kategorie": "Struktur & Navigation",
+    "titel": "Alternative Zugangswege",
+    "beschreibung": "Mindestens zwei unterschiedliche Zugangswege zu den Inhalten — z. B. Navigation, Suche oder Sitemap-Link.",
+    "test_ids": [
+      "BITV_9_2_4_5_ALTERNATIVE_ZUGANGSWEGE",
+      "WCAG_2_4_5_MULTIPLE_WAYS"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/zugangswege-positiv.html",
+      "negativ": "kriterien/zugangswege-negativ.html"
+    }
+  },
+  {
+    "slug": "fokus-kontext",
+    "kategorie": "Bedienbarkeit",
+    "titel": "Keine unerwartete Kontextänderung bei Fokus",
+    "beschreibung": "Beim Fokuserhalt (oder Laden der Seite) wird kein Fenster geöffnet, kein Formular abgeschickt und nicht navigiert.",
+    "test_ids": [
+      "BITV_9_3_2_1_KEINE_UNERWARTETE_KONTEXTAENDERUNG_BEI_FOKUS",
+      "WCAG_3_2_1_ON_FOCUS"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/fokus-kontext-positiv.html",
+      "negativ": "kriterien/fokus-kontext-negativ.html"
+    }
+  },
+  {
+    "slug": "eingabe-kontext",
+    "kategorie": "Bedienbarkeit",
+    "titel": "Keine unerwartete Kontextänderung bei Eingabe",
+    "beschreibung": "Formularfelder lösen bei Eingabe keine unerwartete Kontextänderung aus (kein Auto-Submit, keine Navigation).",
+    "test_ids": [
+      "BITV_9_3_2_2_KEINE_UNERWARTETE_KONTEXTAENDERUNG_BEI_EINGABE",
+      "WCAG_3_2_2_ON_INPUT"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/eingabe-kontext-positiv.html",
+      "negativ": "kriterien/eingabe-kontext-negativ.html"
+    }
+  },
+  {
+    "slug": "fehlererkennung",
+    "kategorie": "Formulare",
+    "titel": "Fehlererkennung",
+    "beschreibung": "Fehler werden automatisch erkannt und beschrieben — auch wenn die native Validierung (novalidate) ausgeschaltet ist.",
+    "test_ids": [
+      "BITV_9_3_3_1_FEHLERERKENNUNG"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/fehlererkennung-positiv.html",
+      "negativ": "kriterien/fehlererkennung-negativ.html"
+    }
+  },
+  {
+    "slug": "erklaerung",
+    "kategorie": "Struktur & Navigation",
+    "titel": "Erklärung zur Barrierefreiheit",
+    "beschreibung": "Die Seite verlinkt eine aktuelle Erklärung zur Barrierefreiheit (üblicherweise im Footer).",
+    "test_ids": [
+      "BITV_7_DECLARATION"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/erklaerung-positiv.html",
+      "negativ": "kriterien/erklaerung-negativ.html"
+    }
+  },
+  {
+    "slug": "layout-tabelle",
+    "kategorie": "Struktur & Navigation",
+    "titel": "Kein Strukturmarkup für Layouttabellen",
+    "beschreibung": "Als Layout deklarierte Tabellen (role=presentation) dürfen kein Tabellenstruktur-Markup (th, caption, summary, scope) enthalten.",
+    "test_ids": [
+      "BITV_9_1_3_1g_KEIN_STRUKTURMARKUP_FUER_LAYOUTTABELLEN"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/layout-tabelle-positiv.html",
+      "negativ": "kriterien/layout-tabelle-negativ.html"
+    }
+  },
+  {
+    "slug": "sensorisch",
+    "kategorie": "Verständlichkeit",
+    "titel": "Ohne Bezug auf sensorische Merkmale nutzbar",
+    "beschreibung": "Anweisungen nennen zusätzlich zu Farbe, Form oder Position einen unabhängigen Bezug (z. B. den Text einer Überschrift).",
+    "test_ids": [
+      "BITV_9_1_3_3_OHNE_BEZUG_AUF_SENSORISCHE_MERKMALE_NUTZBAR",
+      "WCAG_1_3_3_SENSORY"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/sensorisch-positiv.html",
+      "negativ": "kriterien/sensorisch-negativ.html"
+    }
+  },
+  {
+    "slug": "tastatur-reihenfolge",
+    "kategorie": "Bedienbarkeit",
+    "titel": "Schlüssige Reihenfolge bei der Tastaturbedienung",
+    "beschreibung": "Keine positiven tabindex-Werte, die die natürliche Fokus-Reihenfolge umstellen.",
+    "test_ids": [
+      "BITV_9_2_4_3_SCHLUESSIGE_REIHENFOLGE_BEI_DER_TASTATURBEDIENUNG"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/tastatur-reihenfolge-positiv.html",
+      "negativ": "kriterien/tastatur-reihenfolge-negativ.html"
+    }
+  },
+  {
+    "slug": "bewegung",
+    "kategorie": "Bedienbarkeit",
+    "titel": "Alternativen für Bewegungsaktivierung",
+    "beschreibung": "Gerätebewegung (Shake/Neigen) löst keine Funktion aus, ohne dass eine alternative Bedienung vorhanden ist.",
+    "test_ids": [
+      "BITV_9_2_5_4_ALTERNATIVEN_FUER_BEWEGUNGSAKTIVIERUNG",
+      "WCAG_2_5_4_MOTION"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/bewegung-positiv.html",
+      "negativ": "kriterien/bewegung-negativ.html"
+    }
+  },
+  {
+    "slug": "fehlervermeidung",
+    "kategorie": "Formulare",
+    "titel": "Fehlervermeidung wird unterstützt",
+    "beschreibung": "Transaktionsformulare (z. B. Bestellung, Zahlung) bieten vor dem Absenden einen Prüf-/Bestätigungs-Mechanismus.",
+    "test_ids": [
+      "BITV_9_3_3_4_FEHLERVERMEIDUNG_WIRD_UNTERSTUETZT",
+      "WCAG_3_3_4_ERROR_PREVENTION"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/fehlervermeidung-positiv.html",
+      "negativ": "kriterien/fehlervermeidung-negativ.html"
+    }
+  },
+  {
+    "slug": "gebardensprache",
+    "kategorie": "Barrierefreiheits-Angebote",
+    "titel": "Gebärdensprach-Video auf der Startseite",
+    "beschreibung": "Die wichtigsten Inhalte werden auch in Deutscher Gebärdensprache (DGS) als Video angeboten und von jeder Seite verlinkt.",
+    "test_ids": [
+      "BITV_4_SIGN_LANGUAGE",
+      "WCAG_1_2_6_SIGN_LANGUAGE"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/gebardensprache-positiv.html",
+      "negativ": "kriterien/gebardensprache-negativ.html"
+    }
+  },
+  {
+    "slug": "leichte-sprache",
+    "kategorie": "Barrierefreiheits-Angebote",
+    "titel": "Leichte-Sprache-Angebot auf der Startseite",
+    "beschreibung": "Die wichtigsten Inhalte werden auch in Leichter Sprache angeboten und von jeder Seite verlinkt.",
+    "test_ids": [
+      "BITV_4_EASY_LANGUAGE"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/leichte-sprache-positiv.html",
+      "negativ": "kriterien/leichte-sprache-negativ.html"
+    }
+  },
+  {
+    "slug": "ausrichtung",
+    "kategorie": "Bedienbarkeit",
+    "titel": "Keine Beschränkung der Bildschirmausrichtung",
+    "beschreibung": "Die Bildschirmausrichtung wird nicht programmatisch gesperrt — Inhalte funktionieren im Hoch- und Querformat.",
+    "test_ids": [
+      "BITV_9_1_3_4_KEINE_BESCHRAENKUNG_DER_BILDSCHIRMAUSRICHTUNG",
+      "WCAG_1_3_4_ORIENTATION"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/ausrichtung-positiv.html",
+      "negativ": "kriterien/ausrichtung-negativ.html"
+    }
+  },
+  {
+    "slug": "gesten",
+    "kategorie": "Bedienbarkeit",
+    "titel": "Alternativen für komplexe Zeiger-Gesten",
+    "beschreibung": "Funktionen, die über Wisch- oder Mehrpunkt-Gesten bedient werden, bieten eine einfache Zeigeralternative.",
+    "test_ids": [
+      "BITV_9_2_5_1_ALTERNATIVEN_FUER_KOMPLEXE_ZEIGER_GESTEN",
+      "WCAG_2_5_1_POINTER_GESTURES"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/gesten-positiv.html",
+      "negativ": "kriterien/gesten-negativ.html"
+    }
+  },
+  {
+    "slug": "zeiger-abbruch",
+    "kategorie": "Bedienbarkeit",
+    "titel": "Zeigergesten-Eingaben können abgebrochen oder widerrufen werden",
+    "beschreibung": "Aktionen werden nicht bereits beim Drücken eines Zeigers ausgelöst — das Loslassen (oder Widerrufen) bleibt möglich.",
+    "test_ids": [
+      "BITV_9_2_5_2_ZEIGERGESTEN_EINGABEN_KOENNEN_ABGEBROCHEN_ODER_WIDERRUFEN_WERDEN",
+      "WCAG_2_5_2_POINTER_CANCEL"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/zeiger-abbruch-positiv.html",
+      "negativ": "kriterien/zeiger-abbruch-negativ.html"
+    }
+  },
+  {
+    "slug": "hilfe-fehler",
+    "kategorie": "Formulare",
+    "titel": "Hilfe bei Fehlern",
+    "beschreibung": "Fehlermeldungen sind verständlich und geben einen Hinweis, wie der Fehler zu korrigieren ist.",
+    "test_ids": [
+      "BITV_9_3_3_3_HILFE_BEI_FEHLERN",
+      "WCAG_3_3_3_ERROR_SUGGESTION"
+    ],
+    "pytest": true,
+    "seiten": {
+      "positiv": "kriterien/hilfe-fehler-positiv.html",
+      "negativ": "kriterien/hilfe-fehler-negativ.html"
+    }
+  }
+]

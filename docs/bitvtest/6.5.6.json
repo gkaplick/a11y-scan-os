@@ -1,0 +1,54 @@
+{
+  "bitv_nummer": "6.5.6",
+  "titel": "Sprecher-Anzeige für Gebärdensprachen-Kommunikation",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Zeigt ein Webangebot mit Videotelefonie die Aktivität von Sprechenden an, muss das auch für Nutzende der Gebärdensprache gelten."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Die Anzeige einer Gebärden-Eingabe lässt Nutzende erkennen, dass gerade jemand in Gebärdensprache kommuniziert und wer dies tut."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn ein Webangebot Videotelefonie unterstützt und die Sprechaktivität von Sprechenden anzeigt."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Webangebot im Browser auf zwei Geräten mit unterschiedlichen Nutzerkonten starten.\n2. - Eine Videotelefonie-Verbindung zwischen beiden Instanzen herstellen.\n3. - Auf dem verbundenen Gerät mit der Gebärden-Eingabe beginnen.\n4. - Prüfen, ob das Webangebot den Start einer Gebärden-Eingabe manuell signalisieren kann (also die Aktivitätsanzeige aktiviert) oder die Eingabe automatisch erkennt und den Aktivitätszustand selbst setzt.\n5. - Prüfen, ob sich die laufende Gebärden-Eingabe über die Aktivitätsanzeige wahrnehmen lässt."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Für den Test ist es unerheblich, ob die Eingabe von Gebärdensprach-Kundigen stammt oder nur simuliert wird, indem ähnliche Bewegungen ausgeführt werden.\n- Für die Aktivitätsanzeige von Gebärdenden kommen weitere Anforderungen hinzu, etwa zum Grafik-Kontrast.\n\nHinweise zu diesem Prüfschritt können Sie auf GitHub [als Issue anlegen](https://github.com/BIK-BITV/BIK-Web-Test/issues)."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "6.5.6 Speaker identification with video (sign language) communication",
+          "inhalt_markdown": "> Where ICT provides speaker identification for voice users, it shall provide a means for speaker identification for real-time signing and sign language users once the start of signing has been indicated.\n\nNOTE 1: The speaker ID can be in the same location as for voice users for multiparty calls.\n\nNOTE 2: This mechanism might be triggered manually by a user, or automatically where this is technically achievable."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "bitv_nummer": "6.4",
+  "titel": "Alternativen zu sprachbasierten Diensten",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Stellt ein Webangebot Echtzeit-Sprachkommunikation samt Voicemail oder interaktive Sprachdialogsysteme bereit (beispielsweise eine Sprach-Menüführung), müssen die damit angebotenen Aufgaben auch ohne Hör- und Sprechvermögen erledigt werden können."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Gehörlose und schwerhörige Menschen sowie Menschen mit Sprechbeeinträchtigungen können sprachbasierte Dienste nicht nutzen. Es braucht daher eine zugängliche Alternative, über die Informationen auch ohne Sprechen und Hören abruf- und ausgabefähig sind."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt ist anwendbar, wenn das Webangebot Sprachkommunikation in Echtzeit samt Anrufbeantworter oder sprachgesteuerte Dialogsysteme verwendet, etwa eine per Sprache bedienbare Menüführung einer Hotline."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Werden Informationen über die Sprach-Kommunikation ausgegeben, ist zu prüfen, ob sie sich auch ohne Sprechen und Hören erfassen lassen. Dazu gehören:\n\n- ein alternativer Zugang, etwa über barrierefreie Menüs oder Formulare,\n- eine weitere barrierefreie Ausgabe der Informationen, etwa als sichtbarer, programmatisch auslesbarer Text."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Ein Dienst, der Sprach- und Hörfähigkeit voraussetzt, ist etwa das Video-Ident-Verfahren, mit dem Online-Banken die Identität ihrer Kundschaft prüfen. Dafür wird per Videoanruf unter anderem der Personalausweis auf Echtheit kontrolliert. Hier ist eine Alternative nötig, die ohne Hören und Sprechen auskommt.\n\nEin weiteres Beispiel ist die telefonische Guthaben-Ansage bei einem Prepaid-Mobilfunkvertrag: Der Anbieter müsste das aktuelle Guthaben zusätzlich in Textform auf der Seite bereitstellen.\n\nSiehe auch die [Themensammlung auf GitHub](https://github.com/BIK-BITV/BIK-Web-Test/issues), um Fragen zu diesem Prüfschritt zu diskutieren."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Human Factors (HF); Real-Time Text (RTT) in Multiparty Conference Calling / ETSI TR 103 708 V1.1.1 (2022-08)](https://labs.etsi.org/rep/HF/en301549/uploads/272bede3724c5c99efe777f778201f70/tr_103708v010101p.pdf)"
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "6.4 Alternatives to voice-based services",
+          "inhalt_markdown": "> Where ICT provides real-time voice-based communication and also provides voice\nmail, auto-attendant, or interactive voice response facilities, the ICT shall\noffer users a means to access the information and carry out the tasks provided\nby the ICT without the use of hearing or speech.\n\nNOTE 1:\nTasks that involve both operating the interface and perceiving the information\nwould require that both the interface and information be accessible without\nuse of speech or hearing.\n\nNOTE 2:\nSolutions capable of handling audio, RTT and video media could satisfy the\nabove requirement."
+        }
+      ]
+    }
+  ]
+}

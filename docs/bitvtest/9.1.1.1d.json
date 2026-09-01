@@ -1,0 +1,65 @@
+{
+  "bitv_nummer": "9.1.1.1d",
+  "titel": "Alternativen für CAPTCHAs",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Der Alternativtext eines bildbasierten CAPTCHAs soll dessen Zweck beschreiben und erklären, wie eine nicht bildbasierte Alternative zu finden ist. Zudem muss mindestens eine Alternative zu einem Grafik- oder Audio-CAPTCHA vorhanden sein."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Bildbasierte CAPTCHAs zeigen Zeichenfolgen, die Nutzer eintippen müssen, um bestimmte Bereiche eines Angebots zu erreichen — für blinde und sehbehinderte Menschen sind sie unzugänglich, Audio-CAPTCHAs für höreingeschränkte. Deshalb ist in beiden Fällen mindestens eine Alternative nötig. Beim bildbasierten CAPTCHA beschreibt der Alternativtext den Zweck und weist den Weg zur Alternative."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn CAPTCHAs eingesetzt werden. Die Lesbarkeit der Zeichenfolge eines bildbasierten CAPTCHAs ist nicht Gegenstand der Prüfung und bleibt unbewertet."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Prüfung der Alternativtexte von CAPTCHA-Bildern",
+          "inhalt_markdown": "1. - Die Seite im [Firefox](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#firefox) laden.\n2. - In der *Web Developer Toolbar* unter *Images > Display Alt Attributes* prüfen; alternativ das [Images bookmarklet](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#imagesbm) nutzen.\n3. - Prüfen, ob das CAPTCHA-Bild ein `alt`-Attribut besitzt und dessen Text den Zweck benennt (etwa: „Geben Sie die im Bild dargestellte Zeichenfolge ein“)."
+        },
+        {
+          "titel": "2.2 Vorhandensein von CAPTCHA-Alternativen",
+          "inhalt_markdown": "- Prüfen, ob im unmittelbaren Umfeld des bildbasierten CAPTCHAs oder des Audio-CAPTCHAs eine Alternative angeboten wird."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "CAPTCHAs sind grundsätzlich problematisch, denn jede Form bleibt für manche Menschen mit Behinderungen unzugänglich; Näheres in der WCAG-2.0-[Note on CAPTCHA](http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html#text-equiv-all-3-head)."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "- Der Alternativtext nennt den Zweck des CAPTCHAs nicht.\n- Eine Alternative existiert, wird aber weder im Alternativtext erwähnt noch ist sie im unmittelbaren Kontext zugänglich."
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Zu bildbasierten CAPTCHAs oder Audio-CAPTCHAs gibt es keine Alternative."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Damit ein CAPTCHA insgesamt zugänglich ist, muss auch seine Texteingabe zugänglich gestaltet sein; das prüft 9.3.3.2 „Beschriftungen von Formularelementen vorhanden“."
+        }
+      ]
+    }
+  ]
+}

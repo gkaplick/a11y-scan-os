@@ -1,0 +1,66 @@
+{
+  "bitv_nummer": "7.1.3",
+  "titel": "Erhaltung von Untertiteln",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Überträgt, konvertiert oder zeichnet das Webangebot Videos mit Untertiteln auf, müssen die Untertitel erhalten bleiben: Sie lassen sich weiterhin anzeigen und werden synchron zum Ton wiedergegeben. Die Prüfschritte 7.1.1 „Wiedergabe von Untertiteln“ und 7.1.2 „Synchrone Untertitel“ bleiben damit erfüllt."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Nach Übertragung, Konvertierung oder Aufnahme sollen die Untertitel genauso nutzbar sein wie zuvor, also weiterhin anzeigbar und synchron zum Ton."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn das Webangebot Videos mitsamt Untertiteln übermittelt, umwandelt oder aufzeichnet."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Konvertiert oder zeichnet die Webseite Videos mit Untertiteln auf, das Ergebnis in einem konformen Player abspielen und prüfen:\n- Sind alle Untertitel der Quelle weiterhin vorhanden?\n- Lassen sie sich vollständig anzeigen?\n- Bleibt die Darstellung synchron zum Ton?"
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Tragen gestalterische Merkmale der Untertitel wie Position, Farbe, Fettung oder Kursivierung Bedeutung, lohnt es sich, sie nach Möglichkeit zu erhalten.\n\nAuf GitHub können Sie Hinweise zu diesem Prüfschritt [in einem Issue hinterlassen](https://github.com/BIK-BITV/BIK-Web-Test/issues)."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht erfüllt:",
+          "inhalt_markdown": "- Nach dem Übertragen, Konvertieren oder Aufnehmen lassen sich die Untertitel nicht mehr anzeigen oder laufen nicht mehr synchron zum Ton."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Dieser Prüfschritt beurteilt, ob Übertragung, Konvertierung oder Aufnahme die Anzeige oder Synchronität der Untertitel beeinträchtigen. Die Prüfschritte 7.1.1 „Wiedergabe von Untertiteln“ und 7.1.2 „Synchrone Untertitel“ betreffen dagegen Videos, die bereits auf der Webseite vorliegen."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "7.1.3 Preservation of captioning",
+          "inhalt_markdown": "> Where ICT transmits, converts or records video with synchronized audio, it\nshall preserve caption data such that it can be displayed in a manner\nconsistent with clauses 7.1.1 and 7.1.2.\n\nAdditional presentational aspects of the text such as screen position, text\ncolours, text style and text fonts may convey meaning, based on regional\nconventions.\nAltering these presentational aspects could change the meaning and should be\navoided wherever possible."
+        }
+      ]
+    }
+  ]
+}

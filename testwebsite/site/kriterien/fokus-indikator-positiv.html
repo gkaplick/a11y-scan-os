@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sichtbarer Fokus-Indikator (Positivbeispiel) · A11Y Test-Website</title>
+<link rel="stylesheet" href="/assets/styles.css">
+<style>button.fokus-sichtbar:focus, button.fokus-sichtbar:focus-visible { outline: 2px solid #005fcc; outline-offset: 2px; }</style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="seitenkopf">
+  <a class="marke" href="/index.html">A11Y Test-Website</a>
+  <p class="kategorie">Kategorie: Fokus &amp; Tastatur</p>
+</header>
+<nav aria-label="Hauptnavigation" class="hauptnav">
+  <a href="/index.html">Startseite</a>
+  <a href="/kriterien/fokus-indikator-positiv.html">Positivbeispiel</a>
+  <a href="/kriterien/fokus-indikator-negativ.html">Negativbeispiel</a>
+</nav>
+<main id="main">
+<span class="art-badge art-positiv">Positivbeispiel</span>
+<p class="kategorie">Kategorie: Fokus &amp; Tastatur</p>
+<h1>Sichtbarer Fokus-Indikator</h1>
+<p class="beschreibung">Der Tastaturfokus muss durch eine sichtbare Änderung erkennbar sein.</p>
+<p class="testids">Geprüfte Kriterien: <span class="testid">WCAG_2_4_7_FOCUS_INDICATOR</span>
+<span class="testid">BITV_9_2_4_7_AKTUELLE_POSITION_DES_FOKUS_DEUTLICH</span></p>
+<div class="beispiel art-positiv">
+<h2>Sichtbarer Fokus-Indikator</h2>
+<p><button type="button" class="fokus-sichtbar">Menü öffnen</button></p>
+</div><p class="hinweis">Zur Gegenprobe: <a href="/kriterien/fokus-indikator-negativ.html">Negativbeispiel ansehen</a></p>
+</main>
+<footer class="seitenfuss">
+  <p>A11Y Test-Website · Positivbeispiel · <a href="/index.html">Zur Übersicht</a> · <a href="/gebaerdensprache.html">Gebärdensprache</a> · <a href="/leichte-sprache.html">Leichte Sprache</a> · <a href="/erklaerung.html">Erklärung zur Barrierefreiheit</a></p>
+</footer>
+</body>
+</html>

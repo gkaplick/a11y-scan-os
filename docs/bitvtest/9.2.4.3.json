@@ -1,0 +1,74 @@
+{
+  "bitv_nummer": "9.2.4.3",
+  "titel": "Schlüssige Reihenfolge bei der Tastaturbedienung",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Bei der Tastaturbedienung sollen Verweise, Formularfelder und Objekte in einer nachvollziehbaren und stimmigen Abfolge angesteuert werden."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Die Bedienung soll geräteunabhängig möglich sein, also ebenso mit einem Zeiger (Maus, Touch-Geste) wie mit der Tastatur. Auch andere Eingabeformen wie Spracheingabe oder Schaltersteuerung hängen von einer guten Tastaturbedienbarkeit und einer sinnvollen Fokusreihenfolge ab.\n\nProbleme gibt es meist bei der Tastaturbedienung, da die meisten Nutzer mit der Maus arbeiten und oft nur daran gedacht wird. Zahlreiche Menschen mit motorischen Einschränkungen oder blinde Personen bedienen die Seite ausschließlich über die Tastatur. Lässt sich die Fokusreihenfolge nicht nachvollziehen, verlieren Nutzende rasch die Orientierung; die Tastaturbedienung wird dadurch spürbar mühsamer.\n\nManche Seiten fügen per JavaScript dynamische Inhalte ein. Hinweise auf fehlerhafte Formular-Eingaben oder eingeblendete Dialoge sind für sehende Nutzende sofort erkennbar, während Screenreader-Nutzende sie gar nicht oder erst spät wahrnehmen.\n\nWerden Elemente über DOM-Scripting ohne Neuladen der Seite dynamisch in den Quellcode eingefügt, soll das **unterhalb** des auslösenden Elements passieren, damit Screenreader die hinzugefügten Elemente bemerken und vorlesen. Werden Elemente an anderer Stelle eingefügt, etwa am Seitenende (häufig bei modalen Dialogen), müssen Skripte das Fokusmanagement sinnvoll steuern, um eine schlüssige Fokusreihenfolge zu gewährleisten."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, sobald die Seite Verweise, Formularfelder oder Objekte (etwa Menüs oder Dialoge, die sich nach Interaktion öffnen) enthält."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Seite im Firefox laden.\n2. - Mit der Tabulatortaste alle Verweise, Formularfelder und Objekte durchgehen und beurteilen, ob sich die Abfolge weitgehend nachvollziehen lässt.\n3. - Seite in Chrome öffnen und die Kontrolle erneut ausführen."
+        },
+        {
+          "titel": "2.1 Prüfung von dynamisch eingefügten Inhalten",
+          "inhalt_markdown": "Erzeugt die Seite per Interaktion neue Inhalte, die beim frischen Laden ohne CSS noch nicht sichtbar wären:\n\n1. - Seite im [Firefox](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#firefox) öffnen.\n2. - In den Browser-Einstellungen (Bereich \"Surfen\") die Einstellung \"Markieren von Text mit der Tastatur zulassen\" aktivieren; die Cursor-Position wird dann als blinkende Einfügemarke angezeigt und bildet den Screenreader-Fokus in der Regel nach.\n3. - Eingefügte Inhalte durch Formulareingabe oder das Betätigen einer Schaltfläche auslösen.\n4. - Das Entwicklerwerkzeug (für Firefox der *Inspektor*) öffnen, in der Menüleiste das Symbol mit dem Cursor auf einer Taste wählen und den eingefügten Inhalt antippen; das eingeblendete Fenster zeigt den generierten Quellcode im Zusammenhang.\n5. - Einordnung des eingefügten Elements im Quellcode prüfen.\n   - Fall 1: Das eingefügte Element steht im Quellcode **nach** dem auslösenden Element (siehe Abschnitt [3. Hinweise](#_3_hinweise)).\n   - Fall 2: Erzeugte Pseudo-Fenster (modale Dialoge) landen nicht direkt hinter dem Auslöser, sondern **woanders**, etwa ganz unten auf der Seite:\n     1. - Pseudo-Fenster schließen und es ausgehend vom auslösenden Element erneut mit der Tastatur öffnen.\n     2. - Nehmen Screenreader-Nutzende den neu hinzugefügten Inhalt wahr? Mögliche Signale sind etwa eine skriptgesteuerte Fokus-Verschiebung an den Anfang des Elements (die blinkende Einfügemarke steht dort), eine geänderte Beschriftung bzw. Eigenschaft des auslösenden Elements (etwa `disabled`) **sowie** der nächste Fokus beim Weiter-Tabben auf dem neuen Element.\n     3. - Kehrt der Fokus nach dem Schließen des Pseudo-Fensters zum auslösenden Element zurück?"
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Die Tab-Reihenfolge sollte sich weitgehend an der visuellen Anordnung orientieren. Kleinere Abweichungen sind unproblematisch, zumal sich aus der Bildschirmanordnung nicht immer zwingend eine Reihenfolge ableiten lässt.\n- Sie lässt sich kaum nachvollziehen, sobald sie über unsichtbare, ausführbare Elemente führt – vor allem über mehrere nicht sichtbare Sprunglinks hintereinander.\n- Ist die Reihenfolge schwer erkennbar, etwa weil die Fokushervorhebung unterdrückt wird, hilft das Bookmarklet [Show Tab Focus](https://codepen.io/jeffsmith/details/bebKpq) von Jeff Smith zur Hervorhebung der aktuellen Position.\n- Die Prüfung erfolgt bei **eingeschaltetem** JavaScript.\n- Prüfende müssen die Tastaturbedienung der Browser kennen. Wichtig: Formularfelder lassen sich ggf. trotz korrekter Auszeichnung nicht mit der Tabulatortaste durchwandern. Hat das Browserfenster nicht den Fokus, darf man nicht hineinklicken; der Fokus ist per Tastatur (F6) zum Fenster zu bewegen. Auswahllisten ohne Submit-Button, die auf `onchange` reagieren, sind mit den Pfeiltasten allein oft nicht bedienbar, weil bereits die erste Option ausgelöst wird; sie sind ggf. mit \"ALT + Pfeil nach unten\" zu öffnen, dann per Pfeiltasten zu durchblättern und mit der Eingabetaste auszuwählen.\n- Der [ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/) gibt Orientierung, welche Fokusreihenfolge bzw. welches Fokus-Management man bei bestimmten Widget-Arten erwarten darf."
+        },
+        {
+          "titel": "Zur Einfügung dynamisch generierter Inhalte unterhalb des auslösenden Elements",
+          "inhalt_markdown": "In manchen Fällen ist es sinnvoll, neu erzeugte Inhalte nicht direkt hinter dem auslösenden Element, sondern an tieferer Position der Seite einzufügen oder zu erneuern, etwa wenn unter einem mehrstufigen Suchformular dynamisch passende Treffer eingeblendet werden. Anschließend ist zu prüfen, ob sich das dynamische Verhalten bereits aus den Eingabefeldern bzw. Auswahllisten oder aus Hinweisen und Hilfetexten erschließen lässt."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "- Die per Tabulator angesteuerte Abfolge von Links, Formularelementen und Objekten lässt sich im Wesentlichen nachvollziehen und wirkt schlüssig."
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "- Die Tabulatorreihenfolge ist unlogisch, weicht grundlos von der visuellen Anordnung ab oder führt den Fokus durch mehr als drei nicht sichtbare Stationen in Folge.\n- Pseudofenster, die abseits der regulären Quellcodereihenfolge – etwa ganz unten – eingefügt werden, bekommen den Fokus weder direkt noch beim nächsten Tab-Schritt.\n- Nach dem Schließen eines Pseudofensters landet der Fokus nicht wieder auf dem auslösenden Element."
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Die per Tabulator angesteuerte Abfolge von Links, Formularelementen und Objekten ist nicht nachvollziehbar und erschwert die Tastaturbedienung erheblich."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Knowbility:[Let’s Focus on Slide-Out Navigation](https://knowbility.org/blog/2020/accessible-slide-menus)(March 2020)"
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "- In diesem Prüfschritt wird die **Tabreihenfolge** geprüft, unabhängig davon, ob sie der Anordnung der fokussierbaren Elemente im Quellcode entspricht oder über `tabindex` und Skripte erzeugt wird.\n- Ob interaktive Elemente grundsätzlich **erreichbar** und **auslösbar** sind, klärt Prüfschritt 9.2.1.1 \"Ohne Maus nutzbar\".\n- Wo der Fokus **sichtbar** wird, behandelt Prüfschritt 9.2.4.7 \"Aktuelle Position des Fokus deutlich\" (siehe dort)."
+        }
+      ]
+    }
+  ]
+}

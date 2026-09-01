@@ -1,0 +1,100 @@
+{
+  "bitv_nummer": "9.3.2.2",
+  "titel": "Keine unerwartete Kontextänderung bei Eingabe",
+  "wcag22": {
+    "guideline": "Guideline 3.2 Predictable: Make Web pages appear and operate in predictable ways",
+    "level": "A",
+    "success_criterion": "3.2.2 On Input",
+    "techniken": {
+      "General Techniques": [
+        "G80: Providing a submit button to initiate a change of context using a technology-specific technique listed below Hinweis: Die Technik G80 ist SC 3.2.2 zugeordnet, wird aber nur indirekt geprüft.",
+        "G13: Describing what will happen before a change to a form control that causes a change of context to occur is made"
+      ],
+      "HTML Techniques": [
+        "H32: Providing submit buttons Hinweis: Die Technik H32 ist SC 3.2.2 zugeordnet, wird aber nur indirekt geprüft.",
+        "H84: Using a button with a select element to perform an action"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Eingaben in Formularen dürfen keine unerwarteten Kontextänderungen auslösen. Ausgelöste Kontextwechsel müssen unterhalb des auslösenden Elements stattfinden, klar nachvollziehbar sein und den Fokus an Ort und Stelle lassen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Unerwartete, nicht angekündigte Kontextänderungen bei Formularinteraktionen (etwa wenn eine Checkbox oder ein Radio-Button eine neue Seite aufruft oder eine Auswahlliste ohne Submit-Button auf `onchange` reagiert) beeinträchtigen die Orientierung. Änderungen auf der Seite selbst lenken ab, verwirren oder bleiben unbemerkt (plötzlich veränderte Inhalte) und sollten deshalb erwartbar und nachvollziehbar sein. Erfolgen Kontextwechsel nicht **unterhalb** des auslösenden Elements, bleiben sie blinden Nutzenden häufig verborgen."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn die Seite Formularelemente enthält."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Seite im Browser (Chrome oder Firefox) öffnen.\n2. - Formularelemente (Checkboxen, Radio-Buttons, Auswahllisten) bedienen und prüfen, ob dabei unerwartete, nicht angekündigte Kontextänderungen entstehen.\n3. - Prüfen, ob sich Inhalte auf der Seite verändern (etwa das Einblenden zusätzlicher Formularfelder).\n4. - Sind die Änderungen begrenzt und nachvollziehbar oder werden sie **vor** dem auslösenden Element angekündigt beziehungsweise erklärt?\n5. - Prüfen, ob die Inhaltsänderungen **unterhalb** des auslösenden Elements erfolgen.\n6. - Kontrollieren, ob durch Formulareingaben ausgelöste Kontextwechsel den aktuellen Fokus verlagern."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Fehlermeldungen über die JavaScript-Funktion `alert()` gelten nicht als Pop-ups im Sinne dieses Prüfschritts: Sie antworten auf Nutzereingaben und sind modal, für die Orientierung also unproblematisch.\n\nÄnderungen über Skripte und *ARIA-Live-Regionen* — etwa automatisch eingeblendete Vorschläge unter dem Texteingabefeld einer Suchfunktion — sollen den Fokus nicht versetzen.\n\nZur Abgrenzung von Kontext- und Inhaltsänderungen:\n- Klare Kontextänderungen (*changes of context*) nach WCAG 2.1 umfassen den Sprung zu anderen Seiten, das Öffnen neuer Fenster, dynamisch geladene Inhalte auf derselben Seite, die wie eine neue Seite wirken oder in stark veränderter Anordnung erscheinen, sowie Sprunglinks zu Ankern auf derselben Seite.\n- Bloße Inhaltsänderungen (*changes of content*) liegen vor, wenn etwa die Auswahl in einer `select`-Liste die Inhalte einer darunterliegenden Auswahlliste aktualisiert (etwa die Wahl eines Kontinents aktualisiert eine Länderliste) oder zusätzliche Formularbereiche **unterhalb** des auslösenden Elements aufklappen, während Fokus und Scrollposition unverändert bleiben.\n\nOb eine Änderung *unerwartet* ist, lässt sich nur aus dem Gesamtkontext beurteilen.\n\nVergleiche auch das WCAG-2.1-Glossar: [changes of context](http://www.w3.org/TR/WCAG20/#context-changedef)"
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "- Formularelemente lösen bei ihrer Bedienung unerwartete, nicht angekündigte Kontextwechsel aus."
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Formulare senden sich automatisch ab, sobald der Fokus das Formular verlässt.\n- Das Umschalten einer Checkbox oder eines Radio-Buttons stößt automatisch einen unerwarteten Kontextwechsel an (etwa das Öffnen eines neuen Fensters)."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung von anderen Prüfschritten",
+          "inhalt_markdown": "Die in den Techniken [G80](https://www.w3.org/WAI/WCAG21/Techniques/general/G80.html) und [H32](https://www.w3.org/WAI/WCAG21/Techniques/html/H32.html) dem Success Criterion [3.2.2 On Input](https://www.w3.org/TR/WCAG21/#on-input) zugeordnete Verwendung von Submit-Buttons wird nur indirekt im Prüfschritt 9.2.1.1 „Ohne Maus nutzbar“ geprüft."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 3.2 Predictable: Make Web pages appear and operate in predictable ways](https://www.w3.org/TR/WCAG21/#predictable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [3.2.2 On Input](https://www.w3.org/TR/WCAG21/#on-input)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G80: Providing a submit button to initiate a change of context using a technology-specific technique listed below](https://www.w3.org/WAI/WCAG21/Techniques/general/G80.html) *Hinweis:*Die Technik G80 ist SC 3.2.2 zugeordnet, wird aber nur indirekt geprüft.\n                    - [G13: Describing what will happen before a change to a form control that causes a change of context to occur is made](https://www.w3.org/WAI/WCAG21/Techniques/general/G13.html)"
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H32: Providing submit buttons](https://www.w3.org/WAI/WCAG21/Techniques/html/H32.html) *Hinweis:*Die Technik H32 ist SC 3.2.2 zugeordnet, wird aber nur indirekt geprüft.\n                    - [H84: Using a button with a select element to perform an action](https://www.w3.org/WAI/WCAG21/Techniques/html/H84.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F36: Failure of Success Criterion 3.2.2 due to automatically submitting a form and presenting new content without prior warning when the last field in the form is given a value](https://www.w3.org/WAI/WCAG21/Techniques/failures/F36.html)\n                - [F37: Failure of Success Criterion 3.2.2 due to launching a new window without prior warning when the status of a radio button, check box or select list is changed](https://www.w3.org/WAI/WCAG21/Techniques/failures/F37.html)"
+        }
+      ]
+    }
+  ]
+}

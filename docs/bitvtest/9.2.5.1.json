@@ -1,0 +1,79 @@
+{
+  "bitv_nummer": "9.2.5.1",
+  "titel": "Alternativen für komplexe Zeiger-Gesten",
+  "wcag22": {
+    "guideline": "Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard",
+    "level": "A",
+    "success_criterion": "2.5.1 Pointer Gestures",
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Funktionen, die sich über pfadbasierte Zeiger-Gesten (etwa Wisch- oder Mehrpunktgesten) auslösen lassen, müssen sich auch durch eine einfache Zeigereingabe bedienen lassen.\n\n'Zeiger' umfasst indirekte Eingaben per Mauszeiger ebenso wie direkte Eingaben, etwa mit dem Finger auf dem Touchscreen oder dem Eingabestift auf einem Grafiktablett.\n\nAusgenommen bleiben Situationen, in denen eine Eingabe über Pfade oder mehrere Punkte unverzichtbar ist, etwa wenn Handschrift erkannt wird.\n\nZiehbewegungen (Dragging Motions), etwa beim Verschieben per Drag-and-Drop, zählen im Sinne dieser Anforderung nicht als pfadbasierte Geste.\n\nDie Vorgabe betrifft nur Gesten, die von Webinhalten gedeutet und verarbeitet werden, nicht Gesten zur Bedienung von Nutzeragenten oder Hilfsmitteln (etwa Browser-Navigation oder systemseitige Screenreader). Sie gilt auch nicht für Inhalte, deren Verhalten das Betriebssystem oder der Browser bestimmt, etwa scrollbare Bereiche über CSS `overflow:scroll`, für die kein Gestenverhalten per JavaScript festgelegt wurde und deren Scrollbalken nicht explizit versteckt sind.\n\nBeispiele für pfadbasierte Gesten:\n\n- Wischgeste, etwa zum Bewegen autor-definierter Slider-Bereiche oder zum Löschen von Inhalten\n- Bewegen eines selbst definierten Sliders, sofern erst eine Startrichtung gezogen werden muss, damit sich das Element verschiebt\n- Zeichnen eines Pfads, etwa die Geste 'Z' zum Rückgängig-Machen\n\nBeispiele für Gesten mit mehreren Punkten:\n\n- Zwei-Finger-Spreizgeste zum Zoomen (sofern der Webinhalt sie umsetzt und nicht der Browser)\n- \"Split tap\": ein Finger hält, der andere tippt\n- Mehrfinger-Streichen\n\n*Hinweis*: Ziehbewegungen ohne festgelegten Pfad (wie Drag-and-Drop) zählen nicht als pfadbasiert, da nur Start- und Zielpunkt festgelegt sind und der Weg dazwischen frei bleibt. Bewegt sich das Element mit dem gedrückten Zeiger (Maus-Cursor oder Finger) mit und ist keine Startrichtung nötig, liegt eine Ziehbewegung vor.\n\nAbhängig von der Prüfumgebung fällt die Unterscheidung unterschiedlich aus: Auf Touchscreens mobiler Systeme braucht es zum Verschieben horizontaler Slider meist eine anfängliche Bewegung nach rechts oder links, da eine senkrechte Bewegung sonst die Seite scrollt. In dieser Umgebung gilt die Slider-Bedienung als pfadbasiert und fällt damit unter diesen Prüfschritt."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Für Menschen mit Bewegungseinschränkungen sind komplexe Zeiger-Gesten oft schwer oder gar nicht zu bewältigen. Solche Gesten dürfen daher, wenn Webinhalte sie implementieren, nicht der einzige Weg zur Funktion sein. Beispiele sind Wischgesten vom Seitenrand zum Einblenden von Menüs, Wischgesten zum Verschieben autor-definierter Karussells bzw. Slider oder Mehrpunktgesten wie das Aufziehen zweier Finger, um einen Kartenausschnitt zu vergrößern."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt ist anwendbar, wenn Webinhalte Eventhandler implementieren, die auf komplexe Gesten (etwa Wisch- oder Mehrpunkt-Gesten) ansprechen. Ausgenommen sind Inhalte, deren Verhalten das Betriebssystem oder der Browser bestimmt."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Das Angebot auf einem Smartphone öffnen.\n2. - Mit Sichtprüfung und Ausprobieren klären, ob Webinhalte komplexe Gesten verwenden (etwa bei Karussells oder Slidern). Bewegen sich Slider oder andere Elemente, wenn per Wischgeste darüber gestrichen wird? Blenden sich Menüs oder andere Inhalte ein, wenn vom Seitenrand gewischt wird? Ändern bestimmte Elemente (etwa Karten) ihren Zoomfaktor bei der Zwei-Finger-Spreizgeste?\n3. - Prüfen, ob sich die per komplexer Geste erreichbare Funktion auch mit einfachen Zeigergesten auslösen lässt – etwa Tippen, Doppeltippen oder Tippen-und-Halten – etwa über statische Alternativen (beispielsweise Schaltflächen, die Slider verschieben, Werte ändern oder Menüs öffnen)."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Webinhalte können Alternativen zu einfachen Zeiger-Gesten ggf. nur in manchen Systemumgebungen und Benutzeragenten bereitstellen. So kann etwa ein Test auf einem mobilen Gerät nötig sein, um festzustellen, ob im Desktop-Browser angebotene Alternativen auch in mobilen Browsern verfügbar sind.\n- Nicht einbezogen sind Funktionen, die zwangsläufig und von Natur aus auf komplexen Pfaden oder Mehrpunktgesten beruhen, etwa die handschriftliche Unterschrift."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Prüfschritt erfüllt",
+          "inhalt_markdown": "- Für sämtliche von den Autoren umgesetzten komplexen Zeiger-Gesten existieren Alternativen über einfache Zeiger-Gesten in allen Umgebungen, die laut *Accessibility Baseline* geprüft werden."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard](https://www.w3.org/TR/WCAG21/#input-modalities)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [2.5.1 Pointer Gestures](https://www.w3.org/TR/WCAG21/#pointer-gestures)(Level A)"
+        },
+        {
+          "titel": "Sufficient Techniques",
+          "inhalt_markdown": "- [G215: Providing controls to achieve the same result as path based or multipoint gestures](https://www.w3.org/WAI/WCAG21/Techniques/general/G215)\n                - [G216: Providing single point activation for a control slider](https://www.w3.org/WAI/WCAG21/Techniques/general/G216)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F105: Failure of Success Criterion 2.5.1 due to providing functionality via a path-based gesture without simple pointer alternative](https://www.w3.org/WAI/WCAG21/Techniques/failures/F105)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Understanding Success Criterion 2.5.1: Pointer Gestures](https://www.w3.org/WAI/WCAG21/Understanding/pointer-gestures.html)(zur Zeit nur auf Englisch verfügbar)\n        - [Github-Issue zur Behandlung von scrollbaren Bereichen bezüglich Anforderungen nach 2.5.1 Ponter Gestures unfd 2.5.7 Dragging Movements](https://github.com/w3c/wcag/issues/2684). Das Ergebnis der langen Diskussion war, dass für Slider bzw. scrollbare Bereiche nur Alternativen gefordert werden, wenn das Verhalten über Scripts von Web-Autoren explizit definiert wurde und nicht vom Betriebssystem bzw. Browser gehandhabt wird.[https://github.com/w3c/wcag/issues/2684](https://github.com/w3c/wcag/issues/2684)"
+    }
+  ]
+}

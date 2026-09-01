@@ -1,0 +1,83 @@
+{
+  "bitv_nummer": "9.1.3.4",
+  "titel": "Keine Beschränkung der Bildschirmausrichtung",
+  "wcag22": {
+    "guideline": "Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure.",
+    "level": "AA",
+    "success_criterion": "1.3.4 Orientation",
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Webinhalte sollen sich an die von Nutzenden gewählte Ausrichtung des Ausgabegeräts anpassen: Sie sollen im Hoch- wie im Querformat dargestellt und nutzbar sein, außer eine bestimmte Ausrichtung ist unerlässlich. Unerlässlich kann die Ausrichtung etwa bei einem Bankcheck, einer Online-Klaviertastatur, Präsentationsfolien für Projektor oder Bildschirm oder bei VR-Inhalten ohne binäre Ausrichtung sein. Inhalte und Funktionen müssen in beiden Ausrichtungen nicht in der gleichen Form angeboten werden; in der anderen Ausrichtung können sie etwa erst nach dem Öffnen von Ausklappbereichen oder über Links auf andere Seiten zugänglich sein."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Für Menschen mit Behinderung ist die freie Wahl der Ausrichtung eines Ausgabegeräts (etwa eines Smartphones) oft besonders wichtig: Bei stark vergrößertem Text bietet das Querformat häufig ein besseres Leseerlebnis, weil mehr Wörter in eine Zeile passen. Manche Nutzende haben ihre Geräte zudem fest montiert, etwa am Arm eines Elektrorollstuhls. Websites und Anwendungen sollten die Darstellung deshalb nicht auf eine einzige Ausrichtung einschränken."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Wechsel der Bildschirmausrichtung ist immer zu prüfen, außer bei speziellen Inhalten, die nur in einer Ausrichtung funktionieren."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. Für die Prüfung ein aktuelles mobiles Gerät (etwa ein iPhone oder Android-Handy) heranziehen.\n2. Sicherstellen, dass die Ausrichtung auf dem Prüfgerät weder hardware- noch betriebssystemseitig gesperrt ist.\n3. Den zu prüfenden Inhalt im Browser Chrome (Android) oder Safari (iOS) in der ersten Ausrichtung neu laden.\n4. Prüfen, ob Inhalte dargestellt und nutzbar sind.\n5. Gerät um 90 Grad drehen und den Inhalt in der anderen Ausrichtung neu laden.\n6. Prüfen, ob Inhalte auch dort dargestellt und nutzbar sind; auftretende Beschränkungen beim Wechsel notieren, etwa Meldungen, die zum Wechsel in die jeweils andere Ausrichtung auffordern.\n7. Wird nur eine Ausrichtung unterstützt und erscheint in der anderen kein Inhalt, ein um 90 Grad gedrehter Inhalt oder eine Meldung zur Nutzung der anderen Ausrichtung, ist zu klären, ob der Inhalt die unterstützte Ausrichtung zwingend benötigt und in der anderen Ausrichtung also gar nicht oder nur unzureichend darstellbar wäre."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Eine dynamische Anpassung der Inhalte beim Wechsel der Ausrichtung wird nicht verlangt (auch wenn sie sinnvoll und bei responsiven Angeboten meist üblich ist); der Inhalt darf in beiden Ausrichtungen je neu geladen werden."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Prüfschritt erfüllt",
+          "inhalt_markdown": "- Beide Ausrichtungen werden unterstützt.\n- Oder: Es wird nur eine Ausrichtung angeboten, und diese ist für den Inhalt unbedingt erforderlich."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Im Mittelpunkt steht, wie anpassbar die Bildschirm-Ausrichtung ist; nicht bewertet wird die durch den Wechsel veränderte Verfügbarkeit von Inhalten oder Funktionalität. Diese behandeln 9.1.4.4 \"Text auf 200% vergrößerbar\" und 9.1.4.10 \"Inhalte brechen um\"."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure.](https://www.w3.org/TR/WCAG22/#adaptable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.3.4 Orientation](https://www.w3.org/TR/WCAG22/#orientation)(Level AA)"
+        },
+        {
+          "titel": "Sufficient Techniques",
+          "inhalt_markdown": "- [G214: Using a control to allow access to content in different orientations which is otherwise restricted](https://www.w3.org/WAI/WCAG22/Techniques/general/G214)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F97: Failure due to locking the orientation to landscape or portrait view](https://www.w3.org/WAI/WCAG22/Techniques/failures/F97.html)\n                - [F100: Failure of Success Criterion 1.3.4 due to showing a message asking to reorient device](https://www.w3.org/WAI/WCAG21/Techniques/failures/F100)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Understanding Success Criterion 1.3.4: Orientation](https://www.w3.org/WAI/WCAG22/Understanding/orientation.html)(zur Zeit nur auf Englisch verfügbar)"
+    }
+  ]
+}

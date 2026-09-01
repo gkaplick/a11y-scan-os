@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Information nicht nur durch Farbe (Negativbeispiel) · A11Y Test-Website</title>
+<link rel="stylesheet" href="/assets/styles.css">
+<style></style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="seitenkopf">
+  <a class="marke" href="/index.html">A11Y Test-Website</a>
+  <p class="kategorie">Kategorie: Kontrast &amp; Farbe</p>
+</header>
+<nav aria-label="Hauptnavigation" class="hauptnav">
+  <a href="/index.html">Startseite</a>
+  <a href="/kriterien/links-nicht-nur-farbe-positiv.html">Positivbeispiel</a>
+  <a href="/kriterien/links-nicht-nur-farbe-negativ.html">Negativbeispiel</a>
+</nav>
+<main id="main">
+<span class="art-badge art-negativ">Negativbeispiel</span>
+<p class="kategorie">Kategorie: Kontrast &amp; Farbe</p>
+<h1>Information nicht nur durch Farbe</h1>
+<p class="beschreibung">Links müssen sich außer durch die Farbe durch ein dauerhaftes Nicht-Farb-Merkmal vom Text abheben (Unterstreichung, Fettung ab halbfett, Marker-Hintergrund, Icon) — oder bei ≥ 3:1 Kontrast zur umgebenden Textfarbe bei Hover/Fokus zusätzlich hervorgehoben werden (BITV/G183-Ausnahme).</p>
+<p class="testids">Geprüfte Kriterien: <span class="testid">WCAG_1_4_1_COLOR_ONLY</span>
+<span class="testid">BITV_9_1_4_1_OHNE_FARBEN_NUTZBAR</span></p>
+<div class="beispiel art-negativ">
+<h2>Link nur durch Farbe erkennbar (Kontrast &lt; 3:1)</h2>
+<p>Weitere Informationen finden Sie <a href="/index.html" style="color:#555;text-decoration:none">in den Unterlagen</a>.</p>
+</div>
+
+<div class="beispiel art-negativ">
+<h2>≥ 3:1 Kontrast, aber ohne Hover/Fokus-Unterstreichung</h2>
+<p style="color:#666">Die Details finden Sie im <a class="g183-fail" href="/index.html" style="color:#000">Zusatzdokument</a>.</p>
+</div>
+
+<div class="beispiel art-negativ">
+<h2>Icon erscheint nur bei Hover (nicht dauerhaft)</h2>
+<p>Weiter im <a class="icon-hover-only" href="/index.html" style="color:#555;text-decoration:none">Handbuch</a>.</p>
+</div><p class="hinweis">Zur Gegenprobe: <a href="/kriterien/links-nicht-nur-farbe-positiv.html">Positivbeispiel ansehen</a></p>
+</main>
+<footer class="seitenfuss">
+  <p>A11Y Test-Website · Negativbeispiel · <a href="/index.html">Zur Übersicht</a> · <a href="/gebaerdensprache.html">Gebärdensprache</a> · <a href="/leichte-sprache.html">Leichte Sprache</a> · <a href="/erklaerung.html">Erklärung zur Barrierefreiheit</a></p>
+</footer>
+</body>
+</html>

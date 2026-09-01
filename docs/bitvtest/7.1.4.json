@@ -1,0 +1,62 @@
+{
+  "bitv_nummer": "7.1.4",
+  "titel": "Untertitel-Anpassungen",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Enthält das Webangebot Videos mit Untertiteln, müssen sich die Untertitel anpassen lassen, etwa in der Schriftgröße."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Wer Untertitel nutzt, profitiert von Anpassungsmöglichkeiten der Darstellung, etwa einer größeren Schrift oder einem erhöhten Textkontrast."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn das Webangebot Videos mit zuschaltbaren Untertiteln (closed captions) enthält. Für fest ins Videobild eingebettete Untertitel (open captions) ist er nicht anwendbar."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Webangebot öffnen.\n2. - Ein Video mit Untertiteln abspielen.\n3. - Bei zuschaltbaren Untertiteln prüfen, ob sich deren Darstellung anpassen lässt, etwa Schriftgröße, Schriftart, Vorder- und Hintergrundfarbe oder Transparenz des Untertitelbereichs.\n\nAuf GitHub können Sie Hinweise zu diesem Prüfschritt [in einem Issue hinterlassen](https://github.com/BIK-BITV/BIK-Web-Test/issues)."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Welche Einstellmöglichkeiten verlangt werden, legt die Norm nicht fest. Sie nennt beispielhaft Hinter- und Vordergrundfarbe, Schriftart, Größe, Transparenz des Untertitelbereichs und Schriftkontur.\n- Erfüllt ist der Prüfschritt auch, wenn sich die Darstellung nicht über den Player, sondern über Browser- oder Systemeinstellungen ändern lässt, etwa wenn Schriftvergrößerung oder Farb-Schemata des Browsers auf die Untertitel wirken."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht erfüllt:",
+          "inhalt_markdown": "- Für zuschaltbare Untertitel (closed captions) fehlen Anpassungsmöglichkeiten vollständig, etwa für Position, Textgröße, Farben, Textstil oder Schriftart."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 v.3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "7.1.4 Captions characteristics",
+          "inhalt_markdown": "> Where ICT displays captions, it shall provide a way\nfor the user to adapt the displayed characteristics of captions\nto their individual requirements,\nexcept where the captions are displayed as unmodifiable characters.\n\nNOTE 1: Defining the background and foreground colour of subtitles,\nfont type, size opacity of the background box of subtitles,\nand the contour or border of the fonts can contribute\nto meeting this requirement.\n\nNOTE 2: Subtitles that are bitmap images are examples of unmodifiable characters."
+        }
+      ]
+    }
+  ]
+}

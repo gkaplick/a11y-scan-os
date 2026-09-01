@@ -1,0 +1,79 @@
+{
+  "bitv_nummer": "9.4.1.3",
+  "titel": "Statusmeldungen programmatisch verfügbar",
+  "wcag22": {
+    "guideline": "Guideline 4.1 Compatible: Maximize compatibility with current and future user agents, including assistive technologies.",
+    "level": "AA",
+    "success_criterion": "4.1.3 Status messages",
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Statusmeldungen sind Nachrichten, die zur Laufzeit in eine Seite eingefügt werden — etwa über den Erfolg oder das Ergebnis einer Aktion, den Fortschritt eines Prozesses oder aufgetretene Fehler. Erzeugen Webangebote Statusmeldungen, müssen visuell eingeblendete Meldungen über passende Rollen und Eigenschaften ausgezeichnet und für Programme ermittelbar sein; assistive Technologien (Screenreader) präsentieren sie den Nutzenden, ohne den Fokus zu verschieben.\n\nBeispiele für Statusmeldungen:\n\n- Ware wurde im Shop dem Warenkorb hinzugefügt\n- 3 Bücher der Merkliste hinzugefügt\n- Erfolgsmeldung nach dem Absenden eines Formulars\n- 5 Treffer in der Suchergebnisliste (etwa nach einer Filterung)\n- 3 Fehler im Formular (bei clientseitiger Validierung, ohne die Seite neu zu laden)\n- Punktestand geändert\n- Seite wird geladen (bei visueller Ladeanzeige oder Fortschrittsbalken)"
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Sehende Nutzende bekommen in vielen Nutzungskontexten Statusmeldungen zu sehen — manche nur kurz —, die das Ergebnis von Interaktionen oder den Ausgang von Transaktionen melden (etwa wie viele Treffer eine gefilterte Suchergebnisliste enthält). Für nicht-visuelle Nutzende sind diese Meldungen genauso bedeutsam; assistive Technologien müssen sie übermitteln, damit die Nutzenden sie wahrnehmen, ohne Fokus oder Standort zu verlagern."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn die Webinhalte Statusmeldungen erzeugen, die keinen Fokus erhalten. Er findet keine Anwendung, wenn Meldungen bei Kontextänderungen erscheinen — etwa wenn eine Seite nach dem Absenden eines Formulars neu lädt und anschließend vor dem Formular eine Fehlermeldung erscheint."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Statusmeldungen auslösen, indem Eingaben vorgenommen werden, die solche Meldungen erzeugen.\n2. - Bei Meldungen nach Formularabsendung prüfen, ob durch das Absenden die Seite neu lädt oder die Meldung in die bestehende Seite eingefügt wird. Dazu in den Firefox-Developer-Tools den Reiter „Netzwerkanalyse” öffnen und nach Auslösen der Meldung prüfen, ob ein Eintrag vom Typ „html” vorliegt (gegebenenfalls das Protokoll nach Typ „html” filtern). Alternativ in Chrome den Reiter „Netzwerk” wählen und das Protokoll nach Typ „Doc” filtern. Erfolgt stattdessen ein Neuladen der Seite, ist der Prüfschritt nicht anwendbar.\n3. - Wurde die Seite nicht neu geladen, per Analyse des Quelltextes prüfen, ob der Container der Statusmeldung als ARIA-Live-Region markiert ist.\n4. - Die Ausgabe zusätzlich mit dem Screenreader prüfen: Eingaben vornehmen, die Statusmeldungen erzeugen (beziehungsweise automatisch generierte Meldungen abwarten) und prüfen, ob die Meldung beim Erscheinen ausgegeben wird, ohne dass der Fokus auf sie versetzt wird."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Nicht als Statusmeldung gelten:\n\n- Fehlermeldungen über Dialoge (Kontextänderung durch Fokusumsetzung)\n- Das Hinzufügen von Bedienelementen wie zusätzlichen Formularelementen\n\nOb der Screenreader eine Statusmeldung wirklich vorliest, hängt von Browser und Screenreader ab — etwa davon, ob die Meldung nachträglich in einen vorhandenen Container geschrieben wird oder ob vor ihrer Ausgabe eine kurze Verzögerung festgelegt ist. Damit unterschiedliche Umgebungen die Meldungen möglichst gut unterstützen:\n\n- Beim Seitenaufruf sollte bereits ein (leerer) Container im DOM stehen, der als Live-Region ausgezeichnet ist.\n- Die Textänderung sollte erst in den vorhandenen Container geschrieben oder aktualisiert werden, wenn die Aktualisierung ausgelöst wird.\n\nHinweis zur Verwendung von `role=\"status\"`: Die ARIA-Technik [ARIA 22: Using role=status to present status messages](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA22.html#examples) aus den Web Content Accessibility Guidelines (WCAG 2.1) erläutert an einem Beispiel (Beispiel 2) das Aktualisieren eines Warenkorbs. Damit der Screenreader NVDA in Firefox die Meldung ausgibt, ist derzeit (Stand April 2021) zusätzlich `aria-atomic=\"true\"` nötig (auch wenn die Technik das nicht formuliert)."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "- Alle Statusmeldungen sind korrekt markiert und dadurch programmatisch zugänglich."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 4.1 Compatible: Maximize compatibility with current and future user agents, including assistive technologies.](https://www.w3.org/TR/WCAG21/#compatible)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [4.1.3 Status messages](https://www.w3.org/TR/WCAG21/#status-messages)(Level AA)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": "**Situation A:**If a status message advises on the success or results of an\n  action, or the state of an application:\n\n                - [ARIA22: Using role=status to present status messages](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA22)in combination with any of the following: - [G199: Providing success feedback when data is submitted successfully](https://www.w3.org/WAI/WCAG21/Techniques/general/G199)\n\n                        - [G199: Providing success feedback when data is submitted successfully](https://www.w3.org/WAI/WCAG21/Techniques/general/G199)\n\n**Situation B:**If a status message conveys a suggestion, or a warning on the\n  existence of an error:\n\n                - [ARIA19: Using ARIA role=alert or Live Regions to Identify Errors](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA19)in combination with any of the following: - [G83: Providing text descriptions to identify required fields that were not completed](https://www.w3.org/WAI/WCAG21/Techniques/general/G83) - [G84: Providing a text description when the user provides information that is not in the list of allowed values](https://www.w3.org/WAI/WCAG21/Techniques/general/G84) - [G85: Providing a text description when user input falls outside the required format or values](https://www.w3.org/WAI/WCAG21/Techniques/general/G85) - [G177: Providing suggested correction text](https://www.w3.org/WAI/WCAG21/Techniques/general/G177) - [G194: Providing spell checking and suggestions for text input](https://www.w3.org/WAI/WCAG21/Techniques/general/G194)\n\n                        - [G83: Providing text descriptions to identify required fields that were not completed](https://www.w3.org/WAI/WCAG21/Techniques/general/G83)\n                        - [G84: Providing a text description when the user provides information that is not in the list of allowed values](https://www.w3.org/WAI/WCAG21/Techniques/general/G84)\n                        - [G85: Providing a text description when user input falls outside the required format or values](https://www.w3.org/WAI/WCAG21/Techniques/general/G85)\n                        - [G177: Providing suggested correction text](https://www.w3.org/WAI/WCAG21/Techniques/general/G177)\n                        - [G194: Providing spell checking and suggestions for text input](https://www.w3.org/WAI/WCAG21/Techniques/general/G194)\n\n**Situation C:**If a status message conveys information on the progress of a\n  process:\n\n                - [ARIA23: Using role=log to identify sequential information updates](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA23)\n                - [ARIA22: Using role=status to present status messages](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA22)in combination with[G193: Providing help by an assistant in the Web page](https://www.w3.org/WAI/WCAG21/Techniques/general/G193)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F103: Failure of Success Criterion 4.1.3 due to providing status messages that cannot be programmatically determined through role or properties](https://www.w3.org/WAI/WCAG21/Techniques/failures/F103)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Understanding Success Criterion 4.1.3 Status Messages](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)(zur Zeit nur auf Englisch verfügbar)\n        - W3C-Definition einer Statusmeldung:[https://www.w3.org/TR/WCAG/#dfn-status-messages](https://www.w3.org/TR/WCAG/#dfn-status-messages)\n        - W3C-Definition einer Live-Region:[https://www.w3.org/TR/wai-aria/#dfn-live-region](https://www.w3.org/TR/wai-aria/#dfn-live-region)\n        - ARIA 1.1 Spezifikation:[https://www.w3.org/TR/wai-aria-1.1/](https://www.w3.org/TR/wai-aria-1.1/)"
+    }
+  ]
+}

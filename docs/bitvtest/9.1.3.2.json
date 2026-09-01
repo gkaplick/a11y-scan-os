@@ -1,0 +1,116 @@
+{
+  "bitv_nummer": "9.1.3.2",
+  "titel": "Sinnvolle Reihenfolge",
+  "wcag22": {
+    "guideline": "Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure.",
+    "level": "A",
+    "success_criterion": "1.3.2 Meaningful Sequence",
+    "techniken": {
+      "General Techniques": [
+        "G57 Ordering the content in a meaningful sequence"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Die Inhalte einer Seite sollen so geordnet sein, dass sie unabhängig von der Darstellung in einer logischen und nutzbaren Reihenfolge erscheinen; inhaltlich Zusammengehörendes (etwa eine Überschrift samt den zugehörigen Inhalten darunter) soll nicht auseinandergerissen werden. Per CSS versteckte Seiteninhalte sollen an passender Position im Seitenquelltext auftauchen. Dynamische Inhalte, die zunächst visuell verborgen sind, müssen ebenfalls vor dem Screenreader verborgen bleiben, damit sie die Lesereihenfolge nicht stören. Entscheidend ist nicht, ob die Seite ohne CSS eine verständliche Lesereihenfolge hat – ohne CSS sind Inhalte oft schlecht lesbar, es kommt zu Überlappungen oder auseinandergerissenen Inhalten. Maßgeblich ist, ob bei eingeschaltetem CSS die Lesereihenfolge im Screenreader nachvollziehbar bleibt."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Screenreader lesen die auf dem Bildschirm in der Fläche angeordneten Elemente nacheinander vor – in der Abfolge, in der sie im Quellcode stehen. Die Reihenfolge der Elemente muss deshalb gut verständlich und nutzbar sein."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar, wenn CSS verwendet wird – insbesondere für die Positionierung von Inhalten – sowie bei dynamisch eingeblendeten oder eingefügten Inhalten."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Lesereihenfolge für Screenreader-Nutzende",
+          "inhalt_markdown": "- Seite im Chrome oder Firefox aufrufen.\n- Anhand des Quellcodes die Lesereihenfolge der Elemente im DOM prüfen.\n- Gegebenenfalls zusätzlich NVDA aktivieren und die Seiteninhalte im Lesemodus (mit Abwärts-Pfeiltaste) durchlaufen.\n- Treten störende Linearisierungsprobleme auf? Etwa wenn Beschriftungen erst nach dem zugehörigen Eingabefeld ausgegeben werden.\n- Sind standardmäßig visuell ausgeblendete Inhalte wie Ausklappmenüs, Ausklappbereiche oder Dialoge mit passenden Techniken für Screenreader-Nutzende verborgen?"
+        },
+        {
+          "titel": "2.2 Prüfung der Linearisierbarkeit von Layouttabellen",
+          "inhalt_markdown": "Werden Tabellen für Layoutzwecke (die Anordnung von Elementen) eingesetzt, müssen sie sich linearisieren lassen.\n\n- Seite im Firefox anzeigen.\n- Mit der Web Developer Toolbar über *Miscellaneous > Linearize page* die Seitenstruktur und damit die der Layouttabelle linearisieren.\n- Prüfen, ob die lineare Abfolge der sichtbaren Inhalte sinnvoll ist."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Reihenfolge von Inhalten",
+          "inhalt_markdown": "Die visuelle Platzierung der Seitenelemente muss nicht mit der Reihenfolge im Quelltext übereinstimmen; sichtbare Inhalte sollen sich in der Regel in derselben Abfolge wie im Quelltext präsentieren. Bei der CSS-Layout-Technik `grid` gibt es hier häufig Probleme. In manchen Fällen sind bewusste Abweichungen akzeptabel, etwa wenn bei Meldungen in einem News-Bereich das Datum optisch oberhalb der Überschrift platziert ist, in der Lesereihenfolge aber nachfolgt, oder bei Überschriften mit Dachzeilen, deren Ausgabe erst nach der Überschrift sinnvoll ist. Kriterium ist immer: Sind die Inhalte in der ausgegebenen Reihenfolge nachvollziehbar?"
+        },
+        {
+          "titel": "Dynamische Elemente",
+          "inhalt_markdown": "Dynamische Elemente sind oft nur visuell ausgeblendet, bleiben aber für den Screenreader im Lesemodus zugänglich, weil sie nicht mit passenden Mitteln wie `display:none` versteckt wurden. Screenreader-Nutzende müssen dann lange Inhaltslisten (etwa Navigationsmenüs) durchgehen; sehbehinderte Nutzende erleben zusätzlich, dass visuelle Inhalte und Screenreader-Ausgabe nicht mehr zusammenpassen."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "- Die Lesereihenfolge weicht von der visuellen ab, wodurch Inhalte unverständlich werden oder Zuordnungen (etwa von Beschriftung und Feld) in der Screenreader-Ausgabe fehlerhaft sind.\n- Visuell versteckte Elemente wie Ausklappmenüs oder Dialoge sind nicht für Screenreader-Nutzende verborgen."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "- Custom controls, die zum Beispiel Benutzerschnittstellen aus positionierten `div`s mit Hintergrundbildern aufbauen, decken bestehende Prüfkriterien bereits implizit ab, zum Beispiel 9.2.4.7 \"Aktuelle Position des Fokus deutlich\" und 9.4.1.2 \"Name, Rolle, Wert verfügbar\".\n- Die korrekte Reihenfolge im Quelltext dynamisch erzeugter oder eingeblendeter Elemente wird in 9.2.4.3 \"Schlüssige Reihenfolge bei der Tastaturbedienung\" kontrolliert."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure.](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=131#adaptable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.3.2 Meaningful Sequence](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=131#meaningful-sequence)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G57 Ordering the content in a meaningful sequence](https://www.w3.org/WAI/WCAG22/Techniques/general/G57.html)"
+        },
+        {
+          "titel": "CSS Techniques",
+          "inhalt_markdown": "- [C6 Positioning content based on structural markup](https://www.w3.org/WAI/WCAG22/Techniques/css/C6.html)\n                - [C8 Using CSS letter-spacing to control spacing within a word](https://www.w3.org/WAI/WCAG22/Techniques/css/C8.html)\n                - [C27: Making the DOM order match the visual order](https://www.w3.org/WAI/WCAG22/Techniques/css/C27.html)"
+        },
+        {
+          "titel": "Scripting Techniques",
+          "inhalt_markdown": "- [SCR21: Using functions of the Document Object Model (DOM) to add content to a page](https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR21.html)\n                - [SCR28: Using an expandable and collapsible menu to bypass block of content](https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR28.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F1: Failure of Success Criterion 1.3.2 due to changing the meaning of content by positioning information with CSS](https://www.w3.org/WAI/WCAG22/Techniques/failures/F1.html)\n                - [F32: Failure of Success Criterion 1.3.2 due to using white space characters to control spacing within a word](https://www.w3.org/WAI/WCAG22/Techniques/failures/F32.html)\n                - [F34: Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to format tables in plain text content](https://www.w3.org/WAI/WCAG22/Techniques/failures/F34.html)\n                - [F49 Failure of Success Criterion 1.3.2 due to using an HTML layout table that does not make sense when linearized](https://www.w3.org/WAI/WCAG22/Techniques/failures/F49.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Grid by example](https://gridbyexample.com/)(Rachel Andrew)"
+    }
+  ]
+}

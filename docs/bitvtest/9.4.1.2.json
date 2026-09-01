@@ -1,0 +1,125 @@
+{
+  "bitv_nummer": "9.4.1.2",
+  "titel": "Name, Rolle, Wert verfügbar",
+  "wcag22": {
+    "guideline": "Guideline 4.1 Compatible: Maximize compatibility with current and future user agents, including assistive technologies.",
+    "level": "A",
+    "success_criterion": "4.1.2 Name, Role, Value",
+    "techniken": {
+      "General Techniques": [
+        "G10: Creating components using a technology that supports the accessibility API features of the platforms on which the user agents will be run to expose the names and roles, allow user-settable properties to be directly set, and provide notification of changes",
+        "G108: Using markup features to expose the name and role, allow user-settable properties to be directly set, and provide notification of changes",
+        "G135: Using the accessibility API features of a technology to expose names and roles, to allow user-settable properties to be directly set, and to provide notification of changes"
+      ],
+      "HTML Techniques": [
+        "H64: Using the title attribute of the frame and iframe elements",
+        "H91: Using HTML form controls and links"
+      ],
+      "ARIA Techniques": [
+        "ARIA4: Using a WAI-ARIA role to expose the role of a user interface component",
+        "ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component",
+        "ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used",
+        "ARIA16: Using aria-labelledby to provide a name for user interface controls"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Selbst gestaltete Komponenten einer Website — also Elemente oder Widgets, die nicht auf interaktiven HTML-Elementen beruhen — müssen so umgesetzt sein, dass die semantischen Informationen Name, Rolle und Eigenschaften vorhanden sind. Werden nicht semantische Elemente wie `div` oder `span` per JavaScript zu Bedienelementen umfunktioniert, liefert WAI-ARIA die nötige Semantik. Verändert sich der Zustand eines Bedienelements, muss sich das nicht nur im Erscheinungsbild über CSS und JavaScript zeigen: Auch die ARIA-Attributwerte sind per Skript anzupassen, damit die Semantik für nicht-visuelle Nutzung verfügbar bleibt."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Gängige HTML-Bedienelemente — etwa Links (`a`-Element) sowie Formularelemente wie `input`, `button` oder Checkboxen — bringen Namen, Rolle, Wert und Zustände mit, sofern sie spezifikationskonform umgesetzt sind, und bleiben für Hilfsmittel wie Screenreader erkennbar. Blinde Nutzende bemerken so etwa beim Tabben auf einen Link, worum es sich handelt, und können ihm folgen; auch Zustände wie der einer gesetzten oder ungesetzten Checkbox werden vermittelt. Interaktive Schaltflächen sind darum möglichst als native HTML-Elemente umzusetzen, damit ihre Bedeutung erkennbar bleibt.\n\nWerden nicht semantische Elemente wie `div` oder `span` per Skript zu Links oder Bedienelementen gemacht, liefert WAI-ARIA die nötige Semantik. Das betrifft auch Widgets wie Tabpanels oder Akkordeons, die es in nativem HTML nicht gibt: ARIA-Attribute übermitteln die semantischen Informationen vom Browser an die assistiven Technologien."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn die Seite interaktive Bedienelemente umfasst — Links, Formularelemente oder programmierte Elemente, die auf `onclick` oder andere Event-Handler reagieren."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Seite im Firefox öffnen.\n2. - Die Semantik der Bedienelemente prüfen: Sind offensichtliche Links oder Schaltflächen ohne `href`-Attribut vorhanden (erkennbar etwa über die [Web Developer Toolbar](http://www.bitvtest.de/werkzeugliste-2011#webdeveloper) mit *Information > Verweisdetails anzeigen*)? Weichen Checkboxen oder Radio-Buttons von der systemüblichen Darstellung ab, weil sie mit Elementen wie `div` oder `img` nachgebildet wurden? Gibt es selbstgebaute Widgets wie Schieberegler oder Tabpanels?\n3. - Über die Developer Tools prüfen, ob Name, Eigenschaften und gegebenenfalls Zustände über WAI-ARIA abgebildet werden. Zustandsänderungen müssen sich in geänderten Attributwerten widerspiegeln. Auch Zustandswechsel, die grafisch über den skriptgesteuerten Austausch von Bildern statt über Bedienelemente umgesetzt werden, müssen sinnvolle Änderungen der `alt`-Texte beziehungsweise der WAI-ARIA-Eigenschaften erzeugen."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Im Zweifelsfall den [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) heranziehen.\n- Unsemantische Elemente wie `span` oder `div` sind nur dann per Tastatur fokussierbar, wenn das `tabindex`-Attribut gesetzt wurde; andernfalls bleibt nur die Untersuchung mit dem Cursor-Werkzeug des aViewers.\n- Für die Prüfung komplexer Widgets sollte ergänzend ein Screenreader genutzt werden.\n- Bei dynamisch eingeblendeten Inhalten — etwa den Ausklapplisten von Comboboxen — kann es helfen, das laufende Skript anzuhalten. Dazu eignet sich die Eingabe von `setTimeout(function(){debugger}, 5000);` in der Konsole der Entwicklerwerkzeuge (F12), unmittelbar bevor die Inhalte aufgerufen werden; fünf Sekunden nach Aktivierung stoppt die Ausführung des Seitenskripts und die dynamischen Elemente lassen sich nur noch über die Entwicklerwerkzeuge untersuchen."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Wichtige Bedienelemente sind aus unsemantischen HTML-Elementen oder `a`-Elementen ohne `href`-Attribut gebaut, ohne dass die Semantik per WAI-ARIA nachgebildet wurde."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung von anderen Prüfschritten",
+          "inhalt_markdown": "Dieser Prüfschritt bewertet nicht die Tastaturbedienbarkeit geskripteter Bedienelemente; das ist Gegenstand von Prüfschritt 9.2.1.1 „Ohne Maus nutzbar“."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 4.1 Compatible: Maximize compatibility with current and future user agents, including assistive technologies.](https://www.w3.org/TR/WCAG21/#compatible)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G10: Creating components using a technology that supports the accessibility API features of the platforms on which the user agents will be run to expose the names and roles, allow user-settable properties to be directly set, and provide notification of changes](https://www.w3.org/WAI/WCAG21/Techniques/general/G10.html)\n                    - [G108: Using markup features to expose the name and role, allow user-settable properties to be directly set, and provide notification of changes](https://www.w3.org/WAI/WCAG21/Techniques/general/G108.html)\n                    - [G135: Using the accessibility API features of a technology to expose names and roles, to allow user-settable properties to be directly set, and to provide notification of changes](https://www.w3.org/WAI/WCAG21/Techniques/general/G135.html)"
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H64: Using the title attribute of the frame and iframe elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H64.html)\n                    - [H91: Using HTML form controls and links](https://www.w3.org/WAI/WCAG21/Techniques/html/H91.html)"
+        },
+        {
+          "titel": "ARIA Techniques",
+          "inhalt_markdown": "- [ARIA4: Using a WAI-ARIA role to expose the role of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA4.html)\n                    - [ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA5.html)\n                    - [ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA14.html)\n                    - [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA16.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F15: Failure of Success Criterion 4.1.2 due to implementing custom controls that do not use an accessibility API for the technology, or do so incompletely](https://www.w3.org/WAI/WCAG21/Techniques/failures/F15.html)\n                - [F20: Failure of Success Criterion 1.1.1 and 4.1.2 due to not updating text alternatives when changes to non-text content occur](https://www.w3.org/WAI/WCAG21/Techniques/failures/F20.html)\n                - [F59: Failure of Success Criterion 4.1.2 due to using script to make div or span a user interface control in HTML](https://www.w3.org/WAI/WCAG21/Techniques/failures/F59.html)\n                - [F79: Failure of Success Criterion 4.1.2 due to the focus state of a user interface component not being programmatically determinable or no notification of change of focus state available](https://www.w3.org/WAI/WCAG21/Techniques/failures/F79.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "WAI-ARIA Spezifikation",
+          "inhalt_markdown": "- [https://www.w3.org/TR/wai-aria/](https://www.w3.org/TR/wai-aria/)\n            - [Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria-1.1/)(zur Zeit*Candidate Recommendation*)"
+        },
+        {
+          "titel": "ARIA in HTML",
+          "inhalt_markdown": "- [ARIA in HTML](https://www.w3.org/TR/html-aria/)"
+        },
+        {
+          "titel": "ARIA-Widgets",
+          "inhalt_markdown": "- [ARIA Authoring Practice Guide (APG)](https://www.w3.org/WAI/ARIA/apg/)"
+        }
+      ]
+    }
+  ]
+}

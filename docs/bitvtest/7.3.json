@@ -1,0 +1,61 @@
+{
+  "bitv_nummer": "7.3",
+  "titel": "Bedienelemente für Untertitel und Audiodeskription",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Gibt ein Videoplayer Videoinhalte samt zugehöriger Audiospur wieder, müssen die Schalter für Untertitel und Audiodeskription auf derselben Bedienebene erreichbar sein wie die Steuerelemente der Wiedergabe (etwa Abspielen, Pause, Lautstärke)."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Videoplayer bieten viele Interaktionsmöglichkeiten; am wichtigsten sind die Bedienelemente der Wiedergabekontrolle, die deshalb prominent auf der obersten Interaktionsebene liegen. Für Menschen, die darauf angewiesen sind, sind auch die Bedienelemente zum Ein- und Ausblenden der Untertitel sowie zum Starten und Stoppen der Audiodeskription zentral. Damit sie leicht zu finden sind, müssen sie ebenfalls auf der obersten Interaktionsebene platziert sein."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn die Webseite einen Videoplayer mit entwicklerdefinierten Bedienelementen einbindet, der Videos mit zugehörigem Ton abspielt, und Untertitel und/oder Audiodeskription angeboten werden. Nicht anwendbar ist er, wenn ein nativer Videoplayer über das `video`-Element die Bedienelemente vom Browser erhält und der Entwickler sie nicht beeinflussen kann."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Den Player starten und das Video abspielen lassen.\n2. - Prüfen, ob die Schalter für Untertitel und/oder Audiodeskription auf derselben Ebene angeordnet sind wie die Wiedergabesteuerung (etwa Abspielen, Pause, Lautstärke)."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Ist 7.3 „Bedienelemente für Untertitel und Audiodeskription“ erfüllt, sind auch 7.1.1 „Wiedergabe von Untertiteln“ und 7.2.1 „Wiedergabe von Audiodeskription“ erfüllt.\n\nKommentare und Fragen zu diesem Prüfschritt nimmt das Projektteam auf [GitHub entgegen](https://github.com/BIK-BITV/BIK-Web-Test/issues)."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht erfüllt:",
+          "inhalt_markdown": "- Die Schalter für Untertitel und Audiodeskription liegen nicht auf derselben Interaktionsebene wie die Bedienelemente der Wiedergabekontrolle."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Hier ist entscheidend, **wo** die Schalter für Untertitel und Audiodeskription platziert sind. Prüfschritt 7.2.1 „Wiedergabe von Audiodeskription“ verlangt dagegen, dass überhaupt entsprechende Bedienelemente existieren."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.1.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "7.3 User controls for captions and audio description",
+          "inhalt_markdown": "> Where ICT primarily displays materials containing video with associated audio\ncontent, user controls to activate subtitling and audio description shall be\nprovided to the user at the same level of interaction (i.e. the number of\nsteps to complete the task) as the primary media controls.\n\nNOTE 1:\nPrimary media controls are the set of controls that the user most commonly\nuses to control media.\n\nNOTE 2:\nProducts that have a general hardware volume control, such as a telephone, or\na laptop which can be configured to display video through Web-App but which\nis not its primary purpose, would not need dedicated hardware controls for\ncaptions and descriptions; however Web-App controls, or hardware controls\nmapped through Web-App, would need to be at the same level of interaction.\n\nNOTE 3:\nIt is best practice for ICT to include additional controls enabling the user to\nselect whether captions and audio description are turned on or off by default."
+        }
+      ]
+    }
+  ]
+}

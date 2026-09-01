@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fehlervermeidung wird unterstützt (Negativbeispiel) · A11Y Test-Website</title>
+<link rel="stylesheet" href="/assets/styles.css">
+<style></style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="seitenkopf">
+  <a class="marke" href="/index.html">A11Y Test-Website</a>
+  <p class="kategorie">Kategorie: Formulare</p>
+</header>
+<nav aria-label="Hauptnavigation" class="hauptnav">
+  <a href="/index.html">Startseite</a>
+  <a href="/kriterien/fehlervermeidung-positiv.html">Positivbeispiel</a>
+  <a href="/kriterien/fehlervermeidung-negativ.html">Negativbeispiel</a>
+</nav>
+<main id="main">
+<span class="art-badge art-negativ">Negativbeispiel</span>
+<p class="kategorie">Kategorie: Formulare</p>
+<h1>Fehlervermeidung wird unterstützt</h1>
+<p class="beschreibung">Transaktionsformulare (z. B. Bestellung, Zahlung) bieten vor dem Absenden einen Prüf-/Bestätigungs-Mechanismus.</p>
+<p class="testids">Geprüfte Kriterien: <span class="testid">BITV_9_3_3_4_FEHLERVERMEIDUNG_WIRD_UNTERSTUETZT</span>
+<span class="testid">WCAG_3_3_4_ERROR_PREVENTION</span></p>
+<div class="beispiel art-negativ">
+<h2>Transaktion ohne Bestätigungs-/Prüf-Mechanismus</h2>
+<form><p><label for="iban">IBAN</label><input id="iban" name="iban" required></p><button type="submit">Bestellung absenden</button></form>
+</div><p class="hinweis">Zur Gegenprobe: <a href="/kriterien/fehlervermeidung-positiv.html">Positivbeispiel ansehen</a></p>
+</main>
+<footer class="seitenfuss">
+  <p>A11Y Test-Website · Negativbeispiel · <a href="/index.html">Zur Übersicht</a> · <a href="/gebaerdensprache.html">Gebärdensprache</a> · <a href="/leichte-sprache.html">Leichte Sprache</a> · <a href="/erklaerung.html">Erklärung zur Barrierefreiheit</a></p>
+</footer>
+</body>
+</html>

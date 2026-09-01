@@ -1,0 +1,158 @@
+{
+  "bitv_nummer": "9.1.3.1a",
+  "titel": "HTML-Strukturelemente für Überschriften",
+  "wcag22": {
+    "level": "A",
+    "success_criterion": "1.3.1 Info and Relationships",
+    "techniken": {
+      "General Techniques": [
+        "G115: Using semantic elements to mark up structure",
+        "G140: Separating information and structure from presentation to enable different presentations"
+      ],
+      "HTML Techniques": [
+        "H42: Using h1-h6 to identify headings",
+        "H69: Providing heading elements at the beginning of each section of content"
+      ],
+      "ARIA Techniques": [
+        "ARIA12: Using role=heading to identify headings"
+      ],
+      "Failures": [
+        "F43: Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content",
+        "F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Überschriften müssen mit den HTML-Strukturelementen `h1` bis `h6` oder gleichwertigen ARIA-Rollen und -Attributen ausgezeichnet sein und den Inhalt der Seite gliedern."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Visuell gliedern Überschriften die Inhalte einer Webseite und machen erkennbar, was zusammengehört; so lassen sich die Inhalte überblicken und gezielt ansteuern. Wer diese visuelle Ordnung nicht nutzen kann – etwa blinde Menschen oder Nutzende mit kleinem Sichtausschnitt – ist darauf angewiesen, dass die Gliederung unabhängig von der Darstellung nutzbar bleibt. Überschriften-Elemente machen das möglich:\n\n- Nur die Überschriften anzeigen lassen, als Inhaltsverzeichnis, um sich rasch zu orientieren (für blinde Nutzende besonders wichtig)\n- Von Überschrift zu Überschrift springen\n- Überschriften nach eigenen Bedürfnissen hervorheben, wenn die vorgesehene Hervorhebung nicht passt (etwa andere Farbe oder Stimme)"
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar, sobald Inhalte auf der Seite durch Überschriften strukturierbar sind – auf Informationsseiten meistens gegeben."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. Seite im Firefox aufrufen.\n2. Mit der Web Developer Toolbar die Stylesheets der Seite abschalten (Menü *CSS > Stile deaktivieren > Alle Stile deaktivieren*) und das Bookmarklet \"Inhalte gegliedert\" aufrufen; alternativ das HeadingsMap-Browser-Plugin verwenden, um die Hierarchie der Überschriften darzustellen.\n3. Prüfen, ob visuell als Überschriften erkennbare Inhalte mit den HTML-Strukturelementen `h1` bis `h6` ausgezeichnet sind.\n4. Fehlt natives Überschriften-Markup, prüfen, ob visuelle Überschriften mit `role=\"heading\"` und passenden `aria-level`-Attributen ausgezeichnet sind; die Hierarchie der eingesetzten Elemente soll der inhaltlichen Gliederung entsprechen.\n5. Prüfen, ob `h1` bis `h6` nur dazu dienen, verschiedene Schriftgrößen zu erzeugen."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Wortwahl und Stil der Überschriften werden hier nicht bewertet.\n- Überschriften sollen korrekt geschachtelt sein (`h1` vor `h2` vor `h3` usw. bzw. entsprechende `aria-level`-Werte auf Elementen mit `role=\"heading\"`), um die Gliederung der Textinhalte abzubilden; übersprungene Ebenen sind für sich genommen unproblematisch, solange die hierarchische Abfolge logisch bleibt.\n- Nach der ersten Regel für den Einsatz von WAI-ARIA sind wenn möglich native HTML-Elemente zu verwenden (siehe \"Using of ARIA, First rule of ARIA use\"); wo das nicht möglich ist, lässt sich die Semantik über `role=\"heading\"` und `aria-level` bereitstellen.\n- iframe-Inhalte wie andere Seiteninhalte prüfen, gegebenenfalls den iframe in einem neuen Fenster laden."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "- Die visuellen Überschriften der Seite sind semantisch ausgezeichnet (mittels HTML-Strukturelementen oder ARIA-Rollen und -Attributen), korrekt verschachtelt und damit auch nicht-visuell zugänglich."
+        },
+        {
+          "titel": "Teilweise erfüllt",
+          "inhalt_markdown": "- Semantisches Markup für Überschriften ist vorhanden, die Hierarchie-Ebenen sind jedoch irreführend verschachtelt und entsprechen nicht der inhaltlichen Gliederung."
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Gegliederte Inhalte der Seite sind ohne semantische Überschriften-Auszeichnung.\n- Deutlich abgesetzte Inhalte mit erkennbaren Überschriften besitzen lediglich eine pro forma markierte Hauptüberschrift."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Hier stehen Überschriften zur Gliederung der Seiteninhalte im Mittelpunkt, damit sie sich leicht überblicken und mit Hilfsmitteln wie Screenreadern gezielt ansteuern lassen. 9.2.4.1 \"Bereiche überspringbar\" behandelt dagegen die Strukturierung der Seitenbereiche durch Überschriften, ARIA-Attribute oder Sprunglinks."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guidelines",
+          "inhalt_markdown": "- [Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure](https://www.w3.org/TR/WCAG22/#adaptable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG22/#info-and-relationships)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G115: Using semantic elements to mark up structure](https://www.w3.org/WAI/WCAG22/Techniques/general/G115.html)\n                    - [G140: Separating information and structure from presentation to enable different presentations](https://www.w3.org/WAI/WCAG21/Techniques/general/G140.html)"
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H42: Using h1-h6 to identify headings](https://www.w3.org/WAI/WCAG22/Techniques/html/H42.html)\n                    - [H69: Providing heading elements at the beginning of each section of content](https://www.w3.org/WAI/WCAG21/Techniques/html/H69.html)"
+        },
+        {
+          "titel": "ARIA Techniques",
+          "inhalt_markdown": "- [ARIA12: Using role=heading to identify headings](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA12.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F43: Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content](https://www.w3.org/WAI/WCAG22/Techniques/failures/F43.html)\n                    - [F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information](https://www.w3.org/WAI/WCAG22/Techniques/failures/F92.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "Überschriften zur Abbildung der Struktur verwenden",
+          "inhalt_markdown": "> Long documents are often divided into a variety of chapters, chapters have\nsubtopics and subtopics are divided into various sections, sections into\nparagraphs, etc.\nThese semantic chunks of information make up the structure of\nthe document.\n\nSections should be introduced with the HTML heading elements (H1-H6)Other\nmarkup may complement these elements to improve presentation (e.g., the[HR](http://www.w3.org/TR/WCAG10-HTML-TECHS/#edef-HR)element to create a horizontal dividing line), but visual presentation is\nnot sufficient to identify document sections.\n\n([http://www.w3.org/TR/WCAG10-HTML-TECHS/#document-headers](http://www.w3.org/TR/WCAG10-HTML-TECHS/#document-headers))"
+        },
+        {
+          "titel": "Überschriften richtig schachteln",
+          "inhalt_markdown": "> To facilitate navigation and understanding of overall document structure,\nauthors should use headings that are properly nested (e.g.,`h1`followed by`h2`,`h2`followed by`h2`or`h3`,`h3`followed by`h3`or`h4`, etc.)..\n\n(WCAG 2.0 Technik[G141: Organizing a page using headings](http://www.w3.org/TR/WCAG20-TECHS/G141.html))"
+        },
+        {
+          "titel": "Überschriften-Elemente und CSS-Auszeichnungen nicht missbrauchen",
+          "inhalt_markdown": "> Using headings merely to change the appearance of text does not convey the\norganization of the content, and may confuse users who use headings to\nperceive structure or rely on them for navigation.\nConversely, while applying bold format, or even`class=\"heading\"`, can\nresult in the visual display of a heading, assistive technologies will not\nrecognize such text as headings.\n\n(WCAG 2.0 Technik[H42: Using`h1-h6`to identify headings](http://www.w3.org/TR/WCAG20-TECHS/H42.html))"
+        }
+      ]
+    },
+    {
+      "titel": "Fragen zu diesem Prüfschritt",
+      "id": "fragen_zu_diesem_prüfschritt",
+      "untersektionen": [
+        {
+          "titel": "Kann es mehrere h1 -Überschriften auf einer Seite geben?",
+          "inhalt_markdown": "Die mit `h1` ausgezeichnete Hauptüberschrift sollte das Thema der Seite benennen. Gehören alle Inhalte zu einem übergreifenden Thema, gibt es in der Regel nur eine `h1`-Überschrift. Hat die Seite dagegen zwei Themen ohne große Gemeinsamkeit, wäre eine einzelne Hauptüberschrift entweder nichtssagend oder eine reine Aufzählung – dann kann es sinnvoll sein, mehrere Überschriften mit `h1` auszuzeichnen."
+        },
+        {
+          "titel": "Warum sind die Anforderungen des Prüfschritts so allgemein gehalten?",
+          "inhalt_markdown": "Formale Regeln zur Überschriften-Struktur sind sinnvoll und decken oft falsche oder missbräuchliche Anwendungen auf. Die Umkehrung gilt aber nicht: formal korrekte Strukturen sind nicht automatisch brauchbar. Entscheidend ist, dass die Überschriften den Inhalt erschließen. Dazu das aus den Überschriften gebildete Inhaltsverzeichnis prüfen: Ist es vollständig? Zeigt es alle wichtigen Inhalte? Ist es brauchbar? Kann ich ohne Aufwand auf alle wichtigen Inhalte zugreifen? Die Struktur muss für die Nutzenden funktionieren; die technischen Regeln ergeben sich daraus von selbst."
+        },
+        {
+          "titel": "Muss für die oberste Überschrift immer h1 verwendet werden?",
+          "inhalt_markdown": "Maßgeblich ist, ob es einen akzeptablen Grund gibt, `h1` zu überspringen. Wurde etwa `h2` gewählt, weil `h1` zu groß wirkte und man die Größe nicht ändern konnte, ist das kein akzeptabler Grund – Inhalt und Form sollen getrennt sein. Akzeptabel ist dagegen ein zusammengesetztes Dokument, dessen einzelne Seiten Kapitel sind. Für die Nutzbarkeit der Überschriften spielt es keine Rolle, ob ganz oben `h1` steht."
+        },
+        {
+          "titel": "Kann man auch grafische Schriften als Überschriften auszeichnen?",
+          "inhalt_markdown": "Schriftgrafiken als Überschriften sind generell problematisch, weil sich Grafiken weniger an die eigenen Bedürfnisse anpassen lassen. Sie dürfen aber als Überschriften ausgezeichnet werden. 9.1.3.1a gilt als erfüllt, wenn grafische Überschriften angemessen als Überschriften ausgezeichnet sind."
+        },
+        {
+          "titel": "Was ist der Unterschied zwischen dem Dokumenttitel und der h1 -Überschrift?",
+          "inhalt_markdown": "Der Dokumenttitel dient als Fenstertitel oder für Bookmarks und hilft, bei mehreren geöffneten Fenstern oder Bookmark-Listen die richtige Seite zu wählen. Er hat zwei Bestandteile: ein seitenindividueller Teil, der das Thema nennt und sich zwischen den Seiten unterscheidet, und ein angebotsweiter Teil, der die Seite dem richtigen Webangebot zuordnet. Die Hauptüberschrift strukturiert dagegen die Seite intern; von außen ist sie nicht sichtbar, sie erscheint erst nach dem Öffnen der Seite. Sie benennt das Hauptthema – oder bei mehreren Hauptüberschriften die zwei oder drei Hauptthemen – und wiederholt häufig den individuellen Teil des Dokumenttitels. Manche Seiten verzichten auf die Hauptüberschrift und beginnen direkt mit Einstiegspunkten; das ist plausibel, ebenso vertretbar ist es aber, die Hauptüberschrift auf der Seite zu belassen."
+        }
+      ]
+    }
+  ]
+}

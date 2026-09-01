@@ -1,0 +1,70 @@
+{
+  "bitv_nummer": "7.1.1",
+  "titel": "Wiedergabe von Untertiteln",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Liefert das Webangebot Videos mit synchroner Bild- und Tonspur samt zuschaltbarer textbasierter Untertitel (closed captions), muss der Videoplayer es erlauben, diese Untertitel ein- und wieder auszublenden."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Ohne Ton bleibt ein Film meist unverständlich. Untertitel ersetzen die Tonspur deshalb für Menschen mit Hörbehinderung. Es gibt zwei Einbindungsformen: fest ins Bild eingebrannte „open captions“ und zuschaltbare textbasierte „closed captions“, die sich über ein Bedienelement des Players aktivieren lassen. Damit closed captions überhaupt genutzt werden können, braucht der Player eine Funktion zum Ein- und Ausblenden. Bei open captions entfällt diese Prüfung, weil die Untertitel ohnehin sichtbar sind."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "- Anwendbar ist der Prüfschritt bei aufgezeichneten Videos mit abgestimmter Bild- und Tonspur, die über Untertitel verfügen. Zuschaltbare Untertitel bindet man üblicherweise als `track`-Datei in das `video`-Element ein.\n- Stumme Videos ohne Tonspur benötigen keine Untertitel; für sie ist der Prüfschritt nicht anwendbar."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Im Quellcode prüfen, ob eine Untertitel-Datei eingebunden ist. Üblich ist die Einbindung über das HTML-5-`track`-Element; das `kind`-Attribut gibt die Art an: `subtitles` steht für Transkription oder Übersetzung des Dialogs, `captions` für Untertitel zugunsten hörgeschädigter und gehörloser Menschen.\n2. - Manche Player binden die Untertitel-Datei auch außerhalb des `video`-Elements ein.\n3. - Liegt eine Untertitel-Datei vor, prüfen, ob der Player das Ein- und Ausblenden erlaubt."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Wünschenswert ist eine Funktion, Untertitel auf einer Braillezeile auszugeben.\n- Nicht bemängelt wird, wenn ein Video mit open captions nach Betätigung eines Bedienelements neu geladen oder in einem zweiten Player dargestellt wird."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "Bei Videos mit synchroner Bild- und Tonspur sind Untertitel entweder fest ins Bild eingebettet (open captions) oder lassen sich über ein Player-Bedienelement zu- und abschalten (closed captions)."
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "Eine Untertitel-Datei ist vorhanden, der Player stellt aber keine Funktion zu deren Anzeige bereit."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Adding captions and subtitles to HTML video](https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)(Mozilla Foundation, mdn web docs)"
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Dieser Prüfschritt betrifft die Wiedergabe der Untertitel und die Bedienelemente, mit denen sie sich ein- und ausschalten lassen. 9.1.2.2 „Aufgezeichnete Videos mit Untertiteln“ beurteilt dagegen den Inhalt: Der Autor muss die Tonspur korrekt transkribieren und in einem Format ablegen, das sich für synchrone Untertitel eignet. Anforderungen an die Player-Bedienelemente wie Kontrast, zugänglicher Name, Tastaturbedienbarkeit und Fokushervorhebung behandeln die jeweiligen Prüfschritte."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "7.1.1 Captioning playback",
+          "inhalt_markdown": "> Where ICT displays video with synchronized audio, it shall have a mode of\noperation to display the available captions.\nWhere closed captions are provided as part of the content, the ICT shall allow\nthe user to choose to display the captions.\n\nNOTE 1:\nCaptions may contain information about timing, colour and positioning.\nThis caption data is necessary for caption users.\nTiming is used for caption synchronization.\nColour can be used for speaker identification.\nPosition can be used to avoid obscuring important information.\n\nNOTE 2:\nIf a Braille device is connected, the ICT should provide an option to display\ncaptions on the Braille device."
+        }
+      ]
+    }
+  ]
+}

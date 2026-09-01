@@ -1,0 +1,54 @@
+{
+  "bitv_nummer": "11.8.2",
+  "titel": "Barrierefreie Erstellung von Inhalten",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Handelt es sich bei der Webanwendung um ein Autorenwerkzeug, soll sie die Erstellung barrierefreier Dokumente ermöglichen und die Nutzenden dabei unterstützen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Nutzende von Hilfsmitteln sind auf programmatisch ermittelbare Informationen angewiesen; Autorenwerkzeuge müssen das bei der Inhaltserstellung sicherstellen. Erlaubt etwa ein Kommentarfeld die Vergabe einer Überschrift, muss sie in der erzeugten beziehungsweise aktualisierten Seite als Überschrift markiert sein, damit Hilfsmittel sie auswerten können – etwa zum Wechseln von Kommentar zu Kommentar."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt gilt für Autorenwerkzeuge wie Content-Management-Systeme sowie für Kommentarfunktionen, die Strukturierungen zulassen – etwa die Vergabe einer Kommentarüberschrift oder Binnenauszeichnungen wie Listen und Texthervorhebungen. Geprüft wird in erster Linie die Ausgabe des Werkzeugs. Der erzeugte Dokumenttyp muss sich für Barrierefreiheit optimieren lassen, sonst ist der Prüfschritt nicht anwendbar; bei Web-CMS und Kommentarfunktionen ist das grundsätzlich der Fall. Die Ausgabe muss in einer Webumgebung darstellbar sein. Prüfbar sind daher nur Werkzeuge, die eine überprüfbare HTML-Ausgabe erzeugen (etwa in einer Vorschau) oder im Frontend integrierte Editoren, deren Output direkt oder nach Freigabe einsehbar ist. Große Werkzeuge wie Textverarbeitungen lassen sich im BITV-Test nicht prüfen, weil die Barrierefreiheit der erzeugten Dateien in diesem Verfahren nicht untersucht werden kann."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. Mit dem Autorenwerkzeug (etwa der Kommentarfunktion) eine Ausgabe erzeugen und gegebenenfalls freigeben.\n2. Die erzeugte HTML-Seite prüfen und alle Prüfschritte anwenden, die für die Ansicht gelten. Beispiele:\n   - Im Werkzeug gesetzte Überschriften müssen in der Ausgabe als Überschriften-Markup erscheinen, nicht über Fettung oder CSS.\n   - Angelegte Listen müssen als Listen-Markup ausgegeben werden, nicht als Pseudo-Listen mit vorangestellten Spiegelstrichen.\n   - Festgelegte Absätze sollten als Absatz-Markup ausgezeichnet sein, nicht als `div`.\n   - Text-Hervorhebungen sind mit semantischen Elementen wie `strong` oder `em` auszuzeichnen.\n   - Erlaubt das Werkzeug das Einfügen von Bildern, muss sich ein Alternativtext vergeben lassen, der als `alt`-Attribut übernommen wird."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Der Prüfschritt verlangt keine bestimmten semantischen Umsetzungen. Kann in einer Kommentarfunktion etwa keine Überschrift vergeben werden, ist das nicht negativ zu bewerten – auch sehende Nutzer haben dort keine Überschrift. Anders bei Bildern: Ist das Einfügen von Bildern möglich, entsteht für nicht-visuelle Nutzer ein Nachteil, wenn nicht zugleich ein Alternativtext vergeben werden kann, der den Inhalt des Bildes wiedergibt.\n- Das Autorenwerkzeug darf für die Erfüllung einzelner Kriterien auf andere Werkzeuge zurückgreifen, etwa auf ein separates Werkzeug für die Erstellung von Untertiteln.\n\nHinweise zur Ausgestaltung dieses Prüfschritts können als [Issue auf GitHub](https://github.com/BIK-BITV/BIK-Web-Test/issues) eingereicht werden."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "11.8.2 Accessible content creation",
+          "inhalt_markdown": "> Authoring tools shall enable and guide the production of content that conforms\nto clauses 9 (Web content) or 10 (Non-Web content) as applicable.\n\nNOTE:\nAuthoring tools may rely on additional tools where conformance with specific\nrequirements is not achievable by a single tool.\nFor example, a video editing tool may enable the creation of video files for\ndistribution via broadcast television and the web, but authoring of caption\nfiles for multiple formats may be provided by a different tool."
+        }
+      ]
+    }
+  ]
+}

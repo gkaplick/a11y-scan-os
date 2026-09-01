@@ -1,0 +1,143 @@
+{
+  "bitv_nummer": "9.2.2.1",
+  "titel": "Zeitbegrenzungen anpassbar",
+  "wcag22": {
+    "guideline": "Guideline 2.2 Enough Time: Provide users enough time to read and use content.",
+    "level": "A",
+    "success_criterion": "2.2.1 Timing Adjustable",
+    "techniken": {
+      "General Techniques": [
+        "G133: Providing a checkbox on the first page of a multipart form that allows users to ask for longer session time limit or no session time limit",
+        "G180: Providing the user with a means to set the time limit to 10 times the default time limit",
+        "G198: Providing a way for the user to turn the time limit off"
+      ],
+      "Client-side Scripting Techniques": [
+        "SCR16: Providing a script that warns the user a time limit is about to expire AND SCR1: Allowing the user to extend the default time limit"
+      ],
+      "Failures": [
+        "F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit",
+        "F41: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh with a time-out",
+        "F58: Failure of Success Criterion 2.2.1 due to using server-side techniques to automatically redirect pages after a time-out"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Die Seiteninhalte bleiben zeitlich unbegrenzt sichtbar, oder die Zeitbegrenzung lässt sich abschalten oder verlängern. Betroffen sind etwa zeitbegrenzte Dialoge, die zu Entscheidungen auffordern, Online-Transaktionen, deren Sitzung zeitlich befristet ist und die bei Inaktivität automatisch abmelden, das automatische Neu-Laden von Seiten, zeitverzögerte Weiterleitungen sowie wichtige Statusmeldungen, die sich nach kurzer Zeit selbst schließen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Das automatische Neu-Laden kann bei Screenreader-Nutzern das Vorlesen unterbrechen und unvermittelt von vorn beginnen lassen. Erfolgt die Weiterleitung erst mit Verzögerung, sollen Besucher die Zwischenseite vor dem Seitenwechsel noch lesen können; die Frist macht diese Anzeige für viele unzugänglich. Sind Zeitbegrenzungen weder abschaltbar noch verlängerbar, fällt es Menschen, die länger für Eingaben benötigen, häufig schwer, Online-Transaktionen rechtzeitig abzuschließen."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "- Die Kontrolle von Autoaktualisierung und Weiterleitung gemäß Abschnitt [2.1 Prüfung auf Auto-Aktualisierung durch Neu-Laden der Seite und Weiterleitung auf andere URL](#_2_1_prüfung_auf_auto_aktualisierung_durch_neu_laden_der_seite_und_weiterleitung_auf_andere_url) ist stets durchzuführen.\n- Ob sich Zeitbegrenzungen abschalten oder verlängern lassen, prüft Abschnitt [2.2 Prüfung auf Abschaltbarkeit oder Verlängerbarkeit von Zeitbegrenzungen](#_2_2_prüfung_auf_abschaltbarkeit_oder_verlängerbarkeit_von_zeitbegrenzungen) in jedem Fall.\n- Zeitbegrenzungen bei wichtigen Statusmeldungen werden stets geprüft, sofern solche Meldungen (oft als Folge einer Interaktion) nach kurzer Zeit von selbst verschwinden."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Prüfung auf Auto-Aktualisierung durch Neu-Laden der Seite und Weiterleitung auf andere URL",
+          "inhalt_markdown": "Quelltextanalyse auf das Markup: Taucht `http-equiv=\"refresh\"` im Kopfbereich der Seite auf, muss `content=\"0\"` gesetzt sein, d. h. die Weiterleitung erfolgt ohne Verzögerung bzw. es findet keine Aktualisierung statt."
+        },
+        {
+          "titel": "2.2 Prüfung auf Abschaltbarkeit oder Verlängerbarkeit von Zeitbegrenzungen",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.2.1 Zeitbegrenzung wird angezeigt",
+          "inhalt_markdown": "Seiten können Zeitbegrenzungen unterschiedlich anzeigen:\n\n- Eine Transaktion zeigt die noch verbleibende Session-Zeit an; jede Nutzerinteraktion verlängert sie erneut.\n- Kurz vor Fristende erscheint ein Dialog, mit dem sich die Frist verlängern lässt.\n- Über ein Bedienelement lässt sich die Zeitbegrenzung deaktivieren oder verlängern; die Nutzer haben ausreichend Gelegenheit, es vor Fristablauf zu finden."
+        },
+        {
+          "titel": "2.2.2 Nicht unmittelbar sichtbare Zeitbegrenzungen",
+          "inhalt_markdown": "Ist zu erwarten, dass eine Seite eine Zeitbegrenzung hat, ohne dass eine laufende Anzeige der Session-Dauer oder ein Kontrollelement angeboten wird:\n\n1. - Seiten mit üblicherweise begrenzter Session-Dauer (etwa Online-Banking, Shop-Bezahlvorgänge) im zweiten, nicht verwendeten Browser öffnen und Daten eintragen.\n2. - Den Browser 20 Minuten lang unbenutzt lassen.\n3. - Danach kontrollieren, ob die Seite weiterhin erreichbar ist und sich Daten fehlerfrei übertragen lassen.\n4. - Meldet die Seite nach den 20 Minuten das Ende der Session, die Seite neu laden und prüfen, ob sich ein Dialog zeigt, der rechtzeitig – mindestens 20 Sekunden vor Ablauf – eine Verlängerung anbietet."
+        },
+        {
+          "titel": "2.3 Prüfung von Zeitbegrenzungen bei wichtigen Statusmeldungen",
+          "inhalt_markdown": "1. - Liefern Statusmeldungen wichtige Inhalte, die sich nicht anderweitig erschließen, und verschwinden sie nach kurzer Zeit von selbst? Als nicht wesentlich gelten Meldungen, die ein erwartetes Ergebnis zusätzlich bestätigen, etwa nach dem Aktivieren von \"Sichern\" der Hinweis \"Ihr Dokument wurde gespeichert\" oder nach dem Abschicken eines Formulars \"Ihre Angaben wurden übermittelt\". Dass solche Meldungen von selbst verschwinden, ist kein negativer Befund (näheres dazu unter 3. Hinweise, 3.1 Zeitbegrenzte Statusmeldungen)."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "3.1 Zeitbegrenzte Statusmeldungen",
+          "inhalt_markdown": "Für zeitlich befristete Statusmeldungen ist eine einstellbare Zeitdauer nicht nötig, wenn die Inhalte auch ohne Frist erreichbar bleiben. Beispiel: Ein webbasierter E-Mail-Client zeigt den Eingang einer neuen E-Mail als kurzlebige Toast-Meldung an; den Eingang kann man aber ebenso über den Posteingang abrufen. Können Nutzende dieselben Informationen nicht anderweitig auffinden oder dieselbe Funktion nicht auf andere Weise ausführen, müssen solche Meldungen das Erfolgskriterium erfüllen, damit genügend Zeit zum Zugriff bleibt."
+        },
+        {
+          "titel": "3.2 Externe Zeitbegrenzungen",
+          "inhalt_markdown": "Dieser Prüfschritt betrifft nur Zeitbegrenzungen, die der Inhalt selbst hervorruft (serverseitig oder clientseitig). Externe Zeitbegrenzungen, etwa des User Agents, liegen außerhalb des Einflussbereichs des Autors und sind daher nicht Gegenstand der BITV. Ob eine Seite eine Zeitbegrenzung hat, lässt sich oft nicht am Quelltext ablesen, da sie auch serverseitig gesetzt werden kann."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Die Seite aktualisiert sich über `http-equiv=\"refresh\"` in regelmäßigen Abständen.\n- Die Seite leitet nach einer Verzögerung automatisch auf eine andere Seite weiter.\n- Der Ablauf der Zeitbegrenzung bleibt unbemerkt; erst beim Abschicken des Formulars erfährt man, dass die Sessiondauer überschritten wurde."
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "- Die verbleibende Session-Zeit wird zwar sichtbar gemacht und durch Nutzeraktivität zurückgesetzt, ein Dialog mit Verlängerungsangebot fehlt jedoch bis 20 Sekunden vor Fristende.\n- Die Zeit reicht nicht aus, um das Kontrollelement zum Deaktivieren der Zeitbegrenzung aufzuspüren."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung von anderen Prüfschritten",
+          "inhalt_markdown": "Dieser Prüfschritt behandelt Zeitbegrenzungen, die sich auf die gesamte Seite auswirken – unabhängig davon, ob die befristeten Inhalte sich bewegen. Geprüft wird, ob sich solche Zeitbegrenzungen abschalten oder verlängern lassen.\n\nPrüfschritt 9.2.2.2 \"Bewegte Inhalte abschaltbar\" befasst sich dagegen mit bewegten oder sich selbst aktualisierenden Inhalten, die ablenken oder wegen ihres zeitlichen Verlaufs für manche Nutzer schwer erfassbar sind. Dort wird geprüft, ob Nutzer bewegte Inhalte anhalten oder ausblenden können.\n\nBietet die Seite ein Kontrollelement oder einen beschriebenen Tastaturbefehl zum Abschalten oder Strecken von Fristen, bleibt hier nur zu prüfen, ob den Nutzern genügend Zeit bleibt, diese Hilfe zu entdecken und zu gebrauchen. Ob der Mechanismus selbst zugänglich und verständlich ist, klären andere Prüfschritte, etwa 9.2.1.1 \"Ohne Maus nutzbar\" oder 9.1.3.1h \"Beschriftung von Formularelementen programmatisch ermittelbar\"."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 2.2 Enough Time: Provide users enough time to read and use content.](https://www.w3.org/TR/WCAG21/#enough-time)"
+        },
+        {
+          "titel": "Success criteria",
+          "inhalt_markdown": "- [2.2.1 Timing Adjustable](https://www.w3.org/TR/WCAG21/#timing-adjustable)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G133: Providing a checkbox on the first page of a multipart form that allows users to ask for longer session time limit or no session time limit](https://www.w3.org/WAI/WCAG21/Techniques/general/G133.html)\n                    - [G180: Providing the user with a means to set the time limit to 10 times the default time limit](https://www.w3.org/WAI/WCAG21/Techniques/general/G180.html)\n                    - [G198: Providing a way for the user to turn the time limit off](https://www.w3.org/WAI/WCAG21/Techniques/general/G198.html)"
+        },
+        {
+          "titel": "Client-side Scripting Techniques",
+          "inhalt_markdown": "- [SCR16: Providing a script that warns the user a time limit is about to expire](https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR16.html)AND[SCR1: Allowing the user to extend the default time limit](https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR1.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit](https://www.w3.org/WAI/WCAG21/Techniques/failures/F40)\n                    - [F41: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh with a time-out](https://www.w3.org/WAI/WCAG21/Techniques/failures/F41)\n                    - [F58: Failure of Success Criterion 2.2.1 due to using server-side techniques to automatically redirect pages after a time-out](https://www.w3.org/WAI/WCAG21/Techniques/failures/F58)"
+        }
+      ]
+    },
+    {
+      "titel": "Fragen zu diesem Prüfschritt",
+      "id": "fragen_zu_diesem_prüfschritt",
+      "untersektionen": [
+        {
+          "titel": "Wie kann durch ein Kontrollelement auf der Webseite sichergestellt werden, dass der Benutzer eine Zeitbegrenzung oder Autoaktualisierung auf Wunsch abschalten kann?",
+          "inhalt_markdown": "Ausschlaggebend ist, dass die Autoaktualisierung bzw. der Fristablauf nicht eintritt, bevor der Nutzer das Kontrollelement erreicht hat. Deshalb sollte der Link oder die Schaltfläche zum Deaktivieren bzw. Strecken der Frist am Seitenanfang oder in dessen Nähe stehen, damit ihn Menschen mit den unterschiedlichsten Behinderungen entdecken und bedienen können. Dennoch ist nicht garantiert, dass Nutzer die Option tatsächlich finden und verstehen."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1630 @@
+{
+  "anzahl": 98,
+  "tests": [
+    {
+      "slug": "bitv-20-web-11-7-benutzerdefinierte-einstellungen",
+      "status": "ok",
+      "datei": "11.7.json",
+      "bitv_nummer": "11.7",
+      "titel": "Benutzerdefinierte Einstellungen",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-11-8-2-barrierefreie-erstellung-von-inhalten",
+      "status": "ok",
+      "datei": "11.8.2.json",
+      "bitv_nummer": "11.8.2",
+      "titel": "Barrierefreie Erstellung von Inhalten",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-11-8-3-erhaltung-von-barrierefreiheitsinformationen-bei-transformation",
+      "status": "ok",
+      "datei": "11.8.3.json",
+      "bitv_nummer": "11.8.3",
+      "titel": "Erhaltung von Barrierefreiheitsinformationen bei Transformation",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-11-8-4-reparaturassistenz",
+      "status": "ok",
+      "datei": "11.8.4.json",
+      "bitv_nummer": "11.8.4",
+      "titel": "Reparaturassistenz",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-11-8-5-vorlagen",
+      "status": "ok",
+      "datei": "11.8.5.json",
+      "bitv_nummer": "11.8.5",
+      "titel": "Vorlagen",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-12-1-1-dokumentation-von-kompatibilitaet-und-barrierefreiheit",
+      "status": "ok",
+      "datei": "12.1.1.json",
+      "bitv_nummer": "12.1.1",
+      "titel": "Dokumentation von Kompatibilität und Barrierefreiheit",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-12-1-2-barrierefreie-dokumentation",
+      "status": "ok",
+      "datei": "12.1.2.json",
+      "bitv_nummer": "12.1.2",
+      "titel": "Barrierefreie Dokumentation",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-12-2-2-technischer-support",
+      "status": "ok",
+      "datei": "12.2.2.json",
+      "bitv_nummer": "12.2.2",
+      "titel": "Technischer Support",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-12-2-3-effektive-kommunikation",
+      "status": "ok",
+      "datei": "12.2.3.json",
+      "bitv_nummer": "12.2.3",
+      "titel": "Effektive Kommunikation",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-12-2-4-vom-support-bereitgestellte-dokumentation",
+      "status": "ok",
+      "datei": "12.2.4.json",
+      "bitv_nummer": "12.2.4",
+      "titel": "Vom Support bereitgestellte Dokumentation",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-5-2-aktivierung-von-barrierefreiheitsfunktionen",
+      "status": "ok",
+      "datei": "5.2.json",
+      "bitv_nummer": "5.2",
+      "titel": "Aktivierung von Barrierefreiheitsfunktionen",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-5-3-biometrie",
+      "status": "ok",
+      "datei": "5.3.json",
+      "bitv_nummer": "5.3",
+      "titel": "Biometrie",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-5-4-erhaltung-von-barrierefreiheitsinformationen-bei-konvertierung",
+      "status": "ok",
+      "datei": "5.4.json",
+      "bitv_nummer": "5.4",
+      "titel": "Erhaltung von Barrierefreiheitsinformationen bei Konvertierung",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-6-1-audiobandbreite-fuer-sprache",
+      "status": "ok",
+      "datei": "6.1.json",
+      "bitv_nummer": "6.1",
+      "titel": "Audiobandbreite für Sprache",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-6-2-1-1-textkommunikation-in-echtzeit",
+      "status": "ok",
+      "datei": "6.2.1.1.json",
+      "bitv_nummer": "6.2.1.1",
+      "titel": "Textkommunikation in Echtzeit",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-6-2-1-2-gleichzeitige-sprache-und-text",
+      "status": "ok",
+      "datei": "6.2.1.2.json",
+      "bitv_nummer": "6.2.1.2",
+      "titel": "Gleichzeitige Sprache und Text",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-6-2-2-1-visuell-unterscheidbare-anzeige-von-textnachrichten",
+      "status": "ok",
+      "datei": "6.2.2.1.json",
+      "bitv_nummer": "6.2.2.1",
+      "titel": "Visuell unterscheidbare Anzeige von Textnachrichten",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-6-2-2-2-programmatisch-unterscheidbare-anzeige-von-textnachrichten",
+      "status": "ok",
+      "datei": "6.2.2.2.json",
+      "bitv_nummer": "6.2.2.2",
+      "titel": "Programmatisch unterscheidbare Anzeige von Textnachrichten",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-6-2-2-3-sprecheridentifizierung",
+      "status": "ok",
+      "datei": "6.2.2.3.json",
+      "bitv_nummer": "6.2.2.3",
+      "titel": "Sprecheridentifizierung",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-6-2-2-4-echtzeitindikation-von-sprachkommunikation",
+      "status": "ok",
+      "datei": "6.2.2.4.json",
+      "bitv_nummer": "6.2.2.4",
+      "titel": "Echtzeitindikation von Sprachkommunikation",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-6-2-3-interoperabilitaet-von-echtzeit-textkommunikation",
+      "status": "ok",
+      "datei": "6.2.3.json",
+      "bitv_nummer": "6.2.3",
+      "titel": "Interoperabilität von Echtzeit-Textkommunikation",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-6-2-4-reaktionsgeschwindigkeit-der-echtzeit-textkommunikation",
+      "status": "ok",
+      "datei": "6.2.4.json",
+      "bitv_nummer": "6.2.4",
+      "titel": "Reaktionsgeschwindigkeit der Echtzeit-Textkommunikation",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-6-3-anrufer-identifizierung",
+      "status": "ok",
+      "datei": "6.3.json",
+      "bitv_nummer": "6.3",
+      "titel": "Anrufer-Identifizierung",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-6-4-alternativen-zu-sprachbasierten-diensten",
+      "status": "ok",
+      "datei": "6.4.json",
+      "bitv_nummer": "6.4",
+      "titel": "Alternativen zu sprachbasierten Diensten",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-6-5-2-aufloesung-bei-videotelefonie",
+      "status": "ok",
+      "datei": "6.5.2.json",
+      "bitv_nummer": "6.5.2",
+      "titel": "Auflösung bei Videotelefonie",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-6-5-3-bildwiederholfrequenz-bei-videotelefonie",
+      "status": "ok",
+      "datei": "6.5.3.json",
+      "bitv_nummer": "6.5.3",
+      "titel": "Bildwiederholfrequenz bei Videotelefonie",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-6-5-4-synchronitaet-bei-videotelefonie",
+      "status": "ok",
+      "datei": "6.5.4.json",
+      "bitv_nummer": "6.5.4",
+      "titel": "Synchronität bei Videotelefonie",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-6-5-5-visuelle-anzeige-von-audio-aktivitaet",
+      "status": "ok",
+      "datei": "6.5.5.json",
+      "bitv_nummer": "6.5.5",
+      "titel": "Visuelle Anzeige von Audio-Aktivität",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-6-5-6-sprecher-anzeige-fuer-gebaerdensprachen-kommunikation",
+      "status": "ok",
+      "datei": "6.5.6.json",
+      "bitv_nummer": "6.5.6",
+      "titel": "Sprecher-Anzeige für Gebärdensprachen-Kommunikation",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-7-1-1-wiedergabe-von-untertiteln",
+      "status": "ok",
+      "datei": "7.1.1.json",
+      "bitv_nummer": "7.1.1",
+      "titel": "Wiedergabe von Untertiteln",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-7-1-2-synchrone-untertitel",
+      "status": "ok",
+      "datei": "7.1.2.json",
+      "bitv_nummer": "7.1.2",
+      "titel": "Synchrone Untertitel",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-7-1-3-erhaltung-von-untertiteln",
+      "status": "ok",
+      "datei": "7.1.3.json",
+      "bitv_nummer": "7.1.3",
+      "titel": "Erhaltung von Untertiteln",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-7-1-4-untertitel-anpassungen",
+      "status": "ok",
+      "datei": "7.1.4.json",
+      "bitv_nummer": "7.1.4",
+      "titel": "Untertitel-Anpassungen",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-7-1-5-gesprochene-untertitel",
+      "status": "ok",
+      "datei": "7.1.5.json",
+      "bitv_nummer": "7.1.5",
+      "titel": "Gesprochene Untertitel",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-7-2-1-wiedergabe-von-audiodeskription",
+      "status": "ok",
+      "datei": "7.2.1.json",
+      "bitv_nummer": "7.2.1",
+      "titel": "Wiedergabe von Audiodeskription",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-7-2-2-synchrone-audiodeskription",
+      "status": "ok",
+      "datei": "7.2.2.json",
+      "bitv_nummer": "7.2.2",
+      "titel": "Synchrone Audiodeskription",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-7-2-3-erhaltung-von-audiodeskription",
+      "status": "ok",
+      "datei": "7.2.3.json",
+      "bitv_nummer": "7.2.3",
+      "titel": "Erhaltung von Audiodeskription",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-7-3-bedienelemente-fuer-untertitel-und-audiodeskription",
+      "status": "ok",
+      "datei": "7.3.json",
+      "bitv_nummer": "7.3",
+      "titel": "Bedienelemente für Untertitel und Audiodeskription",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-9-1-1-1a-alternativtexte-fuer-bedienelemente",
+      "status": "ok",
+      "datei": "9.1.1.1a.json",
+      "bitv_nummer": "9.1.1.1a",
+      "titel": "Alternativtexte für Bedienelemente",
+      "wcag22": {
+        "guideline": "Guideline 1.1 Text Alternatives: Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.",
+        "level": "A",
+        "success_criterion": "1.1.1 Non-text Content",
+        "techniken": {
+          "General Techniques": [
+            "G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content"
+          ],
+          "HTML Techniques": [
+            "H2: Combining adjacent image and text links for the same resource",
+            "H24: Providing text alternatives for the area elements of image maps",
+            "H30: Providing link text that describes the purpose of a link for anchor elements",
+            "H36: Using alt attributes on images used as submit buttons",
+            "H37: Using alt attributes on img elements"
+          ],
+          "ARIA Techniques": [
+            "ARIA6 Using aria-label to provide labels for objects",
+            "ARIA10: Using aria-labelledby to provide a text alternative for non-text content"
+          ],
+          "Failures": [
+            "F3: Failure of Success Criterion 1.1.1 due to using CSS to include images that convey important information",
+            "F20: Failure of Success Criterion 1.1.1 and 4.1.2 due to not updating text alternatives when changes to non-text content occur",
+            "F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives",
+            "F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute on img elements, area elements, and input elements of type 'image'"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-1-1b-alternativtexte-fuer-grafiken-und-objekte",
+      "status": "ok",
+      "datei": "9.1.1.1b.json",
+      "bitv_nummer": "9.1.1.1b",
+      "titel": "Alternativtexte für Grafiken und Objekte",
+      "wcag22": {
+        "guideline": "Guideline 1.1 Text Alternatives: Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language",
+        "level": "A",
+        "success_criterion": "1.1.1 Non-text Content",
+        "techniken": {
+          "General Techniques": [
+            "G73: Providing a long description in another location with a link to it that is immediately adjacent to the non-text content",
+            "G74: Providing a long description in text near the non-text content, with a reference to the location of the long description in the short description",
+            "G82: Providing a text alternative that identifies the purpose of the non-text content",
+            "G92: Providing long description for non-text content that serves the same purpose and presents the same information",
+            "G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content",
+            "G95: Providing short text alternatives that provide a brief description of the non-text content",
+            "G100: Providing the accepted name or a descriptive name of the non-text content",
+            "G196: Using a text alternative on one item within a group of images that describes all items in the group"
+          ],
+          "HTML Techniques": [
+            "H37: Using alt attributes on img elements",
+            "H46: Using noembed with embed",
+            "H53: Using the body of the object element"
+          ],
+          "ARIA Techniques": [
+            "ARIA6 Using aria-label to provide labels for objects",
+            "ARIA10: Using aria-labelledby to provide a text alternative for non-text content",
+            "ARIA15: Using aria-describedby to provide descriptions of images"
+          ],
+          "Failures": [
+            "F3: Failure of Success Criterion 1.1.1 due to using CSS to include images that convey important information",
+            "F20: Failure of Success Criterion 1.1.1 and 4.1.2 due to not updating text alternatives when changes to non-text content occur",
+            "F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives",
+            "F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute on img elements, area elements, and input elements of type 'image'",
+            "F67: Failure of Success Criterion 1.1.1 and 1.2.1 due to providing long description for non-text content that does not serve the same purpose or does not present the same information"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-1-1c-leere-alt-attribute-fuer-layoutgrafiken",
+      "status": "ok",
+      "datei": "9.1.1.1c.json",
+      "bitv_nummer": "9.1.1.1c",
+      "titel": "Leere alt-Attribute für Layoutgrafiken",
+      "wcag22": {
+        "guideline": "Guideline 1.1 Text Alternatives: Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language",
+        "level": "A",
+        "success_criterion": "1.1.1 Non-text Content",
+        "techniken": {
+          "HTML Techniques": [
+            "H67: Using null alt text and no title attribute on img elements for images that AT should ignore"
+          ],
+          "CSS Techniques": [
+            "C9: Using CSS to include decorative images"
+          ],
+          "Failures": [
+            "F38: Failure of Success Criterion 1.1.1 due to omitting the alt -attribute for non-text content used for decorative purposes only in HTML",
+            "F39: Failure of Success Criterion 1.1.1 due to providing a text alternative that is not null(e.g. alt='spacer' or alt='image' ) for images that should be ignored by assistive technology"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-1-1d-alternativen-fuer-captchas",
+      "status": "ok",
+      "datei": "9.1.1.1d.json",
+      "bitv_nummer": "9.1.1.1d",
+      "titel": "Alternativen für CAPTCHAs",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-9-1-2-1-alternativen-fuer-audiodateien-und-stumme-videos",
+      "status": "ok",
+      "datei": "9.1.2.1.json",
+      "bitv_nummer": "9.1.2.1",
+      "titel": "Alternativen für Audiodateien und stumme Videos",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-9-1-2-2-aufgezeichnete-videos-mit-untertiteln",
+      "status": "ok",
+      "datei": "9.1.2.2.json",
+      "bitv_nummer": "9.1.2.2",
+      "titel": "Aufgezeichnete Videos mit Untertiteln",
+      "wcag22": {
+        "guideline": "Guideline 1.2 Time-based Media: Provide alternatives for time-based media",
+        "level": "A",
+        "success_criterion": "1.2.2 Captions (Prerecorded)",
+        "techniken": {
+          "General Techniques": [
+            "G87: Providing closed captions",
+            "G93: Providing open (always visible) captions"
+          ],
+          "HTML Techniques": [
+            "H95: Using the track element to provide captions"
+          ],
+          "SMIL Techniques": [
+            "SM11: Providing captions through synchronized text streams in SMIL 1.0",
+            "SM12: Providing captions through synchronized text streams in SMIL 2.0"
+          ],
+          "Failures": [
+            "F8: Failure of Success Criterion 1.2.2 due to captions omitting some dialogue or important sound effects",
+            "F74: Failure of SC1.2.2 and 1.2.8 due to not labeling a synchronized media alternative to text as an alternative",
+            "F75: Failure of Success Criterion 1.2.2 by providing synchronized media without captions when the synchronized media presents more information than is presented on the page"
+          ]
+        },
+        "wcag_version": "2.2"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-2-3-audiodeskription-oder-volltext-alternative-fuer-videos",
+      "status": "ok",
+      "datei": "9.1.2.3.json",
+      "bitv_nummer": "9.1.2.3",
+      "titel": "Audiodeskription oder Volltext-Alternative für Videos",
+      "wcag22": {
+        "guideline": "Guideline 1.2 Time-based Media: Provide alternatives for time-based media",
+        "level": "A",
+        "success_criterion": "1.2.3 Audio Description or Media Alternative (Prerecorded)",
+        "techniken": {
+          "General Techniques": [
+            "G58: Placing a link to the alternative for time-based media immediately next to the non-text content",
+            "G69: Providing an alternative for time based media",
+            "G78: Providing a second, user-selectable, audio track that includes audio descriptions",
+            "G173: Providing a version of a movie with audio descriptions",
+            "G203: Using a static text alternative to describe a talking head video"
+          ],
+          "SMIL Techniques": [
+            "SM1: Adding extended audio description in SMIL 1.0",
+            "SM2: Adding extended audio description in SMIL 2.0",
+            "SM6: Providing audio description in SMIL 1.0",
+            "SM7: Providing audio description in SMIL 2.0"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-2-4-videos-live-mit-untertiteln",
+      "status": "ok",
+      "datei": "9.1.2.4.json",
+      "bitv_nummer": "9.1.2.4",
+      "titel": "Videos (live) mit Untertiteln",
+      "wcag22": {
+        "guideline": "Guideline 1.2 Time-based Media: Provide alternatives for time-based media",
+        "level": "AA",
+        "success_criterion": "1.2.4 Captions (Live)",
+        "techniken": {
+          "General Techniques": [
+            "G9: Creating captions for live synchronized media",
+            "G87: Providing closed captions",
+            "G93: Providing open (always visible) captions"
+          ],
+          "SMIL Techniques": [
+            "SM11: Providing captions through synchronized text streams in SMIL 1.0",
+            "SM12: Providing captions through synchronized text streams in SMIL 2.0"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-2-5-audiodeskription-fuer-videos",
+      "status": "ok",
+      "datei": "9.1.2.5.json",
+      "bitv_nummer": "9.1.2.5",
+      "titel": "Audiodeskription für Videos",
+      "wcag22": {
+        "guideline": "Guideline 1.2 Time-based Media: Provide alternatives for time-based media",
+        "level": "AA",
+        "success_criterion": "1.2.5 Audio Description (Prerecorded)",
+        "techniken": {
+          "General Techniques": [
+            "G78: Providing a second, user-selectable, audio track that includes audio descriptions",
+            "G173: Providing a version of a movie with audio descriptions",
+            "G203: Using a static text alternative to describe a talking head video"
+          ],
+          "SMIL Techniques": [
+            "SM1: Adding extended audio description in SMIL 1.0",
+            "SM2: Adding extended audio description in SMIL 2.0",
+            "SM6: Providing audio description in SMIL 1.0",
+            "SM7: Providing audio description in SMIL 2.0"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-3-1a-html-strukturelemente-fuer-ueberschriften",
+      "status": "ok",
+      "datei": "9.1.3.1a.json",
+      "bitv_nummer": "9.1.3.1a",
+      "titel": "HTML-Strukturelemente für Überschriften",
+      "wcag22": {
+        "level": "A",
+        "success_criterion": "1.3.1 Info and Relationships",
+        "techniken": {
+          "General Techniques": [
+            "G115: Using semantic elements to mark up structure",
+            "G140: Separating information and structure from presentation to enable different presentations"
+          ],
+          "HTML Techniques": [
+            "H42: Using h1-h6 to identify headings",
+            "H69: Providing heading elements at the beginning of each section of content"
+          ],
+          "ARIA Techniques": [
+            "ARIA12: Using role=heading to identify headings"
+          ],
+          "Failures": [
+            "F43: Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content",
+            "F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-3-1b-html-strukturelemente-fuer-listen",
+      "status": "ok",
+      "datei": "9.1.3.1b.json",
+      "bitv_nummer": "9.1.3.1b",
+      "titel": "HTML-Strukturelemente für Listen",
+      "wcag22": {
+        "level": "A",
+        "success_criterion": "1.3.1 Info and Relationships",
+        "techniken": {
+          "General Techniques": [
+            "G115: Using semantic elements to mark up structure",
+            "G140: Separating information and structure from presentation to enable different presentations"
+          ],
+          "HTML Techniques": [
+            "H48: Using ol, ul and dl for lists",
+            "H97: Grouping related links using the nav element"
+          ],
+          "Client-side Scripting Techniques": [
+            "SCR28: Using an expandable and collapsible menu to bypass block of content"
+          ],
+          "Failures": [
+            "F2: Failure of Success Criterion 1.3.1 due to using changes in text presentation to convey information without using the appropriate markup or text",
+            "F43: Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content",
+            "F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-3-1c-html-strukturelemente-fuer-zitate",
+      "status": "ok",
+      "datei": "9.1.3.1c.json",
+      "bitv_nummer": "9.1.3.1c",
+      "titel": "HTML-Strukturelemente für Zitate",
+      "wcag22": {
+        "level": "A",
+        "success_criterion": "1.3.1 Info and Relationships",
+        "techniken": {
+          "General Techniques": [
+            "G115: Using semantic elements to mark up structure",
+            "G140: Separating information and structure from presentation to enable different presentations"
+          ],
+          "HTML Techniques": [
+            "H49: Using semantic markup to mark emphasized or special text"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-3-1d-inhalt-gegliedert",
+      "status": "ok",
+      "datei": "9.1.3.1d.json",
+      "bitv_nummer": "9.1.3.1d",
+      "titel": "Inhalt gegliedert",
+      "wcag22": {
+        "guideline": "Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure",
+        "level": "A",
+        "success_criterion": "1.3.1 Info and Relationships",
+        "techniken": {
+          "General Techniques": [
+            "G115: Using semantic elements to mark up structure",
+            "G140: Separating information and structure from presentation to enable different presentations"
+          ],
+          "HTML Techniques": [
+            "H49: Using semantic markup to mark emphasized or special text"
+          ],
+          "Failures": [
+            "F2: Failure of Success Criterion 1.3.1 due to using changes in text presentation to convey information without using the appropriate markup or text",
+            "F33: Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to create multiple columns in plain text content",
+            "F43: Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content",
+            "F48: Failure of Success Criterion 1.3.1 due to using the pre element to markup tabular information",
+            "F87: Failure of Success Criterion 1.3.1 due to inserting non-decorative content by using :before and :after pseudo-elements and the 'content' property in CSS",
+            "F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-3-1e-datentabellen-richtig-aufgebaut",
+      "status": "ok",
+      "datei": "9.1.3.1e.json",
+      "bitv_nummer": "9.1.3.1e",
+      "titel": "Datentabellen richtig aufgebaut",
+      "wcag22": {
+        "guideline": "Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure",
+        "level": "A",
+        "success_criterion": "1.3.1 Info and Relationships",
+        "techniken": {
+          "General Techniques": [
+            "G115: Using semantic elements to mark up structure",
+            "G140: Separating information and structure from presentation to enable different presentations"
+          ],
+          "HTML Techniques": [
+            "H51: Using table markup to present tabular information",
+            "H73: Using the summary attribute of the table element to give an overview of data tables"
+          ],
+          "Failures": [
+            "F33: Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to create multiple columns in plain text content",
+            "F34: Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to format tables in plain text content",
+            "F48: Failure of Success Criterion 1.3.1 due to using the pre element to markup tabular information",
+            "F91: Failure of Success Criterion 1.3.1 for not correctly marking up table headers",
+            "F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-3-1f-zuordnung-von-tabellenzellen",
+      "status": "ok",
+      "datei": "9.1.3.1f.json",
+      "bitv_nummer": "9.1.3.1f",
+      "titel": "Zuordnung von Tabellenzellen",
+      "wcag22": {
+        "guideline": "Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure",
+        "level": "A",
+        "success_criterion": "1.3.1 Info and Relationships",
+        "techniken": {
+          "General Techniques": [
+            "G115: Using semantic elements to mark up structure",
+            "G140: Separating information and structure from presentation to enable different presentations"
+          ],
+          "HTML Techniques": [
+            "H43 Using id and headers attributes to associate data cells with header cells in data tables",
+            "H63 Using the scope attribute to associate header cells and data cells in data tables"
+          ],
+          "Failures": [
+            "F90: Failure of Success Criterion 1.3.1 for incorrectly associating table headers and content via the headers and id attributes",
+            "F92: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-3-1g-kein-strukturmarkup-fuer-layouttabellen",
+      "status": "ok",
+      "datei": "9.1.3.1g.json",
+      "bitv_nummer": "9.1.3.1g",
+      "titel": "Kein Strukturmarkup für Layouttabellen",
+      "wcag22": {
+        "guideline": "Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure",
+        "level": "A",
+        "success_criterion": "1.3.1 Info and Relationships",
+        "techniken": {
+          "General Techniques": [
+            "https://www.w3.org/WAI/WCAG22/Techniques/general/G115.html [ G115: Using semantic elements to mark up structure",
+            "G140: Separating information and structure from presentation to enable different presentations"
+          ],
+          "HTML Techniques": [
+            "H39 Using caption elements to associate data table captions with data tables",
+            "H73 Using the summary attribute of the table element"
+          ],
+          "Failures": [
+            "F46 Failure of Success Criterion 1.3.1 due to using th elements, caption elements, or non-empty summary attributes in layout tables"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-3-1h-beschriftung-von-formularelementen-programmatisch-ermittelbar",
+      "status": "ok",
+      "datei": "9.1.3.1h.json",
+      "bitv_nummer": "9.1.3.1h",
+      "titel": "Beschriftung von Formularelementen programmatisch ermittelbar",
+      "wcag22": {
+        "level": "A",
+        "success_criterion": "1.3.1 Info and Relationships",
+        "techniken": {
+          "General Techniques": [
+            "G162: Positioning labels to maximize predictability of relationships"
+          ],
+          "HTML Techniques": [
+            "H44: Using label elements to associate text labels with form controls",
+            "H65: Using the title attribute to identify form controls when the label element cannot be used",
+            "H71: Providing a description for groups of form controls using fieldset and legend elements"
+          ],
+          "ARIA Techniques": [
+            "ARIA1: Using the aria-describedby property to provide a descriptive label for user interface controls",
+            "ARIA2: Identifying a required field with the aria-required property",
+            "ARIA16: Using aria-labelledby to provide a name for user interface controls",
+            "ARIA17: Using grouping roles to identify related form controls"
+          ],
+          "Failures": [
+            "F87: Failure of Success Criterion 1.3.1 due to inserting non-decorative content by using :before and :after pseudo-elements and the 'content' property in CSS"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-3-2-sinnvolle-reihenfolge",
+      "status": "ok",
+      "datei": "9.1.3.2.json",
+      "bitv_nummer": "9.1.3.2",
+      "titel": "Sinnvolle Reihenfolge",
+      "wcag22": {
+        "guideline": "Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure.",
+        "level": "A",
+        "success_criterion": "1.3.2 Meaningful Sequence",
+        "techniken": {
+          "General Techniques": [
+            "G57 Ordering the content in a meaningful sequence"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-3-3-ohne-bezug-auf-sensorische-merkmale-nutzbar",
+      "status": "ok",
+      "datei": "9.1.3.3.json",
+      "bitv_nummer": "9.1.3.3",
+      "titel": "Ohne Bezug auf sensorische Merkmale nutzbar",
+      "wcag22": {
+        "level": "A",
+        "success_criterion": "1.3.3 Sensory Characteristics",
+        "techniken": {
+          "General Techniques": [
+            "G96 Providing textual identification of items that otherwise rely only on sensory information to be understood"
+          ],
+          "Failures": [
+            "F14: Failure of Success Criterion 1.3.3 due to identifying content only by its shape or location",
+            "F26: Failure of Success Criterion 1.3.3 due to using a graphical symbol alone to convey information"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-3-4-keine-beschraenkung-der-bildschirmausrichtung",
+      "status": "ok",
+      "datei": "9.1.3.4.json",
+      "bitv_nummer": "9.1.3.4",
+      "titel": "Keine Beschränkung der Bildschirmausrichtung",
+      "wcag22": {
+        "guideline": "Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure.",
+        "level": "AA",
+        "success_criterion": "1.3.4 Orientation"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-3-5-eingabefelder-zu-nutzerdaten-vermitteln-den-zweck",
+      "status": "ok",
+      "datei": "9.1.3.5.json",
+      "bitv_nummer": "9.1.3.5",
+      "titel": "Eingabefelder zu Nutzerdaten vermitteln den Zweck",
+      "wcag22": {
+        "guideline": "Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure.",
+        "level": "AA",
+        "success_criterion": "1.3.5 Identify Input Purpose"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-4-1-ohne-farben-nutzbar",
+      "status": "ok",
+      "datei": "9.1.4.1.json",
+      "bitv_nummer": "9.1.4.1",
+      "titel": "Ohne Farben nutzbar",
+      "wcag22": {
+        "level": "A",
+        "success_criterion": "1.4.1 Use of Color",
+        "techniken": {
+          "General Techniques": [
+            "G14: Ensuring that information conveyed by color differences is also available in text",
+            "G111: Using color and pattern",
+            "G182: Ensuring that additional visual cues are available when text color differences are used to convey information",
+            "G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual cues on focus for links or controls where color alone is used to identify them",
+            "G205: Including a text cue for colored form control labels"
+          ],
+          "Failures": [
+            "F13: Failure of Success Criterion 1.4.1 due to having a text alternative that does not include information that is conveyed by color differences in the image",
+            "F73: Failure of Success Criterion 1.4.1 due to creating links that are not visually evident without color vision",
+            "F81: Failure of Success Criterion 1.4.1 due to identifying required or error fields using color differences only"
+          ]
+        },
+        "wcag_version": "2.2"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-4-10-inhalte-brechen-um",
+      "status": "ok",
+      "datei": "9.1.4.10.json",
+      "bitv_nummer": "9.1.4.10",
+      "titel": "Inhalte brechen um",
+      "wcag22": {
+        "guideline": "Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background",
+        "level": "AA",
+        "success_criterion": "1.4.10 Reflow"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-4-11-kontraste-von-grafiken-und-grafischen-bedienelementen-ausreichend",
+      "status": "ok",
+      "datei": "9.1.4.11.json",
+      "bitv_nummer": "9.1.4.11",
+      "titel": "Kontraste von Grafiken und grafischen Bedienelementen ausreichend",
+      "wcag22": {
+        "guideline": "Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background",
+        "level": "AA",
+        "success_criterion": "1.4.11 Non-Text Contrast"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-4-12-textabstaende-anpassbar",
+      "status": "ok",
+      "datei": "9.1.4.12.json",
+      "bitv_nummer": "9.1.4.12",
+      "titel": "Textabstände anpassbar",
+      "wcag22": {
+        "guideline": "Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background",
+        "level": "AA",
+        "success_criterion": "1.4.12 Text Spacing"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-4-13-eingeblendete-inhalte-bedienbar",
+      "status": "ok",
+      "datei": "9.1.4.13.json",
+      "bitv_nummer": "9.1.4.13",
+      "titel": "Eingeblendete Inhalte bedienbar",
+      "wcag22": {
+        "guideline": "Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background",
+        "level": "AA",
+        "success_criterion": "1.4.13 Content on Hover or Focus"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-4-2-ton-abschaltbar",
+      "status": "ok",
+      "datei": "9.1.4.2.json",
+      "bitv_nummer": "9.1.4.2",
+      "titel": "Ton abschaltbar",
+      "wcag22": {
+        "guideline": "Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background.",
+        "level": "A",
+        "success_criterion": "1.4.2 Audio Control",
+        "techniken": {
+          "General Techniques": [
+            "G60: Playing a sound that turns off automatically within three seconds",
+            "G170: Providing a control near the beginning of the Web page that turns off sounds that play automatically",
+            "G171: Playing sounds only on user request"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-4-3-kontraste-von-texten-ausreichend",
+      "status": "ok",
+      "datei": "9.1.4.3.json",
+      "bitv_nummer": "9.1.4.3",
+      "titel": "Kontraste von Texten ausreichend",
+      "wcag22": {
+        "guideline": "Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background",
+        "level": "AA",
+        "success_criterion": "1.4.3 Contrast (Minimum)",
+        "techniken": {
+          "General Techniques": [
+            "G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text",
+            "G145: Ensuring that a contrast ratio of at least 3:1 exists between text (and images of text) and background behind the text",
+            "G148: Not specifying background color, not specifying text color, and not using technology features that change those defaults",
+            "G174: Providing a control with a sufficient contrast ratio that allows users to switch to a presentation that uses sufficient contrast"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-4-4-text-auf-200-vergroesserbar",
+      "status": "ok",
+      "datei": "9.1.4.4.json",
+      "bitv_nummer": "9.1.4.4",
+      "titel": "Text auf 200% vergrößerbar",
+      "wcag22": {
+        "guideline": "Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background",
+        "level": "AA",
+        "success_criterion": "1.4.4 Resize text",
+        "techniken": {
+          "General Techniques": [
+            "G146: Using liquid layout",
+            "G178: Providing controls on the Web page that allow users to incrementally change the size of all text on the page up to 200 percent",
+            "G179: Ensuring that there is no loss of content or functionality when the text resizes and text containers do not change their width"
+          ],
+          "CSS-Techniques": [
+            "C12: Using percent for font sizes",
+            "C13: Using named font sizes",
+            "C14: Using em units for font sizes",
+            "C20: Using relative measurements to set column widths so that lines can average 80 characters or less when the browser is resized",
+            "C28: Specifying the size of text containers using em units",
+            "C29: Using a style switcher to provide a conforming alternate version"
+          ],
+          "Client-side Scripting Techniques": [
+            "SCR34: Calculating size and position in a way that scales with text size"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-1-4-5-schriftgrafiken",
+      "status": "ok",
+      "datei": "9.1.4.5.json",
+      "bitv_nummer": "9.1.4.5",
+      "titel": "Schriftgrafiken",
+      "wcag22": {
+        "guideline": "Guideline 1.4 Distinguishable: Make it easier for users to see and hear content including separating foreground from background",
+        "level": "AA",
+        "success_criterion": "1.4.5 Images of Text",
+        "techniken": {
+          "General Techniques": [
+            "G140: Separating information and structure from presentation to enable different presentations"
+          ],
+          "CSS Techniques": [
+            "C22: Using CSS to control visual presentation of text",
+            "C30: Using CSS to replace text with images of text and providing user interface controls to switch"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-2-1-1-ohne-maus-nutzbar",
+      "status": "ok",
+      "datei": "9.2.1.1.json",
+      "bitv_nummer": "9.2.1.1",
+      "titel": "Ohne Maus nutzbar",
+      "wcag22": {
+        "guideline": "Guideline 2.1 Keyboard Accessible: Make all functionality available from a keyboard.",
+        "level": "A",
+        "success_criterion": "2.1.1 Keyboard",
+        "techniken": {
+          "General Techniques": [
+            "G90: Providing keyboard-triggered event handlers",
+            "G202: Ensuring keyboard control for all functionality"
+          ],
+          "HTML Techniques": [
+            "H91: Using HTML form controls and links"
+          ],
+          "Scripting Techniques": [
+            "SCR2: Using redundant keyboard and mouse event handlers",
+            "SCR20: Using both keyboard and other device-specific functions",
+            "SCR27: Reordering page sections using the Document Object Model",
+            "SCR29: Adding keyboard-accessible actions to static HTML elements",
+            "SCR35: Making actions keyboard accessible by using the onclick event of anchors and buttons"
+          ],
+          "Failures": [
+            "F42: Failure of Success Criterion 1.3.1 and 2.1.1 due to using scripting events to emulate links in a way that is not programmatically determinable",
+            "F54: Failure of Success Criterion 2.1.1 due to using only pointing-device-specific event handlers (including gesture) for a function",
+            "F55: Failure of Success Criteria 2.1.1, 2.4.7, and 3.2.1 due to using script to remove focus when focus is received"
+          ]
+        },
+        "wcag_version": "2.2"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-2-1-2-keine-tastaturfalle",
+      "status": "ok",
+      "datei": "9.2.1.2.json",
+      "bitv_nummer": "9.2.1.2",
+      "titel": "Keine Tastaturfalle",
+      "wcag22": {
+        "guideline": "Guideline 2.1 Keyboard Accessible: Make all functionality available from a keyboard.",
+        "level": "A",
+        "success_criterion": "2.1.2 No Keyboard Trap",
+        "techniken": {
+          "General Techniques": [
+            "G21: Ensuring that users are not trapped in content"
+          ],
+          "Flash Techniques": [
+            "FLASH17: Providing keyboard access to a Flash object and avoiding a keyboard trap"
+          ],
+          "Failures": [
+            "F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type"
+          ]
+        },
+        "wcag_version": "2.2"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-2-1-4-tastatur-kurzbefehle-abschaltbar-oder-anpassbar",
+      "status": "ok",
+      "datei": "9.2.1.4.json",
+      "bitv_nummer": "9.2.1.4",
+      "titel": "Tastatur-Kurzbefehle abschaltbar oder anpassbar",
+      "wcag22": {
+        "guideline": "Guideline 2.1 Keyboard Accessible: Make all functionality available from a keyboard",
+        "level": "A",
+        "success_criterion": "2.1.4 Character Key Shortcuts"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-2-2-1-zeitbegrenzungen-anpassbar",
+      "status": "ok",
+      "datei": "9.2.2.1.json",
+      "bitv_nummer": "9.2.2.1",
+      "titel": "Zeitbegrenzungen anpassbar",
+      "wcag22": {
+        "guideline": "Guideline 2.2 Enough Time: Provide users enough time to read and use content.",
+        "level": "A",
+        "success_criterion": "2.2.1 Timing Adjustable",
+        "techniken": {
+          "General Techniques": [
+            "G133: Providing a checkbox on the first page of a multipart form that allows users to ask for longer session time limit or no session time limit",
+            "G180: Providing the user with a means to set the time limit to 10 times the default time limit",
+            "G198: Providing a way for the user to turn the time limit off"
+          ],
+          "Client-side Scripting Techniques": [
+            "SCR16: Providing a script that warns the user a time limit is about to expire AND SCR1: Allowing the user to extend the default time limit"
+          ],
+          "Failures": [
+            "F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit",
+            "F41: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh with a time-out",
+            "F58: Failure of Success Criterion 2.2.1 due to using server-side techniques to automatically redirect pages after a time-out"
+          ]
+        },
+        "wcag_version": "2.2"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-2-2-2-bewegte-inhalte-abschaltbar",
+      "status": "ok",
+      "datei": "9.2.2.2.json",
+      "bitv_nummer": "9.2.2.2",
+      "titel": "Bewegte Inhalte abschaltbar",
+      "wcag22": {
+        "guideline": "Guideline 2.2 Enough Time: Provide users enough time to read and use content.",
+        "level": "A",
+        "success_criterion": "2.2.2 Pause, Stop, Hide",
+        "techniken": {
+          "General Techniques": [
+            "G4: Allowing the content to be paused and restarted from where it was paused",
+            "G11: Creating content that blinks for less than 5 seconds",
+            "G152: Setting animated gif images to stop blinking after n cycles (within 5 seconds)",
+            "G186: Using a control in the Web page that stops moving, blinking, or auto-updating content",
+            "G191: Providing a link, button, or other mechanism that reloads the page without any blinking content"
+          ],
+          "Scripting Techniques": [
+            "SCR22: Using scripts to control blinking and stop it in five seconds or less",
+            "SCR33: Using script to scroll content, and providing a mechanism to pause it"
+          ],
+          "Failures": [
+            "F4: Failure of Success Criterion 2.2.2 due to using text-decoration:blink without a mechanism to stop it in less than five seconds",
+            "F7: Failure of Success Criterion 2.2.2 due to an object or applet , such as Java or Flash, that has blinking content without a mechanism to pause the content that blinks for more than five seconds",
+            "F16: Failure of Success Criterion 2.2.2 due to including scrolling content where movement is not essential to the activity without also including a mechanism to pause and restart the content",
+            "F47: Failure of Success Criterion 2.2.2 due to using the blink element",
+            "F50: Failure of Success Criterion 2.2.2 due to a script that causes a blink effect without a mechanism to stop the blinking at 5 seconds or less"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-2-3-1-verzicht-auf-flackern",
+      "status": "ok",
+      "datei": "9.2.3.1.json",
+      "bitv_nummer": "9.2.3.1",
+      "titel": "Verzicht auf Flackern",
+      "wcag22": {
+        "level": "",
+        "success_criterion": "2.3.1 Three Flashes or Below Threshold",
+        "techniken": {
+          "General Techniques": [
+            "G15: Using a tool to ensure that content does not violate the general flash threshold or red flash threshold",
+            "G176: Keeping the flashing area small enough"
+          ]
+        },
+        "wcag_version": "2.2"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-2-4-1-bereiche-ueberspringbar",
+      "status": "ok",
+      "datei": "9.2.4.1.json",
+      "bitv_nummer": "9.2.4.1",
+      "titel": "Bereiche überspringbar",
+      "wcag22": {
+        "level": "A",
+        "success_criterion": "2.4.1 Bypass Blocks",
+        "techniken": {
+          "General Techniques": [
+            "G1: Adding a link at the top of each page that goes directly to the main content area",
+            "G115: Using semantic elements to mark up structure",
+            "G123: Adding a link at the beginning of a block of repeated content to go to the end of the block",
+            "G124: Adding links at the top of the page to each area of the content",
+            "G130: Providing descriptive headings",
+            "G140: Separating information and structure from presentation to enable different presentations"
+          ],
+          "HTML Techniques": [
+            "H42: Using h1-h6 to identify headings",
+            "H64: Using the title attribute of the frame and iframe elements",
+            "H69: Providing heading elements at the beginning of each section of content",
+            "H97: Grouping related links using the nav element"
+          ],
+          "ARIA Techniques": [
+            "ARIA11: Using ARIA landmarks to identify regions of a page",
+            "ARIA13: Using aria-labelledby to name regions and landmarks"
+          ]
+        },
+        "wcag_version": "2.2"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-2-4-2-sinnvolle-dokumenttitel",
+      "status": "ok",
+      "datei": "9.2.4.2.json",
+      "bitv_nummer": "9.2.4.2",
+      "titel": "Sinnvolle Dokumenttitel",
+      "wcag22": {
+        "guideline": "Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are",
+        "level": "A",
+        "success_criterion": "2.4.2 Page Titled: Web pages have titles that describe topic or purpose.",
+        "techniken": {
+          "General Techniques": [
+            "G88: Providing descriptive titles for Web pages",
+            "G127: Identifying a Web page’s relationship to a larger collection of Web pages"
+          ],
+          "HTML Techniques": [
+            "H25: Providing a title using the title element",
+            "H86: Providing text alternatives for ASCII art, emoticons, and leetspeak"
+          ]
+        },
+        "wcag_version": "2.2"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-2-4-3-schluessige-reihenfolge-bei-der-tastaturbedienung",
+      "status": "ok",
+      "datei": "9.2.4.3.json",
+      "bitv_nummer": "9.2.4.3",
+      "titel": "Schlüssige Reihenfolge bei der Tastaturbedienung",
+      "wcag22": null
+    },
+    {
+      "slug": "bitv-20-web-9-2-4-4-aussagekraeftige-linktexte",
+      "status": "ok",
+      "datei": "9.2.4.4.json",
+      "bitv_nummer": "9.2.4.4",
+      "titel": "Aussagekräftige Linktexte",
+      "wcag22": {
+        "guideline": "Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are",
+        "level": "A",
+        "success_criterion": "2.4.4 Link Purpose (In Context)",
+        "techniken": {
+          "General Techniques": [
+            "G53: Identifying the purpose of a link using link text combined with the text of the enclosing sentence",
+            "G91: Providing link text that describes the purpose of a link"
+          ],
+          "HTML Techniques": [
+            "H24: Providing text alternatives for the area elements of image maps",
+            "H30: Providing link text that describes the purpose of a link for anchor elements",
+            "H33: Supplementing link text with the title attribute",
+            "H77: Identifying the purpose of a link using link text combined with its enclosing list item",
+            "H78: Identifying the purpose of a link using link text combined with its enclosing paragraph",
+            "H79: Identifying the purpose of a link using link text combined with its enclosing table cell and associated table headings",
+            "H80: Identifying the purpose of a link using link text combined with the preceding heading element",
+            "H81: Identifying the purpose of a link in a nested list using link text combined with the parent list item under which the list is nested"
+          ],
+          "CSS Techniques": [
+            "C7: Using CSS to hide a portion of the link text (CSS)"
+          ],
+          "ARIA Techniques": [
+            "ARIA7: Using aria-labelledby for link purpose",
+            "ARIA8: Using aria-label for link purpose"
+          ]
+        },
+        "wcag_version": "2.2"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-2-4-5-alternative-zugangswege",
+      "status": "ok",
+      "datei": "9.2.4.5.json",
+      "bitv_nummer": "9.2.4.5",
+      "titel": "Alternative Zugangswege",
+      "wcag22": {
+        "guideline": "Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are.",
+        "level": "AA",
+        "success_criterion": "2.4.5 Multiple Ways",
+        "techniken": {
+          "General Techniques": [
+            "G63: Providing a site map",
+            "G64: Providing a Table of Contents",
+            "G125: Providing links to navigate to related Web pages",
+            "G126: Providing a list of links to all other Web pages",
+            "G161: Providing a search function to help users find content",
+            "G185: Linking to all of the pages on the site from the home page"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-2-4-6-aussagekraeftige-ueberschriften-und-beschriftungen",
+      "status": "ok",
+      "datei": "9.2.4.6.json",
+      "bitv_nummer": "9.2.4.6",
+      "titel": "Aussagekräftige Überschriften und Beschriftungen",
+      "wcag22": {
+        "guideline": "Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are.",
+        "level": "A",
+        "success_criterion": "2.4.6 Headings and Labels",
+        "techniken": {
+          "General Techniques": [
+            "G130: Providing descriptive headings",
+            "G131: Providing descriptive labels"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-2-4-7-aktuelle-position-des-fokus-deutlich",
+      "status": "ok",
+      "datei": "9.2.4.7.json",
+      "bitv_nummer": "9.2.4.7",
+      "titel": "Aktuelle Position des Fokus deutlich",
+      "wcag22": {
+        "guideline": "Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are",
+        "level": "AA",
+        "success_criterion": "2.4.7 Focus Visible",
+        "techniken": {
+          "General Techniques": [
+            "G149: Using user interface components that are highlighted by the user agent when they receive focus",
+            "G165: Using the default focus indicator for the platform so that high visibility default focus indicators will carry over",
+            "G195: Using an author-supplied, highly visible focus indicator"
+          ],
+          "CSS Techniques": [
+            "C15: Using CSS to change the presentation of a user interface component when it receives focus"
+          ],
+          "Client-side Scripting Techniques": [
+            "SCR31: Using script to change the background color or border of the element with focus"
+          ],
+          "Failures": [
+            "F55: Failure of Success Criteria 2.1.1, 2.4.7, and 3.2.1 due to using script to remove focus when focus is received",
+            "F78: Failure of Success Criterion 2.4.7 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-2-5-1-alternativen-fuer-komplexe-zeiger-gesten",
+      "status": "ok",
+      "datei": "9.2.5.1.json",
+      "bitv_nummer": "9.2.5.1",
+      "titel": "Alternativen für komplexe Zeiger-Gesten",
+      "wcag22": {
+        "guideline": "Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard",
+        "level": "A",
+        "success_criterion": "2.5.1 Pointer Gestures"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-2-5-2-zeigergesten-eingaben-koennen-abgebrochen-oder-widerrufen-werden",
+      "status": "ok",
+      "datei": "9.2.5.2.json",
+      "bitv_nummer": "9.2.5.2",
+      "titel": "Zeigergesten-Eingaben können abgebrochen oder widerrufen werden",
+      "wcag22": {
+        "guideline": "Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard",
+        "level": "A",
+        "success_criterion": "2.5.2 Pointer Cancellation"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-2-5-3-sichtbare-beschriftung-teil-des-zugaenglichen-namens",
+      "status": "ok",
+      "datei": "9.2.5.3.json",
+      "bitv_nummer": "9.2.5.3",
+      "titel": "Sichtbare Beschriftung Teil des zugänglichen Namens",
+      "wcag22": {
+        "guideline": "Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard",
+        "level": "A",
+        "success_criterion": "2.5.3 Label in Name"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-2-5-4-alternativen-fuer-bewegungsaktivierung",
+      "status": "ok",
+      "datei": "9.2.5.4.json",
+      "bitv_nummer": "9.2.5.4",
+      "titel": "Alternativen für Bewegungsaktivierung",
+      "wcag22": {
+        "guideline": "Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard",
+        "level": "A",
+        "success_criterion": "2.5.4 Motion Actuation"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-3-1-1-hauptsprache-angegeben",
+      "status": "ok",
+      "datei": "9.3.1.1.json",
+      "bitv_nummer": "9.3.1.1",
+      "titel": "Hauptsprache angegeben",
+      "wcag22": {
+        "guideline": "Guideline 3.1 Readable: Make text content readable and understandable",
+        "level": "A",
+        "success_criterion": "3.1.1 Language of Page",
+        "techniken": {
+          "HTML Techniques": [
+            "H57: Using language attributes on the html element"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-3-1-2-anderssprachige-woerter-und-abschnitte-ausgezeichnet",
+      "status": "ok",
+      "datei": "9.3.1.2.json",
+      "bitv_nummer": "9.3.1.2",
+      "titel": "Anderssprachige Wörter und Abschnitte ausgezeichnet",
+      "wcag22": {
+        "guideline": "Guideline 3.1 Readable: Make text content readable and understandable",
+        "level": "AA",
+        "success_criterion": "3.1.2 Language of Parts",
+        "techniken": {
+          "HTML Techniques": [
+            "H58: Using language attributes to identify changes in the human language"
+          ]
+        },
+        "wcag_version": "2.1"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-3-2-1-keine-unerwartete-kontextaenderung-bei-fokus",
+      "status": "ok",
+      "datei": "9.3.2.1.json",
+      "bitv_nummer": "9.3.2.1",
+      "titel": "Keine unerwartete Kontextänderung bei Fokus",
+      "wcag22": {
+        "guideline": "Guideline 3.2 Predictable: Make Web pages appear and operate in predictable ways.",
+        "level": "A",
+        "success_criterion": "3.2.1 On Focus",
+        "techniken": {
+          "General Techniques": [
+            "G107: Using \"activate\" rather than \"focus\" as a trigger for changes of context"
+          ],
+          "Advisory Techniques": [
+            "G200: Opening new windows and tabs from a link only when necessary",
+            "G201: Giving users advanced warning when opening a new window"
+          ],
+          "Failures": [
+            "F52: Failure of Success Criterion 3.2.1 due to opening a new window as soon as a new page is loaded"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-3-2-2-keine-unerwartete-kontextaenderung-bei-eingabe",
+      "status": "ok",
+      "datei": "9.3.2.2.json",
+      "bitv_nummer": "9.3.2.2",
+      "titel": "Keine unerwartete Kontextänderung bei Eingabe",
+      "wcag22": {
+        "guideline": "Guideline 3.2 Predictable: Make Web pages appear and operate in predictable ways",
+        "level": "A",
+        "success_criterion": "3.2.2 On Input",
+        "techniken": {
+          "General Techniques": [
+            "G80: Providing a submit button to initiate a change of context using a technology-specific technique listed below Hinweis: Die Technik G80 ist SC 3.2.2 zugeordnet, wird aber nur indirekt geprüft.",
+            "G13: Describing what will happen before a change to a form control that causes a change of context to occur is made"
+          ],
+          "HTML Techniques": [
+            "H32: Providing submit buttons Hinweis: Die Technik H32 ist SC 3.2.2 zugeordnet, wird aber nur indirekt geprüft.",
+            "H84: Using a button with a select element to perform an action"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-3-2-3-konsistente-navigation",
+      "status": "ok",
+      "datei": "9.3.2.3.json",
+      "bitv_nummer": "9.3.2.3",
+      "titel": "Konsistente Navigation",
+      "wcag22": {
+        "guideline": "Guideline 3.2 Make Web pages appear and operate in predictable ways.",
+        "level": "AA",
+        "success_criterion": "3.2.3 Consistent Navigation",
+        "techniken": {
+          "General Techniques": [
+            "G61: Presenting repeated components in the same relative order each time they appear"
+          ],
+          "Failures": [
+            "F66: Failure of Success Criterion 3.2.3 due to presenting navigation links in a different relative order on different pages"
+          ]
+        },
+        "wcag_version": "2.2"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-3-2-4-konsistente-bezeichnung",
+      "status": "ok",
+      "datei": "9.3.2.4.json",
+      "bitv_nummer": "9.3.2.4",
+      "titel": "Konsistente Bezeichnung",
+      "wcag22": {
+        "guideline": "Guideline 3.2 Make Web pages appear and operate in predictable ways.",
+        "level": "AA",
+        "success_criterion": "3.2.4 Consistent Identification",
+        "techniken": {
+          "General Techniques": [
+            "G131: Providing descriptive labels",
+            "G197: Using labels, names, and text alternatives consistently for content that has the same functionality"
+          ],
+          "HTML Techniques": [
+            "H70: Using frame elements to group blocks of repeated material"
+          ],
+          "Failures": [
+            "F31: Failure of Success Criterion 3.2.4 due to using two different labels for the same function on different Web pages within a set of Web pages"
+          ]
+        },
+        "wcag_version": "2.2"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-3-3-1-fehlererkennung",
+      "status": "ok",
+      "datei": "9.3.3.1.json",
+      "bitv_nummer": "9.3.3.1",
+      "titel": "Fehlererkennung",
+      "wcag22": {
+        "guideline": "Guideline 3.3 Input Assistance: Help users avoid and correct mistakes.",
+        "level": "A",
+        "success_criterion": "3.3.1 Error Identification",
+        "techniken": {
+          "General Techniques": [
+            "G83: Providing text descriptions to identify required fields that were not completed",
+            "G84: Providing a text description when the user provides information that is not in the list of allowed values",
+            "G85: Providing a text description when user input falls outside the required format or values"
+          ],
+          "Scripting Techniques": [
+            "SCR18: Providing client-side validation and alert",
+            "SCR32: Providing client-side validation and adding error text via the DOM"
+          ],
+          "ARIATechniques": [
+            "ARIA18: Using aria-alertdialog to Identify Errors",
+            "ARIA19: Using ARIA role=alert or Live Regions to Identify Errors",
+            "ARIA21: Using Aria-Invalid to Indicate An Error Field"
+          ]
+        },
+        "wcag_version": "2.2"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-3-3-2-beschriftungen-von-formularelementen-vorhanden",
+      "status": "ok",
+      "datei": "9.3.3.2.json",
+      "bitv_nummer": "9.3.3.2",
+      "titel": "Beschriftungen von Formularelementen vorhanden",
+      "wcag22": {
+        "level": "A",
+        "success_criterion": "3.3.2 Labels or Instructions",
+        "techniken": {
+          "General Techniques": [
+            "G13: Describing what will happen before a change to a form control that causes a change of context to occur is made",
+            "G89: Providing expected data format and example",
+            "G131: Providing descriptive labels",
+            "G162: Positioning labels to maximize predictability of relationships",
+            "G184: Providing text instructions at the beginning of a form or set of fields that describes the necessary input"
+          ],
+          "HTML Techniques": [
+            "H44: Using label elements to associate text labels with form controls",
+            "H65: Using the title attribute to identify form controls when the label element cannot be used",
+            "H71: Providing a description for groups of form controls using fieldset and legend elements",
+            "H90: Indicating required form controls using label or legend"
+          ],
+          "ARIA Techniques": [
+            "ARIA1: Using the aria-describedby property to provide a descriptive label for user interface controls",
+            "ARIA9: Using aria-labelledby to concatenate a label from several text nodes",
+            "ARIA17: Using grouping roles to identify related form controls"
+          ],
+          "Failures": [
+            "F82: Failure of Success Criterion 3.3.2 by visually formatting a set of phone number fields but not including a text label"
+          ]
+        },
+        "wcag_version": "2.2"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-3-3-3-hilfe-bei-fehlern",
+      "status": "ok",
+      "datei": "9.3.3.3.json",
+      "bitv_nummer": "9.3.3.3",
+      "titel": "Hilfe bei Fehlern",
+      "wcag22": {
+        "guideline": "Guideline 3.3 Input Assistance: Help users avoid and correct mistakes.",
+        "level": "AA",
+        "success_criterion": "3.3.3 Error Suggestion",
+        "wcag_version": "2.2"
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-3-3-4-fehlervermeidung-wird-unterstuetzt",
+      "status": "ok",
+      "datei": "9.3.3.4.json",
+      "bitv_nummer": "9.3.3.4",
+      "titel": "Fehlervermeidung wird unterstützt",
+      "wcag22": {
+        "guideline": "Guideline 3.3 Input Assistance: Help users avoid and correct mistakes.",
+        "level": "AA",
+        "success_criterion": "3.3.4 Error prevention (Legal, Financial, Data)",
+        "techniken": {
+          "General Techniques": [
+            "G98: Providing the ability for the user to review and correct answers before submitting",
+            "G99: Providing the ability to recover deleted information",
+            "G155: Providing a checkbox in addition to a submit button",
+            "G164: Providing a stated time within which an online request (or transaction) may be amended or canceled by the user after making the request",
+            "G168: Requesting confirmation to continue with selected action",
+            "G199: Providing success feedback when data is submitted successfully"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-4-1-1-korrekte-syntax",
+      "status": "ok",
+      "datei": "9.4.1.1.json",
+      "bitv_nummer": "9.4.1.1",
+      "titel": "Korrekte Syntax",
+      "wcag22": {
+        "guideline": "Guideline 4.1 Compatible: Maximize compatibility with current and future user agents, including assistive technologies.",
+        "level": "A",
+        "success_criterion": "4.1.1 Parsing",
+        "techniken": {
+          "General Techniques": [
+            "G134: Validating Web pages",
+            "G192: Fully conforming to specifications"
+          ],
+          "HTML Techniques": [
+            "H74: Ensuring that opening and closing tags are used according to specification",
+            "H75: Ensuring that Web pages are well-formed",
+            "H88: Using HTML according to spec",
+            "H93: Ensuring that id attributes are unique on a Web page"
+          ],
+          "Failures": [
+            "F70: Failure of Success Criterion 4.1.1 due to incorrect use of start and end tags or attribute markup",
+            "F77: Failure of Success Criterion 4.1.1 due to duplicate values of type ID"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-4-1-2-name-rolle-wert-verfuegbar",
+      "status": "ok",
+      "datei": "9.4.1.2.json",
+      "bitv_nummer": "9.4.1.2",
+      "titel": "Name, Rolle, Wert verfügbar",
+      "wcag22": {
+        "guideline": "Guideline 4.1 Compatible: Maximize compatibility with current and future user agents, including assistive technologies.",
+        "level": "A",
+        "success_criterion": "4.1.2 Name, Role, Value",
+        "techniken": {
+          "General Techniques": [
+            "G10: Creating components using a technology that supports the accessibility API features of the platforms on which the user agents will be run to expose the names and roles, allow user-settable properties to be directly set, and provide notification of changes",
+            "G108: Using markup features to expose the name and role, allow user-settable properties to be directly set, and provide notification of changes",
+            "G135: Using the accessibility API features of a technology to expose names and roles, to allow user-settable properties to be directly set, and to provide notification of changes"
+          ],
+          "HTML Techniques": [
+            "H64: Using the title attribute of the frame and iframe elements",
+            "H91: Using HTML form controls and links"
+          ],
+          "ARIA Techniques": [
+            "ARIA4: Using a WAI-ARIA role to expose the role of a user interface component",
+            "ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component",
+            "ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used",
+            "ARIA16: Using aria-labelledby to provide a name for user interface controls"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "bitv-20-web-9-4-1-3-statusmeldungen-programmatisch-verfuegbar",
+      "status": "ok",
+      "datei": "9.4.1.3.json",
+      "bitv_nummer": "9.4.1.3",
+      "titel": "Statusmeldungen programmatisch verfügbar",
+      "wcag22": {
+        "guideline": "Guideline 4.1 Compatible: Maximize compatibility with current and future user agents, including assistive technologies.",
+        "level": "AA",
+        "success_criterion": "4.1.3 Status messages"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "bitv_nummer": "6.2.1.1",
+  "titel": "Textkommunikation in Echtzeit",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Bietet das Webangebot eine Zwei-Wege-Kommunikation wie Sprach- oder Videotelefonie, muss es zusätzlich Echtzeit-Textkommunikation (RTT, Real-Time Text) anbieten. Echtzeit heißt: Bereits einzelne eingegebene Zeichen werden übertragen und beim Empfänger sichtbar, ohne dass die Nutzenden den Text erst abschicken müssen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Menschen, die Sprache nicht nutzen können oder wollen, sollen über Echtzeit-Textkommunikation (RTT, Real-Time Text) gleichberechtigt an Gesprächen teilnehmen können."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn das Webangebot eine Zwei-Wege-Kommunikation ermöglicht, etwa webbasierte Sprach- oder Videotelefonie."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Webangebot öffnen.\n2. - Bietet das Angebot eine Zwei-Wege-Kommunikation, prüfen, ob zusätzlich Echtzeit-Textkommunikation (RTT, Real-Time Text) unterstützt wird."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Anders als beim Chat werden bei RTT bereits einzelne getippte Zeichen übertragen und beim Gegenüber angezeigt, ohne dass eine Nachricht erst abgeschickt werden muss."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Human Factors (HF); Real-Time Text (RTT) in Multiparty Conference Calling / ETSI TR 103 708 V1.1.1 (2022-08)](https://labs.etsi.org/rep/HF/en301549/uploads/272bede3724c5c99efe777f778201f70/tr_103708v010101p.pdf)\n        - [11 More Free Open-source Text-To-Speech Apps](https://medevel.com/free-tts/)(MEDevel.com: Open-source Guide to Healthcare and Medical Software)\n        - [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API)(Mozilla Foundation, mdm web docs)\n        - [RFC 8865 T.140 Real-Time Text Conversation over WebRTC Data Channels (PDF)](https://www.rfc-editor.org/rfc/rfc8865.pdf)\n        - [WebRTC 1.0: Real-Time Communication Between Browsers.](https://w3c.github.io/webrtc-pc/)W3C Editor’s Draft 06 February 2023"
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "6.2.1.1 RTT communication",
+          "inhalt_markdown": "> Where ICT is in a mode that provides a means for two-way voice communication,\nthe ICT shall provide a means for two-way RTT communication, except where this\nwould require design changes to add input or output hardware to the ICT.\n\nNOTE 1:\nThis requirement includes those products which do not have physical display or\ntext entry capabilities but have the capability to connect to devices that do\nhave such capabilities.\nIt also includes intermediate ICT between the endpoints of the communication.\n\nNOTE 2:\nThere is no requirement to add: a hardware display, a hardware keyboard, or\nhardware to support the ability to connect to a display or keyboard, wired or\nwirelessly, if this hardware would not normally be provided.\n\nNOTE 3:\nFor the purposes of interoperability, support of Recommendation ITU-T T.140\n[i.36] is widely used."
+        }
+      ]
+    }
+  ]
+}

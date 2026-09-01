@@ -1,0 +1,147 @@
+{
+  "bitv_nummer": "9.2.4.4",
+  "titel": "Aussagekräftige Linktexte",
+  "wcag22": {
+    "guideline": "Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are",
+    "level": "A",
+    "success_criterion": "2.4.4 Link Purpose (In Context)",
+    "techniken": {
+      "General Techniques": [
+        "G53: Identifying the purpose of a link using link text combined with the text of the enclosing sentence",
+        "G91: Providing link text that describes the purpose of a link"
+      ],
+      "HTML Techniques": [
+        "H24: Providing text alternatives for the area elements of image maps",
+        "H30: Providing link text that describes the purpose of a link for anchor elements",
+        "H33: Supplementing link text with the title attribute",
+        "H77: Identifying the purpose of a link using link text combined with its enclosing list item",
+        "H78: Identifying the purpose of a link using link text combined with its enclosing paragraph",
+        "H79: Identifying the purpose of a link using link text combined with its enclosing table cell and associated table headings",
+        "H80: Identifying the purpose of a link using link text combined with the preceding heading element",
+        "H81: Identifying the purpose of a link in a nested list using link text combined with the parent list item under which the list is nested"
+      ],
+      "CSS Techniques": [
+        "C7: Using CSS to hide a portion of the link text (CSS)"
+      ],
+      "ARIA Techniques": [
+        "ARIA7: Using aria-labelledby for link purpose",
+        "ARIA8: Using aria-label for link purpose"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Der Linktext oder der direkte Kontext sollen erkennen lassen, welches Ziel oder welchen Zweck ein Link hat.\n\nFühren Links auf Dokumente in anderen Formaten als HTML, soll der Link das Dateiformat des Ziels nennen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Blinde Nutzende, die mit der Tastatur von Link zu Link springen, lassen sich die Linktexte vorlesen; sind diese aussagekräftig, fällt die Entscheidung leicht, ob sie einem Link folgen.\n\nIst die Linkbeschriftung allein nicht aufschlussreich, muss der direkte Kontext für Screenreader-Nutzende zumindest leicht auffindbar sein.\n\nScreenreader können sämtliche Links der Seite auflisten und so einen schnellen Überblick geben, selbst wenn die Seite sonst schlecht zugänglich ist. Das nützt allerdings nur bedingt, wenn alle Linktexte identisch sind und das Ziel des Links nicht benennen.\n\nBei Links auf Angebote in anderen Formaten als HTML (etwa PDF oder Word) hilft es Nutzenden zu wissen, in welchem Format die Informationen vorliegen, bevor sie den Link aktivieren. Wird diese Information visuell bereitgehalten (etwa über ein per CSS eingeblendetes PDF- oder Word-Icon), muss sie auch für blinde Nutzer verfügbar sein."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, sobald auf der Seite Verweise (Links) vorkommen."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Prüfung von Linktexten",
+          "inhalt_markdown": "1. - Seite im Firefox öffnen.\n2. - Prüfen, ob die Linktexte genug aussagen, also im Linktext oder im Kontext erkennen lassen, wohin sie führen oder welchem Zweck sie dienen.\n3. - Für Links, deren sichtbare Beschriftung für sich genommen wenig aussagt (etwa \"mehr\" oder \"weiterlesen\"), prüfen, ob sie im Kontext auf eine der folgenden Arten sinnvoll ergänzt wird:\n   - über zusätzlichen, per CSS unsichtbar gemachten Linktext (ggf. in der Web Developer Toolbar *CSS > Disable All Styles* wählen und die Links erneut kontrollieren)\n   - durch den Alternativtext einer Grafik, die im selben `a`-Element verlinkt ist (dazu *Images > Display Alt Attributes* wählen)\n   - durch den Text des umschließenden Elements (`p`, `li`); das `div`-Element zählt hier wie `p`\n   - bei Links in verschachtelten Listen durch den Text des übergeordneten `li`-Elements\n   - durch den Inhalt der umgebenden Tabellenzelle und der zugehörigen Kopfzellen (`td`, `th`)\n   - durch den Text der unmittelbar davorstehenden Überschrift (`h1`-`h6`)\n   - über das `aria-label`- oder `aria-labelledby`-Attribut (Hinweis: `aria-label` ersetzt den Linktext)\n   - über einen gut verständlichen Link zu Beginn der Seite, der die Linktexte der Seite ergänzt"
+        },
+        {
+          "titel": "2.2 Prüfung von Links auf andere Dateiformate",
+          "inhalt_markdown": "1. - Seite im Browser öffnen.\n2. - Kontrollieren, ob das Dateiformat sichtbar angezeigt wird, etwa über Icons oder eigene Tooltips.\n3. - Prüfen, ob die sichtbare Formatangabe auch programmatisch auslesbar ist (etwa via unsichtbaren Linktext, Alternativtext, das `title`-Attribut oder passende ARIA-Attribute).\n4. - Ist das Dateiformat weder im Linktext noch über ein eindeutiges Icon erkennbar, bleibt es möglicherweise allen Nutzenden unklar. Ein Verstoß gegen diesen Prüfschritt ist das nicht; anzumerken ist es gleichwohl als allgemeines Usability-Problem."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Links, deren Ziel für niemanden erkennbar ist, sind nicht Gegenstand dieses Prüfschritts.\n- Verlinkte URLs und E-Mail-Adressen verraten über ihr Format den Zweck des Links (etwa das Starten eines Mailprogramms oder das Aufrufen eines externen Angebots). Dass URLs für alle Nutzenden nicht unbedingt aussagekräftig sind, wird hier nicht negativ bewertet.\n- Bei verlinkten Grafiken entspricht der Linktext dem Wert des `alt`-Attributs des `img`-Elements; möglich ist auch eine Zusammensetzung aus den `alt`-Texten mehrerer Grafiken und einfachem Text.\n- Nicht aussagekräftige Links wie \"mehr\", \"weiter\" oder \"etc.\" im letzten `li`-Element einer Liste sind hinnehmbar, wenn der programmatisch ermittelbare Kontext die Bedeutung liefert, also der einschließende Absatz, Listenpunkt oder die vorangehende Überschrift.\n- Per `display:none` verborgener Linktext ist programmatisch nicht ermittelbar und steigert die Aussagekraft nicht: Screenreader übergehen ihn.\n- Das `title`-Attribut eines Links lässt sich zwar programmatisch ermitteln, doch je nach Konfiguration werten nicht alle Screenreader es aus."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "- Alle Links offenbaren ihr Ziel bzw. ihren Zweck über den Linktext oder den programmatisch ermittelbaren Kontext.\n- Alle Links auf nicht-HTML-Angebote, die das Dateiformat sichtbar kennzeichnen, machen diese Angabe auch maschinell auslesbar verfügbar."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Geprüft wird hier allein, ob die Auskunft über das Dateiformat überhaupt vorliegt – sei es als Grafik, als Linktext oder als zugänglicher Name des Elements.\n\nBei verlinkten Grafiken bildet der `alt`-Text des `img`-Elements den Linktext. Dessen Zugänglichkeit und Aussagekraft prüft jedoch Prüfschritt 9.1.1.1a \"Alternativtexte für Bedienelemente\".\n\nIst die Grafik, die über das Dateiformat informiert, nicht in den Link eingebunden (etwa unverlinkt dem Link vorangestellt), wird dies in Prüfschritt 9.1.1.1b \"Alternativtexte für Grafiken und Objekte\" geprüft."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are](https://www.w3.org/TR/WCAG21/#navigable)"
+        },
+        {
+          "titel": "Success criteria",
+          "inhalt_markdown": "- [2.4.4 Link Purpose (In Context)](https://www.w3.org/TR/WCAG21/#link-purpose-in-context)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G53: Identifying the purpose of a link using link text combined with the text of the enclosing sentence](https://www.w3.org/WAI/WCAG21/Techniques/general/G53.html)\n                    - [G91: Providing link text that describes the purpose of a link](https://www.w3.org/WAI/WCAG21/Techniques/general/G91.html)"
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H24: Providing text alternatives for the area elements of image maps](https://www.w3.org/WAI/WCAG21/Techniques/html/H24.html)\n                    - [H30: Providing link text that describes the purpose of a link for anchor elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H30.html)\n                    - [H33: Supplementing link text with the title attribute](https://www.w3.org/WAI/WCAG21/Techniques/html/H33.html)\n                    - [H77: Identifying the purpose of a link using link text combined with its enclosing list item](https://www.w3.org/WAI/WCAG21/Techniques/html/H77.html)\n                    - [H78: Identifying the purpose of a link using link text combined with its enclosing paragraph](https://www.w3.org/WAI/WCAG21/Techniques/html/H78.html)\n                    - [H79: Identifying the purpose of a link using link text combined with its enclosing table cell and associated table headings](https://www.w3.org/WAI/WCAG21/Techniques/html/H79.html)\n                    - [H80: Identifying the purpose of a link using link text combined with the preceding heading element](https://www.w3.org/WAI/WCAG21/Techniques/html/H80.html)\n                    - [H81: Identifying the purpose of a link in a nested list using link text combined with the parent list item under which the list is nested](https://www.w3.org/WAI/WCAG21/Techniques/html/H81.html)"
+        },
+        {
+          "titel": "CSS Techniques",
+          "inhalt_markdown": "- [C7: Using CSS to hide a portion of the link text (CSS)](https://www.w3.org/WAI/WCAG21/Techniques/css/C7.html)"
+        },
+        {
+          "titel": "ARIA Techniques",
+          "inhalt_markdown": "- [ARIA7: Using aria-labelledby for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA7)\n                    - [ARIA8: Using aria-label for link purpose](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA8)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F63: Failure of Success Criterion 2.4.4 due to providing link context only in content that is not related to the link](https://www.w3.org/WAI/WCAG21/Techniques/failures/F63.html)\n                - [F89: Failure of 2.4.4, 2.4.9 and 4.1.2 due to using null alt on an image where the image is the only content in a link](https://www.w3.org/WAI/WCAG21/Techniques/failures/F89.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "Zweck der Kontextunabhängigkeit",
+          "inhalt_markdown": "> Assistive technology has the ability to provide users with a list of links\nthat are on the Web page.\nLink text that is as meaningful as possible will aid\nusers who want to choose from this list of links.\nMeaningful link text also\nhelps those who wish to tab from link to link.\nMeaningful links help users\nchoose which links to follow without requiring complicated strategies to\nunderstand the page.\n\n[WCAG 2.1, Link Purpose (In Context): Understanding SC 2.4.4](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)"
+        },
+        {
+          "titel": "Gruppen zusammengehöriger Links",
+          "inhalt_markdown": "Bei einer Gruppe zusammengehöriger Links kann im ersten Link Ziel oder Zweck\ngenannt werden und in den folgenden Links unterscheidende Informationen.\nDie WCAG 2.1 geben folgendes Beispiel:\n\n> A list of books is available in three formats: HTML, PDF, and mp3\n(a recording of a person reading the book).\nTo avoid hearing the title of each book three times (once for each format),\nthe first link for each book is the title of the book, the second link says\n\"PDF\" and the third says, \"mp3.\"\n\n[WCAG 2.1, Link Purpose (In Context): Understanding SC 2.4.4: Examples of Success\nCriterion 2.4.4](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html#examples)"
+        },
+        {
+          "titel": "Aussagekraft über den Kontext",
+          "inhalt_markdown": "> Whenever possible, provide link text that identifies the purpose of the link\nwithout needing additional context.\n\nIn some situations, authors may want to provide part of the description of the\nlink in logically related text that provides the context for the link.\nIn this case the user should be able to identify the purpose of the link\nwithout moving focus from the link.\nIn other words, they can arrive on a link and find out more about it without\nlosing their place.\nThis can be achieved by putting the description of the link in the same\nsentence, paragraph, list item, the\nheading immediately preceding the link, or table cell as the link, or in the\ntable header cell for a link in a data table, because these are directly\nassociated with the link itself.\n\n[WCAG 2.1, Link Purpose (In Context): Understanding SC 2.4.4](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)"
+        },
+        {
+          "titel": "Grenzen des title -Attributs (Technik H33: Supplementing link text with the title attribute)",
+          "inhalt_markdown": "> The`title`attribute is used to provide additional information to help\nclarify or further describe the purpose of a link.\nIf the supplementary\ninformation provided through the`title`attribute is something the user\nshould know before following the link, such as a warning, then it should be\nprovided in the link text rather than in the title attribute.\n\nBecause of the extensive user agent limitations in supporting access to the`title`attribute, authors should use caution in applying this technique.\nFor this reason, it is preferred that the author use technique[C7: Using CSS to hide a portion of the link text](https://www.w3.org/WAI/WCAG21/Techniques/css/C7.html)(CSS) or[H30: Providing link text that describes the purpose of a link for anchor\nelements](https://www.w3.org/WAI/WCAG21/Techniques/html/H30.html)(HTML).\n\n[WCAG 2.1 Technik, H33: Supplementing link text with the title attribute](https://www.w3.org/WAI/WCAG21/Techniques/html/H33.html)"
+        }
+      ]
+    }
+  ]
+}

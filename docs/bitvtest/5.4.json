@@ -1,0 +1,66 @@
+{
+  "bitv_nummer": "5.4",
+  "titel": "Erhaltung von Barrierefreiheitsinformationen bei Konvertierung",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Konvertiert die Webseite Dokumente in andere Formate, sollen vorhandene Barrierefreiheitsinformationen ins Zielformat übernommen werden, sofern dieses sie grundsätzlich unterstützt."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Bei Konvertierungsfunktionen sollen Barrierefreiheitsinformationen des Ausgangsformats im Zielformat nicht unnötig verloren gehen. Ein Verlust ist unnötig, wenn das Zielformat die betreffende Information prinzipiell aufnehmen könnte, die Konvertierung sie aber verwirft. So unterstützen etwa HTML und PDF die Auszeichnung von Überschriften; eine Konvertierung könnte die Überschriftenstruktur daher mühelos aus dem HTML-Quelltext ins PDF übernehmen. Hingenommen wird der Verlust nur, wenn das Zielformat die im Ausgangsformat verwendete Informationsart gar nicht abbilden kann."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Grundsätzlich greift der Prüfschritt, sobald die Webseite digitale Formate wie Text, Audio oder Video konvertiert. Ist Ausgangs- oder Zielformat jedoch nicht HTML, lässt er sich in diesem Verfahren allein nicht prüfen, da das abweichende Format zusätzlich untersucht werden müsste. Zur Bewertung siehe „3. Hinweise“."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Die Prüfung ist stark vom jeweiligen Quell- und Zielformat abhängig; das abweichende Format lässt sich in diesem Verfahren nicht zusätzlich prüfen.\n\n1. Falls nötig, Musterdokumente mit Barrierefreiheitsinformationen in das Zielformat überführen.\n2. Prüfen, ob die vom Zielformat grundsätzlich unterstützten Barrierefreiheitsinformationen nach der Konvertierung erhalten geblieben sind."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Da sich ein Nicht-HTML-Format mit diesem Verfahren nicht prüfen lässt, ist der Prüfschritt mit „nicht anwendbar“ zu bewerten. In einer Anmerkung sollte jedoch darauf hingewiesen werden, dass Barrierefreiheitsinformationen wie Überschriften-Semantik, Links oder Untertitel auch im Zielformat nicht verloren gehen."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "Alle Barrierefreiheitsinformationen des HTML-Ausgangsformats, die das Zielformat abbilden kann, sind darin vollständig enthalten."
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "Bei der Konvertierung gehen Barrierefreiheitsinformationen des HTML-Ausgangsformats verloren, die das Zielformat grundsätzlich unterstützt."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "5.4 Preservation of accessibility information during conversion",
+          "inhalt_markdown": "> Where ICT converts information or communication it shall preserve all\ndocumented non-proprietary information that is provided for accessibility, to\nthe extent that such information can be contained in or supported by the\ndestination format."
+        }
+      ]
+    }
+  ]
+}

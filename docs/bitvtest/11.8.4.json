@@ -1,0 +1,49 @@
+{
+  "bitv_nummer": "11.8.4",
+  "titel": "Reparaturassistenz",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Erkennt ein Autorenwerkzeug bei der Erstellung von Dokumenten Fehler in der Barrierefreiheit, soll es zugleich Vorschläge zu deren Behebung anbieten."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar ist der Prüfschritt, sobald die Seite zu einem Autorenwerkzeug gehört oder eine Schreibfunktion besitzt, etwa eine Kommentarfunktion. Voraussetzung ist, dass Fehler in der Barrierefreiheit der erstellten Inhalte angezeigt werden können – etwa fehlende Überschriften oder fehlende Alternativtexte bei informationstragenden Bildern."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. Inhalte anlegen und die vorhandenen Auszeichnungsoptionen gezielt ungenutzt lassen, etwa:\n   - Überschriftenfelder leer lassen und die Überschriftenauszeichnung des Editors nicht verwenden\n   - Bilder ohne Alternativtext einfügen\n   - In ein E-Mail-Feld eine fehlerhafte Adresse eingeben\n2. Den Inhalt sichern oder absenden und prüfen, ob eine Fehlerprüfung stattfindet.\n3. Falls das passiert (etwa wenn das Sichern oder Absenden nicht möglich ist oder fehlerhafte Eingaben farblich markiert werden), ist zu prüfen, ob Korrekturhinweise erscheinen."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "„Dokumente“ ist hier weit zu verstehen und umfasst Web- wie Nicht-Web-Dokumente (siehe Kapitel 9 und 10 der EN 301 549). Weitere Hinweise für die Prüfpraxis können als [Issue auf GitHub](https://github.com/BIK-BITV/BIK-Web-Test/issues) eingebracht werden."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "11.8.4 Repair assistance",
+          "inhalt_markdown": "> If the accessibility checking functionality of an authoring tool can detect\nthat content does not meet a requirement of clauses 9 (Web) or 10 (Non-web\ndocuments) as applicable, then the authoring tool shall provide repair\nsuggestion(s).\n\nNOTE:\nThis does not preclude automated and semi-automated repair which is possible\n(and encouraged) for many types of content accessibility problems."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "bitv_nummer": "6.2.3",
+  "titel": "Interoperabilität von Echtzeit-Textkommunikation",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Web-Anwendungen, die Echtzeit-Textkommunikation (RTT, Real-Time Text) – meist zusätzlich zur Sprach-Kommunikation – mit anderen Anwendungen austauschen, müssen interoperabel sein und die jeweils einschlägigen technischen Standards von ITU, IETF oder ETSI unterstützen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Tauschen sich Web-Anwendungen, die zur Sprachkommunikation auch Echtzeit-Text (RTT) anbieten, untereinander aus, müssen die RTT-Mechanismen auf beiden Seiten gleich arbeiten – etwa bei der Anzeige nicht oder fehlerhaft übertragener Zeichen. Das ist gewährleistet, wenn beide Seiten die geltenden technischen Standards von ITU, IETF oder ETSI umsetzen. Proprietäre RTT-Mechanismen funktionieren dagegen möglicherweise nicht im Austausch mit anderen RTT-fähigen Anwendungen."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn die Web-Anwendung neben der Sprachkommunikation auch Echtzeit-Text (RTT) bietet und grundsätzlich mit anderer, gleichermaßen ausgestatteter Kommunikations-Software zusammenarbeiten kann."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Dokumentation der Web-Anwendung oder deren Anbieter konsultieren und klären, ob die je nach technischer Umsetzung einschlägigen aktuellen Standards für RTT (Real-Time Text) unterstützt werden."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Die Besonderheit von RTT (Real-Time Text): Der Text wird bereits während der Eingabe übertragen, während eine Chat-Nachricht erst nach dem Senden beim Gegenüber landet.\n- Bei der Bewertung der Standard-Unterstützung ist der aktuelle Stand der Normung zu berücksichtigen, da für die jeweilige Kommunikationsmethode inzwischen neuere Standards gängig sein können.\n\nEN 301 549 V3.2.1 nennt je nach technischer Umsetzung folgende anwendbare Standards:\n\n- Kommunikation über das öffentliche Telefonnetz: Echtzeit-Text nach den Empfehlungen ITU-T V.18 [i.23] oder den Text-Telefonie-Standards in deren Anhängen.\n- Voice over IP (VoIP) auf Basis des Session Initiation Protocol (SIP): Hier kommen Empfehlungen der IETF zum Tragen, namentlich RFC 4103 [i.13].\n- Basiert die Sprachübertragung auf dem IMS (IP Multimedia Sub-System), gelten die ETSI-Normen TS 126 114 [i.10], TS 122 173 [i.11] und TS 134 229 [i.12].\n- Andere Kommunikationsmethoden: Es werden gemeinsame, einschlägige und veröffentlichte Standards unterstützt, die auch die Anzeige verlorener und fehlerhaft übertragener Zeichen vorsehen."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Human Factors (HF); Real-Time Text (RTT) in Multiparty Conference Calling / ETSI TR 103 708 V1.1.1 (2022-08)](https://labs.etsi.org/rep/HF/en301549/uploads/272bede3724c5c99efe777f778201f70/tr_103708v010101p.pdf)"
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "6.2.3 Interoperability",
+          "inhalt_markdown": "> Where ICT with RTT functionality interoperates with other ICT with RTT\nfunctionality (as required by clause 6.2.1.1) they shall support the\napplicable RTT interoperability mechanisms described below:\n\n                                - (a) ICT interoperating with other ICT directly connected to the Public Switched Telephone Network (PSTN), using Recommendation ITU-T V.18 [i.23] or any of its annexes for text telephony signals at the PSTN interface;\n                                - (b) ICT interoperating with other ICT using VOIP with Session Initiation Protocol (SIP) and using RTT that conforms to IETF RFC 4103 [i.13]. For ICT interoperating with other ICT using the IP Multimedia Sub-System (IMS) to implement VOIP, the set of protocols specified in ETSI TS 126 114 [i.10], ETSI TS 122 173 [i.11] and ETSI TS 134 229 [i.12] describe how IETF RFC 4103 [i.13] would apply;\n                                - (c) ICT interoperating with other ICT using technologies other than a or b, above, using a relevant and applicable common specification for RTT exchange that is published and available for the environments in which they will be operating. This common specification shall include a method for indicating loss or corruption of characters.\n                                - (d) ICT interoperating with other ICT using a standard for RTT that has been introduced for use in any of the above environments, and is supported by all of the other active ICT that support voice and RTT in that environment.\n\nNOTE 1:\nIn practice, new standards are introduced as an alternative codec/protocol\nthat is supported alongside the existing common standard and used when\nall end-to-end components support it while technology development, combined\nwith other reasons including societal development and cost efficiency, may\nmake others become obsolete.\n\nNOTE 2:\nWhere multiple technologies are used to provide voice communication, multiple\ninteroperability mechanisms may be needed to ensure that all users are able to\nuse RTT.\n\nEXAMPLE:\nA conferencing system that supports voice communication through an internet\nconnection might provide RTT over an internet connection using a proprietary\nRTT method (option c). However, regardless of whether the RTT method is\nproprietary or non-proprietary, if the conferencing system also offers\ntelephony communication it will also need to support options a or b to ensure\nthat RTT is supported over the telephony connection."
+        }
+      ]
+    }
+  ]
+}

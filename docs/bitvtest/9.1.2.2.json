@@ -1,0 +1,164 @@
+{
+  "bitv_nummer": "9.1.2.2",
+  "titel": "Aufgezeichnete Videos mit Untertiteln",
+  "wcag22": {
+    "guideline": "Guideline 1.2 Time-based Media: Provide alternatives for time-based media",
+    "level": "A",
+    "success_criterion": "1.2.2 Captions (Prerecorded)",
+    "techniken": {
+      "General Techniques": [
+        "G87: Providing closed captions",
+        "G93: Providing open (always visible) captions"
+      ],
+      "HTML Techniques": [
+        "H95: Using the track element to provide captions"
+      ],
+      "SMIL Techniques": [
+        "SM11: Providing captions through synchronized text streams in SMIL 1.0",
+        "SM12: Providing captions through synchronized text streams in SMIL 2.0"
+      ],
+      "Failures": [
+        "F8: Failure of Success Criterion 1.2.2 due to captions omitting some dialogue or important sound effects",
+        "F74: Failure of SC1.2.2 and 1.2.8 due to not labeling a synchronized media alternative to text as an alternative",
+        "F75: Failure of Success Criterion 1.2.2 by providing synchronized media without captions when the synchronized media presents more information than is presented on the page"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Enthält die Tonspur eines aufgezeichneten Videos relevante Informationen, sind Untertitel als Alternative bereitzustellen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Filme erschließen sich in der Regel nur mit Ton. Menschen mit Hörbehinderung brauchen deshalb den Inhalt der Tonspur als Untertitel. Untertitel helfen auch anderen, etwa wenn die Filmsprache nicht die eigene ist."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "- Anwendbar bei aufgezeichneten Videos mit synchroner Bild- und Tonspur.\n- Videos ohne Tonspur sind ausgenommen; Alternativen für sie prüft 9.1.2.1 \"Alternativen für Audiodateien und stumme Videos\"."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Prüfung auf Untertitel",
+          "inhalt_markdown": "1. Das Video im eingebundenen Player abspielen. 2. Prüfen, ob Untertitel automatisch angezeigt werden oder sich zuschalten lassen. 3. Eine kurze Sequenz mit Untertiteln ansehen und stichprobenartig prüfen, ob die Untertitel dem Hörbaren entsprechen – einschließlich bedeutungsvoller akustischer Ereignisse."
+        },
+        {
+          "titel": "2.2 Prüfung von Videos als Medienalternative",
+          "inhalt_markdown": "1. Fehlen Untertitel, ist zu klären, ob das Video einem Text als ergänzende Medienalternative dient. 2. Zu prüfen ist außerdem, ob die Beschriftung des Videos klar auf eine zugehörige Textversion verweist und diese in unmittelbarer Nachbarschaft liegt oder über einen aussagekräftigen Link erreichbar ist. 3. Kontrollieren, ob das Video sämtliche wesentlichen Inhalte des Textes über den Ton vermittelt. 4. Trägt das Video wichtige Informationen, die über den Text hinausgehen, ist es keine Medienalternative: Es braucht Untertitel und muss zusätzlich auf Audiodeskription geprüft werden (vgl. 9.1.2.3 \"Audiodeskription oder Volltext-Alternative für Videos\")."
+        },
+        {
+          "titel": "3. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "- Die Videos haben erweiterte Untertitel mit sämtlichen Informationen der Tonspur, gegebenenfalls inklusive Sprecherkennzeichnung und bedeutungstragender Tonereignisse wie informationstragenden Geräuschen, Lachen oder Applaus."
+        },
+        {
+          "titel": "Teilweise erfüllt",
+          "inhalt_markdown": "- Keine Untertitel, aber in unmittelbarer Nähe des Videos liegt eine vollständige Transkription als Text vor oder ein eindeutig benannter Link führt zu ihr.\n- Enthält das Videobild Inhalte, die in der Transkription fehlen oder sich nicht angemessen abbilden lassen, sind die Abstufungen von eher nicht erfüllt bis nicht erfüllt heranzuziehen."
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "- Bei Medienalternativen fehlt die unmittelbare Nachbarschaft oder der klar bezeichnete Link zum primären Medium, das die Medienalternative ersetzt."
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Aufgezeichnete Videos haben weder Untertitel noch eine Textalternative."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Live-Videos",
+          "inhalt_markdown": "Die Untertitelung von Live-Videos prüft 9.1.2.4 \"Videos (live) mit Untertiteln\"."
+        },
+        {
+          "titel": "Stumme Videodateien",
+          "inhalt_markdown": "Hier zählt die synchrone Vermittlung von visuellen und akustischen Informationen: Ist die gleichzeitige Wahrnehmung von Bild und Ton für das Verständnis nötig, genügt eine kurze Textalternative bzw. eine zusammenfassende Umschreibung nicht mehr. Stumme Videodateien behandelt 9.1.2.1 \"Alternativen für Audiodateien und stumme Videos\"."
+        },
+        {
+          "titel": "Alternativtexte für Objekte",
+          "inhalt_markdown": "Alternativtexte für Multimedia-Objekte wie Video- oder Audiodateien oder Applets prüft 9.1.1.1b \"Alternativtexte für Grafiken und Objekte\"."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.2 Time-based Media: Provide alternatives for time-based media](https://www.w3.org/TR/WCAG22/#time-based-media)"
+        },
+        {
+          "titel": "Success criteria",
+          "inhalt_markdown": "- [1.2.2 Captions (Prerecorded)](https://www.w3.org/TR/WCAG22/#captions-prerecorded)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G87: Providing closed captions](https://www.w3.org/WAI/WCAG22/Techniques/general/G87)\n                    - [G93: Providing open (always visible) captions](https://www.w3.org/WAI/WCAG22/Techniques/general/G93)"
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H95: Using the track element to provide captions](https://www.w3.org/WAI/WCAG22/Techniques/html/H95)"
+        },
+        {
+          "titel": "SMIL Techniques",
+          "inhalt_markdown": "- [SM11: Providing captions through synchronized text streams in SMIL 1.0](https://www.w3.org/WAI/WCAG22/Techniques/smil/SM11)\n                    - [SM12: Providing captions through synchronized text streams in SMIL 2.0](https://www.w3.org/WAI/WCAG22/Techniques/smil/SM12)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F8: Failure of Success Criterion 1.2.2 due to captions omitting some dialogue or important sound effects](https://www.w3.org/WAI/WCAG22/Techniques/failures/F8)\n                    - [F74: Failure of SC1.2.2 and 1.2.8 due to not labeling a synchronized media alternative to text as an alternative](https://www.w3.org/WAI/WCAG22/Techniques/failures/F74)\n                    - [F75: Failure of Success Criterion 1.2.2 by providing synchronized media without captions when the synchronized media presents more information than is presented on the page](https://www.w3.org/WAI/WCAG22/Techniques/failures/F75)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "BIK für Alle: Leitfaden barrierefreie Online-Videos",
+          "inhalt_markdown": "- [Für Webentwickler: Einbindung in die Internetseite](http://www.bik-fuer-alle.de/fuer-webentwickler-einbindung-in-die-internetseite.html)Hinweise zur Wahl von Mediaelementen.\n            - [Untertitelung](http://www.bik-fuer-alle.de/untertitelung.html)"
+        },
+        {
+          "titel": "'Sprungmarker' zur Barrierefreiheit von Media-Playern",
+          "inhalt_markdown": "- [Barrierefreiheit & Media Player: eine Kurzübersicht - Teil 1](http://sprungmarker.de/2010/barrierefreiheit_mediaplayer_eine_kurzuebersicht/)\n            - [Barrierefreiheit & Media Player: Captioning - Teil 2](http://sprungmarker.de/2010/barrierefreiheit_mediaplayer_captioning/)"
+        },
+        {
+          "titel": "Zum Stellenwert von Untertiteln und Gebärdensprache",
+          "inhalt_markdown": "> Sign languages for the Deaf (I know of three used in english-speaking countries\nbesides \"signed english\") normally have their own grammar and syntax, their\nown ways of adding emphasis or modifying the \"tone\" of a statement.\nThey are generally recognised as being languages in their own right, and not\njust a pictorial representation of words in a spoken language.\nWhich brings up all the problems associated with translation - it is not easy,\nand automatic translators are still quite primitive.\n\nThis explains why sign language users (not all people who are deaf are sign\nusers) generally prefer sign language interpretation to captioning - with\ncaptions they have to read what amounts to a foreign language, and reading\ntext is not a skill that is easy to acquire without hearing (since it is based\non an abstract representation of the sound of a language, whereas sign\nlanguages tend to be based on an abstract representation of visual experience\nof the world, and since sign languages generally don’t have a written form).\n\nSo being able to communicate in their own language, and not required to use a\nforeign language for chat systems etc is important.\n\nNote that typically this applies to the minority who lose their hearing before\nthey learn to speak a language - people who are hearing impaired or lose their\nhearing later in life, tend to be more (or often only) proficient in a\nspoken/written language, so captions are indeed necessary.\n\n([http://lists.w3.org/Archives/Public/w3c-wai-ig/2003JulSep/0222.html](http://lists.w3.org/Archives/Public/w3c-wai-ig/2003JulSep/0222.html))"
+        }
+      ]
+    },
+    {
+      "titel": "Fragen zu diesem Prüfschritt",
+      "id": "fragen_zu_diesem_prüfschritt",
+      "untersektionen": [
+        {
+          "titel": "Können an Stelle der Untertitel auch Filme mit gebärdensprachlicher Darstellung eingeblendet werden?",
+          "inhalt_markdown": "Gebärdensprachfilme helfen Menschen, die über Gebärdensprache kommunizieren – meist gehörlos Geborene oder früh Ertaubte. Spät ertaubte Menschen beherrschen Gebärdensprache in der Regel nicht und sind auf Untertitel angewiesen. Gebärdensprachliche Darstellungen ersetzen Untertitel daher nicht."
+        }
+      ]
+    }
+  ]
+}

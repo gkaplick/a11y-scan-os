@@ -1,0 +1,220 @@
+{
+  "bitv_nummer": "9.1.1.1a",
+  "titel": "Alternativtexte für Bedienelemente",
+  "wcag22": {
+    "guideline": "Guideline 1.1 Text Alternatives: Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.",
+    "level": "A",
+    "success_criterion": "1.1.1 Non-text Content",
+    "techniken": {
+      "General Techniques": [
+        "G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content"
+      ],
+      "HTML Techniques": [
+        "H2: Combining adjacent image and text links for the same resource",
+        "H24: Providing text alternatives for the area elements of image maps",
+        "H30: Providing link text that describes the purpose of a link for anchor elements",
+        "H36: Using alt attributes on images used as submit buttons",
+        "H37: Using alt attributes on img elements"
+      ],
+      "ARIA Techniques": [
+        "ARIA6 Using aria-label to provide labels for objects",
+        "ARIA10: Using aria-labelledby to provide a text alternative for non-text content"
+      ],
+      "Failures": [
+        "F3: Failure of Success Criterion 1.1.1 due to using CSS to include images that convey important information",
+        "F20: Failure of Success Criterion 1.1.1 and 4.1.2 due to not updating text alternatives when changes to non-text content occur",
+        "F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives",
+        "F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute on img elements, area elements, and input elements of type 'image'"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Alle verlinkten und interaktiven Grafiken müssen Alternativtexte erhalten; unverlinkte Grafiken behandelt Prüfschritt 9.1.1.1b „Alternativtexte für Grafiken und Objekte“. Bei Bedienelementen wie Icons, Logos oder Teaserbildern soll der Alternativtext das **Ziel** des Links nennen, bei grafischen Schaltflächen die ausgelöste **Aktion**. Bei Image maps brauchen die aktiven Bereiche (`area`-Elemente) sinnvolle Alternativtexte. Ebenfalls Thema sind per CSS durch Hintergrundbilder ersetzte Textlinks sowie Textalternativen für Icon Fonts und SVGs."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Blinde Nutzer und Nutzer, die aus Gründen der Geschwindigkeit keine Bilder laden, sehen Grafiken nicht. Die Textalternative übernimmt dann deren Funktion. Icon Fonts sind Schriften aus Symbolen statt Buchstaben, die per CSS eingebunden werden: Assistive Technologien geben sie entweder gar nicht aus oder lesen ein Unicode-Äquivalent vor, das die Bedeutung im Kontext nicht erkennen lässt."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn Grafiken, Icon Fonts oder SVGs als Bedienelemente dienen, etwa in Menüs, Logos, Teaserbildern oder Schaltflächen."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Anzeige der Alternativtexte von Grafiken",
+          "inhalt_markdown": "1. - Die Seite im [Firefox](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#firefox) aufrufen.\n2. - Bedienelemente ermitteln, etwa Navigationsleisten, Logo, Banner, Teaserbilder oder grafische Schaltflächen.\n3. - Mit dem [Images bookmarklet](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#imagesbm) die Alternativtexte anzeigen und prüfen, ob sie gleichwertig sind; Näheres in [2.6 Gleichwertige (äquivalente) Alternativtexte](#_2_6_gleichwertige_äquivalente_alternativtexte). Ergänzend kann die Quelltextanalyse dienen, besonders für Bilder, die nicht als `img`-Element umgesetzt sind.\n4. - Prüfen, ob die Seite Image maps enthält; der Quelltext lässt sich nach `map` durchsuchen. Ist das der Fall, mit [2.2 Anzeige von Image maps](#_2_2_anzeige_von_image_maps) fortfahren."
+        },
+        {
+          "titel": "2.2 Anzeige von Image maps",
+          "inhalt_markdown": "Bei Image maps in den Web Developer Tools im Quellcode prüfen, ob sowohl jeder aktive Bereich (`area`-Element) **als auch** das Gesamtbild der Image map einen gleichwertigen Alternativtext besitzt; Näheres dazu in [2.6 Gleichwertige (äquivalente) Alternativtexte](#_2_6_gleichwertige_äquivalente_alternativtexte). Der Alternativtext des Gesamtbilds beschreibt in der Regel die Image map, die der `area`-Elemente die jeweiligen Linkziele."
+        },
+        {
+          "titel": "2.3 Textalternativen für Hintergrundgrafiken",
+          "inhalt_markdown": "Hintergrundgrafiken besitzen kein `alt`-Attribut und können daher keine Textalternative tragen. Ersetzt eine Hintergrundgrafik jedoch einen real im HTML-Dokument vorhandenen Textlink (CSS-Bildersetzung), zählt dieser Textlink als ihre Textalternative. Voraussetzung ist ein geeignetes Verfahren — `display:none` ist nicht zulässig."
+        },
+        {
+          "titel": "Grundeinstellung in Firefox",
+          "inhalt_markdown": "1. - [Firefox](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#firefox) öffnen, im Anwendungsmenü *Einstellungen* aufrufen, den Reiter *Inhalt* wählen und unter *Schriftarten & Farben* die Option *Farben…* öffnen.\n2. - Unter *Sprache und Erscheinungsbild / Kontraststeuerung* die Einstellung *Benutzerdefiniert* wählen.\n3. - Unter *Farben verwalten* eine helle Textfarbe, eine dunkle Hintergrundfarbe und bei Bedarf helle Linkfarben wählen.\n4. - Die Dialoge mit „OK“ schließen."
+        },
+        {
+          "titel": "Prüfung",
+          "inhalt_markdown": "**Hintergrundgrafiken:**\n1. - Seite in [Firefox](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#firefox) aufrufen.\n2. - Kontrollieren, ob Bedienelemente als Hintergrundgrafiken unsichtbar werden.\n3. - Sind nicht redundante Bedienelemente als Hintergrundgrafiken eingebunden: Prüfen, ob das Hintergrundbild einen real vorhandenen Textlink ersetzt oder der Alternativtext anderweitig hinterlegt ist (etwa als `aria-label` oder `title` am Link).\n4. - Ersetzt ein Hintergrundbild ein leeres `a`-Element ohne Text, zählt das wie ein fehlendes oder leeres `alt`-Attribut.\n5. - Bei ersetzten Textlinks prüfen, welches Verfahren zur Bildersetzung genutzt wurde; `display:none` ist wie ein fehlendes oder leeres `alt`-Attribut zu werten.\n6. - Bei geeignetem Verfahren prüfen, ob der Textlink das Hintergrundbild gleichwertig ersetzt; Näheres in [2.6 Gleichwertige (äquivalente) Alternativtexte](#_2_6_gleichwertige_äquivalente_alternativtexte).\n\n**Icon Fonts:**\n1. - Seite in [Firefox](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#firefox) aufrufen und Bedienelemente feststellen.\n2. - Mit den Developer Tools prüfen, ob über die CSS-Eigenschaft `content` der Pseudoelemente `:before` oder `:after` Font Icons eingebunden werden.\n3. - Bei nicht redundanten Icons prüfen, ob eine HTML-Textalternative vorhanden ist; ein leeres `a`-Element ohne Text zählt wie ein fehlendes oder leeres `alt`-Attribut.\n4. - Bei unsichtbaren HTML-Textalternativen prüfen, wie sie versteckt wurden; `display:none` zählt wie ein fehlendes oder leeres `alt`-Attribut.\n5. - Bei geeigneter CSS-Technik prüfen, ob der Textlink das Icon gleichwertig ersetzt; Näheres in [2.6 Gleichwertige (äquivalente) Alternativtexte](#_2_6_gleichwertige_äquivalente_alternativtexte).\n6. - Fehlt eine HTML-Textalternative, prüfen, ob sie über `title` oder `aria-label` bereitgestellt wird.\n7. - Wird für Icons Text ausgegeben (z. B. `content: \"k\"`), prüfen, ob das Icon für Screenreader versteckt ist (z. B. `aria-hidden=\"true\"`).\n\n**Inline-SVGs:**\n1. - Seite in [Firefox](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#firefox) aufrufen und Bedienelemente feststellen.\n2. - Mit den Web Developer Tools prüfen, ob die SVG direkt in HTML eingebunden ist (Inline SVG).\n3. - Prüfen, ob eine Textalternative vorhanden ist.\n4. - Prüfen, ob ein `title`-Element (für längere Beschreibungen ein `desc`-Element) existiert und dessen Text das Bild angemessen ersetzt; Näheres in [2.6 Gleichwertige (äquivalente) Alternativtexte](#_2_6_gleichwertige_äquivalente_alternativtexte). `title` bzw. `desc` sollte das erste Kind des `svg`-Elternelements sein.\n5. - Da SVG nicht von allen Screenreader-Browser-Kombinationen ausreichend unterstützt wird, die Zugänglichkeit über ARIA prüfen: SVG-Grafiken sollten `role=\"img\"` tragen, sonst wird ihr `title`-Element ggf. nicht ausgegeben; wird das `title`-Element als zugänglicher Name herangezogen, sollte das `svg`-Element über `aria-labelledby` darauf zeigen. Enthält ein Link neben der Grafik aussagekräftigen Linktext, sollte die Grafik mit `aria-hidden=\"true\"` ausgeblendet werden, dann ist keine `role` nötig. Fehlen `title`/`desc`, prüfen, ob das umschließende Link-Element per `aria-label` eine Textalternative bietet. Für komplexere SVGs wie Erklärbilder, Diagramme oder Bilder mit Links kommt auch `role=\"graphics-document\"` in Frage (die Screenreader-Unterstützung ist derzeit unklar)."
+        },
+        {
+          "titel": "2.4 Textalternativen für Icon Fonts",
+          "inhalt_markdown": "Bei Icon Fonts lässt sich keine Textalternative über ein `alt`-Attribut hinterlegen. Besteht ein Bedienelement aus Icon und begleitendem HTML-Text, der den Zweck wiedergibt, gilt dieser Text als Alternative; das Icon selbst sollte dann für Screenreader versteckt werden (etwa `aria-hidden=\"true\"`). Ein informationstragendes Icon ohne sichtbaren Text (Stand-alone-Icon) braucht dagegen eine eigene Textalternative, etwa zugänglich versteckten Text (nicht `display:none`) oder `aria-label`."
+        },
+        {
+          "titel": "Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.5 Textalternativen für Inline-SVGs",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.6 Gleichwertige (äquivalente) Alternativtexte",
+          "inhalt_markdown": "Maßstab ist: Die Seite muss benutzbar bleiben, wenn Grafiken, Bilder oder Objekte durch ihre Textalternativen ersetzt werden. Üblicherweise heißt das:\n- Bei **Schriftgrafiken** wiederholt der Alternativtext den abgebildeten Text.\n- Bei **Symbolen** ersetzt der Alternativtext das Symbol, statt es zu beschreiben — etwa „Kontakt“ für einen Briefkasten, der zur Kontakt-Seite führt.\n- Bei **Objekten**, die nicht angezeigt werden können, genügt eine kurze Beschreibung oder Identifizierung (als Fallback-Text oder skriptgeneriert). Sinnvoll ist, dass ein Skript bei deaktiviertem JavaScript/Plugin eine Meldung erzeugt; ausreichend ist auch eine identifizierende Überschrift im Umfeld.\n\nBei **verlinkten Abbildungen** sind drei Varianten denkbar:\n- Der abgebildete Gegenstand wird beschrieben, wenn er wichtig ist und daraus das Linkziel hervorgeht (etwa ein Logo).\n- Das Linkziel wird genannt, wenn der Gegenstand unwichtig ist (etwa eine Illustration).\n- Beides wird vermittelt, wenn Gegenstand und Linkziel beziehungsweise Aktion beide wichtig sind.\n\nAllgemein gilt: Alternativtexte sollen kurz sein. Ausführliche Bildbeschreibungen gehören nicht in den Alternativtext, sondern in den Kontext der Abbildung."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "3.1 Alternativtexte für redundant verlinkte Abbildungen",
+          "inhalt_markdown": "Verweisen eine Abbildung und ein daneben platzierter Textlink auf dasselbe Ziel, ist zu prüfen, ob beide im selben Link liegen. Ist das der Fall, soll der Alternativtext den Linktext nicht wiederholen: Das `alt`-Attribut kann je nach Bildinhalt leer bleiben oder den Gegenstand beschreiben, während der Linktext Ziel oder Zweck nennt. Handelt es sich um zwei getrennte Links, darf das `alt`-Attribut *nicht* leer sein, denn viele Screenreader werten leere wie fehlende `alt`-Attribute und lesen dann den Dateinamen der Grafik beziehungsweise die URL des Ziels vor."
+        },
+        {
+          "titel": "3.2 Unterstützung von SVGs durch assistive Technologien",
+          "inhalt_markdown": "Da SVG nicht von allen Screenreader-Browser-Kombinationen ausreichend unterstützt wird, sollte die Rolle derzeit über WAI-ARIA vermittelt werden (siehe 9.4.1.2 „Name, Rolle, Wert verfügbar“). Beschreibt Text im selben Link das Linkziel aussagekräftig, kann die Rolle entfallen; die Grafik wird dann mit `aria-hidden=\"true\"` versehen."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Teilweise erfüllt",
+          "inhalt_markdown": "- Der Alternativtext fehlt bei einem weniger wichtigen Bedienelement wie dem Link zum Seitenanfang.\n- Alternativtexte sind missverständlich, unklar oder sehr lang."
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Ein wichtiges Bedienelement hat keinen oder einen unbrauchbaren Alternativtext."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "Anleitungen zum Erstellen guter Alternativtexte",
+          "inhalt_markdown": "- W3C Web Accessibility Tutorials:[Images Concepts](https://www.w3.org/WAI/tutorials/images/)\n            - WebAIM:[Alternative Text](https://webaim.org/techniques/alttext/)\n            - HTML 5.1 Spezifikation:[Requirements for providing text to act as an alternative for images](https://www.w3.org/TR/html51/semantics-embedded-content.html#alt-text)"
+        },
+        {
+          "titel": "W3C - Scalable Vector Graphics (SVG) 1.1",
+          "inhalt_markdown": "- [The 'desc' and the 'title' elements](https://www.w3.org/TR/SVG11/struct.html#DescriptionAndTitleElements)\n            - Zu Rollen wie`role=\"graphics-document\"`für komplexere SVG-Grafiken:[WAI-ARIA Graphics Module](https://www.w3.org/TR/graphics-aria-1.0/)(W3C Recommendation 02 October 2018)"
+        },
+        {
+          "titel": "SVGs zugänglich einbinden",
+          "inhalt_markdown": "- [Contextually marking up accessible images and SVGs](https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html)(Scott O’Hara, May 2019)\n            - [Creating accessible SVGs](https://www.deque.com/blog/creating-accessible-svgs/)(Deque blog, January 2019)\n            - [7 solutions for creating more accessible SVGs](https://simplyaccessible.com/article/7-solutions-svgs/)(SimplyAccessible, March 2017)\n            - [Accessible SVGs](https://css-tricks.com/accessible-svgs/)(CSS-Tricks, updated August 2016)"
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Verlinkte Grafiken werden immer hier bewertet, auch wenn sie zugleich eine weitere Information vermitteln, etwa ein auf die Startseite verlinktes Logo. Einzige Ausnahme ist eine Grafik, die zusammen mit danebenstehendem Text einen gemeinsamen Link bildet; dann bezieht sich der Alternativtext nur auf die Grafik und es gelten 9.1.1.1b „Alternativtexte für Grafiken und Objekte“ beziehungsweise 9.1.1.1c „Leere alt-Attribute für Layoutgrafiken“. Weitere Abgrenzungen: Alternativtexte für grafische Überschriften prüft 9.1.1.1b, CAPTCHAs prüft 9.1.1.1d „Alternativen für CAPTCHAs“, Textäquivalente für Frames behandelt 9.2.4.1 „Bereiche überspringbar“. Linktexte sind zudem Thema von 9.2.4.4 „Aussagekräftige Linktexte“ — dort geht es um die allgemeine Aussagekraft, hier zählt allein, ob Alternativtext und grafischer Link gleichwertig sind. Die Rollenausgabe von SVGs prüft 9.4.1.2 „Name, Rolle, Wert verfügbar“."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 1.1 Text Alternatives: Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.](http://www.w3.org/TR/WCAG22/#text-alternatives)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.1.1 Non-text Content](http://www.w3.org/TR/WCAG22/#x1-1-1-non-text-content)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](https://www.w3.org/WAI/WCAG22/Techniques/general/G94)"
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H2: Combining adjacent image and text links for the same resource](https://www.w3.org/WAI/WCAG22/Techniques/html/H2)\n                    - [H24: Providing text alternatives for the`area`elements of image maps](https://www.w3.org/WAI/WCAG22/Techniques/html/H24)\n                    - [H30: Providing link text that describes the purpose of a link for anchor elements](https://www.w3.org/WAI/WCAG22/Techniques/html/H30)\n                    - [H36: Using`alt`attributes on images used as submit buttons](https://www.w3.org/WAI/WCAG22/Techniques/html/H36)\n                    - [H37: Using`alt`attributes on`img`elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H37)"
+        },
+        {
+          "titel": "ARIA Techniques",
+          "inhalt_markdown": "- [ARIA6 Using`aria-label`to provide labels for objects](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA6)\n                    - [ARIA10: Using`aria-labelledby`to provide a text alternative for non-text content](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA10)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F3: Failure of Success Criterion 1.1.1 due to using CSS to include images that convey important information](https://www.w3.org/WAI/WCAG22/Techniques/failures/F3)\n                    - [F20: Failure of Success Criterion 1.1.1 and 4.1.2 due to not updating text alternatives when changes to non-text content occur](https://www.w3.org/WAI/WCAG22/Techniques/failures/F20)\n                    - [F30: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives](https://www.w3.org/WAI/WCAG22/Techniques/failures/F30)\n                    - [F65: Failure of Success Criterion 1.1.1 due to omitting the`alt`attribute on`img`elements,`area`elements, and`input`elements of type 'image'](https://www.w3.org/WAI/WCAG22/Techniques/failures/F65)"
+        }
+      ]
+    },
+    {
+      "titel": "Fragen zu diesem Prüfschritt",
+      "id": "fragen_zu_diesem_prüfschritt",
+      "untersektionen": [
+        {
+          "titel": "Kann das alt -Attribut nicht leer gelassen werden, wenn stattdessen ein sinnvolles title -Attribut verwendet wird? Das wird in meinem Screenreader problemlos ausgegeben.",
+          "inhalt_markdown": "Neuere Screenreader lesen bei fehlendem `alt`-Attribut zwar häufig das `title`-Attribut vor, das gilt aber nicht für alle verbreiteten Hilfsmittel. Der Test verlangt deshalb die standardkonforme Umsetzung nach HTML 5.0 und WCAG 2.0: Das `alt`-Attribut soll den Inhalt des Bildes ersetzen, das `title`-Attribut ist für zusätzliche, nicht essentielle Informationen gedacht. Die WCAG-2.0-Technik [H33](http://www.w3.org/TR/WCAG20-TECHS/H33.html) rät wegen der unzureichenden Unterstützung des `title`-Attributs zu Vorsicht und bevorzugt Verfahren wie [C7](http://www.w3.org/TR/WCAG20-TECHS/C7.html) (CSS zum Verstecken von Linktext) oder [H30](http://www.w3.org/TR/WCAG20-TECHS/H30.html) (aussagekräftiger Linktext). Auch bei abgeschalteten Bildern zahlt sich das `alt`-Attribut aus: Es wird zumindest im Bereich der Bildumrisse angezeigt, während `title` dort gar nicht erscheint."
+        },
+        {
+          "titel": "Der Alternativtext beschreibt die Grafik, der title -Text beschreibt das Link-Ziel: Ist das ein geeigneter Lösungsansatz für grafische Links?",
+          "inhalt_markdown": "Dieser Vorschlag betrifft Grafiken, die nicht einfach das Linkziel abbilden, sondern eine eigene Aussagekraft haben, etwa Teaser mit Anreißertext und verlinkter Abbildung. Die Idee: Sehende klicken auf das Bild und schließen vom Bildinhalt auf das Linkziel; der Alternativtext ersetzt das Bild für Blinde, und wenn das Ziel nicht eindeutig ist, liefert das `title`-Attribut die Ergänzung. In der Praxis funktioniert das nicht. Sehende orientieren sich beim Klick nicht am Bildinhalt, sondern an der Position; Teaserbilder sagen ohnehin oft wenig über das Linkziel aus und müssen das auch nicht, weil der Linktext daneben steht. Für blinde Nutzer ist der Zusammenhang zwischen Bild und folgendem Kontext meist unklar, sie müssten raten, wohin der Link führt — und weil das Bild keine Aussagekraft hat, wären sie auf das `title`-Attribut angewiesen, das für sie also nicht ergänzend wirkt. Hinzu kommt, dass `title` von Screenreadern uneinheitlich und schlecht unterstützt wird; JAWS etwa liest `alt` und `title` nur abwechselnd vor. Da das Linkziel aus dem Bildinhalt in der Regel nicht hervorgeht, ist es keine ergänzende Information — der Alternativtext muss das Linkziel deshalb selbst nennen."
+        },
+        {
+          "titel": "Sollte im alt -Attribut und im title -Attribut eines Bildes derselbe Inhalt stehen?",
+          "inhalt_markdown": "Der Alternativtext soll das Bild ersetzen, sagt also in der Regel, was abgebildet ist. Das `title`-Attribut dient dagegen ergänzenden Informationen, die dem Bild nicht zu entnehmen sind, etwa der Bildquelle. Entsprechend sollten beide normalerweise nicht denselben Inhalt tragen. Eine Ausnahme: Werden Symbole als Bedienelemente genutzt, ist eine ergänzende Beschriftung hilfreich — am besten als sichtbarer Text neben dem Bild, weil er dann auch Tastaturnutzern zugänglich ist. Kommt `title` zum Einsatz, sollte es möglichst exakt den zugänglichen Namen aus `alt` (oder `aria-label`) wiederholen: Bei identischen Werten lesen Screenreader den Text meist nur einmal, bei abweichenden beide, was unnötige Doppelungen erzeugt."
+        },
+        {
+          "titel": "Screenreader geben oft den Dateinamen der Bilddatei aus, wenn kein Alternativtext zur Verfügung steht. Kann so das Fehlen des Alternativtextes kompensiert werden?",
+          "inhalt_markdown": "Nein. Die Ausgabe des Dateinamens ist nicht verlässlich: Manche Browser oder Screenreader geben ihn gar nicht aus, andere nennen den vollständigen Pfad der Bilddatei, was kaum verständlich ist."
+        },
+        {
+          "titel": "Soll im Alternativtext stehen, dass es sich um ein Navigationselement handelt?",
+          "inhalt_markdown": "Nein. Screenreader und Textbrowser nennen die Rolle des Elements ohnehin selbst (etwa „Link“ oder „Schaltfläche“); stünde sie zusätzlich im Alternativtext, würde die Information doppelt ausgegeben."
+        },
+        {
+          "titel": "Was ist ein passender Alternativtext für verlinkte Bilder, etwa Fotos?",
+          "inhalt_markdown": "Bei verlinkten Bildern steht vor allem das Linkziel im Mittelpunkt. In Teasern aus Überschrift, Anreißertext und „Weiter“- oder „Mehr lesen“-Links kann die Überschrift als Linktext dienen. Ist der komplette Teaser verlinkt, bleibt das `alt`-Attribut des Bildes leer, um Doppelungen zu vermeiden. Trägt das Bild selbst Information, braucht es einen aussagekräftigen Alternativtext und sollte besser nicht in den Teaser-Link eingeschlossen werden; das [Cards-Pattern](https://inclusive-components.design/cards/) zeigt, wie es trotzdem Teil der Klickfläche werden kann."
+        },
+        {
+          "titel": "Sollte der Alternativtext für grafische Bedienelemente (Icons) auch sagen, was abgebildet ist?",
+          "inhalt_markdown": "Symbole tragen meist eine konventionelle Bedeutung: Die Lupe steht für „Suchen“, die Diskette für „Speichern“, das Fragezeichen für „Hilfe“, der Stift für „Bearbeiten“. Der Alternativtext soll in solchen Fällen die Funktion nennen, nicht den abgebildeten Gegenstand beschreiben."
+        },
+        {
+          "titel": "Links oben ist das Firmenlogo abgebildet, es ist außerdem mit der Startseite verlinkt. Welcher Alternativtext ist angemessen?",
+          "inhalt_markdown": "Der Alternativtext hat hier zwei Aufgaben: für das Logo stehen und das Linkziel vertreten. Daraus ergeben sich drei vertretbare Lösungen:\n1. - Das Bild zeigt das Logo der Firma; das ist seine Hauptaufgabe. Auch für blinde Nutzer ist es hilfreich zu wissen, dass die Firma ihr Logo zeigt, weitere Angaben zum Linkziel sind überflüssig. Also: „Logo: Müllermilch“.\n2. - Das Bild zeigt das Logo und verlinkt auf die Startseite. Ein grafischer Link namens „Müllermilch“ führt für sehende wie blinde Nutzer erwartbar zur Firma. Also kurz: „Müllermilch“.\n3. - Beide Funktionen werden benannt: „Logo: Müllermilch — zur Startseite“.\n\nAlle drei Varianten unterstützen blinde Besucher und gelten im BITV-Test als angemessen."
+        }
+      ]
+    }
+  ]
+}

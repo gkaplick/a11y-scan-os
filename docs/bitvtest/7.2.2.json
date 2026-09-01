@@ -1,0 +1,66 @@
+{
+  "bitv_nummer": "7.2.2",
+  "titel": "Synchrone Audiodeskription",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Bei Videos mit synchroner Bild- und Tonspur und zusätzlicher Audiodeskription muss der Player die Audiodeskription synchron zu Bild und Ton ausgeben können."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Bildbeschreibungen sollten sich möglichst an der Handlung orientieren (siehe auch [Vorgaben der Rundfunkanstalten für Audiodeskription](https://www.ndr.de/fernsehen/barrierefreie_angebote/audiodeskription/Vorgaben-fuer-Audiodeskriptionen,audiodeskription140.html)). Die Audiodeskription muss also auf die visuellen Elemente abgestimmt sein. Nur so bleibt das Gesamtgeschehen verständlich."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn die Webseite Videos mit synchroner Bild- und Tonspur samt zusätzlich eingebundener Audiodeskriptions-Tonspur enthält. Möglich ist auch die Einbindung über das `track`-Element mit `kind=\"description\"`, also eine Textdatei im `video`-Element, aus der sich ggf. eine Audioausgabe erzeugen lässt. Lädt der Player bei Auswahl der Audiodeskriptions-Version dagegen eine andere Videodatei mit erweitertem Ton, ist der Prüfschritt nicht anwendbar: Eine fehlende Synchronität läge dann an der Videodatei, nicht am Player."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Das Video mit aktivierter Audiodeskription im Player der Seite abspielen.\n2. - Prüfen, ob die Audiodeskription zeitgleich zu Bild und Ton läuft.\n3. - Läuft sie nicht synchron, mit den Web Developer Tools prüfen, ob beide Fassungen unterschiedliche Quelldateien nutzen. Unterscheiden sich die `src`-Pfade des `video`-Elements (etwa `../video-name.mp4` und `../video-name-AD.mp4`), ist die Audiodeskription mit hoher Wahrscheinlichkeit Teil der Video-Tonspur; die fehlende Synchronität liegt dann nicht am Player und der Prüfschritt ist erfüllt. In dem Fall ist vermutlich Prüfschritt 9.1.2.5 „Audiodeskription für Videos“ negativ zu bewerten.\n4. - Bleibt der Dateipfad nach dem Zuschalten unverändert, liegt die fehlende Synchronität entweder am Player oder daran, dass die Audiodeskription fehlerhaft eingebettet wurde. Aufklären kann das derzeit nur der Web-Autor."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Läuft die Audiodeskription eines Videos nicht synchron, weitere Videos mit zuschaltbarer Audiodeskription im Angebot prüfen. Ist sie dort synchron, spricht das dafür, dass der Player korrekt arbeitet und die Ursache im jeweiligen Video oder in dessen Audiodeskriptions-Datei liegt; der Prüfschritt ist dann erfüllt.\n\nHinweise zu diesem Prüfschritt können Sie auf GitHub [in einem Issue hinterlassen](https://github.com/BIK-BITV/BIK-Web-Test/issues)."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht erfüllt:",
+          "inhalt_markdown": "- Bild und Ton laufen nicht synchron zur Audiodeskription."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "Dieser Prüfschritt beurteilt, ob der Player Audiodeskription synchron ausgibt; Prüfschritt 9.1.2.5 „Audiodeskription für Videos“ prüft deren Inhalt. Ob der Player oder die Umsetzung fehlerhaft ist, lässt sich derzeit nicht feststellen. Bei nicht synchroner Audiodeskription werden beide Prüfschritte negativ bewertet, mit Verweis auf die unklare Ursache."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "7.2.2 Audio description synchronization",
+          "inhalt_markdown": "> Where ICT has a mechanism to play audio description, it shall preserve the\nsynchronization between the audio/visual content and the corresponding audio\ndescription."
+        }
+      ]
+    }
+  ]
+}

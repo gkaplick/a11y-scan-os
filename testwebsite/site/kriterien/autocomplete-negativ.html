@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autocomplete-Attribute für Nutzerdaten (Negativbeispiel) · A11Y Test-Website</title>
+<link rel="stylesheet" href="/assets/styles.css">
+<style></style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="seitenkopf">
+  <a class="marke" href="/index.html">A11Y Test-Website</a>
+  <p class="kategorie">Kategorie: Formulare</p>
+</header>
+<nav aria-label="Hauptnavigation" class="hauptnav">
+  <a href="/index.html">Startseite</a>
+  <a href="/kriterien/autocomplete-positiv.html">Positivbeispiel</a>
+  <a href="/kriterien/autocomplete-negativ.html">Negativbeispiel</a>
+</nav>
+<main id="main">
+<span class="art-badge art-negativ">Negativbeispiel</span>
+<p class="kategorie">Kategorie: Formulare</p>
+<h1>Autocomplete-Attribute für Nutzerdaten</h1>
+<p class="beschreibung">Felder für bekannte Nutzerdaten (E-Mail, Name, …) brauchen ein passendes autocomplete-Attribut.</p>
+<p class="testids">Geprüfte Kriterien: <span class="testid">WCAG_1_3_5_AUTOCOMPLETE</span>
+<span class="testid">BITV_9_1_3_5_EINGABEFELDER_ZU_NUTZERDATEN_VERMITTELN_DEN_ZWECK</span></p>
+<div class="beispiel art-negativ">
+<h2>Feld ohne autocomplete</h2>
+<label for="em">E-Mail</label><input type="email" id="em" name="email">
+</div><p class="hinweis">Zur Gegenprobe: <a href="/kriterien/autocomplete-positiv.html">Positivbeispiel ansehen</a></p>
+</main>
+<footer class="seitenfuss">
+  <p>A11Y Test-Website · Negativbeispiel · <a href="/index.html">Zur Übersicht</a> · <a href="/gebaerdensprache.html">Gebärdensprache</a> · <a href="/leichte-sprache.html">Leichte Sprache</a> · <a href="/erklaerung.html">Erklärung zur Barrierefreiheit</a></p>
+</footer>
+</body>
+</html>

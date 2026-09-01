@@ -1,0 +1,78 @@
+{
+  "bitv_nummer": "11.7",
+  "titel": "Benutzerdefinierte Einstellungen",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Die Seite soll die benutzerdefinierten Einstellungen des Browsers übernehmen, insbesondere:\n\n- geänderte Vorder- und Hintergrundfarben\n- Schriftarten\n- Schriftgrößen\n- Darstellung des Fokuscursors\n- Maßeinheiten\n\nZusätzlich darf die Seite eigene Werte für diese Einstellungen anbieten. Solange diese nicht genutzt werden, gelten die Browsereinstellungen. In manchen Fällen wirken Änderungen erst nach einem Neuladen der Seite."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Wer im Browser eigene Einstellungen vornimmt, etwa eine größere Schrift oder angepasste Farben benötigt, soll sich darauf verlassen können, dass das Webangebot diese Vorgaben möglichst übernimmt."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift in jedem Fall."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. Die Seite im Firefox-Browser laden.\n2. Die Einstellungen öffnen (Element-Menü → Einstellungen).\n3. Im Bereich „Sprache und Erscheinungsbild“ folgende Werte setzen:\n   - Die Schriftgröße deutlich über den Standardwert anheben (z. B. auf 32px); unter „Erweitert…“ sollte die Mindestschriftgröße auf „Keine“ stehen.\n   - Über „Erweitert…“ für „Serif“, „Sans Serif“ und „Feste Breite“ deutlich andere Schriftarten wählen und die Checkbox abwählen, die es Seiten erlaubt, eigene statt der zuvor gewählten Schriftarten zu verwenden.\n   - Im Bereich „Kontrasteinstellungen“ den Auswahlschalter „Benutzerdefiniert“ aktivieren, über „Farben verwalten …“ stark voneinander abweichende Farben für Text und Hintergrund festlegen und mit „OK“ bestätigen.\n4. Prüfen, ob sich Schriftart, Schriftgröße sowie Vorder- und Hintergrundfarben auf die Darstellung auswirken und übernommen werden.\n5. Prüfen, ob alle wesentlichen Bedienelemente und ihre Zustände (etwa „Hamburger“-Schaltfläche und selbst gestaltete Formularelemente wie Optionsfelder oder Kontrollkästchen) bei veränderten Vorder- und Hintergrundfarben erkennbar bleiben."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "3.1. Einzusetzender Browser für die Prüfung",
+          "inhalt_markdown": "Für die Prüfung sollte möglichst Firefox verwendet werden, da er diese Einstellungen anbietet. In anderen Browsern fehlen einige Optionen oder bleiben wirkungslos. Bleibt die Darstellung dort trotz geänderter Voreinstellungen unverändert, kann das am Browser oder an Vorgaben der Webanwendung liegen."
+        },
+        {
+          "titel": "3.2 Hinweis zur Prüfung mit Firefox",
+          "inhalt_markdown": "Firefox übernimmt für `button`-Elemente die benutzerdefinierte Hintergrundfarbe nicht beziehungsweise setzt eine eigene Farbe. Das ist nicht als Fehler zu werten."
+        },
+        {
+          "titel": "3.3 CSS-Schlüsselwort currentColor",
+          "inhalt_markdown": "Bei informationstragenden Grafiken lässt sich für Inline-SVGs das [CSS-Schlüsselwort `currentColor`](https://kulturbanause.de/blog/das-currentcolor-keyword-von-css) nutzen. Das Schlüsselwort greift die gesetzte Vordergrundfarbe auf (`color`). Setzt man per CSS `fill: currentColor`, folgt die Füllfarbe des Icons automatisch der Schrift- beziehungsweise Vordergrundfarbe des umgebenden Elements. Wird die Vordergrundfarbe über die Browsereinstellungen oder in Kontrastmodi geändert, übernimmt sie auch das SVG – die Grafik bleibt auf diese Weise auch vor benutzerdefinierten Hintergrundfarben gut erkennbar. Das SVG darf selbst kein `fill`-Attribut enthalten, da dieses die CSS-Regel überschreibt."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "Die Seite stellt sich im Firefox-Browser nach geänderten Einstellungen (etwa hellem Text auf dunklem Hintergrund) entsprechend verändert dar. Alle wichtigen Funktionen bleiben bei benutzerdefinierten Farben bedienbar, die Schrift erscheint vergrößert und in der eingestellten Art."
+        },
+        {
+          "titel": "Teilweise erfüllt oder schlechter",
+          "inhalt_markdown": "Benutzerdefinierte Farbeinstellungen führen zu Problemen, zum Beispiel:\n\n- Grafiken mit Informationsgehalt oder grafische Bedienelemente, die für die Nutzung wichtig sind, verschwinden.\n- Zustände von Formularelementen (etwa Auswahlschalter oder Kontrollkästchen) lassen sich nicht mehr auseinanderhalten.\n- Fließtext wird nicht vergrößert dargestellt."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "11.7 User preferences",
+          "inhalt_markdown": "> Where Web-App is not designed to be isolated from its platform, and provides\na user interface, that user interface shall follow the values of the user\npreferences for platform settings for:\nunits of measurement, colour, contrast, font type, font\nsize, and focus cursor except where they are overridden by the user.\n\nNOTE 1:\nWeb-App that is isolated from its underlying platform has no access to user\nsettings in the platform and thus cannot adhere to them.\n\nNOTE 2:\nFor web content, the underlying platform is the user agent.\n\nNOTE 3:\nThis does not preclude the Web-App from having additional values for a\nsetting as long as there is one mode where the application will follow the\nsystem settings even if more restricted."
+        }
+      ]
+    }
+  ]
+}

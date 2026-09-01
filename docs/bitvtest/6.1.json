@@ -1,0 +1,50 @@
+{
+  "bitv_nummer": "6.1",
+  "titel": "Audiobandbreite für Sprache",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Für eine gut verständliche Zwei-Wege-Sprachkommunikation muss die Webanwendung Audio so kodieren und dekodieren, dass der Frequenzbereich nach oben mindestens bis 7.000 Hz reicht. Das entspricht mindestens HD-Telefonie bzw. Telefonie in ISDN-Qualität, wie sie etwa der gängige Codec G.722 erreicht."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Vor allem Menschen mit Hörbehinderungen sind auf eine klare Sprachübertragung angewiesen. Der Prüfschritt legt deshalb einen verbindlichen Mindeststandard für die Audioqualität fest."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt ist anwendbar, sobald die Webanwendung eine Sprachverbindung in beide Richtungen unterstützt."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Die Sprachqualität der Verbindung im Praxistest beurteilen und mit aktueller Festnetztelefonie vergleichen. Vorab sicherstellen, dass die Internetverbindung an beiden Endpunkten stabil läuft; bei Zweifeln den Test wiederholen.\n2. - Ist der Hörtest nicht eindeutig, die Softwaredokumentation nach dem verwendeten Codec durchsuchen, notfalls beim Hersteller nachfragen.\n3. - Den Codec anschließend recherchieren und prüfen, ob sein Frequenzbereich nach oben mindestens bis 7.000 Hz reicht."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "6.1 Audio bandwidth for speech",
+          "inhalt_markdown": "> Where ICT provides two-way voice communication, in order to provide good audio\nquality, that ICT shall be able to encode and decode two-way voice\ncommunication with a frequency range with an upper limit of at least 7 000 Hz.\n\nNOTE 1:\nFor the purposes of interoperability, support of Recommendation ITU-T G.722\n[i.21] is widely used.\n\nNOTE 2:\nWhere codec negotiation is implemented, other standardized codecs such as\nRecommendation ITU-T G.722.2 [i.22] are sometimes used so as to avoid\ntranscoding."
+        }
+      ]
+    }
+  ]
+}

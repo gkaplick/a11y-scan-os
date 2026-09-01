@@ -1,0 +1,75 @@
+{
+  "bitv_nummer": "9.2.5.3",
+  "titel": "Sichtbare Beschriftung Teil des zugänglichen Namens",
+  "wcag22": {
+    "guideline": "Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard",
+    "level": "A",
+    "success_criterion": "2.5.3 Label in Name",
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Die sichtbare Beschriftung eines Bedienelements muss in dessen zugänglichem Namen auftauchen. Betroffen sind etwa Links, Beschriftungen von Textfeldern, Buttons und Checkboxen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Spracheingabenutzer lösen Bedienelemente aus, indem sie den sichtbaren Namen sprechen, auch zusammen mit Kommandos (etwa *Klick \"Abschicken\"*). Kommt die sichtbare Beschriftung nicht im hinterlegten zugänglichen Namen vor (dem Text, der programmatisch als Beschriftung ermittelt wird), lässt sich das Element per Spracheingabe gegebenenfalls nicht oder nur über Umwege aktivieren.\n\nDer zugängliche Name kann von der sichtbaren Beschriftung abweichen, da er sich aus versteckten Angaben speist – etwa `aria-label` oder `title`, das erst bei Mausnutzung sichtbar wird. So könnte der sichtbare Text \"AGB akzeptieren\" durch \"Allgemeine Geschäftsbedingungen annehmen\" als zugänglichen Namen ersetzt werden; diktiert der Nutzer dann Klicke \"AGB akzeptieren\", kommt dieser Text so im zugänglichen Namen nicht vor und die Eingabe schlägt fehl.\n\nManchmal erweitert versteckter Text sichtbare Beschriftungen, oft in der Absicht, Hilfsmittelnutzern zu helfen. Das ist akzeptabel, sofern die sichtbare Beschriftung vollständig im zugänglichen Namen vorkommt, am besten an dessen Anfang."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt gilt für Bedienelemente, die sich selbst beschriften (Links, Tasten) oder denen ein Text direkt zugeordnet ist (etwa einem Texteingabefeld oder einer Checkbox).\n\nAusgenommen sind Bedienelemente, deren Beschriftung aus mehreren sichtbaren Elementen besteht, etwa wenn Elemente in einer tabellarischen Matrix ihren zugänglichen Namen aus Spalten- und Zeilenüberschriften erhalten. In diesen Fällen bleibt unklar, welche Elemente dem Spracheingabe-Nutzer als Beschriftung dienen und sich zum Diktat eignen."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Bei jedem Bedienelement, das sich selbst benennt oder dessen Beschriftung aus einem einzelnen zugeordneten Text besteht, prüfen, ob dieser Text wörtlich im zugänglichen Namen des Bedienelements auftaucht."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "Der zugängliche Name jedes Bedienelements lässt sich per Screenreader, über die Entwickler-Werkzeuge des Browsers oder mit einem anderen Tool (etwa einem Bookmarklet) ermitteln und mit der sichtbaren Beschriftung vergleichen. Zu beachten ist, dass die Screenreader-Ausgabe zusätzliche Angaben umfassen kann, die nicht zum zugänglichen Namen zählen, etwa die Rolle des Bedienelements oder eine ergänzende Beschreibung.\n\nDer zugängliche Name darf zusätzlichen Text enthalten, aber die Zeichenkette der Beschriftung sollte in gleicher Form in der Zeichenkette des zugänglichen Namens vorkommen.\n\nHaben Bedienelemente keinen zugänglichen Namen, aber eine zugeordnete visuelle Beschriftung (etwa ein Textfeld, dessen Beschriftung keine programmatische Anbindung hat), fällt der Befund doppelt aus: Neben Prüfschritt 9.1.3.1h \"Info und Beziehungen - Beschriftung von Formularelementen programmatisch ermittelbar\" ist dann auch dieser Prüfschritt nicht erfüllt."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": "Der Prüfschritt gilt als erfüllt, sobald der Beschriftungstext unverändert im zugänglichen Namen auftaucht."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard](https://www.w3.org/TR/WCAG21/#input-modalities)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [2.5.3 Label in Name](https://www.w3.org/TR/WCAG21/#label-in-name)(Level A)"
+        },
+        {
+          "titel": "Sufficient Techniques",
+          "inhalt_markdown": "- [G208: Including the text of the visible label as part of the accessible name](https://www.w3.org/WAI/WCAG21/Techniques/general/G208)\n                - [G211: Matching the accessible name to the visible label](https://www.w3.org/WAI/WCAG21/Techniques/general/G211)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F96: Failure due to the accessible name not containing the visible label text](https://www.w3.org/WAI/WCAG21/Techniques/failures/F96)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- [Understanding Success Criterion 2.5.3: Label in Name](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name)(zur Zeit nur auf Englisch verfügbar)\n        - Accessible Name and Description Computation:[https://www.w3.org/TR/accname/#mapping_additional_nd_te](https://www.w3.org/TR/accname/#mapping_additional_nd_te)(zur Zeit nur auf Englisch verfügbar)"
+    }
+  ]
+}

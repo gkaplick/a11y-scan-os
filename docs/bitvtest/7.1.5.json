@@ -1,0 +1,62 @@
+{
+  "bitv_nummer": "7.1.5",
+  "titel": "Gesprochene Untertitel",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Liegt der Originalton eines Videos in einer anderen Sprache als der Hauptsprache des Webangebots vor, müssen die in der Hauptsprache angebotenen zuschaltbaren oder programmatisch ermittelbaren Untertitel auch als akustische Ausgabe verfügbar sein, etwa über eine den Untertiteln entsprechende eigene Tonspur oder eine generierte Sprachausgabe. Nicht programmatisch ermittelbar sind fest eingebrannte Untertitel (open captions), da sie Teil des Bildes sind."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Wer den fremdsprachigen Originalton nicht versteht, ist auf Untertitel in der eigenen Sprache angewiesen. Diese sollen auch blinden und sehbehinderten Menschen als akustische Ausgabe zugänglich sein."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt greift, wenn alle drei Bedingungen erfüllt sind:\n- Der Originalton des Videos ist fremdsprachig, entspricht also nicht der Hauptsprache des Webauftritts.\n- Untertitel in der Hauptsprache werden bereitgestellt.\n- Es gibt keine Fassung des Videos mit Tonspur in der Hauptsprache."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Webangebot öffnen.\n2. - Kontrollieren, ob der Originalton von der Hauptsprache des Angebots abweicht.\n3. - Bei fremdsprachiger Tonspur kontrollieren, ob Untertitel in der Hauptsprache bereitgestellt werden.\n4. - Prüfen, ob eine Tonspur in der Hauptsprache verfügbar ist oder eine Sprachausgabe für die Untertitel zugeschaltet werden kann."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Gängige Player bieten bislang meist keine zuschaltbare Sprachausgabe der Untertitel.\n- Blinde und sehbehinderte Menschen, denen der fremdsprachige Originalton unverständlich bleibt, sollen die Untertitel in der Hauptsprache akustisch abrufen können. Ist der Originalton dagegen bereits in der Hauptsprache gehalten, zählen anderssprachige Untertitel zur Zusatzinformation und fallen nicht unter diese Anforderung.\n\nHinweise zu diesem Prüfschritt können Sie auf GitHub [in einem Issue anlegen](https://github.com/BIK-BITV/BIK-Web-Test/issues)."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht erfüllt:",
+          "inhalt_markdown": "- Videos, deren Tonspur fremdsprachig ist und die zuschaltbare Untertitel in der Hauptsprache bieten, lassen die Untertitel nicht akustisch ausgeben."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Empfehlungen für die Audio-Darstellung von Text in Videos, einschließlich Untertitel und andere Texte im Bild (ITU Version, Englisch, kostenlos)[ITU T.701.25 : Guidance on the audio presentation of text in videos, including captions, subtitles and other on-screen text (itu.int)](https://www.itu.int/rec/T-REC-T.701.25-202203-I/en)"
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 v.3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "7.1.5 Spoken subtitles",
+          "inhalt_markdown": "> Where ICT displays video with synchronized audio,\nit shall have a mode of operation to provide a spoken output\nof the available captions,\nexcept where the content of the displayed captions\nis not programmatically determinable.\n\nNOTE 1: Being able to manage speech output range for spoken subtitles\nindependently from general ICT speech is preferable for most users.\nThat is possible when the audio file with spoken subtitle\nis delivered in a separate audio track and mixed in the end users device."
+        }
+      ]
+    }
+  ]
+}

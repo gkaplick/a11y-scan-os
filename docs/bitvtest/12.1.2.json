@@ -1,0 +1,62 @@
+{
+  "bitv_nummer": "12.1.2",
+  "titel": "Barrierefreie Dokumentation",
+  "wcag22": null,
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Die Produktdokumentation eines Webangebots unterstützt die allgemeine Nutzung seiner Funktionen, enthält aber oft auch Hinweise auf zusätzliche Angebote, die bestimmten Nutzergruppen den Zugang zu den Inhalten erleichtern, etwa Einstellungen für einen höheren Kontrast oder Fassungen in Leichter Sprache sowie Deutscher Gebärdensprache. Die Erklärung zur Barrierefreiheit gehört ebenfalls dazu.\n\nStellt ein Webangebot Produktdokumentation bereit, soll diese in mindestens einem der folgenden Formate barrierefrei verfügbar sein:\n\n- Als Web-Dokument, das die Kriterien der EN 301 549 Kapitel 9 erfüllt\n- Als Nicht-Web-Dokument (etwa PDF), das die Kriterien der EN 301 549 Kapitel 10 erfüllt\n\nNicht-Web-Dokumente werden in diesem Prüfverfahren nicht bewertet."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Die Dokumentation gehört zu den zentralen Bestandteilen eines Webangebots. Die Erklärung zur Barrierefreiheit hält für Menschen mit Behinderungen fest, wie es um die Barrierefreiheit des Angebots steht, benennt noch nicht barrierefreie Inhalte und nennt gegebenenfalls Wege, benötigte Informationen anders zu erhalten. Sie muss daher barrierefrei sein und wird, wenn vorhanden, immer geprüft – ebenso wie weitere Dokumentationsseiten des Angebots."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Anwendbar ist der Prüfschritt, wenn eine Produktdokumentation angeboten wird, einschließlich der Erklärung zur Barrierefreiheit. Unter Produktdokumentation fällt die technische Beschreibung der Funktionen des Angebots, etwa zu Tastaturkurzbefehlen oder zur Nutzung mit Hilfsmitteln. Inhaltliche Hilfe wie FAQs zählt nicht dazu. Die Barrierefreiheit nicht-web-basierter Dokumentation (etwa PDF) lässt sich in diesem Verfahren nicht prüfen und erfordert einen separaten Auftrag."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "Ob die Dokumentation Teil der Seitenauswahl sein muss, richtet sich nach den Voraussetzungen in „3. Hinweise“; ist sie es nicht, erfolgt die Prüfung nach 2.2."
+        },
+        {
+          "titel": "2.1 Prüfung der Dokumentation (Teil der Seitenauswahl)",
+          "inhalt_markdown": "1. Nachprüfen, ob jeder anwendbare Prüfschritt des Verfahrens als „konform“ eingestuft wurde.\n2. Trifft das zu, gilt auch dieser Prüfschritt als konform."
+        },
+        {
+          "titel": "2.2 Prüfung der Dokumentation (nicht Teil der Seitenauswahl)",
+          "inhalt_markdown": "1. Gehört die Dokumentation nicht zur Seitenauswahl (siehe „3. Hinweise“), ist zu prüfen, ob die anwendbaren Prüfschritte für die seitenübergreifenden Bereiche wie Kopf- und Fußbereich konform sind.\n2. Für den Inhaltsbereich prüfen, ob alle anwendbaren Prüfschritte erfüllt sind – bei sehr schlichten Seiten zumeist Aufbau und, soweit nötig, die Bedienung per Tastatur."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Auf die Aufnahme in die Seitenauswahl kann verzichtet werden, wenn:\n  - der Seitentyp bereits in der Seitenauswahl abgedeckt ist,\n  - die seitenübergreifenden Bereiche (Kopf- und Fußbereich) mit anderen Seiten der Auswahl identisch und bereits geprüft sind,\n  - der Inhaltsbereich sehr einfach ist, etwa nur aus strukturiertem Text und Links besteht.\n- Ist die Dokumentation komplexer oder ein eigener Seitentyp, wird sie als weitere Seite in die Seitenauswahl aufgenommen. Existiert weitere web-basierte Dokumentation zum Angebot, soll auch sie einbezogen werden.\n- Alternative Formate, die auf die Bedürfnisse einzelner Nutzergruppen zugeschnitten sind (etwa Braille-Dokumente für blinde Personen oder Fassungen in Leichter Sprache), bleiben weiterhin zulässig.\n\nWeitere Hinweise zu diesem Prüfschritt können als [Issue auf GitHub](https://github.com/BIK-BITV/BIK-Web-Test/issues) eingereicht werden."
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "inhalt_markdown": "- Zurzeit keine Quellen."
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach EN 301 549 V3.2.1",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "12.1.2 Accessible documentation",
+          "inhalt_markdown": "> Product documentation provided with the ICT shall be made available\nin at least one of the following electronic formats:\n\n                                - a Web format that conforms to the requirements of clause 9; or\n                                - a non-web format that conforms to the requirements of clause 10.\n\nNOTE 1:\nThis does not preclude the possibility of also providing the product documentation\nin other formats (electronic, printed or audio) that are not accessible.\n\nNOTE 2:\nIt also does not preclude the possibility of providing alternate formats\nthat meet the needs of some specific type of users\n(e.g. Braille documents for blind people or easy-to-read information\nfor persons with limited cognitive, language and learning abilities).\n\nNOTE 3:\nWhere documentation is incorporated into the ICT,\nthe documentation falls under the requirements for accessibility in the present document.\n\nNOTE 4:\nA user agent that supports automatic media conversion\nwould be beneficial to enhancing accessibility."
+        }
+      ]
+    }
+  ]
+}

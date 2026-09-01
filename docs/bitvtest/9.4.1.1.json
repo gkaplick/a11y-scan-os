@@ -1,0 +1,112 @@
+{
+  "bitv_nummer": "9.4.1.1",
+  "titel": "Korrekte Syntax",
+  "wcag22": {
+    "guideline": "Guideline 4.1 Compatible: Maximize compatibility with current and future user agents, including assistive technologies.",
+    "level": "A",
+    "success_criterion": "4.1.1 Parsing",
+    "techniken": {
+      "General Techniques": [
+        "G134: Validating Web pages",
+        "G192: Fully conforming to specifications"
+      ],
+      "HTML Techniques": [
+        "H74: Ensuring that opening and closing tags are used according to specification",
+        "H75: Ensuring that Web pages are well-formed",
+        "H88: Using HTML according to spec",
+        "H93: Ensuring that id attributes are unique on a Web page"
+      ],
+      "Failures": [
+        "F70: Failure of Success Criterion 4.1.1 due to incorrect use of start and end tags or attribute markup",
+        "F77: Failure of Success Criterion 4.1.1 due to duplicate values of type ID"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Die eingesetzte Markup-Sprache HTML ist korrekt zu verwenden. Für jedes Element gilt: vollständige Start- und Endtags, korrekte Verschachtelung gemäß Spezifikation, keine doppelten Attribute und eindeutige IDs — außer dort, wo die Spezifikation etwas anderes erlaubt."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Eine saubere HTML-Syntax erleichtert Browsern und Screenreadern den Umgang mit der Seite."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt findet ohne Einschränkung Anwendung."
+        },
+        {
+          "titel": "2. Prüfung mit dem W3C-Validator",
+          "inhalt_markdown": "1. - Seite im Chrome-Browser öffnen.\n2. - Mit dem Bookmarklet [Check serialized DOM of current page](https://validator.w3.org/nu/about.html#extras) die Validität des geparsten Quelltextes mit dem [W3C-Validator](https://validator.w3.org/) prüfen. Funktioniert das Bookmarklet nicht und wird im Validator nichts angezeigt, den DOM-Code kopieren und direkt im Tab „Validate by direct Input“ einfügen (dabei gegebenenfalls eine nicht mitkopierte DOCTYPE-Zeile am Beginn ergänzen, bei HTML5 etwa `<!DOCTYPE html>`).\n3. - Zeigt der Validator Fehler (Error) an, diese über das [Syntax Only Bookmarklet](https://bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#parsingerror) filtern.\n4. - Prüfen, ob nach Einsatz des Bookmarklets weiterhin Fehler auftreten."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": "- Valide Custom-Attribute in HTML5 nutzen das Format `data-*`, etwa `data-platznummer=\"44\"`; manche Scripting-Frameworks verwenden eigene Formate wie `ng-*` bei Angular.js. Solche Attribute sind trotz fehlender Validität grundsätzlich kein Barrierefreiheitsproblem, solange sie semantisch korrekt eingesetzt sind (etwa mit richtig öffnenden und schließenden Anführungszeichen). Browser ignorieren Attribute, die sie nicht zuordnen können.\n- Geprüft wird das vom Browser nach Auswertung der Skripte generierte DOM, nicht der Quelltext vor der Interpretation im Browser."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "- Der W3C-HTML-Validator ist nach Anwendung des Syntax-Only-Bookmarklets positiv; verbleibende Fehler rühren von semantisch korrekt genutzten Custom-Attributen her."
+        },
+        {
+          "titel": "Eher erfüllt",
+          "inhalt_markdown": "- Der W3C-HTML-Validator zeigt auch nach Anwendung des Syntax-Only-Bookmarklets Fehler."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 4.1 Compatible: Maximize compatibility with current and future user agents, including assistive technologies.](https://www.w3.org/TR/WCAG21/#compatible)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [4.1.1 Parsing](https://www.w3.org/TR/WCAG21/#parsing)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G134: Validating Web pages](https://www.w3.org/WAI/WCAG21/Techniques/general/G134.html)\n                    - [G192: Fully conforming to specifications](https://www.w3.org/WAI/WCAG21/Techniques/general/G192.html)"
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H74: Ensuring that opening and closing tags are used according to specification](https://www.w3.org/WAI/WCAG21/Techniques/html/H74.html)\n                    - [H75: Ensuring that Web pages are well-formed](https://www.w3.org/WAI/WCAG21/Techniques/html/H75.html)\n                    - [H88: Using HTML according to spec](https://www.w3.org/WAI/WCAG21/Techniques/html/H88.html)\n                    - [H93: Ensuring that`id`attributes are unique on a Web page](https://www.w3.org/WAI/WCAG21/Techniques/html/H93.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F70: Failure of Success Criterion 4.1.1 due to incorrect use of start and end tags or attribute markup](https://www.w3.org/WAI/WCAG21/Techniques/failures/F70.html)\n                    - [F77: Failure of Success Criterion 4.1.1 due to duplicate values of type ID](https://www.w3.org/WAI/WCAG21/Techniques/failures/F77.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "WCAG Note zum Umgang mit dem Erfolgskriterium 4.1.1 Parsing (entfernt in WCAG 2.2, immer erfüllt in WCAG 2.0 und 2.1)",
+          "inhalt_markdown": "[Understanding SC 4.1.1:Parsing (Level A)](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html)"
+        }
+      ]
+    }
+  ]
+}

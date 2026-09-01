@@ -1,0 +1,94 @@
+{
+  "bitv_nummer": "9.3.2.4",
+  "titel": "Konsistente Bezeichnung",
+  "wcag22": {
+    "guideline": "Guideline 3.2 Make Web pages appear and operate in predictable ways.",
+    "level": "AA",
+    "success_criterion": "3.2.4 Consistent Identification",
+    "techniken": {
+      "General Techniques": [
+        "G131: Providing descriptive labels",
+        "G197: Using labels, names, and text alternatives consistently for content that has the same functionality"
+      ],
+      "HTML Techniques": [
+        "H70: Using frame elements to group blocks of repeated material"
+      ],
+      "Failures": [
+        "F31: Failure of Success Criterion 3.2.4 due to using two different labels for the same function on different Web pages within a set of Web pages"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Mehrfach verwendete Navigationshilfen und Funktionen eines Webauftritts müssen überall dieselbe Bezeichnung tragen."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Eindeutige und überall gleich verwendete Bezeichnungen für Navigation und wiederkehrende Funktionen erleichtern das Verständnis des Angebots: Gesuchtes wird schneller gefunden, Zusammenhänge sind leichter erkennbar."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Der Prüfschritt ist immer anwendbar."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Sind Navigation und sich wiederholende Funktionen einheitlich bezeichnet?",
+          "inhalt_markdown": "- Verschiedene Bereiche des Webangebots nacheinander von der Startseite aus aufsuchen.\n- Kontrollieren, ob Navigationselemente, Menüpunkte und wiederkehrende Funktionen in allen Bereichen aussagekräftig und einheitlich benannt sind.\n- Entsprechen die oft kürzeren Menüeinträge den Überschriften der Zielseiten?\n- Bei Nutzung von Framesets: Mit der [Web Developer Toolbar](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/werkzeugliste.html#webdeveloper) auf verschiedenen Seiten über *Outline > Outline Frames* und anschließend *Information > Display Element Information* mit dem Cursor-Fadenkreuz die Frames auswählen und prüfen, ob gleichartige Inhalte (etwa ein Navigationsmenü) stets an derselben Stelle im `frameset` eingebunden sind."
+        },
+        {
+          "titel": "3. Bewertung",
+          "inhalt_markdown": "Eine Bewertung als nicht oder teilweise erfüllt ist immer zu erläutern!"
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung von anderen Prüfschritten",
+          "inhalt_markdown": "- Während es hier darum geht, dass eingesetzte Navigationsmechanismen durchgängig die gleiche Bezeichnung tragen, prüft Prüfschritt 9.3.2.3 „Konsistente Navigation” die durchgängig einheitliche Anordnung von Navigationsmechanismen und Menüeinträgen in den verschiedenen Bereichen des Webauftritts."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 3.2 Make Web pages appear and operate in predictable ways.](https://www.w3.org/TR/WCAG21/#predictable)"
+        },
+        {
+          "titel": "Success criteria",
+          "inhalt_markdown": "- [3.2.4 Consistent Identification](https://www.w3.org/TR/WCAG21/#consistent-identification)(Level AA)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G131: Providing descriptive labels](https://www.w3.org/WAI/WCAG21/Techniques/general/G131.html)\n                    - [G197: Using labels, names, and text alternatives consistently for content that has the same functionality](https://www.w3.org/WAI/WCAG21/Techniques/general/G197.html)"
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H70: Using frame elements to group blocks of repeated material](https://www.w3.org/WAI/WCAG21/Techniques/html/H70.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F31: Failure of Success Criterion 3.2.4 due to using two different labels for the same function on different Web pages within a set of Web pages](https://www.w3.org/WAI/WCAG21/Techniques/failures/F31.html)"
+        }
+      ]
+    }
+  ]
+}

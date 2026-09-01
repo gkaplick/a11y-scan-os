@@ -1,0 +1,105 @@
+{
+  "bitv_nummer": "9.2.1.2",
+  "titel": "Keine Tastaturfalle",
+  "wcag22": {
+    "guideline": "Guideline 2.1 Keyboard Accessible: Make all functionality available from a keyboard.",
+    "level": "A",
+    "success_criterion": "2.1.2 No Keyboard Trap",
+    "techniken": {
+      "General Techniques": [
+        "G21: Ensuring that users are not trapped in content"
+      ],
+      "Flash Techniques": [
+        "FLASH17: Providing keyboard access to a Flash object and avoiding a keyboard trap"
+      ],
+      "Failures": [
+        "F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Der Tastaturfokus muss sich von jedem erreichbaren Element wieder wegbewegen lassen; der Inhalt darf keine Tastaturfalle bilden."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Die Bedienung soll geräteunabhängig möglich sein, also ebenso per Maus wie per Tastatur. Auf die Tastaturbedienung sind etwa viele motorisch eingeschränkte Menschen oder Blinde angewiesen."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "Dieser Prüfschritt gilt für jede Webseite ohne Einschränkung."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": "1. - Seite im Firefox aufrufen.\n2. - Mit der Tabulatortaste alle Links und Formularelemente durchgehen und prüfen, ob sie sich erreichen und wieder verlassen lassen.\n3. - Seite in Chrome öffnen und die Schritte 1 bis 2 wiederholen."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "3.1 Allgemeine Hinweise",
+          "inhalt_markdown": "Bedienprobleme entstehen in der Regel durch JavaScript; geprüft wird daher bei **eingeschaltetem** JavaScript."
+        },
+        {
+          "titel": "3.2 Hinweise zu Tastaturfallen",
+          "inhalt_markdown": "- Versperrt die Tastaturfalle den Zugang zu dahinterliegenden Inhalten, ist unter Umständen zugleich Prüfschritt 9.2.1.1 \"Ohne Maus nutzbar\" als verfehlt zu werten."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Erfüllt",
+          "inhalt_markdown": "- Es treten keine Tastaturfallen auf; der Fokus bleibt an allen Stellen verlassen."
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Wesentliche Inhalte und Funktionen bleiben in Chrome oder Firefox hinter einer Tastaturfalle hängen und sind per Tastatur weder erreichbar noch bedienbar."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guideline",
+          "inhalt_markdown": "- [Guideline 2.1 Keyboard Accessible: Make all functionality available from a keyboard.](https://www.w3.org/TR/WCAG21/#keyboard-accessible)"
+        },
+        {
+          "titel": "Success criteria",
+          "inhalt_markdown": "- [2.1.2 No Keyboard Trap](https://www.w3.org/TR/WCAG21/#no-keyboard-trap)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G21: Ensuring that users are not trapped in content](https://www.w3.org/WAI/WCAG21/Techniques/general/G21.html)"
+        },
+        {
+          "titel": "Flash Techniques",
+          "inhalt_markdown": "- [FLASH17: Providing keyboard access to a Flash object and avoiding a keyboard trap](https://www.w3.org/WAI/WCAG21/Techniques/flash/FLASH7)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F10: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type](https://www.w3.org/WAI/WCAG21/Techniques/failures/F10)"
+        }
+      ]
+    }
+  ]
+}

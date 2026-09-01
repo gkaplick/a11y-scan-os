@@ -1,0 +1,150 @@
+{
+  "bitv_nummer": "9.1.3.1h",
+  "titel": "Beschriftung von Formularelementen programmatisch ermittelbar",
+  "wcag22": {
+    "level": "A",
+    "success_criterion": "1.3.1 Info and Relationships",
+    "techniken": {
+      "General Techniques": [
+        "G162: Positioning labels to maximize predictability of relationships"
+      ],
+      "HTML Techniques": [
+        "H44: Using label elements to associate text labels with form controls",
+        "H65: Using the title attribute to identify form controls when the label element cannot be used",
+        "H71: Providing a description for groups of form controls using fieldset and legend elements"
+      ],
+      "ARIA Techniques": [
+        "ARIA1: Using the aria-describedby property to provide a descriptive label for user interface controls",
+        "ARIA2: Identifying a required field with the aria-required property",
+        "ARIA16: Using aria-labelledby to provide a name for user interface controls",
+        "ARIA17: Using grouping roles to identify related form controls"
+      ],
+      "Failures": [
+        "F87: Failure of Success Criterion 1.3.1 due to inserting non-decorative content by using :before and :after pseudo-elements and the 'content' property in CSS"
+      ]
+    },
+    "wcag_version": "2.2"
+  },
+  "abschnitte": [
+    {
+      "titel": "Was wird geprüft?",
+      "id": "was_wird_geprüft",
+      "inhalt_markdown": "Beschriftungen sollen per Markup mit den Formularelementen verknüpft sein, die sie beschreiben. Bei `label`-Elementen geschieht das über das `for`-Attribut oder durch den Einschluss des beschrifteten Elements in das `label`. Fehlt eine `label`-Auszeichnung, muss die Beschriftung des zugehörigen Elements anderweitig sichergestellt sein (etwa über `aria-labelledby`). Bei selbstgestalteten Formularelementen – etwa einem `div` mit `role=\"textbox\"` und `contenteditable=\"true\"` – greift `label for` nicht; dann ist die programmatisch ermittelbare Beschriftung anderweitig sicherzustellen, etwa durch einen `aria-labelledby`-Verweis, der die sichtbare Beschriftung referenziert, oder über ein `aria-label`-Attribut. Ist für das Verständnis der Beschriftung einzelner Formularelemente eine Gruppenbeschriftung nötig, sollte ihre programmatische Verfügbarkeit sichergestellt sein, etwa mit `fieldset` und `legend` bei nativen `input`-Elementen oder mit `role=\"group\"` und einer über `aria-labelledby` verknüpften Gruppenbeschriftung. Visuell voneinander abgesetzte oder logisch verbundene Gruppen von Formularelementen sollten mit `fieldset` oder mithilfe von Überschriften sinnvoll strukturiert sein."
+    },
+    {
+      "titel": "Warum wird das geprüft?",
+      "id": "warum_wird_das_geprüft",
+      "inhalt_markdown": "Die Kopplung von Beschriftungen an die zugehörigen Eingabefelder macht den Seitenaufbau unabhängig von der Präsentation zugänglich: Beim Durchwandern der Formularelemente liest der Screenreader die Beschriftungen vor. Natürliche `label`-Elemente haben zusätzlich den Vorteil, dass ein Mausklick auf die Beschriftung das zugeordnete Formularelement in den Fokus rückt."
+    },
+    {
+      "titel": "Wie wird geprüft?",
+      "id": "wie_wird_geprüft",
+      "untersektionen": [
+        {
+          "titel": "1. Anwendbarkeit des Prüfschritts",
+          "inhalt_markdown": "- Anwendbar, sobald die Seite Formularelemente enthält."
+        },
+        {
+          "titel": "2. Prüfung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "2.1 Sind Beschriftungen und Formular-Elemente verknüpft?",
+          "inhalt_markdown": "Mit der Maus auf die Beschriftung eines Formularelements klicken und prüfen, ob der Cursor dadurch auf das Formularelement gesetzt wird. Ist das nicht der Fall, ist zu prüfen, ob Beschriftung und Element per `aria-labelledby` verknüpft sind oder ein Name für das Element auf andere Weise programmatisch bereitgestellt wird."
+        },
+        {
+          "titel": "2.2 Prüfung von Gruppen von Formular-Elementen",
+          "inhalt_markdown": "Prüfen, ob optisch getrennte oder logisch zusammengehörende Gruppen von Formularelementen mithilfe von `fieldset` oder Überschriften sinnvoll strukturiert sind. Ist eine Gruppenbeschriftung zum Verständnis der Beschriftung einzelner Formularelemente erforderlich, prüfen, ob sie über das `legend`-Element eines `fieldset` oder über eine ausreichend unterstützte Alternative (etwa `role=\"group\"`) ausgezeichnet ist."
+        },
+        {
+          "titel": "2.3 Gliederung von Auswahllisten",
+          "inhalt_markdown": "Enthalten Auswahllisten (`select`) deutlich voneinander getrennte Gruppen von Optionen, sind diese mit `optgroup` auszuzeichnen (mit der Web Developer Toolbar unter *Informationen > Elementinformationen einblenden > Kindelemente* überprüfen)."
+        },
+        {
+          "titel": "3. Hinweise",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "3.1 Ergänzende Beschriftungen (etwa über fieldset / legend )",
+          "inhalt_markdown": "Auch korrekt ausgezeichnete Einzel-Labels können für sich genommen unzureichend sein; eine Gruppenüberschrift (`legend`-Element eines `fieldset`) ist etwa bei Radio-Inputs mit den Labels \"Ja\"/\"Nein\" oder bei Adressfeldern nötig, bei denen offen bleibt, ob Rechnungs- oder Versandadresse gemeint ist."
+        },
+        {
+          "titel": "3.2 Kombinierte Formular-Elemente (etwa bei Datumseingabe)",
+          "inhalt_markdown": "Bei kombinierten Formularelementen hat nicht immer jedes Element eine zugeordnete Beschriftung; dann sollten die Elemente mit einem erklärenden `title`-Attribut versehen werden. Beispiel: Für die Eingabe eines Datums dienen drei Auswahllisten (Tag, Monat, Jahr) mit gemeinsamer Gruppenbeschriftung \"Datum\" (etwa per `fieldset` und `legend`); die einzelnen Listen tragen ein erklärendes `title`-Attribut. Alternativ lässt sich die Beschriftung über `aria-label` oder `aria-labelledby` bereitstellen."
+        },
+        {
+          "titel": "3.3 Suchfeld mit nachfolgendem Button bzw. Input",
+          "inhalt_markdown": "Bei einem einfachen Suchformular aus Eingabefeld und Button ist oft keine sichtbare Beschriftung nötig, wenn Feld und Button sichtbar nebeneinander und im Quellcode nacheinander stehen, das Eingabefeld eine Textvorbelegung hat oder die Button-Beschriftung die Funktion eindeutig kennzeichnet (etwa \"Suchen\" oder ein Lupen-Icon mit aussagekräftigem Alternativtext). Das unbeschriftete Feld braucht dann ein aussagekräftiges `title`-Attribut, ein verknüpftes verstecktes Label oder ein `aria-label`-Attribut, da der nachfolgende Button für Screenreader-Nutzende nicht gleichermaßen als Beschriftung taugt."
+        },
+        {
+          "titel": "3.4 Zusätzliche Beschriftungen",
+          "inhalt_markdown": "Zusätzliche sichtbare erläuternde Beschriftungen sollten über `aria-describedby` mit den betreffenden Formularelementen verknüpft sein."
+        },
+        {
+          "titel": "4. Bewertung",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Nicht erfüllt",
+          "inhalt_markdown": "- Beschriftungen sind nicht korrekt mit den zugehörigen Eingabefeldern verknüpft, und auch über `aria-label` oder `title` ist kein zugänglicher Name programmatisch ermittelbar."
+        },
+        {
+          "titel": "Nicht voll erfüllt",
+          "inhalt_markdown": "- Für die Unterscheidung nötige Gruppenbeschriftungen existieren zwar, sind aber nicht programmatisch ermittelbar (etwa über `fieldset`/`legend` oder `role=\"group\"` mit Verknüpfung der Gruppenüberschrift über `aria-labelledby`).\n- Zusätzliche Beschriftungen, die für das Verständnis nötig sind, lassen sich nicht programmatisch ermitteln (etwa weil die Verknüpfung über `aria-describedby` fehlt).\n- Hierarchische Auswahllisten nutzen Dummy-Einträge oder Einrückungen aus Leerzeichen oder Bindestrichen, statt mit `optgroup` gegliedert zu sein."
+        }
+      ]
+    },
+    {
+      "titel": "Einordnung des Prüfschritts",
+      "id": "einordnung_des_prüfschritts",
+      "untersektionen": [
+        {
+          "titel": "Abgrenzung zu anderen Prüfschritten",
+          "inhalt_markdown": "- Ob die Beschriftungen von Formularelementen (auch mit Gruppenüberschriften als Ergänzung) hinreichend aussagekräftig sind, wird in 9.2.4.6 \"Aussagekräftige Überschriften und Beschriftungen\" bewertet; hier steht die programmatische Ermittelbarkeit im Mittelpunkt.\n- Ob überhaupt eine sichtbare Beschriftung vorhanden ist, klärt sich in 9.3.3.2 \"Beschriftungen von Formularelementen vorhanden\".\n- Ob die sichtbare Beschriftung Bestandteil des zugänglichen Namens des Formularelements ist, klärt sich in 9.2.5.3 \"Sichtbare Beschriftung Teil des zugänglichen Namens\"."
+        },
+        {
+          "titel": "Einordnung des Prüfschritts nach WCAG 2.2",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "Guidelines",
+          "inhalt_markdown": "- [Guideline 1.3 Adaptable: Create content that can be presented in different ways (for example simpler layout) without losing information or structure.](https://www.w3.org/TR/WCAG22/#adaptable)"
+        },
+        {
+          "titel": "Success criterion",
+          "inhalt_markdown": "- [1.3.1 Info and Relationships](https://www.w3.org/TR/WCAG22/#info-and-relationships)(Level A)"
+        },
+        {
+          "titel": "Techniques",
+          "inhalt_markdown": ""
+        },
+        {
+          "titel": "General Techniques",
+          "inhalt_markdown": "- [G162: Positioning labels to maximize predictability of relationships](https://www.w3.org/WAI/WCAG22/Techniques/general/G162.html)"
+        },
+        {
+          "titel": "HTML Techniques",
+          "inhalt_markdown": "- [H44: Using label elements to associate text labels with form controls](https://www.w3.org/WAI/WCAG22/Techniques/html/H44.html)\n                    - [H65: Using the title attribute to identify form controls when the label element cannot be used](https://www.w3.org/WAI/WCAG21/Techniques/html/H65.html)\n                    - [H71: Providing a description for groups of form controls using fieldset and legend elements](https://www.w3.org/WAI/WCAG21/Techniques/html/H71.html)"
+        },
+        {
+          "titel": "ARIA Techniques",
+          "inhalt_markdown": "- [ARIA1: Using the aria-describedby property to provide a descriptive label for user interface controls](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA1.html)\n                    - [ARIA2: Identifying a required field with the aria-required property](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA2.html)\n                    - [ARIA16: Using aria-labelledby to provide a name for user interface controls](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA16.html)\n                    - [ARIA17: Using grouping roles to identify related form controls](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA17.html)"
+        },
+        {
+          "titel": "Failures",
+          "inhalt_markdown": "- [F87: Failure of Success Criterion 1.3.1 due to inserting non-decorative content by using :before and :after pseudo-elements and the 'content' property in CSS](https://www.w3.org/WAI/WCAG22/Techniques/failures/F87.html)"
+        }
+      ]
+    },
+    {
+      "titel": "Quellen",
+      "id": "quellen",
+      "untersektionen": [
+        {
+          "titel": "W3C Web Accessibility Tutorials: Forms",
+          "inhalt_markdown": "- [Labeling Controls](https://www.w3.org/WAI/tutorials/forms/labels/)\n            - [Grouping Controls](https://www.w3.org/WAI/tutorials/forms/grouping/)"
+        }
+      ]
+    }
+  ]
+}
