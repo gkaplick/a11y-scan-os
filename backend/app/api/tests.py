@@ -9,12 +9,18 @@ from __future__ import annotations
 
 from collections import Counter
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 
 from ..engine import registry as reg
 from ..schemas import TestOut
+from ..security import require_user
 
-router = APIRouter(prefix="/api/tests", tags=["tests"])
+# Router-Dependency: Registry-Katalog nur mit gültigem Session-Cookie.
+router = APIRouter(
+    prefix="/api/tests",
+    tags=["tests"],
+    dependencies=[Depends(require_user)],
+)
 
 
 def _to_out(entry: dict) -> TestOut:

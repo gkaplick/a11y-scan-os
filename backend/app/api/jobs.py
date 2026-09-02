@@ -19,7 +19,7 @@ import uuid
 from datetime import datetime, timezone
 from urllib.parse import urlparse
 
-from fastapi import APIRouter, HTTPException, Response
+from fastapi import APIRouter, Depends, HTTPException, Response
 from fastapi.responses import FileResponse
 
 from ..config import settings
@@ -28,8 +28,15 @@ from ..engine.job_manager import job_manager
 from ..engine.screenshots import finding_screenshot_path
 from ..schemas import JobCreate, JobOut, ResultsOut, RetestCreate
 from ..reports import generate_txt_report
+from ..security import require_user
 
-router = APIRouter(prefix="/api/jobs", tags=["jobs"])
+# Router-Dependency: greift vor JEDER Route — auch Screenshot-FileResponse und
+# TXT-Export sind damit nur mit gültigem Session-Cookie erreichbar.
+router = APIRouter(
+    prefix="/api/jobs",
+    tags=["jobs"],
+    dependencies=[Depends(require_user)],
+)
 
 
 @router.post("", response_model=JobOut, status_code=201)

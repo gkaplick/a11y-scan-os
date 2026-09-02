@@ -181,3 +181,21 @@ class ResultsOut(BaseModel):
     tests: list[TestOut]        # Registry-Stand des Laufs
     manual_tests: list[TestOut]  # nicht automatisierbare Kriterien (Checkliste)
     system_bewertung: list[SystemBewertungOut] = []   # je Testsystem ein Urteil
+
+
+class LoginRequest(BaseModel):
+    """Login (kein Registrierungsweg — Konten legt nur der Betreiber an)."""
+    username: str = Field(min_length=1, max_length=64)
+    password: str = Field(min_length=1, max_length=256)
+
+
+class UserOut(BaseModel):
+    id: int
+    username: str
+    created_at: datetime
+
+
+class WsTokenResponse(BaseModel):
+    """Kurzlebiges WebSocket-Ticket für den Live-Progress eines Jobs."""
+    token: str
+    expires_at: datetime

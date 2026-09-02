@@ -27,6 +27,10 @@ Text-Report (TXT) exportieren.
 - **TXT-Report** — herunterladbar und zusätzlich als Datei in `docs/`.
 - **Zugangsgeschützte Bereiche** — HTACCESS-Zugangsdaten pro Job (nie als
   Default im Code).
+- **User-Login ohne Registrierung** — das Webfrontend ist hinter einem Login
+  geschützt (Session-Cookie, bcrypt-Passwörter); Konten legt ausschließlich
+  der Betreiber an (Env-Bootstrap + CLI). Der Login-Screen ist bewusst ohne
+  jede Information zur App (nur ein zentriertes Formular).
 
 ## 🚀 Schnellstart
 
@@ -43,6 +47,43 @@ docker compose logs -f api
 Danach http://localhost:3001 öffnen, eine URL eintragen und scanen.
 
 Nach Änderungen neu bauen: `docker compose up --build`.
+
+## 🔐 Zugangsschutz (Login)
+
+Das Webfrontend ist hinter einem Login geschützt — ohne Anmeldung siehst du
+**ausschließlich** einen nackten Login-Screen (kein App-Name, keine Kopf-/
+Fußzeile, keine Info). Es gibt bewusst **keine Registrierung**; Konten legt der
+Betreiber an. REST-API, Report-Downloads und WebSocket-Live-Progress setzen
+eine gültige Session voraus; nur `/api/health` bleibt offen (Betrieb).
+
+**Erster Admin (Env-Bootstrap):** Beim Start legt das Backend einen Admin an,
+wenn die `users`-Tabelle leer ist und beide Env-Variablen gesetzt sind:
+
+```bash
+A11Y_ADMIN_USERNAME=admin A11Y_ADMIN_PASSWORD='<starkes-passwort>' docker compose up -d
+```
+
+> ⚠️ Danach die Variablen aus der Umgebung/`.env` wieder entfernen bzw. für den
+> dauerhaften Betrieb getrennt aufbewahren — sie werden nur beim Leer-Start
+> ausgewertet.
+
+**Weitere Konten (CLI im api-Container):**
+
+```bash
+docker compose run --rm api python -m app.manage users add <benutzername>
+docker compose run --rm api python -m app.manage users list
+docker compose run --rm api python -m app.manage users set-password <benutzername>
+docker compose run --rm api python -m app.manage users remove <benutzername> --yes
+```
+
+Das Passwort fragt die CLI interaktiv ab (oder kommt per `--password <wert>`).
+
+**Technik:** Session-basierte Auth mit opakem Token im `httpOnly`-Cookie
+(`a11y_session`, SameSite=Lax, `Secure` per `A11Y_SESSION_COOKIE_SECURE`),
+Passwörter mit bcrypt (Cost 12), in der DB liegen nur SHA-256-Digests der
+Session-/WS-Tokens. Der Live-Progress nutzt kurzlebige Einmal-Tickets
+(`GET /api/auth/ws-token` → `?ws_token=…`), weil der Nitro-WebSocket-Tunnel
+keine Cookies weitergibt. Weitere Details in `docs/ARCHITEKTUR.md`.
 
 ## 🧭 So nutzt du den Scanner
 
@@ -152,10 +193,30 @@ pydantic-settings, Umgebungsvariablen mit Präfix `A11Y_`:
 | `A11Y_DEFAULT_SUITE` | Standard-Suite |
 | `A11Y_KEYBOARD_MIN_WIDTH` | Mindestbreite für Fokus-/Keyboard-Tests (1160 px) |
 | `A11Y_TEST_RESOLUTIONS` | Test-Auflösungen (Default 320px, 1920px) |
+| `A11Y_ADMIN_USERNAME` / `A11Y_ADMIN_PASSWORD` | Env-Bootstrap des Erst-Admins (nur wenn `users` leer) |
+| `A11Y_SESSION_COOKIE_SECURE` | `true` setzt Secure-Flag auf dem Session-Cookie (Prod hinter TLS) |
+| `A11Y_SESSION_TTL_HOURS` | Session-Lebensdauer (Default 24) |
+| `A11Y_CORS_ORIGINS` | erlaubte Origins (kommagetrennt) für direkte API-Zugriffe |
 
 **Zugangsdaten** (HTACCESS) kommen pro Job aus dem Formular bzw. der Umgebung —
 die `config.py` enthält keine Default-Credentials, es werden keine Secrets
 committet.
+
+## ☁️ Produktion hinter einem Reverse-Proxy
+
+Das Repo enthält einen Produktions-Override, der die API und den Web-Container
+**nicht mehr öffentlich** publiziert und das `Secure`-Cookie-Flag anstellt —
+Clients erreichen die App nur über den TLS-Proxy (z. B. Caddy) davor:
+
+```bash
+# .env (chmod 600) mit A11Y_ADMIN_USERNAME/A11Y_ADMIN_PASSWORD befüllen, dann:
+docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+```
+
+Die Proxy-Route selbst (neue Subdomain → Web-Service des Stacks) hängt von der
+Server-Infrastruktur ab und gehört in die **Betriebsdoku des Zielsystems**, nicht
+ins Repo. Für die API ist kein öffentlicher Port nötig — der Web-Container
+erreicht sie intern über das Compose-Netz.
 
 ## 🧑‍💻 Neuen Check anlegen
 
@@ -208,8 +269,9 @@ docker compose run --rm api flake8 app tests
 
 - Der W3C-Validator (`validator.w3.org/nu`, Remote-API) braucht Netz; in
   eingeschränkten Umgebungen `A11Y_W3C_VALIDATOR_MAX=0`.
-- Lokales Single-User-Tool ohne Authentifizierung — nicht als öffentlicher
-  Multi-User-Dienst gedacht.
+- Login-Zugänge werden **bewusst** nicht per Registrierung vergeben — es ist ein
+  Single-Betreiber-/Kleinteam-Werkzeug; das Rate-Limit am Login ist in-memory
+  (ein Worker) und hinter einem Reverse-Proxy effektiv global (dort ok).
 - Export-Dateien in `docs/` (Reporte) liegen außerhalb der Datenbank und
   werden beim Löschen eines Scans nicht mitentfernt.
 

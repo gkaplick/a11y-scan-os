@@ -80,10 +80,10 @@ a11y-scanner/
 
 ### 3.1 FastAPI-App (`app/main.py`)
 
-- Startet im **Lifespan**: `init_db()` (legt alle Tabellen idempotent an) und best-effort `get_browser()` (Playwright-Warmstart; wird bei Bedarf pro Job ohnehin gestartet). Beim Shutdown: `close_browser()`.
-- Routen-Module: `api/jobs.py`, `api/tests.py`, `api/ws.py`.
-- CORS ist für das lokale Single-User-Tool großzügig (`allow_origins=["*"]`) — im Produktiv-Container ist das Frontend ohnehin same-origin über den Nitro-Proxy.
-- `GET /` liefert einen kleinen Service-Index; `GET /api/health` → `{"status": "ok"}`.
+- Startet im **Lifespan**: `init_db()` (legt alle Tabellen idempotent an), `ensure_admin()` (Env-Bootstrap des Erst-Admins, siehe „Session-Auth-Architektur“) und best-effort `get_browser()` (Playwright-Warmstart; wird bei Bedarf pro Job ohnehin gestartet). Beim Shutdown: `close_browser()`.
+- Routen-Module: `api/auth.py`, `api/jobs.py`, `api/tests.py`, `api/ws.py`.
+- CORS ist auf `settings.cors_origins` (explizite Liste, Default lokal `localhost:3001`) + `allow_credentials=True` beschränkt. Im Produktiv-Container ist das Frontend ohnehin **same-origin** über den Nitro-Proxy — dort ist CORS kein Angriffsweg.
+- `GET /` liefert einen kleinen Service-Index; `GET /api/health` → `{"status": "ok"}` (beide offen).
 
 ### 3.2 Konfiguration (`app/config.py`, pydantic-settings)
 
@@ -100,6 +100,12 @@ Alle Werte sind als `Settings`-Felder deklariert und werden in dieser Reihenfolg
 | `w3c_validator_max` | `A11Y_W3C_VALIDATOR_MAX` | `1` | 0=aus, -1=alle, N=erste N Seiten |
 | `max_pages_per_project` | `A11Y_MAX_PAGES_PER_PROJECT` | `0` | 0 = unbegrenzt |
 | `htaccess_user` / `htaccess_pw` | `A11Y_HTACCESS_USER` / `A11Y_HTACCESS_PW` | `""` | **keine Default-Credentials** |
+| `admin_username` / `admin_password` | `A11Y_ADMIN_USERNAME` / `A11Y_ADMIN_PASSWORD` | `""` | Env-Bootstrap des Erst-Admins (nur bei leerer `users`-Tabelle) |
+| `session_cookie_name` | `A11Y_SESSION_COOKIE_NAME` | `a11y_session` | Name des Session-Cookies |
+| `session_cookie_secure` | `A11Y_SESSION_COOKIE_SECURE` | `False` | `Secure`-Flag auf dem Cookie (Prod hinter TLS: `true`) |
+| `session_ttl_hours` | `A11Y_SESSION_TTL_HOURS` | `24` | Lebensdauer einer Session |
+| `ws_token_ttl_seconds` | `A11Y_WS_TOKEN_TTL_SECONDS` | `300` | Lebensdauer eines WS-Tickets |
+| `cors_origins` | `A11Y_CORS_ORIGINS` | `http://localhost:3001, http://127.0.0.1:3001` | erlaubte Origins (SPA ist same-origin über den Nitro-Proxy; Liste deckt direkte API-Dev-Zugriffe ab) |
 
 `Settings.should_crawl_url(url)` prüft die `excluded_paths`/`excluded_extensions`.
 
@@ -111,34 +117,94 @@ Alle Werte sind als `Settings`-Felder deklariert und werden in dieser Reihenfolg
   - `Page` — je gecrawlte URL (http_status, ok, error, visited_at).
   - `Finding` — je Verstoß: test_id, url, **dom_path**, message, detail, resolution, plus **denormalisierte** Registry-Metadaten (wcag, bitv, en301549, level, wcag_level, responsibility, priority) — Stand des Laufs.
   - `TestRecord` — **Snapshot** des Registry-Stands pro Job (Reports bleiben so reproduzierbar).
-- `conftest.py` setzt `A11Y_DATABASE_PATH`/`A11Y_OUTPUT_DIR` auf temporäre Pfade und `A11Y_W3C_VALIDATOR_MAX=0`, damit Tests isoliert und ohne externe W3C-Aufrufe laufen.
+  - `User` — Login-Konto (`username` unique, `password_hash` bcrypt). Kein Registrierungsweg.
+  - `AuthSession` — aktive Session: nur **SHA-256-Hash** des Cookie-Tokens, `user_id`, `expires_at`. Wird per Logout sofort widerrufen, abgelaufene Sitzungen opportunistisch gelöscht.
+  - `WsToken` — kurzlebiges **Einmal-Ticket** (SHA-256-Hash) für den WebSocket (siehe 3.5): nach erfolgreichem Konsum sofort gelöscht.
+- Neue Tabellen entstehen über SQLAlchemy `create_all` beim Start (`main.py`-Lifespan) — es gibt keine Migrationen.
+- `conftest.py` setzt `A11Y_DATABASE_PATH`/`A11Y_OUTPUT_DIR` auf temporäre Pfade, `A11Y_W3C_VALIDATOR_MAX=0` und `A11Y_BROWSER_WARMSTART=false`, damit Tests isoliert und ohne externe W3C-Aufrufe/Playwright-Warmstart laufen. `_clean_db` leert zusätzlich `WsToken`/`AuthSession`/`User` (Kinder zuerst).
 
 ### 3.4 REST-API
 
-Alle Endpunkte (außer WS) unter Prefix `/api`. Offene Endpunkte:
+Alle Endpunkte (außer WS) unter Prefix `/api`. **Zugriffsschutz:** Alle Router
+`/api/jobs`, `/api/tests` (und `/api/auth`) außer `/login` sind über
+`dependencies=[Depends(require_user)]` bzw. `Depends(require_user)` pro Endpoint
+**session-geschützt** — der Router-Dependency-Mechanismus greift auch vor
+`FileResponse`-Downloads (Screenshots, TXT-Export). Nur `/api/health` bleibt
+offen (Betrieb/Orchestrierung). Ohne gültiges Session-Cookie → `401`.
 
-| Methode | Pfad | Zweck |
-|---|---|---|
-| `POST` | `/api/jobs` | Scan anlegen (`JobCreate`: url, suite, max_pages, htaccess_user/pw) |
-| `GET` | `/api/jobs` | Job-Liste (neueste zuerst, `limit` 1–200) |
-| `GET` | `/api/jobs/{id}` | Einzelner Job (mit page_count/finding_count) |
-| `DELETE` | `/api/jobs/{id}` | Scan abbrechen (cancel); 409 wenn nicht mehr abbrechbar |
-| `GET` | `/api/jobs/{id}/results` | Ergebnis (`ResultsOut`: by_test / by_url / tests / manual_tests / stub_tests) |
-| `GET` | `/api/jobs/{id}/export/txt` | TXT-Report-Download **und** zusätzlich als Datei nach `docs/` |
-| `POST` | `/api/jobs/retest` | **Retest** eines einzelnen Tests für eine URL (Mini-Job) |
-| `GET` | `/api/tests` | Kompletter Katalog (`TestOut[]`), filterbar nach suite/status |
-| `GET` | `/api/tests/summary` | Aggregierte Kennzahlen (total, by_status, by_suite, by_category, by_level) |
-| `GET` | `/api/tests/{test_id}` | Einzelner Katalog-Eintrag |
-| `WS` | `/ws/jobs/{id}` | Live-Progress (siehe 3.5) |
+| Methode | Pfad | Schutz | Zweck |
+|---|---|---|---|
+| `POST` | `/api/auth/login` | offen (Limiter) | Login, setzt Session-Cookie, liefert `UserOut` |
+| `POST` | `/api/auth/logout` | Session | widerruft Session + leert Cookie |
+| `GET` | `/api/auth/me` | Session | aktueller Benutzer (Frontend-Reload prüft hiermit) |
+| `GET` | `/api/auth/ws-token` | Session | kurzlebiges Einmal-Ticket für den WS-Live-Progress |
+| `POST` | `/api/jobs` | Session | Scan anlegen (`JobCreate`: url, suite, max_pages, htaccess_user/pw) |
+| `GET` | `/api/jobs` | Session | Job-Liste (neueste zuerst, `limit` 1–200) |
+| `GET` | `/api/jobs/{id}` | Session | Einzelner Job (mit page_count/finding_count) |
+| `DELETE` | `/api/jobs/{id}` | Session | Scan abbrechen (cancel); 409 wenn nicht mehr abbrechbar |
+| `GET` | `/api/jobs/{id}/results` | Session | Ergebnis (`ResultsOut`: by_test / by_url / tests / manual_tests / stub_tests) |
+| `GET` | `/api/jobs/{id}/export/txt` | Session | TXT-Report-Download **und** zusätzlich als Datei nach `docs/` |
+| `POST` | `/api/jobs/retest` | Session | **Retest** eines einzelnen Tests für eine URL (Mini-Job) |
+| `GET` | `/api/tests` | Session | Kompletter Katalog (`TestOut[]`), filterbar nach suite/status |
+| `GET` | `/api/tests/summary` | Session | Aggregierte Kennzahlen (total, by_status, by_suite, by_category, by_level) |
+| `GET` | `/api/tests/{test_id}` | Session | Einzelner Katalog-Eintrag |
+| `GET` | `/api/health` | offen | Health-Check |
+| `WS` | `/ws/jobs/{id}` | WS-Ticket (`?ws_token=`) | Live-Progress (siehe 3.5) |
 
 **Retest-Endpunkt** (`POST /api/jobs/retest`): Body `RetestCreate { url, test_id, resolution }`. Validiert, dass der Test im Registry existiert (404) und nicht `manual` ist (422 — manuelle Kriterien lassen sich nicht automatisiert erneut ausführen). Erzeugt über `job_manager.create_retest(url, test_id, suite, resolution)` einen Mini-Job und gibt ihn als `JobOut` zurück.
 
 **Export-Endpunkt**: erzeugt den TXT-Report aus dem kanonischen `ResultsOut`, schreibt die Datei zusätzlich nach `settings.output_dir` (Dateiname `Barrierefreiheit_Report_<domain>_<timestamp>.txt`) und liefert sie als `Content-Disposition: attachment` zurück.
 
+#### Session-Auth-Architektur (`app/security.py`, `app/api/auth.py`, `app/manage.py`)
+
+**Grundsatz:** Backend-eigene Session-Auth, kein Registrierungsweg — Konten legt
+ausschließlich der Betreiber an. Es gibt **zwei** Anlegewege:
+
+- **Env-Bootstrap** (`security.ensure_admin`): wird im Lifespan nach `init_db()`
+  aufgerufen. Legt genau dann einen Admin an, wenn die `users`-Tabelle **leer**
+  ist und `A11Y_ADMIN_USERNAME`/`A11Y_ADMIN_PASSWORD` gesetzt sind. Danach sind
+  die Env-Werte wirkungslos (Tabelle nicht mehr leer) — sie können also nach dem
+  ersten Start wieder entfernt werden.
+- **CLI** (`app/manage.py`): `python -m app.manage users add|list|set-password|remove`
+  im api-Container. Bewusst nur DB-/Config-Importe (startet schnell); Passwort
+  per `--password` oder `getpass`-Prompt; validiert das 72-Byte-bcrypt-Limit.
+
+**Session-Fluss (REST):**
+1. `POST /api/auth/login` prüft ein **In-Memory-Rate-Limit** (`_LoginLimiter`,
+   pro Client-IP: 5 Versuche / 15 min, dann 15 min Sperre), führt bei unbekanntem
+   Benutzernamen trotzdem einen **bcrypt-Vergleich gegen einen Dummy-Hash** aus
+   (gleiche Laufzeit → keine Benutzernamen-Enumeration über Timing) und antwortet
+   bei Fehlern immer mit **derselben** Meldung „Ungültige Zugangsdaten.“.
+2. Bei Erfolg wird ein opaker Token (`secrets.token_urlsafe(48)`) erzeugt; in der
+   DB (`AuthSession`) liegt nur der **SHA-256-Digest**. Der Client bekommt den
+   Rohwert ausschließlich als **`httpOnly`-Cookie** (`a11y_session`, SameSite=Lax,
+   `Secure` über `A11Y_SESSION_COOKIE_SECURE`, `path=/`).
+3. Jeder geschützte Endpoint hängt an `require_user` (FastAPI-Dependency): Cookie →
+   Digest-Lookup → Ablaufprüfung (**sliding Renewal**: `expires_at` wird bei jedem
+   Zugriff um die TTL nach hinten geschoben) → `401 „Nicht angemeldet"`.
+4. `POST /api/auth/logout` löscht die Session sofort (Revoke) und leert das Cookie.
+   Abgelaufene Sitzungen werden bei Gelegenheit gelöscht (opportunistischer Purge).
+
+**Warum keine Cookie-Auth für den WebSocket:** Der Nitro-Tunnel
+(`frontend/server/routes/ws/jobs/[id].ts`) reicht ans Backend **nur Pfad + Query**
+weiter; der Node-`WebSocket`-Client kann keinen `Cookie`-Header setzen. Deshalb
+holt die SPA über die Session ein **kurzlebiges Einmal-Ticket**
+(`GET /api/auth/ws-token`, TTL `ws_token_ttl_seconds`=300) und hängt es als
+`?ws_token=…` an. `WsToken` speichert ebenfalls nur den SHA-256-Digest; nach
+erfolgreichem Konsum wird die Zeile **gelöscht** (Single-Use). Der WS-Handler
+validiert das Ticket **nach `accept()` und vor `subscribe()`**; ungültig →
+`close(1008)` + Return. Ein verlorenes/verbrauchtes Ticket fällt über den
+bestehenden `onClose → REST-Polling`-Pfad ab (kein Funktionsverlust, nur kein
+Live-Update).
+
+**bcrypt im async-Kontext:** `hash_password`/`verify_password` (bcrypt direkt,
+Cost 12, 72-Byte-Limit, dummy-vergleich) laufen im Runner- und Request-Pfad über
+`asyncio.to_thread` — Cost 12 ≈ 100–300 ms dürfen den Event-Loop nicht blockieren.
+
 ### 3.5 WebSocket-Protokoll (`api/ws.py`, `engine/progress.py`)
 
 - **`ProgressBroker`** (In-Process): pro Job eine Menge von `asyncio.Queue`-Subscribern (eine Queue pro Client). Zusätzlich werden die letzten N Events pro Job behalten (`deque(maxlen=500)`), damit ein später beigetretener Client sofort den aktuellen Stand erhält.
-- Der WS-Handler akzeptiert, subscribed die Queue und sendet jedes Event als `ProgressEvent`-JSON. Die Schnittstelle ist bewusst klein (`subscribe`/`unsubscribe`/`publish`) — ein späterer Umstieg auf Redis/Broadcast ist möglich, ohne den Runner zu ändern.
+- **Auth:** Der Handler akzeptiert, validiert dann das `?ws_token=`-Einmal-Ticket (siehe „Session-Auth-Architektur“) und subscribed erst danach die Queue — ungültiges/verbrauchtes Ticket → `close(1008)`, kein Zugriff auf Job-Events.
 - `ProgressEvent`-Felder: `type` (`page` | `stage` | `status` | `done` | `error` | `log`), `job_id`, `percent`, `page_url`, `page_index`, `page_total`, `resolution`, `message`, `at`. Bei `done`/`error` schließt der Client typischerweise selbst.
 - **Frontend-Tunnel**: Das Browser-Frontend verbindet sich same-origin auf `:3001`. `/ws/**` ist **kein** `routeRules`-Proxy (Nitro-Proxy kann keine WebSocket-Upgrades), sondern eine eigene Nitro-Server-Route `frontend/server/routes/ws/jobs/[id].ts` mit h3 `defineWebSocketHandler` (crossws): Sie öffnet eine Client-WebSocket-Verbindung zum selben Pfad auf `ws://api:8000` und piped Nachrichten in beide Richtungen. Schlägt die Upstream-Verbindung fehl, wird das Browser-Socket sauber geschlossen, sodass `useScan.js` über `onClose` auf REST-Polling zurückfällt.
 - **⚠️ Voraussetzung `experimental.websocket`**: Damit Nitros node-server-Produktion tatsächlich `upgrade`-Events an crossws weiterreicht, muss in `frontend/nuxt.config.ts` `nitro: { experimental: { websocket: true } }` gesetzt sein. Ohne dieses Flag bleibt `import.meta._websocket` falsy, der crossws-`handleUpgrade`-Listener wird nie registriert und `/ws/**` antwortet auf Handshakes mit **426 Upgrade Required** (die Route existiert im Build, bekommt aber keine Upgrades). Symptom eines verpassten Flips: Der Browser-Log zeigt `WebSocket connection to 'ws://localhost:3001/ws/jobs/…' failed`.
@@ -264,7 +330,12 @@ async def check_xxx(ctx: CheckContext) -> list[Finding]
   - **Live-Bereich** solange der Job läuft: `ProgressPanel.vue` + `StatusLog.vue` (WS-Events); Polling-Fallback alle 2,5 s.
   - **Ergebnis-Bereich** wenn fertig: Umschalter „Nach Test" (`ResultByTest.vue`) vs. „Nach URL" (`ResultByUrl.vue`), Filter, TXT-Export-Button.
   - **Checklisten**: manuelle Tests und Stubs („Noch nicht automatisierte Tests") als aufklappbare Listen.
-- `composables/useScan.js` — zentraler API-/WS-Client: `createJob`, `listJobs`, `getJob`, `cancelJob`, `getResults`, `getTests`, `getTestsSummary`, `download` (TXT-Export), `connectWs`.
+- `composables/useScan.js` — zentraler API-/WS-Client: `createJob`, `listJobs`, `getJob`, `cancelJob`, `getResults`, `getTests`, `getTestsSummary`, `download` (TXT-Export), `connectWs`. Alle `$fetch`-Aufrufe laufen über `apiFetch`; `connectWs(jobId, { token, … })` hängt das WS-Ticket als `?ws_token=…` an.
+- **Auth-Schicht** (`app.vue` + `components/LoginScreen.vue` + `composables/useAuth.js` + `utils/apiFetch.js`):
+  - `useAuth` ist ein **Module-Singleton** (`status`: `loading | guest | authed`, `user`); Zustand **nur im Speicher** (kein localStorage). Beim App-Start prüft `init()` über `GET /api/auth/me`, ob eine Bestandssession existiert (httpOnly-Cookie).
+  - `app.vue` rendert als **Auth-Gate**: `loading` → leere neutrale Fläche; `guest` → **ausschließlich** `LoginScreen` (kein Header/Footer/Branding/Info); `authed` → bisherige Shell (Header mit Benutzername + „Abmelden“, `NuxtPage`, Footer). `NuxtPage` wird also erst nach erfolgreichem Login gemountet.
+  - `LoginScreen.vue` ist bewusst **nackt** (zentriertes Formular auf leerem Grund, generische Fehlermeldung); keine App-Information.
+  - `utils/apiFetch.js` (`$fetch.create`) registriert **401-Handler**: Jede abgelaufene Session setzt den Zustand einheitlich auf `guest` zurück → Login-Screen erscheint. (Download via `<a>`-Klick ist browser-level, 401 dort nicht abfangbar — der nächste API-Call flippt zu `guest`.)
 
 ### 4.3 Ergebnis-Filter
 
@@ -296,9 +367,25 @@ Volumes/Bind-Mounts:
 
 Umgebungen: `PYTHONUNBUFFERED=1`, `PLAYWRIGHT_BROWSERS_PATH=/ms-playwright`; `shm_size: "2gb"` (Playwright/Chromium), `restart: unless-stopped`.
 
-### 5.2 Builds
+### 5.2 Produktions-Override (`docker-compose.prod.yml`)
 
-- **`Dockerfile.api`**: Basis `mcr.microsoft.com/playwright/python:v1.48.0-jammy` (Chromium inkl. System-Dependencies unter `/ms-playwright`; `playwright==1.48.0` im pip-Install ist auf die Browser-Revision des Basis-Images gepinnt). Erst Dependencies (`requirements-dev.txt`), dann `COPY backend/ .`. CMD: `uvicorn app.main:app --host 0.0.0.0 --port 8000`.
+Basis-Compose + Override zusammen (`docker compose -f docker-compose.yml -f
+docker-compose.prod.yml up -d --build`) für den Betrieb **hinter einem
+TLS-Reverse-Proxy**:
+
+- `api.ports: !override []` und `web.ports: !override []` — kein öffentlicher
+  Host-Port; Clients erreichen die App nur über den Proxy (z. B. Caddy).
+  (`!override` ist Compose ≥ v2.24 / v5; ersetzt additiv gemergte Port-Listen.)
+- `api`-Environment: `A11Y_SESSION_COOKIE_SECURE=true` (TLS davor) und
+  `A11Y_ADMIN_USERNAME`/`A11Y_ADMIN_PASSWORD` aus der Umgebung/`.env` (dort
+  chmod 600 — die Datei enthält bewusst keine Werte und keine Server-Topologie).
+- Die Anbindung an ein geteiltes Proxy-Netz (damit der Proxy den `web`-Container
+  per DNS erreicht) ist server-spezifisch und liegt **nicht** im Repo, sondern in
+  der Betriebsdoku des Zielsystems (dort z. B. `compose.vps.yml` + Caddyfile-Route).
+
+### 5.3 Builds
+
+- **`Dockerfile.api`**: Basis `mcr.microsoft.com/playwright/python:v1.48.0-jammy` (Chromium inkl. System-Dependencies unter `/ms-playwright`; `playwright==1.48.0` im pip-Install ist auf die Browser-Revision des Basis-Images gepinnt). Erst Dependencies (`requirements-dev.txt`), dann `COPY backend/ .`. CMD: `uvicorn app.main:app --host 0.0.0.0 --port 8000`. (bcrypt liefert abi3-Wheels — kein Compiler auf jammy nötig.)
 - **`Dockerfile.web`**: Node 22 multi-stage. Build-Stage: `npm ci --no-audit --no-fund --legacy-peer-deps` (Hinweis: `--legacy-peer-deps` wegen einer Peer-Dependency-Kollision von `@bomb.sh/tab` — siehe Kommentar im Dockerfile) + `npm run build`. Runtime-Stage: kopiert nur `.output` + `node_modules`; CMD `node .output/server/index.mjs`.
 
 ## 6. Neuen Check hinzufügen (Schritt-für-Schritt)

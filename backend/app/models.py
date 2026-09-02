@@ -111,3 +111,51 @@ class TestRecord(Base):
     status: Mapped[str] = mapped_column(String(16))     # implemented|manual|nicht_relevant
 
     job: Mapped[Job] = relationship(back_populates="test_records")
+
+
+class User(Base):
+    """App-Login (nur vom Betreiber angelegt — kein Registrierungsweg)."""
+
+    __tablename__ = "users"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    username: Mapped[str] = mapped_column(String(64), unique=True, index=True)
+    password_hash: Mapped[str] = mapped_column(String(128))  # bcrypt
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+
+    sessions: Mapped[list["AuthSession"]] = relationship(
+        back_populates="user", cascade="all, delete-orphan"
+    )
+
+
+class AuthSession(Base):
+    """Opake Login-Session; in der DB liegt nur der SHA-256-Hash des Tokens."""
+
+    __tablename__ = "auth_sessions"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    token_hash: Mapped[str] = mapped_column(String(64), unique=True, index=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+    expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+
+    user: Mapped[User] = relationship(back_populates="sessions")
+
+
+class WsToken(Base):
+    """Kurzlebiges Ticket für den WebSocket-Live-Progress.
+
+    Grund: Der Nitro-WS-Tunnel (frontend/server/routes/ws/jobs/[id].ts) reicht
+    Cookies nicht ans Backend weiter — die SPA holt den Token über die
+    (Cookie-)Session und hängt ihn als ``?ws_token=…`` an die WS-URL. Auch
+    hier wird nur der SHA-256-Hash gespeichert.
+    """
+
+    __tablename__ = "ws_tokens"
+
+    token_hash: Mapped[str] = mapped_column(String(64), primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+    expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+
+    user: Mapped[User] = relationship()

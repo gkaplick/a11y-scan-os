@@ -1,0 +1,34 @@
+# Produktions-Override für den A11Y-Scanner.
+#
+# Änderungen gegenüber der Basis-Compose:
+#   - Die API wird NICHT mehr öffentlich auf Port 8000 publiziert (wie der
+#     Web-Port 3001): Clients erreichen die App ausschließlich über den
+#     TLS-Reverse-Proxy (z. B. Caddy) vor dem Web-Container.
+#   - Session-Cookie bekommt das Secure-Flag (Pflicht hinter TLS).
+#   - Admin-Bootstrap-Credentials (A11Y_ADMIN_USERNAME/PASSWORD) werden aus
+#     der Umgebung/Stack-.env eingespeist (dort chmod 600, NIE committen).
+#
+# Nutzung auf dem Server hinter einem Reverse-Proxy:
+#   docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+#
+# Hinweis: Damit der Proxy den Web-Container erreichen kann, wird der Stack in
+# ein geteiltes Proxy-Netz eingebunden. Das ist server-spezifisch und passiert
+# über eine lokale, NICHT versionierte Override-Datei direkt auf dem Server
+# (z. B. compose.vps.yml) — Details in der VPS-Betriebsdoku. Diese Datei bleibt
+# bewusst frei von Server-Topologie- und Secret-Werten.
+services:
+  api:
+    # Kein öffentlicher Host-Port: Die API ist nur intern (Web → http://api:8000).
+    ports: !override []
+    environment:
+      # Secure-Cookie: nur über HTTPS senden (Proxy terminiert TLS).
+      - A11Y_SESSION_COOKIE_SECURE=true
+      # Erst-Admin beim Start, wenn die users-Tabelle leer ist. Leer lassen,
+      # wenn der erste Admin schon per CLI angelegt wurde.
+      - A11Y_ADMIN_USERNAME=${A11Y_ADMIN_USERNAME:-}
+      - A11Y_ADMIN_PASSWORD=${A11Y_ADMIN_PASSWORD:-}
+
+  web:
+    # Kein öffentlicher Host-Port: Nur der Proxy spricht mit dem Web-Container
+    # (über das geteilte Proxy-Netz).
+    ports: !override []

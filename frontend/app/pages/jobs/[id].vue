@@ -223,7 +223,16 @@ onMounted(async () => {
   if (!finished.value) {
     startClock()
     const { connectWs } = useScan()
+    // Kurzlebiges WS-Ticket über die Session holen (Cookies reichen durch den
+    // Nitro-Tunnel nicht ans Backend). Schlägt das fehl (Session weg), wird
+    // kein WS verbunden — der REST-Polling-Timer läuft weiter, und der
+    // 401-Handler von apiFetch wirft die SPA zurück zum Login.
+    let token = null
+    try {
+      token = await useAuth().getWsToken()
+    } catch { /* kein Ticket → kein Live-Update, Polling fängt es ab */ }
     ws = connectWs(jobId, {
+      token,
       onEvent: (ev) => {
         events.value.push(ev)
         if (events.value.length > 300) events.value.splice(0, events.value.length - 300)

@@ -18,6 +18,9 @@ docs/*.json
 # ... aber die Doku-Markdowns versionieren
 !docs/ARCHITEKTUR.md
 
+# --- Betriebsdoku (Ziel-VPS) — Server-Struktur/User gehören nicht ins (public) Repo ---
+docs/vps-server-netcup.md
+
 # --- Node / Nuxt ---
 node_modules/
 .nuxt/

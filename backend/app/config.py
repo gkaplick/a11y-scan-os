@@ -72,6 +72,25 @@ class Settings(BaseSettings):
     htaccess_user: str = ""
     htaccess_pw: str = ""
 
+    # --- Login / Session (App-Auth; KEIN Registrierungsweg) ---
+    # Erster Admin wird beim Start angelegt, wenn die users-Tabelle leer ist
+    # und beide Credentials gesetzt sind. Weitere Zugänge nur über die
+    # Verwaltungs-CLI (`python -m app.manage users add …`).
+    admin_username: str = ""
+    admin_password: str = ""
+    session_cookie_name: str = "a11y_session"
+    # Secure-Flag nur hinter TLS setzen (prod-Override docker-compose.prod.yml);
+    # lokal/ohne HTTPS würde der Browser das Cookie sonst gar nicht speichern.
+    session_cookie_secure: bool = False
+    session_ttl_hours: float = 24          # Sliding-Session-Lebensdauer
+    ws_token_ttl_seconds: int = 300        # Kurzlebiges WS-Ticket (Live-Progress)
+    # Explizite CORS-Origins (keine Wildcards). Das SPA läuft same-origin über
+    # den Nitro-Proxy — Cross-Origin-Zugriffe sind nicht vorgesehen.
+    cors_origins: list[str] = [
+        "http://localhost:3001",
+        "http://127.0.0.1:3001",
+    ]
+
     # --- Browser / Playwright ---
     headless: bool = True
     # Browser beim App-Start warmstarten (best-effort, verkürzt den ersten Job).

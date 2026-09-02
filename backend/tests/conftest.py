@@ -9,6 +9,7 @@ zeigt. So laufen Tests isoliert von echten ``data/``- und ``docs/``-Daten.
 - ``A11Y_DATABASE_PATH``      → temporäre SQLite-Datei
 - ``A11Y_OUTPUT_DIR``         → temporäres Export-Verzeichnis
 - ``A11Y_W3C_VALIDATOR_MAX=0``→ keine externen W3C-Validator-Aufrufe in Tests
+- ``A11Y_BROWSER_WARMSTART=false`` → TestClient-Lifespan startet kein Playwright
 """
 from __future__ import annotations
 
@@ -22,11 +23,20 @@ os.environ["A11Y_OUTPUT_DIR"] = os.path.join(_TMP, "reports")
 os.environ["A11Y_SCREENSHOTS_DIR"] = os.path.join(_TMP, "screenshots")
 os.environ["A11Y_W3C_VALIDATOR_MAX"] = "0"
 os.environ["A11Y_DEBUG"] = "false"
+os.environ["A11Y_BROWSER_WARMSTART"] = "false"
 
 import pytest  # noqa: E402  (Import nach Env-Setup ist Absicht)
 
 from app.db import SessionLocal, init_db  # noqa: E402
-from app.models import Finding, Job, Page, TestRecord  # noqa: E402
+from app.models import (  # noqa: E402
+    AuthSession,
+    Finding,
+    Job,
+    Page,
+    TestRecord,
+    User,
+    WsToken,
+)
 
 init_db()
 
@@ -39,6 +49,10 @@ def _clean_db():
         session.query(TestRecord).delete()
         session.query(Page).delete()
         session.query(Job).delete()
+        # Auth-Tabellen (WS-Tickets/Sessions vor User, Kinder zuerst)
+        session.query(WsToken).delete()
+        session.query(AuthSession).delete()
+        session.query(User).delete()
         session.commit()
     yield
 
